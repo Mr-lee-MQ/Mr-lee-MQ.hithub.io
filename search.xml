@@ -22,6 +22,18 @@
     <title>第一篇博客</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/24/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>#模板设置##头部设置##首页设置#<a id="more"></a></p>
+<p>#模板设置#</p>
+<p>当我们使用命令 <code>hexo new &quot;title&quot;</code> 创建文章时，Hexo 会根据 <code>/scaffolds/post.md</code> 对新文章进行初始化</p>
+<p>换言之，<code>/scaffolds/post.md</code> 就是新文章的 <strong>模板</strong>，所以我们可以修改它来适应自己的写作习惯</p>
+<p>‘’’</p>
+<p>title: 第一篇博客<br>date: 1590292077000<br>tags:<br>categories: </p>
+<p>‘’’</p>
 ]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
   </entry>
 </search>
