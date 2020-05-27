@@ -35,7 +35,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   <entry>
     <title>My batis框架</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/27/My-batis%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="My-Batis框架"><a href="#My-Batis框架" class="headerlink" title="My Batis框架"></a>My Batis框架</h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
+    <content><![CDATA[<h1 id="My-Batis框架"><a href="#My-Batis框架" class="headerlink" title="My Batis框架"></a>My Batis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
 <h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><ul>
 <li>表现层:　 用于展示数据</li>
 <li>业务层: 　用于处理也无需求</li>
