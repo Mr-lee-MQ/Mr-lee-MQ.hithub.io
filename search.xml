@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo的搭建</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
+<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
+<li>安装主题</li>
+</ul>
+<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
+<ul>
+<li>更新</li>
+</ul>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
+<p>用Hexo写一篇博客</p>
+<pre><code>$ hexo n &quot;我的第一篇博客&quot;
+INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
+<pre><code> hexo clean          # 清除所有记录 
+$ hexo generate       # 生成静态网页 简写：hexo g
+$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mybatis框架</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
@@ -74,38 +106,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo的搭建</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
-<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
-<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
-<li>安装主题</li>
-</ul>
-<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
-<ul>
-<li>配置</li>
-</ul>
-<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
-<ul>
-<li>更新</li>
-</ul>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
-<p>用Hexo写一篇博客</p>
-<pre><code>$ hexo n &quot;我的第一篇博客&quot;
-INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
-<pre><code> hexo clean          # 清除所有记录 
-$ hexo generate       # 生成静态网页 简写：hexo g
-$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>maven项目管理</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="Maven项目管理"><a href="#Maven项目管理" class="headerlink" title="Maven项目管理"></a>Maven项目管理<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
@@ -157,8 +157,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
 <li>在settings.xml文件中的mirrors下添加mirror标签</li>
 </ul>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5Cblog%5Csource_posts%5Cmaven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%5Cimage-20200530180215593.png" alt="image-20200530180215593"></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200530180215593.png" alt="mirror标签"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530192209838.png" alt="image-20200530192209838"></p>
 ]]></content>
       <tags>
         <tag>maven</tag>
