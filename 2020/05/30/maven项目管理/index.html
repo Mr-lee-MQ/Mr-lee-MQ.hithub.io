@@ -17,10 +17,14 @@
 <meta property="og:site_name" content="Mr-lee">
 <meta property="og:description" content="Maven项目管理">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530172929530.png">
+<meta property="og:image" content="https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530175433411.png">
+<meta property="og:image" content="https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5Cblog%5Csource_posts%5Cmaven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%5Cimage-20200530180215593.png">
 <meta property="article:published_time" content="2020-05-30T03:40:37.000Z">
-<meta property="article:modified_time" content="2020-05-30T07:09:37.728Z">
+<meta property="article:modified_time" content="2020-05-30T10:19:39.238Z">
 <meta property="article:tag" content="maven">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530172929530.png">
   
     <link rel="alternative" href="/Mr-lee-MQ.hithub.io/atom.xml" title="Mr-lee" type="application/atom+xml">
   
@@ -223,7 +227,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">151字</span>
+      <span class="post-count">515字</span>
     </span>
   </span>
 
@@ -257,9 +261,43 @@
 <li><p>多工程开发，将模块拆分成若干个工程，利于团队协作开发。</p>
 </li>
 <li><p>一键构建项目：使用命令行可以对项目进行一键构建，操作系统中无需安装eclipse和tomcat。</p>
+<h2 id="Maven入门"><a href="#Maven入门" class="headerlink" title="Maven入门"></a>Maven入门</h2></li>
+<li><p>下载，安装，配置环境变量Maven；</p>
+<ul>
+<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>     下载后解压，放到工作目录下。<ul>
+<li>bin：配置文件，脚本</li>
+<li>boot：类加载器的框架</li>
+<li>conf：配置文件     sttings.xml主要用到的配置文件（全局配置）</li>
+<li>lib：库文件</li>
+</ul>
+</li>
+<li><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530172929530.png" alt="image-20200530172929530"></li>
+</ul>
 </li>
 </ul>
-
+<h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
+<li>jar包管理<ul>
+<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
+<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
+<li>Maven项目通过坐标的方式从本地仓库获取jar包<ul>
+<li>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</li>
+<li>本地仓库：存放了很多Jar包，供Maven项目使用。</li>
+<li>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</li>
+<li>多个Maven项目都可以从本地仓库获取jar包</li>
+<li>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530175433411.png" alt="image-20200530175433411"></p>
+<p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
+<h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
+<li>在settings.xml文件中的mirrors下添加mirror标签</li>
+</ul>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5Cblog%5Csource_posts%5Cmaven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%5Cimage-20200530180215593.png" alt="image-20200530180215593"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![mirror标签](maven项目管理&#x2F;image-20200530180215593.png)</span><br></pre></td></tr></table></figure>
     
 
     
@@ -422,7 +460,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven项目管理"><span class="toc-number">1.</span> <span class="toc-text">Maven项目管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么使用Maven？"><span class="toc-number">1.1.</span> <span class="toc-text">为什么使用Maven？</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Maven项目管理"><span class="toc-number">1.</span> <span class="toc-text">Maven项目管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么使用Maven？"><span class="toc-number">1.1.</span> <span class="toc-text">为什么使用Maven？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven入门"><span class="toc-number">1.2.</span> <span class="toc-text">Maven入门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven的优点"><span class="toc-number">1.3.</span> <span class="toc-text">Maven的优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven三中仓库概念"><span class="toc-number">1.4.</span> <span class="toc-text">Maven三中仓库概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置阿里云Maven仓库镜像"><span class="toc-number">1.5.</span> <span class="toc-text">设置阿里云Maven仓库镜像</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

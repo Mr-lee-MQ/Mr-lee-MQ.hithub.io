@@ -36,6 +36,10 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
     <title>Mybatis框架</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
+<p>​            采用ORM思想解决了实体与数据库映射的问题，对JDBC进行了封装。</p>
+<ul>
+<li>ORM：（对象关系映射）就是把数据库表和实体类的属性对应起来，让我们可以操作实体类实现操作数据库表。</li>
+</ul>
 <h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><ul>
 <li>表现层:　 用于展示数据</li>
 <li>业务层: 　用于处理业务需求</li>
@@ -70,6 +74,14 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <li>Executor（执行器），也是一个接口（基本执行器，缓存执行器）   作用：sqlsession内部通过执行器操作数据库</li>
 </ul>
 <h2 id="mybatis的入门"><a href="#mybatis的入门" class="headerlink" title="mybatis的入门"></a>mybatis的入门</h2><ul>
+<li><p>在pom.xml文件中写入打包方式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;packaging&gt;jar&lt;&#x2F;packaging&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mybatis官网复制依赖代码</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;&#x2F;version&gt;		版本号</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
 <li><p>官网下载Mybatis框架</p>
 </li>
 <li><p>创建maven工程</p>
@@ -110,9 +122,43 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <li><p>多工程开发，将模块拆分成若干个工程，利于团队协作开发。</p>
 </li>
 <li><p>一键构建项目：使用命令行可以对项目进行一键构建，操作系统中无需安装eclipse和tomcat。</p>
+<h2 id="Maven入门"><a href="#Maven入门" class="headerlink" title="Maven入门"></a>Maven入门</h2></li>
+<li><p>下载，安装，配置环境变量Maven；</p>
+<ul>
+<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>     下载后解压，放到工作目录下。<ul>
+<li>bin：配置文件，脚本</li>
+<li>boot：类加载器的框架</li>
+<li>conf：配置文件     sttings.xml主要用到的配置文件（全局配置）</li>
+<li>lib：库文件</li>
+</ul>
+</li>
+<li><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530172929530.png" alt="image-20200530172929530"></li>
+</ul>
 </li>
 </ul>
-]]></content>
+<h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
+<li>jar包管理<ul>
+<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
+<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
+<li>Maven项目通过坐标的方式从本地仓库获取jar包<ul>
+<li>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</li>
+<li>本地仓库：存放了很多Jar包，供Maven项目使用。</li>
+<li>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</li>
+<li>多个Maven项目都可以从本地仓库获取jar包</li>
+<li>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530175433411.png" alt="image-20200530175433411"></p>
+<p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
+<h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
+<li>在settings.xml文件中的mirrors下添加mirror标签</li>
+</ul>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5Cblog%5Csource_posts%5Cmaven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%5Cimage-20200530180215593.png" alt="image-20200530180215593"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![mirror标签](maven项目管理&#x2F;image-20200530180215593.png)</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>maven</tag>
       </tags>
