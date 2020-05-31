@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Mybatis框架</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
+<p>​            采用ORM思想解决了实体与数据库映射的问题，对JDBC进行了封装。</p>
+<ul>
+<li>ORM：（对象关系映射）就是把数据库表和实体类的属性对应起来，让我们可以操作实体类实现操作数据库表。</li>
+</ul>
+<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><ul>
+<li>表现层:　 用于展示数据</li>
+<li>业务层: 　用于处理业务需求</li>
+<li>持久层: 　是和数据交互的</li>
+</ul>
+<h2 id="持久层技术解决方案"><a href="#持久层技术解决方案" class="headerlink" title="持久层技术解决方案"></a>持久层技术解决方案</h2><h3 id="JDBC技术"><a href="#JDBC技术" class="headerlink" title="JDBC技术"></a>JDBC技术</h3><p>　　　　　　Connection<br>　　　　　　PreparedStatemnet<br>　　　　　　ResultSet</p>
+<h3 id="Spring-的JdbcTemplate："><a href="#Spring-的JdbcTemplate：" class="headerlink" title="Spring 的JdbcTemplate："></a>Spring 的JdbcTemplate：</h3><p>　　Spring中对JDBC的简单封装</p>
+<h3 id="Apache的DBUtils："><a href="#Apache的DBUtils：" class="headerlink" title="Apache的DBUtils："></a>Apache的DBUtils：</h3><p>　　它和Spring的 jdbcTemplate 很像，也是对JDBC的简单封装</p>
+<h3 id="持久层"><a href="#持久层" class="headerlink" title="持久层"></a>持久层</h3><p>数据持久化</p>
+<ul>
+<li>持久化就是将程序的数据在持久状态和瞬间状态转化的过程</li>
+<li>内存：<strong>断电即失</strong></li>
+<li>数据库（jdbc），io文件持久化。</li>
+</ul>
+<p>持久层</p>
+<p>Dao层，Service层，Controller层</p>
+<ul>
+<li>完成持久化工作的代码块</li>
+<li>层界限十分明显</li>
+</ul>
+<h2 id="JDBC编程分析"><a href="#JDBC编程分析" class="headerlink" title="JDBC编程分析"></a>JDBC编程分析</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;    </span><br><span class="line">                  <span class="comment">//数据库连接</span></span><br><span class="line">			Connection connection = <span class="keyword">null</span>;  </span><br><span class="line">                 <span class="comment">//预编译的Statement</span></span><br><span class="line">			PreparedStatement preparedStatement = <span class="keyword">null</span>;    </span><br><span class="line">			ResultSet resultSet = <span class="keyword">null</span>;    </span><br><span class="line">    <span class="keyword">try</span> &#123;     <span class="comment">//加载数据库驱动    					  				  </span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>); <span class="comment">//通过驱动管理类获取数据库链接     </span></span><br><span class="line">        connection =  DriverManager </span><br><span class="line">.getConnection(<span class="string">"jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"</span>,<span class="string">"root"</span>, <span class="string">"mysql"</span>);   <span class="comment">//用户名密码</span></span><br><span class="line">    						<span class="comment">//定义 sql 语句 ?表示占位符    </span></span><br><span class="line">        String sql = <span class="string">"select * from user where username = ?"</span>; </span><br><span class="line">                          <span class="comment">//获取预处理 statement     </span></span><br><span class="line">        preparedStatement = connection.prepareStatement(sql); </span><br><span class="line">                         <span class="comment">//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的 参数值        </span></span><br><span class="line">        preparedStatement.setString(<span class="number">1</span>, <span class="string">"王五"</span>);     </span><br><span class="line">                         <span class="comment">//向数据库发出 sql 执行查询，查询出结果集     </span></span><br><span class="line">        resultSet =  preparedStatement.executeQuery(); </span><br><span class="line">                          <span class="comment">//遍历查询结果集     </span></span><br><span class="line">        <span class="keyword">while</span>(resultSet.next())&#123;              				                         System.out.println(resultSet.getString(<span class="string">"id"</span>)+<span class="string">"                              "</span>+resultSet.getString(<span class="string">"username"</span>));     </span><br><span class="line">              &#125;   </span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;     </span><br><span class="line">        e.printStackTrace(); </span><br><span class="line">   &#125;<span class="keyword">finally</span>&#123;     </span><br><span class="line">        <span class="comment">//释放资源     </span></span><br><span class="line">        <span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       resultSet.close(); </span><br><span class="line">     		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(preparedStatement!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                preparedStatement.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace(); </span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                connection.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                <span class="comment">// TODO Auto-generated catch block       </span></span><br><span class="line">                e.printStackTrace();      &#125; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">上边使用 jdbc 的原始方法（未经封装）实现了查询数据库表记录的操作。</span><br></pre></td></tr></table></figure>
+
+<h2 id="原生JDBC的问题"><a href="#原生JDBC的问题" class="headerlink" title="原生JDBC的问题"></a>原生JDBC的问题</h2><ol>
+<li>数据库连接，使用时就创建，不使用就立即释放，对数据库进行频繁的连接开启和关闭，造成数据库资源浪费，影响数据库性能。</li>
+</ol>
+<p>​       解决方案：使用数据库连接池管理数据库连接。</p>
+<ol start="2">
+<li><p>将sql语句硬编码到java中，如果sql语句修改，需要重新编译java代码，不利于系统维护。</p>
+<p>解决方案： 将sql语句配置到xml文件中，即使sql变化，不需要对java代码进行重新编译。</p>
+</li>
+</ol>
+<h2 id="mybatis的概述"><a href="#mybatis的概述" class="headerlink" title="mybatis的概述"></a>mybatis的概述</h2><p>​    mybatis是一个持久层框架，用java编写。</p>
+<p>​    它封装了jdbc操作的很多细节，使开发者只需要关注sql语句本身，而无需关注注册驱动，创建链接等繁杂过程。</p>
+<p>​    它使用了ORM思想，实现了结果集的封装</p>
+<p>​        ORM：</p>
+<p>​                    Object Relational Mappging 对象关系映射</p>
+<p>​        简单的说：</p>
+<p>​                    就是把数据库表和实体类及实体类的的属性对应起来</p>
+<p>​                    让我们可以操作实体类就实现操作数据库</p>
+<h2 id="mybatis框架流程"><a href="#mybatis框架流程" class="headerlink" title="mybatis框架流程"></a>mybatis框架流程</h2><ul>
+<li>sqlMapConfig.xml(是mybatis的全局配置文件)配置了数据源，事务等mybatis运行环境，配置了映射文件（配置sql语句）mapper.xml(映射文件)，mapper.xml，mapper.xml………</li>
+<li>sqlSessionFactory（会话工厂），根据配置文件创建工厂     作用：创建sqlsession。</li>
+<li>sqlSession（会话），是一个接口，面向（程序员）的接口    作用：操作数据库（发出sql增删改查）</li>
+<li>Executor（执行器），也是一个接口（基本执行器，缓存执行器）   作用：sqlsession内部通过执行器操作数据库</li>
+</ul>
+<h2 id="mybatis的入门"><a href="#mybatis的入门" class="headerlink" title="mybatis的入门"></a>mybatis的入门</h2><ul>
+<li><p>在pom.xml文件中写入打包方式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;packaging&gt;jar&lt;&#x2F;packaging&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mybatis官网复制依赖代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;&#x2F;version&gt;		版本号</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>官网下载Mybatis框架</p>
+</li>
+<li><p>创建maven工程</p>
+</li>
+<li><p>在pom.xml文件中添加Mybatis的坐标</p>
+</li>
+</ul>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;      </span><br><span class="line">		&lt;version&gt;3.4.5&lt;&#x2F;version&gt;</span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;junit&lt;&#x2F;groupId&gt;   单元测试</span><br><span class="line">		&lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.10&lt;&#x2F;version&gt;</span><br><span class="line">		&lt;scope&gt;test&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;     </span><br><span class="line">		&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;     						&lt;version&gt;5.1.6&lt;&#x2F;version&gt;     </span><br><span class="line">		&lt;scope&gt;runtime&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;log4j&lt;&#x2F;groupId&gt;  日志   </span><br><span class="line">		&lt;artifactId&gt;log4j&lt;&#x2F;artifactId&gt;    </span><br><span class="line">        &lt;version&gt;1.2.12&lt;&#x2F;version&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;   </span><br><span class="line">&lt;&#x2F;dependencies&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<p>​     </p>
+]]></content>
+      <tags>
+        <tag>框架</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo的搭建</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
@@ -33,79 +116,6 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
-    <title>Mybatis框架</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
-<p>​            采用ORM思想解决了实体与数据库映射的问题，对JDBC进行了封装。</p>
-<ul>
-<li>ORM：（对象关系映射）就是把数据库表和实体类的属性对应起来，让我们可以操作实体类实现操作数据库表。</li>
-</ul>
-<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><ul>
-<li>表现层:　 用于展示数据</li>
-<li>业务层: 　用于处理业务需求</li>
-<li>持久层: 　是和数据交互的</li>
-</ul>
-<h2 id="持久层技术解决方案"><a href="#持久层技术解决方案" class="headerlink" title="持久层技术解决方案"></a>持久层技术解决方案</h2><h3 id="JDBC技术"><a href="#JDBC技术" class="headerlink" title="JDBC技术"></a>JDBC技术</h3><p>　　　　　　Connection<br>　　　　　　PreparedStatemnet<br>　　　　　　ResultSet</p>
-<h3 id="Spring-的JdbcTemplate："><a href="#Spring-的JdbcTemplate：" class="headerlink" title="Spring 的JdbcTemplate："></a>Spring 的JdbcTemplate：</h3><p>　　Spring中对JDBC的简单封装</p>
-<h3 id="Apache的DBUtils："><a href="#Apache的DBUtils：" class="headerlink" title="Apache的DBUtils："></a>Apache的DBUtils：</h3><p>　　它和Spring的 jdbcTemplate 很像，也是对JDBC的简单封装</p>
-<h2 id="JDBC编程分析"><a href="#JDBC编程分析" class="headerlink" title="JDBC编程分析"></a>JDBC编程分析</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;    </span><br><span class="line">                  <span class="comment">//数据库连接</span></span><br><span class="line">			Connection connection = <span class="keyword">null</span>;  </span><br><span class="line">                 <span class="comment">//预编译的Statement</span></span><br><span class="line">			PreparedStatement preparedStatement = <span class="keyword">null</span>;    </span><br><span class="line">			ResultSet resultSet = <span class="keyword">null</span>;    </span><br><span class="line">    <span class="keyword">try</span> &#123;     <span class="comment">//加载数据库驱动    					  				  </span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>); <span class="comment">//通过驱动管理类获取数据库链接     </span></span><br><span class="line">        connection =  DriverManager </span><br><span class="line">.getConnection(<span class="string">"jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"</span>,<span class="string">"root"</span>, <span class="string">"mysql"</span>);   <span class="comment">//用户名密码</span></span><br><span class="line">    						<span class="comment">//定义 sql 语句 ?表示占位符    </span></span><br><span class="line">        String sql = <span class="string">"select * from user where username = ?"</span>; </span><br><span class="line">                          <span class="comment">//获取预处理 statement     </span></span><br><span class="line">        preparedStatement = connection.prepareStatement(sql); </span><br><span class="line">                         <span class="comment">//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的 参数值        </span></span><br><span class="line">        preparedStatement.setString(<span class="number">1</span>, <span class="string">"王五"</span>);     </span><br><span class="line">                         <span class="comment">//向数据库发出 sql 执行查询，查询出结果集     </span></span><br><span class="line">        resultSet =  preparedStatement.executeQuery(); </span><br><span class="line">                          <span class="comment">//遍历查询结果集     </span></span><br><span class="line">        <span class="keyword">while</span>(resultSet.next())&#123;              				                         System.out.println(resultSet.getString(<span class="string">"id"</span>)+<span class="string">"                              "</span>+resultSet.getString(<span class="string">"username"</span>));     </span><br><span class="line">              &#125;   </span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;     </span><br><span class="line">        e.printStackTrace(); </span><br><span class="line">   &#125;<span class="keyword">finally</span>&#123;     </span><br><span class="line">        <span class="comment">//释放资源     </span></span><br><span class="line">        <span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       resultSet.close(); </span><br><span class="line">     		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(preparedStatement!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                preparedStatement.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace(); </span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                connection.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                <span class="comment">// TODO Auto-generated catch block       </span></span><br><span class="line">                e.printStackTrace();      &#125; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">上边使用 jdbc 的原始方法（未经封装）实现了查询数据库表记录的操作。</span><br></pre></td></tr></table></figure>
-
-<h2 id="原生JDBC的问题"><a href="#原生JDBC的问题" class="headerlink" title="原生JDBC的问题"></a>原生JDBC的问题</h2><ol>
-<li>数据库连接，使用时就创建，不使用就立即释放，对数据库进行频繁的连接开启和关闭，造成数据库资源浪费，影响数据库性能。</li>
-</ol>
-<p>​       解决方案：使用数据库连接池管理数据库连接。</p>
-<ol start="2">
-<li><p>将sql语句硬编码到java中，如果sql语句修改，需要重新编译java代码，不利于系统维护。</p>
-<p>解决方案： 将sql语句配置到xml文件中，即使sql变化，不需要对java代码进行重新编译。</p>
-</li>
-</ol>
-<h2 id="mybatis的概述"><a href="#mybatis的概述" class="headerlink" title="mybatis的概述"></a>mybatis的概述</h2><p>​    mybatis是一个持久层框架，用java编写。</p>
-<p>​    它封装了jdbc操作的很多细节，使开发者只需要关注sql语句本身，而无需关注注册驱动，创建链接等繁杂过程。</p>
-<p>​    它使用了ORM思想，实现了结果集的封装</p>
-<p>​        ORM：</p>
-<p>​                    Object Relational Mappging 对象关系映射</p>
-<p>​        简单的说：</p>
-<p>​                    就是把数据库表和实体类及实体类的的属性对应起来</p>
-<p>​                    让我们可以操作实体类就实现操作数据库</p>
-<h2 id="mybatis框架流程"><a href="#mybatis框架流程" class="headerlink" title="mybatis框架流程"></a>mybatis框架流程</h2><ul>
-<li>sqlMapConfig.xml(是mybatis的全局配置文件)配置了数据源，事务等mybatis运行环境，配置了映射文件（配置sql语句）mapper.xml(映射文件)，mapper.xml，mapper.xml………</li>
-<li>sqlSessionFactory（会话工厂），根据配置文件创建工厂     作用：创建sqlsession。</li>
-<li>sqlSession（会话），是一个接口，面向（程序员）的接口    作用：操作数据库（发出sql增删改查）</li>
-<li>Executor（执行器），也是一个接口（基本执行器，缓存执行器）   作用：sqlsession内部通过执行器操作数据库</li>
-</ul>
-<h2 id="mybatis的入门"><a href="#mybatis的入门" class="headerlink" title="mybatis的入门"></a>mybatis的入门</h2><ul>
-<li><p>在pom.xml文件中写入打包方式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;packaging&gt;jar&lt;&#x2F;packaging&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mybatis官网复制依赖代码</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;&#x2F;version&gt;		版本号</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li></li>
-<li><p>官网下载Mybatis框架</p>
-</li>
-<li><p>创建maven工程</p>
-</li>
-<li><p>在pom.xml文件中添加Mybatis的坐标</p>
-</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;      </span><br><span class="line">		&lt;version&gt;3.4.5&lt;&#x2F;version&gt;</span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;junit&lt;&#x2F;groupId&gt;   单元测试</span><br><span class="line">		&lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.10&lt;&#x2F;version&gt;</span><br><span class="line">		&lt;scope&gt;test&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;     </span><br><span class="line">		&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;     						&lt;version&gt;5.1.6&lt;&#x2F;version&gt;     </span><br><span class="line">		&lt;scope&gt;runtime&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;log4j&lt;&#x2F;groupId&gt;  日志   </span><br><span class="line">		&lt;artifactId&gt;log4j&lt;&#x2F;artifactId&gt;    </span><br><span class="line">        &lt;version&gt;1.2.12&lt;&#x2F;version&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;   </span><br><span class="line">&lt;&#x2F;dependencies&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<p>​     </p>
-]]></content>
-      <tags>
-        <tag>框架</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>maven项目管理</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="Maven项目管理"><a href="#Maven项目管理" class="headerlink" title="Maven项目管理"></a>Maven项目管理<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
@@ -135,30 +145,137 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <li><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530172929530.png" alt="image-20200530172929530"></li>
 </ul>
 </li>
+<li><p>变量值Maven安装路径到bin目录之前</p>
+</li>
 </ul>
 <h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
-<li>jar包管理<ul>
-<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
-<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
-<li>Maven项目通过坐标的方式从本地仓库获取jar包<ul>
-<li>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</li>
-<li>本地仓库：存放了很多Jar包，供Maven项目使用。</li>
-<li>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</li>
-<li>多个Maven项目都可以从本地仓库获取jar包</li>
-<li>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径</li>
+<li><p>jar包管理</p>
+<ul>
+<li><p>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</p>
+</li>
+<li><p>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</p>
+</li>
+<li><p>Maven项目通过坐标的方式从本地仓库获取jar包</p>
+<ul>
+<li><p>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</p>
+</li>
+<li><p>本地仓库：存放了很多Jar包，供Maven项目使用。</p>
+</li>
+<li><p>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</p>
+</li>
+<li><p>多个Maven项目都可以从本地仓库获取jar包</p>
+</li>
+<li><p>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径····</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localRepository&gt;&#x2F;path&#x2F;to&#x2F;local&#x2F;repo&lt;&#x2F;localRepository&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530175433411.png" alt="image-20200530175433411"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5Cblog%5Csource_posts%5Cmaven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%5Cimage-20200530175433411.png" alt="+ "></p>
+<ul>
+<li>中央仓库（MVN）<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></li>
+</ul>
 <p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
 <h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
 <li>在settings.xml文件中的mirrors下添加mirror标签</li>
 </ul>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200530192209838.png" alt="image-20200530192209838"></p>
-]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line"></span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line"></span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line"></span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line"></span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>maven是由纯java开发，是跨平台的可以在window，linux，mac上使用</li>
+<li>清晰的项目结构</li>
+<li>使用Maven将大型项目按照模块拆分成若干工程，不同的团队维护各自的工程，可大大的提升开发效率。<ul>
+<li>大型商城项目按业务分成商品管理，用户管理，订单管理等模块</li>
+<li>中小型项目按照传统项目分为Web，Service，Dao层，依照员工的业务能力分配工作</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a>Maven常用命令</h2><ul>
+<li><p>mvn       命令（在工程目录下）</p>
+</li>
+<li><p>clean            清理</p>
+</li>
+<li><p>compile          编译，只编译main文件，不编译test中的代码（记得常clean）</p>
+</li>
+<li><p>test-compile    编译test目录中的代码 </p>
+</li>
+<li><p>package     打包           打包完的名字是由pom.xml中的(artifactId——version—-packaging)决定的</p>
+<ul>
+<li>Java项目—–打成jar包          </li>
+<li>web项目—–打成war包</li>
+</ul>
+</li>
+<li><p>install：    发布项目到本地仓库，用在打jar包上，打成jar包可以被其他项目使用</p>
+</li>
+<li><p>tomcat：run：    一键构建项目</p>
+</li>
+</ul>
+<h2 id="Maven的生命周期"><a href="#Maven的生命周期" class="headerlink" title="Maven的生命周期"></a>Maven的生命周期</h2><ul>
+<li>Clean       生命周期：clean</li>
+<li>Default      生命周期：compile，test-compile，test，package，install</li>
+<li>Silt              生命周期：site命令，生成项目描述文档静态页</li>
+<li>不同的生命周期可以一起执行，例如先clean再compile</li>
+</ul>
+<h2 id="Maven命令的执行顺序"><a href="#Maven命令的执行顺序" class="headerlink" title="Maven命令的执行顺序"></a>Maven命令的执行顺序</h2><ul>
+<li>在相同生命周期中的命令才会受执行顺序的影响</li>
+<li>Default生命周期中的命令执行顺序：<ul>
+<li>compile&lt;—test-compile&lt;—test&lt;—package&lt;—install</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven入门程序"><a href="#Maven入门程序" class="headerlink" title="Maven入门程序"></a>Maven入门程序</h2><ul>
+<li><p>创建Maven项目</p>
+</li>
+<li><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132200007.png" alt="image-20200531132200007" style="zoom:200%;">
+</li>
+<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132333105.png" alt="image-20200531132333105"></p>
+</li>
+<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132454709.png" alt="image-20200531132454709"></p>
+</li>
+<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132531764.png" alt="image-20200531132531764"></p>
+</li>
+<li></li>
+<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531115832479.png" alt="image-20200531115832479"></p>
+</li>
+</ul>
+<ul>
+<li><p>再src—&gt;main–&gt;webapp下创建WEB-INF目录，并在目录下创建web.xml</p>
+</li>
+<li><p>修改Maven默认编译级别</p>
+<ul>
+<li>全局编译级别–&gt;修改settings.xml</li>
+<li>项目级别修改–&gt;项目对应的pox.xml</li>
+</ul>
+</li>
+<li><p>在Java Resourcese -&gt; src/main/java下写代码，创建包和Servlet；</p>
+</li>
+<li><p>添加servlet-api</p>
+</li>
+<li><p>在servlet-api中添加scope标签，值为：proviede；</p>
+<ul>
+<li>如果不加此标签有很大几率报错，因为tomcat中也有servlet-api的包导致冲突；</li>
+</ul>
+</li>
+<li><p>运行：发生错误，原因是maven默认使用tomcat6.xx，不支持@WebServle注解；</p>
+<ul>
+<li>解决方案1：需要去web.xml中配置Servlet;</li>
+<li>解决方案2：配置高版本tomcat插件；</li>
+</ul>
+</li>
+<li><p>最后测试，启动服务，在地址栏输入请求，显示结果；</p>
+</li>
+<li><p>报错可以更新Maven</p>
+</li>
+</ul>
+<h2 id="使用tomcat7插件运行项目"><a href="#使用tomcat7插件运行项目" class="headerlink" title="使用tomcat7插件运行项目"></a>使用tomcat7插件运行项目</h2>]]></content>
       <tags>
         <tag>maven</tag>
       </tags>
