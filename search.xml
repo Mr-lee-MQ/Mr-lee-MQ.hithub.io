@@ -161,6 +161,8 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 </li>
 <li><p><a href="https://www.wailian.work/image/AjEN5b" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531115832479.png" alt="image-20200531115832479.png"></a></p>
 </li>
+<li><p><img src="http://s1.wailian.download/2020/06/10/sp200610_113715.png" alt="sp200610_113715.png"></p>
+</li>
 </ul>
 <ul>
 <li><p>在src—&gt;main–&gt;webapp下创建WEB-INF目录，并在目录下创建web.xml</p>
