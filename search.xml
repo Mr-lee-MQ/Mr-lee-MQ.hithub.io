@@ -177,7 +177,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 </li>
 </ul>
 <h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/C:%5CUsers%5Cwww22%5Cblog%5Csource_posts%5Cmaven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%5Cimage-20200530175433411.png" alt="+ "></p>
+<p><a href="https://www.wailian.work/image/AjEarS" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200530175433411.png" alt="image-20200530175433411.png"></a></p>
 <ul>
 <li>中央仓库（MVN）<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></li>
 </ul>
@@ -234,16 +234,15 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <h2 id="Maven入门程序"><a href="#Maven入门程序" class="headerlink" title="Maven入门程序"></a>Maven入门程序</h2><ul>
 <li><p>创建Maven项目</p>
 </li>
-<li><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132200007.png" alt="image-20200531132200007" style="zoom:200%;">
+<li><p>!<img src="http://s1.wailian.download/2020/06/10/image-20200531132200007.png" alt="image-20200531132200007.png"></p>
 </li>
-<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132333105.png" alt="image-20200531132333105"></p>
+<li><p><a href="https://www.wailian.work/image/AjE28B" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132333105.png" alt="image-20200531132333105.png"></a></p>
 </li>
-<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132454709.png" alt="image-20200531132454709"></p>
+<li><p><a href="https://www.wailian.work/image/AjE9a0" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132454709.md.png" alt="image-20200531132454709.md.png"></a></p>
 </li>
-<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531132531764.png" alt="image-20200531132531764"></p>
+<li><p><a href="https://www.wailian.work/image/AjEW5l" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132531764.png" alt="image-20200531132531764.png"></a></p>
 </li>
-<li></li>
-<li><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/image-20200531115832479.png" alt="image-20200531115832479"></p>
+<li><p><img src="http://s1.wailian.download/2020/06/10/image-20200531115832479.png" alt="image-20200531115832479.png"></p>
 </li>
 </ul>
 <ul>
