@@ -18,7 +18,7 @@
 <meta property="og:description" content="MyBatis框架">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-27T10:52:32.000Z">
-<meta property="article:modified_time" content="2020-05-31T06:16:15.367Z">
+<meta property="article:modified_time" content="2020-06-10T13:01:52.934Z">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
   
@@ -223,7 +223,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.2k字</span>
+      <span class="post-count">1.3k字</span>
     </span>
   </span>
 
@@ -279,7 +279,7 @@
 <p>解决方案： 将sql语句配置到xml文件中，即使sql变化，不需要对java代码进行重新编译。</p>
 </li>
 </ol>
-<h2 id="mybatis的概述"><a href="#mybatis的概述" class="headerlink" title="mybatis的概述"></a>mybatis的概述</h2><p>​    mybatis是一个持久层框架，用java编写。</p>
+<h2 id="Mybatis的概述"><a href="#Mybatis的概述" class="headerlink" title="Mybatis的概述"></a>Mybatis的概述</h2><p>​    Mybatis是一个持久层框架，用java编写。</p>
 <p>​    它封装了jdbc操作的很多细节，使开发者只需要关注sql语句本身，而无需关注注册驱动，创建链接等繁杂过程。</p>
 <p>​    它使用了ORM思想，实现了结果集的封装</p>
 <p>​        ORM：</p>
@@ -287,13 +287,24 @@
 <p>​        简单的说：</p>
 <p>​                    就是把数据库表和实体类及实体类的的属性对应起来</p>
 <p>​                    让我们可以操作实体类就实现操作数据库</p>
-<h2 id="mybatis框架流程"><a href="#mybatis框架流程" class="headerlink" title="mybatis框架流程"></a>mybatis框架流程</h2><ul>
+<h2 id="Mybatis实现的基本原理"><a href="#Mybatis实现的基本原理" class="headerlink" title="Mybatis实现的基本原理"></a>Mybatis实现的基本原理</h2><ul>
+<li>应用程序找Mybatis要数据</li>
+<li>mybatis从数据库中找来数据<ul>
+<li>通过mybatis-config.xml 定位哪个数据库</li>
+<li>通过Category.xml执行对应的select语句</li>
+<li>基于Category.xml把返回的数据库记录封装在Category对象中</li>
+<li>把多个Category对象装在一个Category集合中</li>
+</ul>
+</li>
+<li>返回一个Category集合</li>
+</ul>
+<h2 id="Mybatis框架流程"><a href="#Mybatis框架流程" class="headerlink" title="Mybatis框架流程"></a>Mybatis框架流程</h2><ul>
 <li>sqlMapConfig.xml(是mybatis的全局配置文件)配置了数据源，事务等mybatis运行环境，配置了映射文件（配置sql语句）mapper.xml(映射文件)，mapper.xml，mapper.xml………</li>
 <li>sqlSessionFactory（会话工厂），根据配置文件创建工厂     作用：创建sqlsession。</li>
 <li>sqlSession（会话），是一个接口，面向（程序员）的接口    作用：操作数据库（发出sql增删改查）</li>
 <li>Executor（执行器），也是一个接口（基本执行器，缓存执行器）   作用：sqlsession内部通过执行器操作数据库</li>
 </ul>
-<h2 id="mybatis的入门"><a href="#mybatis的入门" class="headerlink" title="mybatis的入门"></a>mybatis的入门</h2><ul>
+<h2 id="Mybatis的入门"><a href="#Mybatis的入门" class="headerlink" title="Mybatis的入门"></a>Mybatis的入门</h2><ul>
 <li><p>在pom.xml文件中写入打包方式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;packaging&gt;jar&lt;&#x2F;packaging&gt;</span><br></pre></td></tr></table></figure>
 </li>
@@ -490,7 +501,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MyBatis框架"><span class="toc-number">1.</span> <span class="toc-text">MyBatis框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三层架构"><span class="toc-number">1.1.</span> <span class="toc-text">三层架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持久层技术解决方案"><span class="toc-number">1.2.</span> <span class="toc-text">持久层技术解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC技术"><span class="toc-number">1.2.1.</span> <span class="toc-text">JDBC技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-的JdbcTemplate："><span class="toc-number">1.2.2.</span> <span class="toc-text">Spring 的JdbcTemplate：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache的DBUtils："><span class="toc-number">1.2.3.</span> <span class="toc-text">Apache的DBUtils：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#持久层"><span class="toc-number">1.2.4.</span> <span class="toc-text">持久层</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBC编程分析"><span class="toc-number">1.3.</span> <span class="toc-text">JDBC编程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原生JDBC的问题"><span class="toc-number">1.4.</span> <span class="toc-text">原生JDBC的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mybatis的概述"><span class="toc-number">1.5.</span> <span class="toc-text">mybatis的概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mybatis框架流程"><span class="toc-number">1.6.</span> <span class="toc-text">mybatis框架流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mybatis的入门"><span class="toc-number">1.7.</span> <span class="toc-text">mybatis的入门</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MyBatis框架"><span class="toc-number">1.</span> <span class="toc-text">MyBatis框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三层架构"><span class="toc-number">1.1.</span> <span class="toc-text">三层架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#持久层技术解决方案"><span class="toc-number">1.2.</span> <span class="toc-text">持久层技术解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC技术"><span class="toc-number">1.2.1.</span> <span class="toc-text">JDBC技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-的JdbcTemplate："><span class="toc-number">1.2.2.</span> <span class="toc-text">Spring 的JdbcTemplate：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache的DBUtils："><span class="toc-number">1.2.3.</span> <span class="toc-text">Apache的DBUtils：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#持久层"><span class="toc-number">1.2.4.</span> <span class="toc-text">持久层</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBC编程分析"><span class="toc-number">1.3.</span> <span class="toc-text">JDBC编程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原生JDBC的问题"><span class="toc-number">1.4.</span> <span class="toc-text">原生JDBC的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis的概述"><span class="toc-number">1.5.</span> <span class="toc-text">Mybatis的概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis实现的基本原理"><span class="toc-number">1.6.</span> <span class="toc-text">Mybatis实现的基本原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis框架流程"><span class="toc-number">1.7.</span> <span class="toc-text">Mybatis框架流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mybatis的入门"><span class="toc-number">1.8.</span> <span class="toc-text">Mybatis的入门</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -638,11 +649,15 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
             
             <div class="clearfix"></div>
