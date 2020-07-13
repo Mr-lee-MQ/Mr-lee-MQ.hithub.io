@@ -530,42 +530,102 @@ int main()
 </ul>
 </li>
 </ul>
-<h2 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h2><ul>
-<li><pre><code class="html"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>       <span class="comment">&lt;!--必填，表示要跳转的网址</span>
-<span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  +  target     以何种方式打开窗口</span><br><span class="line">    + blank     在一个新的网页中打开</span><br><span class="line">    + self         在本网页中打开</span><br><span class="line"></span><br><span class="line">+ 锚链接</span><br><span class="line"></span><br><span class="line">  + 需要一个锚标记</span><br><span class="line">  + #加标记name </span><br><span class="line"></span><br><span class="line">+ 功能性链接</span><br><span class="line"></span><br><span class="line">  + 邮件链接： mailto</span><br><span class="line"></span><br><span class="line">  + QQ链接：</span><br></pre></td></tr></table></figure></span>
-  <span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"http://wpa.qq.com/pa?p=2::52"</span> <span class="attr">alt</span>=<span class="string">"点击我"</span> <span class="attr">title</span>=<span class="string">"点击我"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-  <span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 行内元素和块元素</span><br><span class="line"></span><br><span class="line">+ 块元素</span><br><span class="line">  + 无论内容多少，该元素独占一行</span><br><span class="line">  + （p、h1-h6）</span><br><span class="line">+ 行内元素</span><br><span class="line">  + 内容撑开宽度，左右都是行元素的可以排在一行</span><br><span class="line">  + （a.strong.em.....）</span><br><span class="line"></span><br><span class="line">## 列表</span><br><span class="line"></span><br><span class="line">+ 无序列表</span><br></pre></td></tr></table></figure></span>
-<span class="tag">&lt;<span class="name">ol</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">li</span>&gt;</span>JAVA<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">li</span>&gt;</span>前端<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
-  <span class="tag">&lt;<span class="name">li</span>&gt;</span>C语言<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
-</code></pre>
+<h2 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;&quot;&gt;&lt;&#x2F;a&gt;       &lt;!--必填，表示要跳转的网址</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>target     以何种方式打开窗口</p>
+<ul>
+<li>blank     在一个新的网页中打开</li>
+<li>self         在本网页中打开</li>
+</ul>
+</li>
+<li><p>锚链接</p>
+<ul>
+<li>需要一个锚标记</li>
+<li>#加标记name </li>
+</ul>
+</li>
+<li><p>功能性链接</p>
+<ul>
+<li><p>邮件链接： mailto</p>
+</li>
+<li><p>QQ链接：</p>
 </li>
 </ul>
-
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 有序列表</span><br></pre></td></tr></table></figure>
-<ul>
-    <li>JAVA</li>
-    <li>前端</li>
-    <li>C语言</li>
-
+</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 自定义列表</span><br></pre></td></tr></table></figure>
-<dl>
-    <dt>学科</dt>
-    <dd>JAVA</dd>
-    <dd>Linux</dd>
-</dl>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 表格标签</span><br><span class="line"></span><br><span class="line">+  表格标签table</span><br><span class="line"></span><br><span class="line">  + 行标签   tr</span><br><span class="line"></span><br><span class="line">  + 列标签   ed</span><br><span class="line"></span><br><span class="line">  + 边框   border</span><br><span class="line"></span><br><span class="line">  + 跨列   colspan</span><br></pre></td></tr></table></figure>
-<td colspan="4">1-1</td>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 跨行  rowspan</span><br></pre></td></tr></table></figure>
-<td rowspan="2">2-1</td>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 视频和音频</span><br></pre></td></tr></table></figure>
-<video src="../resources/video/NOGIZAKA46_></video>
-<figure class=" highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ src     资源路径</span><br><span class="line">+ controls    控制条 </span><br><span class="line">+ autoplay    自动播放</span><br></pre></td></tr></table>
-<audio src="../resources/audio/LOSER%20-%20米津玄師.mp3"></audio>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ controls    控制条 </span><br><span class="line">+ autoplay    自动播放</span><br><span class="line"></span><br><span class="line">## 页面结构分析</span><br><span class="line"></span><br><span class="line">+ header    标题头部区域的内容</span><br><span class="line">+ footer     标记脚部区域的内容</span><br><span class="line">+ section    Web页面中的一块独立区域</span><br><span class="line">+ article      独立的文章内容</span><br><span class="line">+ aside      相关内容或应用</span><br><span class="line">+ nav      导航类辅助内容</span><br><span class="line"></span><br><span class="line">## iframe内联框架</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;iframe src&#x3D;&quot;&quot; height&#x3D;&quot;&quot; width&#x3D;&quot;&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"http://wpa.qq.com/pa?p=2::52"</span> <span class="attr">alt</span>=<span class="string">"点击我"</span> <span class="attr">title</span>=<span class="string">"点击我"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="行内元素和块元素"><a href="#行内元素和块元素" class="headerlink" title="行内元素和块元素"></a>行内元素和块元素</h2><ul>
+<li>块元素<ul>
+<li>无论内容多少，该元素独占一行</li>
+<li>（p、h1-h6）</li>
+</ul>
+</li>
+<li>行内元素<ul>
+<li>内容撑开宽度，左右都是行元素的可以排在一行</li>
+<li>（a.strong.em…..）</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>无序列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ol&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>有序列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自定义列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">    &lt;dt&gt;学科&lt;&#x2F;dt&gt;</span><br><span class="line">    &lt;dd&gt;JAVA&lt;&#x2F;dd&gt;</span><br><span class="line">    &lt;dd&gt;Linux&lt;&#x2F;dd&gt;</span><br><span class="line">&lt;&#x2F;dl&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><ul>
+<li><p>表格标签table</p>
+<ul>
+<li><p>行标签   tr</p>
+</li>
+<li><p>列标签   ed</p>
+</li>
+<li><p>边框   border</p>
+</li>
+<li><p>跨列   colspan</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;td colspan&#x3D;&quot;4&quot;&gt;1-1&lt;&#x2F;td&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>跨行  rowspan</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;td rowspan&#x3D;&quot;2&quot;&gt;2-1&lt;&#x2F;td&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="视频和音频"><a href="#视频和音频" class="headerlink" title="视频和音频"></a>视频和音频</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;video src&#x3D;&quot;..&#x2F;resources&#x2F;video&#x2F;NOGIZAKA46_&gt;&lt;&#x2F;video&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>src     资源路径</li>
+<li>controls    控制条 </li>
+<li>autoplay    自动播放</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;audio src&#x3D;&quot;..&#x2F;resources&#x2F;audio&#x2F;LOSER%20-%20米津玄師.mp3&quot;&gt;&lt;&#x2F;audio&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>controls    控制条 </li>
+<li>autoplay    自动播放</li>
+</ul>
+<h2 id="页面结构分析"><a href="#页面结构分析" class="headerlink" title="页面结构分析"></a>页面结构分析</h2><ul>
+<li>header    标题头部区域的内容</li>
+<li>footer     标记脚部区域的内容</li>
+<li>section    Web页面中的一块独立区域</li>
+<li>article      独立的文章内容</li>
+<li>aside      相关内容或应用</li>
+<li>nav      导航类辅助内容</li>
+</ul>
+<h2 id="iframe内联框架"><a href="#iframe内联框架" class="headerlink" title="iframe内联框架"></a>iframe内联框架</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">height</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>src    地址</li>
@@ -696,7 +756,7 @@ int main()
 <li>非空判断：required</li>
 <li>正则表达式:    pattern     百度可得</li>
 </ul>
-</video>]]></content>
+]]></content>
   </entry>
   <entry>
     <title>Hexo的搭建</title>
