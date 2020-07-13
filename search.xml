@@ -534,37 +534,42 @@ int main()
 <li><pre><code class="html"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>       <span class="comment">&lt;!--必填，表示要跳转的网址</span>
 <span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">  +  target     以何种方式打开窗口</span><br><span class="line">    + blank     在一个新的网页中打开</span><br><span class="line">    + self         在本网页中打开</span><br><span class="line"></span><br><span class="line">+ 锚链接</span><br><span class="line"></span><br><span class="line">  + 需要一个锚标记</span><br><span class="line">  + #加标记name </span><br><span class="line"></span><br><span class="line">+ 功能性链接</span><br><span class="line"></span><br><span class="line">  + 邮件链接： mailto</span><br><span class="line"></span><br><span class="line">  + QQ链接：</span><br></pre></td></tr></table></figure></span>
   <span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"http://wpa.qq.com/pa?p=2::52"</span> <span class="attr">alt</span>=<span class="string">"点击我"</span> <span class="attr">title</span>=<span class="string">"点击我"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span>
-  <span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 行内元素和块元素</span><br><span class="line"></span><br><span class="line">+ 块元素</span><br><span class="line">  + 无论内容多少，该元素独占一行</span><br><span class="line">  + （p、h1-h6）</span><br><span class="line">+ 行内元素</span><br><span class="line">  + 内容撑开宽度，左右都是行元素的可以排在一行</span><br><span class="line">  + （a.strong.em.....）</span><br><span class="line"></span><br><span class="line">## 列表</span><br><span class="line"></span><br><span class="line">+ 无序列表</span><br><span class="line"></span><br><span class="line">  + &#96;&#96;&#96;html</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">    	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">    	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">    	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;&#x2F;ol&gt;</span><br></pre></td></tr></table></figure></span></code></pre>
+  <span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 行内元素和块元素</span><br><span class="line"></span><br><span class="line">+ 块元素</span><br><span class="line">  + 无论内容多少，该元素独占一行</span><br><span class="line">  + （p、h1-h6）</span><br><span class="line">+ 行内元素</span><br><span class="line">  + 内容撑开宽度，左右都是行元素的可以排在一行</span><br><span class="line">  + （a.strong.em.....）</span><br><span class="line"></span><br><span class="line">## 列表</span><br><span class="line"></span><br><span class="line">+ 无序列表</span><br></pre></td></tr></table></figure></span>
+<span class="tag">&lt;<span class="name">ol</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">li</span>&gt;</span>JAVA<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">li</span>&gt;</span>前端<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">li</span>&gt;</span>C语言<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
+</code></pre>
 </li>
-<li><p>有序列表</p>
-<ul>
-<li><pre><code>&lt;ul&gt;
-    &lt;li&gt;JAVA&lt;/li&gt;
-    &lt;li&gt;前端&lt;/li&gt;
-    &lt;li&gt;C语言&lt;/li&gt;
-
-&lt;/ul&gt;
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">+ 自定义列表</span><br><span class="line"></span><br><span class="line">  +</span><br></pre></td></tr></table></figure>
-&lt;dl&gt;
-    &lt;dt&gt;学科&lt;/dt&gt;
-    &lt;dd&gt;JAVA&lt;/dd&gt;
-    &lt;dd&gt;Linux&lt;/dd&gt;
-&lt;/dl&gt;
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 表格标签</span><br><span class="line"></span><br><span class="line">+  表格标签table</span><br><span class="line"></span><br><span class="line">  + 行标签   tr</span><br><span class="line"></span><br><span class="line">  + 列标签   ed</span><br><span class="line"></span><br><span class="line">  + 边框   border</span><br><span class="line"></span><br><span class="line">  + 跨列   colspan</span><br><span class="line"></span><br><span class="line">    +</span><br></pre></td></tr></table></figure>
-  &lt;td colspan=&quot;4&quot;&gt;1-1&lt;/td&gt;
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 跨行  rowspan</span><br><span class="line"></span><br><span class="line">  +</span><br></pre></td></tr></table></figure>
-   &lt;td rowspan=&quot;2&quot;&gt;2-1&lt;/td&gt;
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 视频和音频</span><br></pre></td></tr></table></figure>
-&lt;video src=&quot;../resources/video/NOGIZAKA46_&gt;&lt;/video&gt;
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ src     资源路径</span><br><span class="line">+ controls    控制条 </span><br><span class="line">+ autoplay    自动播放</span><br></pre></td></tr></table></figure>
-&lt;audio src=&quot;../resources/audio/LOSER%20-%20米津玄師.mp3&quot;&gt;&lt;/audio&gt;
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ controls    控制条 </span><br><span class="line">+ autoplay    自动播放</span><br><span class="line"></span><br><span class="line">## 页面结构分析</span><br><span class="line"></span><br><span class="line">+ header    标题头部区域的内容</span><br><span class="line">+ footer     标记脚部区域的内容</span><br><span class="line">+ section    Web页面中的一块独立区域</span><br><span class="line">+ article      独立的文章内容</span><br><span class="line">+ aside      相关内容或应用</span><br><span class="line">+ nav      导航类辅助内容</span><br><span class="line"></span><br><span class="line">## iframe内联框架</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;iframe src&#x3D;&quot;&quot; height&#x3D;&quot;&quot; width&#x3D;&quot;&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure></code></pre></li>
 </ul>
-</li>
-<li><p>src    地址</p>
-</li>
-<li><p>w-h    高度宽度   </p>
-</li>
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 有序列表</span><br></pre></td></tr></table></figure>
+<ul>
+    <li>JAVA</li>
+    <li>前端</li>
+    <li>C语言</li>
+
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 自定义列表</span><br></pre></td></tr></table></figure>
+<dl>
+    <dt>学科</dt>
+    <dd>JAVA</dd>
+    <dd>Linux</dd>
+</dl>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 表格标签</span><br><span class="line"></span><br><span class="line">+  表格标签table</span><br><span class="line"></span><br><span class="line">  + 行标签   tr</span><br><span class="line"></span><br><span class="line">  + 列标签   ed</span><br><span class="line"></span><br><span class="line">  + 边框   border</span><br><span class="line"></span><br><span class="line">  + 跨列   colspan</span><br></pre></td></tr></table></figure>
+<td colspan="4">1-1</td>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ 跨行  rowspan</span><br></pre></td></tr></table></figure>
+<td rowspan="2">2-1</td>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">## 视频和音频</span><br></pre></td></tr></table></figure>
+<video src="../resources/video/NOGIZAKA46_></video>
+<figure class=" highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ src     资源路径</span><br><span class="line">+ controls    控制条 </span><br><span class="line">+ autoplay    自动播放</span><br></pre></td></tr></table>
+<audio src="../resources/audio/LOSER%20-%20米津玄師.mp3"></audio>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ controls    控制条 </span><br><span class="line">+ autoplay    自动播放</span><br><span class="line"></span><br><span class="line">## 页面结构分析</span><br><span class="line"></span><br><span class="line">+ header    标题头部区域的内容</span><br><span class="line">+ footer     标记脚部区域的内容</span><br><span class="line">+ section    Web页面中的一块独立区域</span><br><span class="line">+ article      独立的文章内容</span><br><span class="line">+ aside      相关内容或应用</span><br><span class="line">+ nav      导航类辅助内容</span><br><span class="line"></span><br><span class="line">## iframe内联框架</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;iframe src&#x3D;&quot;&quot; height&#x3D;&quot;&quot; width&#x3D;&quot;&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>src    地址</li>
+<li>w-h    高度宽度   </li>
 </ul>
 <h2 id="表单语法"><a href="#表单语法" class="headerlink" title="表单语法"></a>表单语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&quot;&gt;&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
 
@@ -618,13 +623,17 @@ int main()
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"game"</span><span class="attr">name</span>=<span class="string">"hobby"</span> &gt;</span>游戏</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"go"</span><span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">checked</span>&gt;</span>逛街</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"hua"</span><span class="attr">name</span>=<span class="string">"hobby"</span> &gt;</span>化妆</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>按钮  button</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;button&quot;name&#x3D;&quot;but1&quot; value&#x3D;&quot;点击&quot;&#x2F;&gt;</span><br><span class="line">&lt;input type&#x3D;&quot;image&quot;src&#x3D;&quot;..&#x2F;resources&#x2F;image&#x2F;mmexport1564926230808.jpg&quot;alt&#x3D;&quot;tutu&quot;width&#x3D;&quot;200&quot;height&#x3D;&quot;200&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>下拉框/列表框      select</p>
 <ul>
-<li><pre><code class="html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span><span class="attr">name</span>=<span class="string">"but1"</span> <span class="attr">value</span>=<span class="string">"点击"</span>/&gt;</span>
-<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span><span class="attr">src</span>=<span class="string">"../resources/image/mmexport1564926230808.jpg"</span><span class="attr">alt</span>=<span class="string">"tutu"</span><span class="attr">width</span>=<span class="string">"200"</span><span class="attr">height</span>=<span class="string">"200"</span>/&gt;</span>
-<span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">下拉框&#x2F;列表框      select</span><br><span class="line"></span><br><span class="line">+ select    列表</span><br><span class="line"></span><br><span class="line">+ option  value&#x3D;“      ”     选项的值</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;select name&#x3D;&quot;列表名称&quot;&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;china&quot;&gt;中国&lt;&#x2F;option&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;ruishi&quot;&gt;瑞士&lt;&#x2F;option&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;deguo&quot;&gt;德国&lt;&#x2F;option&gt;</span><br><span class="line">        &lt;option value&#x3D;&quot;meiguo&quot;&gt;美国&lt;&#x2F;option&gt;</span><br><span class="line">    &lt;&#x2F;select&gt;</span><br></pre></td></tr></table></figure></span>
-</code></pre>
+<li><p>select    列表</p>
+</li>
+<li><p>option  value=“      ”     选项的值</p>
 </li>
 </ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"列表名称"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"china"</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ruishi"</span>&gt;</span>瑞士<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"deguo"</span>&gt;</span>德国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"meiguo"</span>&gt;</span>美国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>文本域   textarea</p>
 <ul>
 <li>cols   长度</li>
@@ -636,25 +645,27 @@ int main()
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"files"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"bon1"</span> <span class="attr">value</span>=<span class="string">"上传"</span> &gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>邮件验证     email</p>
-<ul>
-<li><pre><code class="html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span><span class="attr">name</span>=<span class="string">"email"</span>&gt;</span>
-<span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">URL验证   url</span><br><span class="line"></span><br><span class="line">+ &#96;&#96;&#96;html</span><br><span class="line">   &lt;input type&#x3D;&quot;url&quot; name&#x3D;&quot;url&quot;&gt;</span><br></pre></td></tr></table></figure></span>
-</code></pre>
-</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;email&quot;name&#x3D;&quot;email&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>URL验证   url</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;url&quot; name&#x3D;&quot;url&quot;&gt;</span><br></pre></td></tr></table></figure>
+
 <p>数字验证  number</p>
 <ul>
-<li><p>max</p>
-</li>
-<li><p>min</p>
-</li>
-<li><p>step     递增或递减</p>
-</li>
-<li><pre><code class="html"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span><span class="attr">name</span>=<span class="string">"number"</span> <span class="attr">max</span>=<span class="string">"100"</span><span class="attr">min</span>=<span class="string">"10"</span><span class="attr">step</span>=<span class="string">"1"</span> &gt;</span>
-<span class="comment"><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">滑块     range</span><br><span class="line"></span><br><span class="line">+ max</span><br><span class="line">+ min</span><br><span class="line">+ step    递增或递减 </span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">&lt;input type&#x3D;&quot;range&quot;name&#x3D;&quot;huakuai&quot;max&#x3D;&quot;100&quot;min&#x3D;&quot;1&quot;step&#x3D;&quot;1&quot;&gt;</span><br></pre></td></tr></table></figure></span>
-</code></pre>
-</li>
+<li>max</li>
+<li>min</li>
+<li>step     递增或递减</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;number&quot;name&#x3D;&quot;number&quot; max&#x3D;&quot;100&quot;min&#x3D;&quot;10&quot;step&#x3D;&quot;1&quot; &gt;</span><br></pre></td></tr></table></figure>
+
+<p>滑块     range</p>
+<ul>
+<li>max</li>
+<li>min</li>
+<li>step    递增或递减 </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span><span class="attr">name</span>=<span class="string">"huakuai"</span><span class="attr">max</span>=<span class="string">"100"</span><span class="attr">min</span>=<span class="string">"1"</span><span class="attr">step</span>=<span class="string">"1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>搜索框   search</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span><span class="attr">name</span>=<span class="string">"sousuo"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -685,7 +696,7 @@ int main()
 <li>非空判断：required</li>
 <li>正则表达式:    pattern     百度可得</li>
 </ul>
-]]></content>
+</video>]]></content>
   </entry>
   <entry>
     <title>Hexo的搭建</title>
