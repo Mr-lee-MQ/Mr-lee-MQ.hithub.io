@@ -411,6 +411,40 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Git</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git<a id="more"></a></h1><h2 id="idea安装Git"><a href="#idea安装Git" class="headerlink" title="idea安装Git"></a>idea安装Git</h2><ul>
+<li><p>[下载地址]:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
+</li>
+<li><p>安装默认</p>
+</li>
+<li><p>运行测试：win+r,cmd  打开控制台，输入git指令，看到下图即表示安装成功</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5793.png" alt="运行测试"></p>
+</li>
+</ul>
+<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
+<li><p>菜单-&gt;settings-&gt;Version Control-&gt;Git-&gt;Path to Git executable: 设置为<a href="https://how2j.cn/k/idea/idea-git-install/1359.html" target="_blank" rel="noopener">安装git</a>中所安装的git.exe</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5794.png" alt="为IDEA指定git路径"></p>
+</li>
+<li><p>接下来为github设置账号密码：<br>菜单-&gt;settings-&gt;Version Control-&gt;GitHub-&gt;Create API Token</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5795.png" alt="设置github账号"></p>
+</li>
+</ul>
+<h2 id="idea-pull项目"><a href="#idea-pull项目" class="headerlink" title="idea pull项目"></a>idea pull项目</h2><ul>
+<li>checkout：菜单-&gt;VCS-&gt;Chekout from Version Control-&gt;GitHub</li>
+<li><img src="https://stepimagewm.how2j.cn/5797.png" alt="checkout"></li>
+<li>输入项目参数：Git Repositor URL:<a href="https://github.com/how2j/higit.git" target="_blank" rel="noopener">https://github.com/how2j/higit.git</a><br>Parent Directory: e:\project<br>Directory Name: higit<br>然后点击 Clone</li>
+<li><img src="https://stepimagewm.how2j.cn/5798.png" alt="输入项目参数"></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML5</title>
     <url>/Mr-lee-MQ.hithub.io/2020/07/13/HTML5/</url>
     <content><![CDATA[<h1 id="HTML详解"><a href="#HTML详解" class="headerlink" title="HTML详解"></a>HTML详解<a id="more"></a></h1><h2 id="初识HTML"><a href="#初识HTML" class="headerlink" title="初识HTML"></a>初识HTML</h2><ul>
@@ -430,8 +464,10 @@ int main()
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>​    <body>  ，</body>等成对出现的标签（<body> 为开放标签     </body>为闭合标签 ）</li>
-<li>&lt; meta charset=”UTF-8”&gt;为自闭合标签</li>
+<li><p>&lt; body&gt;  ，&lt; /body&gt;等成对出现的标签（&lt; body&gt; 为开放标签     &lt; /body&gt;为闭合标签 ）</p>
+</li>
+<li><p>&lt; meta charset=”UTF-8”&gt;为自闭合标签</p>
+</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE：      &gt;</span>      <span class="comment">&lt;!--告诉浏览器要使用什么规范--&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -444,14 +480,14 @@ int main()
 <h2 id="网页基本标签"><a href="#网页基本标签" class="headerlink" title="网页基本标签"></a>网页基本标签</h2><ul>
 <li><p>标题标签</p>
 <ul>
-<li>（<h1>一级标签</h1>）</li>
-<li>（<h2>一级标签</h2>）</li>
-<li>（<h3>一级标签</h3>）</li>
+<li>（&lt; h1&gt;一级标签&lt; /h1&gt;）</li>
+<li>（&lt; h2&gt;一级标签&lt; /h2&gt;）</li>
+<li>（&lt; h3&gt;一级标签&lt; /h3&gt;）</li>
 </ul>
 </li>
 <li><p>段落标签</p>
 <ul>
-<li>（<p>段落</p>）</li>
+<li>（&lt; p&gt;段落&lt; /p&gt;）</li>
 </ul>
 </li>
 <li><p>换行标签</p>
@@ -461,13 +497,13 @@ int main()
 </li>
 <li><p>水平线标签</p>
 <ul>
-<li>（）</li>
+<li>（&lt; /hr&gt;）</li>
 </ul>
 </li>
 <li><p>字体样式标签</p>
 <ul>
-<li>粗体（<stong>  </stong>）</li>
-<li>斜体（<em></em>）</li>
+<li>粗体（&lt; stong&gt;  &lt; /stong&gt;）</li>
+<li>斜体（&lt; em&gt;&lt; /em&gt;）</li>
 </ul>
 </li>
 <li><p>特殊符号（&amp;     ）</p>
@@ -481,13 +517,15 @@ int main()
 </ul>
 <h2 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h2><ul>
 <li>img标签学习<ul>
-<li><img src>
-+ src     图片地址
-  + 相对地址（常用）../      --上一级目录
-  + 绝对地址
-+ alt     图片名字
-+ title     鼠标悬停显示的文字
-
+<li>&lt; img src&gt;<ul>
+<li>src     图片地址<ul>
+<li>相对地址（常用）../      –上一级目录</li>
+<li>绝对地址</li>
+</ul>
+</li>
+<li>alt     图片名字</li>
+<li>title     鼠标悬停显示的文字</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -650,56 +688,6 @@ int main()
 ]]></content>
   </entry>
   <entry>
-    <title>Java上线流程</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/12/Java%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Java项目上线流程"><a href="#Java项目上线流程" class="headerlink" title="Java项目上线流程"></a>Java项目上线流程<a id="more"></a></h1><ul>
-<li>企业项目</li>
-</ul>
-<p>定需求（开会）—&gt;写需求文档（同时可以技术选型）—&gt;设计原型—&gt;开发前端代码（后端代码也可以同时进行开发）—&gt;前后端代码进行测试—&gt;上传到公网—&gt;客户在使用中也是一个测试—&gt;出现了bug或功能不全在更新。</p>
-<ul>
-<li>自己开发的项目</li>
-</ul>
-<p>项目代码写好以后在本地运行测试完毕—&gt;购买域名和服务器—&gt;域名的解析（简单的说就是将域名和服务器的ip绑定，以后访问时就直接找到你的服务器，这就叫做DNS解析）—&gt;在服务器上搭建项目运行的环境（数据库，web容器，redis，Nginx）—&gt;项目上线</p>
-<h2 id="学习路线的问题"><a href="#学习路线的问题" class="headerlink" title="学习路线的问题"></a>学习路线的问题</h2>]]></content>
-      <tags>
-        <tag>Java项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
-    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git<a id="more"></a></h1><h2 id="idea安装Git"><a href="#idea安装Git" class="headerlink" title="idea安装Git"></a>idea安装Git</h2><ul>
-<li><p>[下载地址]:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
-</li>
-<li><p>安装默认</p>
-</li>
-<li><p>运行测试：win+r,cmd  打开控制台，输入git指令，看到下图即表示安装成功</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5793.png" alt="运行测试"></p>
-</li>
-</ul>
-<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
-<li><p>菜单-&gt;settings-&gt;Version Control-&gt;Git-&gt;Path to Git executable: 设置为<a href="https://how2j.cn/k/idea/idea-git-install/1359.html" target="_blank" rel="noopener">安装git</a>中所安装的git.exe</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5794.png" alt="为IDEA指定git路径"></p>
-</li>
-<li><p>接下来为github设置账号密码：<br>菜单-&gt;settings-&gt;Version Control-&gt;GitHub-&gt;Create API Token</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5795.png" alt="设置github账号"></p>
-</li>
-</ul>
-<h2 id="idea-pull项目"><a href="#idea-pull项目" class="headerlink" title="idea pull项目"></a>idea pull项目</h2><ul>
-<li>checkout：菜单-&gt;VCS-&gt;Chekout from Version Control-&gt;GitHub</li>
-<li><img src="https://stepimagewm.how2j.cn/5797.png" alt="checkout"></li>
-<li>输入项目参数：Git Repositor URL:<a href="https://github.com/how2j/higit.git" target="_blank" rel="noopener">https://github.com/how2j/higit.git</a><br>Parent Directory: e:\project<br>Directory Name: higit<br>然后点击 Clone</li>
-<li><img src="https://stepimagewm.how2j.cn/5798.png" alt="输入项目参数"></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo的搭建</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
@@ -729,6 +717,22 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java上线流程</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/06/12/Java%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Java项目上线流程"><a href="#Java项目上线流程" class="headerlink" title="Java项目上线流程"></a>Java项目上线流程<a id="more"></a></h1><ul>
+<li>企业项目</li>
+</ul>
+<p>定需求（开会）—&gt;写需求文档（同时可以技术选型）—&gt;设计原型—&gt;开发前端代码（后端代码也可以同时进行开发）—&gt;前后端代码进行测试—&gt;上传到公网—&gt;客户在使用中也是一个测试—&gt;出现了bug或功能不全在更新。</p>
+<ul>
+<li>自己开发的项目</li>
+</ul>
+<p>项目代码写好以后在本地运行测试完毕—&gt;购买域名和服务器—&gt;域名的解析（简单的说就是将域名和服务器的ip绑定，以后访问时就直接找到你的服务器，这就叫做DNS解析）—&gt;在服务器上搭建项目运行的环境（数据库，web容器，redis，Nginx）—&gt;项目上线</p>
+<h2 id="学习路线的问题"><a href="#学习路线的问题" class="headerlink" title="学习路线的问题"></a>学习路线的问题</h2>]]></content>
+      <tags>
+        <tag>Java项目</tag>
       </tags>
   </entry>
   <entry>
