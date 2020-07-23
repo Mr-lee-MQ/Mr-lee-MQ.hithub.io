@@ -445,6 +445,38 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Hexo的搭建</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
+<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
+<li>安装主题</li>
+</ul>
+<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
+<ul>
+<li>更新</li>
+</ul>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
+<p>用Hexo写一篇博客</p>
+<pre><code>$ hexo n &quot;我的第一篇博客&quot;
+INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
+<pre><code> hexo clean          # 清除所有记录 
+$ hexo generate       # 生成静态网页 简写：hexo g
+$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML5</title>
     <url>/Mr-lee-MQ.hithub.io/2020/07/13/HTML5/</url>
     <content><![CDATA[<h1 id="HTML详解"><a href="#HTML详解" class="headerlink" title="HTML详解"></a>HTML详解<a id="more"></a></h1><h2 id="初识HTML"><a href="#初识HTML" class="headerlink" title="初识HTML"></a>初识HTML</h2><ul>
@@ -757,38 +789,6 @@ int main()
 <li>正则表达式:    pattern     百度可得</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Hexo的搭建</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
-<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
-<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
-<li>安装主题</li>
-</ul>
-<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
-<ul>
-<li>配置</li>
-</ul>
-<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
-<ul>
-<li>更新</li>
-</ul>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
-<p>用Hexo写一篇博客</p>
-<pre><code>$ hexo n &quot;我的第一篇博客&quot;
-INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
-<pre><code> hexo clean          # 清除所有记录 
-$ hexo generate       # 生成静态网页 简写：hexo g
-$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>Java上线流程</title>
