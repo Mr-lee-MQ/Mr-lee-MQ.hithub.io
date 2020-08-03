@@ -352,6 +352,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Git</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git<a id="more"></a></h1><h2 id="idea安装Git"><a href="#idea安装Git" class="headerlink" title="idea安装Git"></a>idea安装Git</h2><ul>
+<li><p>[下载地址]:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
+</li>
+<li><p>安装默认</p>
+</li>
+<li><p>运行测试：win+r,cmd  打开控制台，输入git指令，看到下图即表示安装成功</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5793.png" alt="运行测试"></p>
+</li>
+</ul>
+<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
+<li><p>菜单-&gt;settings-&gt;Version Control-&gt;Git-&gt;Path to Git executable: 设置为<a href="https://how2j.cn/k/idea/idea-git-install/1359.html" target="_blank" rel="noopener">安装git</a>中所安装的git.exe</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5794.png" alt="为IDEA指定git路径"></p>
+</li>
+<li><p>接下来为github设置账号密码：<br>菜单-&gt;settings-&gt;Version Control-&gt;GitHub-&gt;Create API Token</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5795.png" alt="设置github账号"></p>
+</li>
+</ul>
+<h2 id="idea-pull项目"><a href="#idea-pull项目" class="headerlink" title="idea pull项目"></a>idea pull项目</h2><ul>
+<li>checkout：菜单-&gt;VCS-&gt;Chekout from Version Control-&gt;GitHub</li>
+<li><img src="https://stepimagewm.how2j.cn/5797.png" alt="checkout"></li>
+<li>输入项目参数：Git Repositor URL:<a href="https://github.com/how2j/higit.git" target="_blank" rel="noopener">https://github.com/how2j/higit.git</a><br>Parent Directory: e:\project<br>Directory Name: higit<br>然后点击 Clone</li>
+<li><img src="https://stepimagewm.how2j.cn/5798.png" alt="输入项目参数"></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言基础</title>
     <url>/Mr-lee-MQ.hithub.io/2020/06/17/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础<a id="more"></a></h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;                        //这是编译预处理指令</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                               <span class="comment">//定义主函数</span></span></span><br><span class="line"><span class="function"></span>&#123;                                        <span class="comment">//函数开始的标志</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"This is C program.\n"</span>);      <span class="comment">//输出所指定的一行信息     </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;                            <span class="comment">//函数执行完毕时返回函数值0  </span></span><br><span class="line">&#125;                                        <span class="comment">//函数结束的标志</span></span><br></pre></td></tr></table></figure>
@@ -759,405 +793,6 @@ int main()
 ]]></content>
       <tags>
         <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
-    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git<a id="more"></a></h1><h2 id="idea安装Git"><a href="#idea安装Git" class="headerlink" title="idea安装Git"></a>idea安装Git</h2><ul>
-<li><p>[下载地址]:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
-</li>
-<li><p>安装默认</p>
-</li>
-<li><p>运行测试：win+r,cmd  打开控制台，输入git指令，看到下图即表示安装成功</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5793.png" alt="运行测试"></p>
-</li>
-</ul>
-<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
-<li><p>菜单-&gt;settings-&gt;Version Control-&gt;Git-&gt;Path to Git executable: 设置为<a href="https://how2j.cn/k/idea/idea-git-install/1359.html" target="_blank" rel="noopener">安装git</a>中所安装的git.exe</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5794.png" alt="为IDEA指定git路径"></p>
-</li>
-<li><p>接下来为github设置账号密码：<br>菜单-&gt;settings-&gt;Version Control-&gt;GitHub-&gt;Create API Token</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5795.png" alt="设置github账号"></p>
-</li>
-</ul>
-<h2 id="idea-pull项目"><a href="#idea-pull项目" class="headerlink" title="idea pull项目"></a>idea pull项目</h2><ul>
-<li>checkout：菜单-&gt;VCS-&gt;Chekout from Version Control-&gt;GitHub</li>
-<li><img src="https://stepimagewm.how2j.cn/5797.png" alt="checkout"></li>
-<li>输入项目参数：Git Repositor URL:<a href="https://github.com/how2j/higit.git" target="_blank" rel="noopener">https://github.com/how2j/higit.git</a><br>Parent Directory: e:\project<br>Directory Name: higit<br>然后点击 Clone</li>
-<li><img src="https://stepimagewm.how2j.cn/5798.png" alt="输入项目参数"></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的搭建</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
-<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
-<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
-<li>安装主题</li>
-</ul>
-<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
-<ul>
-<li>配置</li>
-</ul>
-<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
-<ul>
-<li>更新</li>
-</ul>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
-<p>用Hexo写一篇博客</p>
-<pre><code>$ hexo n &quot;我的第一篇博客&quot;
-INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
-<pre><code> hexo clean          # 清除所有记录 
-$ hexo generate       # 生成静态网页 简写：hexo g
-$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML5</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/07/13/HTML5/</url>
-    <content><![CDATA[<h1 id="HTML详解"><a href="#HTML详解" class="headerlink" title="HTML详解"></a>HTML详解<a id="more"></a></h1><h2 id="初识HTML"><a href="#初识HTML" class="headerlink" title="初识HTML"></a>初识HTML</h2><ul>
-<li>Hper Text Markup Language(超文本标记语言)</li>
-<li>W3C     万维网联盟</li>
-<li>W3C标准包括<ul>
-<li>结构化标准语言（HTML    XML）</li>
-<li>表现标准语言（CSS）</li>
-<li>行为标准（DOM，ECMAScript）</li>
-</ul>
-</li>
-</ul>
-<h2 id="HTML的基本结构"><a href="#HTML的基本结构" class="headerlink" title="HTML的基本结构"></a>HTML的基本结构</h2><p>网页头部</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我的第一个网页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>主体部分</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>&lt; body&gt;  ，&lt; /body&gt;等成对出现的标签（&lt; body&gt; 为开放标签     &lt; /body&gt;为闭合标签 ）</p>
-</li>
-<li><p>&lt; meta charset=”UTF-8”&gt;为自闭合标签</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE：      &gt;</span>      <span class="comment">&lt;!--告诉浏览器要使用什么规范--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>我的第一个程序<span class="tag">&lt;/<span class="name">title</span>&gt;</span>    <span class="comment">&lt;!--网页的标题--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>      <span class="comment">&lt;!--mate 描述性标签，用来描述网站的信息，可做SEO--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta  name &#x3D;&quot;keywords&quot; content&#x3D;&quot;西部开源&quot; &gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;description&quot; content&#x3D;&quot;可以学JAVA&quot; &gt;	&lt;！--网站描述--&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="网页基本标签"><a href="#网页基本标签" class="headerlink" title="网页基本标签"></a>网页基本标签</h2><ul>
-<li><p>标题标签</p>
-<ul>
-<li>（&lt; h1&gt;一级标签&lt; /h1&gt;）</li>
-<li>（&lt; h2&gt;一级标签&lt; /h2&gt;）</li>
-<li>（&lt; h3&gt;一级标签&lt; /h3&gt;）</li>
-</ul>
-</li>
-<li><p>段落标签</p>
-<ul>
-<li>（&lt; p&gt;段落&lt; /p&gt;）</li>
-</ul>
-</li>
-<li><p>换行标签</p>
-<ul>
-<li>（br  换行）自闭合标签</li>
-</ul>
-</li>
-<li><p>水平线标签</p>
-<ul>
-<li>（&lt; /hr&gt;）</li>
-</ul>
-</li>
-<li><p>字体样式标签</p>
-<ul>
-<li>粗体（&lt; stong&gt;  &lt; /stong&gt;）</li>
-<li>斜体（&lt; em&gt;&lt; /em&gt;）</li>
-</ul>
-</li>
-<li><p>特殊符号（&amp;     ）</p>
-<ul>
-<li>空格（&amp;nbsp；）</li>
-<li>大于号   (&amp;gt ;）</li>
-<li>小于号   (&amp;lt ;)</li>
-<li>版权符号（&amp;copy；）</li>
-</ul>
-</li>
-</ul>
-<h2 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h2><ul>
-<li>img标签学习<ul>
-<li>&lt; img src&gt;<ul>
-<li>src     图片地址<ul>
-<li>相对地址（常用）../      –上一级目录</li>
-<li>绝对地址</li>
-</ul>
-</li>
-<li>alt     图片名字</li>
-<li>title     鼠标悬停显示的文字</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;&quot;&gt;&lt;&#x2F;a&gt;       &lt;!--必填，表示要跳转的网址</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>target     以何种方式打开窗口</p>
-<ul>
-<li>blank     在一个新的网页中打开</li>
-<li>self         在本网页中打开</li>
-</ul>
-</li>
-<li><p>锚链接</p>
-<ul>
-<li>需要一个锚标记</li>
-<li>#加标记name </li>
-</ul>
-</li>
-<li><p>功能性链接</p>
-<ul>
-<li><p>邮件链接： mailto</p>
-</li>
-<li><p>QQ链接：</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"http://wpa.qq.com/pa?p=2::52"</span> <span class="attr">alt</span>=<span class="string">"点击我"</span> <span class="attr">title</span>=<span class="string">"点击我"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="行内元素和块元素"><a href="#行内元素和块元素" class="headerlink" title="行内元素和块元素"></a>行内元素和块元素</h2><ul>
-<li>块元素<ul>
-<li>无论内容多少，该元素独占一行</li>
-<li>（p、h1-h6）</li>
-</ul>
-</li>
-<li>行内元素<ul>
-<li>内容撑开宽度，左右都是行元素的可以排在一行</li>
-<li>（a.strong.em…..）</li>
-</ul>
-</li>
-</ul>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>无序列表</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ol&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>有序列表</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>自定义列表</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">    &lt;dt&gt;学科&lt;&#x2F;dt&gt;</span><br><span class="line">    &lt;dd&gt;JAVA&lt;&#x2F;dd&gt;</span><br><span class="line">    &lt;dd&gt;Linux&lt;&#x2F;dd&gt;</span><br><span class="line">&lt;&#x2F;dl&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><ul>
-<li><p>表格标签table</p>
-<ul>
-<li><p>行标签   tr</p>
-</li>
-<li><p>列标签   td</p>
-</li>
-<li><p>边框   border</p>
-</li>
-<li><p>跨列   colspan</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;td colspan&#x3D;&quot;4&quot;&gt;1-1&lt;&#x2F;td&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>跨行  rowspan</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;td rowspan&#x3D;&quot;2&quot;&gt;2-1&lt;&#x2F;td&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="视频和音频"><a href="#视频和音频" class="headerlink" title="视频和音频"></a>视频和音频</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;video src&#x3D;&quot;..&#x2F;resources&#x2F;video&#x2F;NOGIZAKA46_&gt;&lt;&#x2F;video&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>src     资源路径</li>
-<li>controls    控制条 </li>
-<li>autoplay    自动播放</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;audio src&#x3D;&quot;..&#x2F;resources&#x2F;audio&#x2F;LOSER%20-%20米津玄師.mp3&quot;&gt;&lt;&#x2F;audio&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>controls    控制条 </li>
-<li>autoplay    自动播放</li>
-</ul>
-<h2 id="页面结构分析"><a href="#页面结构分析" class="headerlink" title="页面结构分析"></a>页面结构分析</h2><ul>
-<li>header    标题头部区域的内容</li>
-<li>footer     标题脚部区域的内容</li>
-<li>section    Web页面中的一块独立区域</li>
-<li>article      独立的文章内容</li>
-<li>aside      相关内容或应用</li>
-<li>nav      导航类辅助内容</li>
-</ul>
-<h2 id="iframe内联框架"><a href="#iframe内联框架" class="headerlink" title="iframe内联框架"></a>iframe内联框架</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">height</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>src    地址</li>
-<li>w-h    高度宽度   </li>
-</ul>
-<h2 id="表单语法"><a href="#表单语法" class="headerlink" title="表单语法"></a>表单语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&quot;&gt;&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>action   表单提交的位置，可以是网站，也可以是一个请求处理的地址</li>
-<li>method    post，get 提交方式<ul>
-<li>get     信息可以在url中看到，不安全，高速</li>
-<li>post    比较安全，传输大文件</li>
-</ul>
-</li>
-</ul>
-<p>文本输入框    input</p>
-<ul>
-<li>type     指定元素类型<ul>
-<li>text  文本框</li>
-<li>password    密码框</li>
-<li>submit    提交</li>
-<li>reset    重置</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>注册<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"我的第一个程序.html"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>用户户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span><span class="attr">name</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password "</span><span class="attr">name</span>=<span class="string">"psd"</span> &gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="表单元素格式"><a href="#表单元素格式" class="headerlink" title="表单元素格式"></a>表单元素格式</h3><ul>
-<li>type    指定元素类型      （都需要name属性）<ul>
-<li>text   文本框（默认）</li>
-<li>password    密码框</li>
-<li>checkbox   单选框</li>
-<li>radio   单选框       必须有初值，且单选框的name需一致</li>
-<li>submit    按钮提交</li>
-<li>reset    按钮重置</li>
-<li>file     文件域</li>
-<li>hidden 隐藏域</li>
-<li>image   图片点击</li>
-<li>button   按钮</li>
-</ul>
-</li>
-<li>name    指定表单元素的名称</li>
-<li>value    元素的初始值      type为radio时必须指定一个值</li>
-<li>size   指定表单元素的初始宽度。当type为text或password时，表单元素的大小以字符为单位。对于其它类型，宽度以像素为单位</li>
-<li>maxlength    type为text或password时，输入的最大字符</li>
-<li>checked     type为radio或checkbox时，指定按钮是否被选中</li>
-</ul>
-<p>单选框   radio</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span><span class="attr">value</span>=<span class="string">"boy"</span>  <span class="attr">name</span>=<span class="string">"sex"</span> /&gt;</span>男</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span><span class="attr">value</span>=<span class="string">"girl"</span> <span class="attr">name</span>=<span class="string">"sex"</span> /&gt;</span>女</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>多选框    checkbox</p>
-<ul>
-<li>checked    默认选中</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"game"</span><span class="attr">name</span>=<span class="string">"hobby"</span> &gt;</span>游戏</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"go"</span><span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">checked</span>&gt;</span>逛街</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"hua"</span><span class="attr">name</span>=<span class="string">"hobby"</span> &gt;</span>化妆</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>按钮  button</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span><span class="attr">name</span>=<span class="string">"but1"</span> <span class="attr">value</span>=<span class="string">"点击"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span><span class="attr">src</span>=<span class="string">"../resources/image/mmexport1564926230808.jpg"</span><span class="attr">alt</span>=<span class="string">"tutu"</span><span class="attr">width</span>=<span class="string">"200"</span><span class="attr">height</span>=<span class="string">"200"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>下拉框/列表框      select</p>
-<ul>
-<li><p>select    列表</p>
-</li>
-<li><p>option  value=“      ”     选项的值</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"列表名称"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"china"</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ruishi"</span>&gt;</span>瑞士<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"deguo"</span>&gt;</span>德国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"meiguo"</span>&gt;</span>美国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>文本域   textarea</p>
-<ul>
-<li>cols   长度</li>
-<li>rows   宽度</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"textarea"</span> <span class="attr">cols</span>=<span class="string">"10"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>文件域    file</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"files"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"bon1"</span> <span class="attr">value</span>=<span class="string">"上传"</span> &gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>邮件验证     email</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;email&quot;name&#x3D;&quot;email&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>URL验证   url</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;url&quot; name&#x3D;&quot;url&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>数字验证  number</p>
-<ul>
-<li>max</li>
-<li>min</li>
-<li>step     递增或递减</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;number&quot;name&#x3D;&quot;number&quot; max&#x3D;&quot;100&quot;min&#x3D;&quot;10&quot;step&#x3D;&quot;1&quot; &gt;</span><br></pre></td></tr></table></figure>
-
-<p>滑块     range</p>
-<ul>
-<li>max</li>
-<li>min</li>
-<li>step    递增或递减 </li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span><span class="attr">name</span>=<span class="string">"huakuai"</span><span class="attr">max</span>=<span class="string">"100"</span><span class="attr">min</span>=<span class="string">"1"</span><span class="attr">step</span>=<span class="string">"1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>搜索框   search</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span><span class="attr">name</span>=<span class="string">"sousuo"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="表单的应用"><a href="#表单的应用" class="headerlink" title="表单的应用"></a>表单的应用</h2><ul>
-<li><p>只读域   readonly</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span><span class="attr">value</span>=<span class="string">"boy"</span>  <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">readonly</span>/&gt;</span>男</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>禁用域    disabled</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"game"</span><span class="attr">name</span>=<span class="string">"hobby"</span>  <span class="attr">disabled</span>&gt;</span>游戏</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>隐藏域   hidden</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password "</span><span class="attr">name</span>=<span class="string">"psd"</span> <span class="attr">hidden</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>增强鼠标的可用性   lable<ul>
-<li>for=“进入某个id中”</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"mark"</span>&gt;</span>你点我试试<span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="表单初级验证"><a href="#表单初级验证" class="headerlink" title="表单初级验证"></a>表单初级验证</h2><ul>
-<li>提示信息：placeholder=“请输入用户名”</li>
-<li>非空判断：required</li>
-<li>正则表达式:    pattern     百度可得</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java上线流程</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/12/Java%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Java项目上线流程"><a href="#Java项目上线流程" class="headerlink" title="Java项目上线流程"></a>Java项目上线流程<a id="more"></a></h1><ul>
-<li>企业项目</li>
-</ul>
-<p>定需求（开会）—&gt;写需求文档（同时可以技术选型）—&gt;设计原型—&gt;开发前端代码（后端代码也可以同时进行开发）—&gt;前后端代码进行测试—&gt;上传到公网—&gt;客户在使用中也是一个测试—&gt;出现了bug或功能不全在更新。</p>
-<ul>
-<li>自己开发的项目</li>
-</ul>
-<p>项目代码写好以后在本地运行测试完毕—&gt;购买域名和服务器—&gt;域名的解析（简单的说就是将域名和服务器的ip绑定，以后访问时就直接找到你的服务器，这就叫做DNS解析）—&gt;在服务器上搭建项目运行的环境（数据库，web容器，redis，Nginx）—&gt;项目上线</p>
-<h2 id="学习路线的问题"><a href="#学习路线的问题" class="headerlink" title="学习路线的问题"></a>学习路线的问题</h2>]]></content>
-      <tags>
-        <tag>Java项目</tag>
       </tags>
   </entry>
   <entry>
@@ -1604,14 +1239,551 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <p>JSON字符串和JS对象的转化</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> user = &#123;</span><br><span class="line">    name:<span class="string">"qinjiang"</span>,</span><br><span class="line">    age:<span class="number">3</span>,</span><br><span class="line">    sex:<span class="string">'男'</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//对象转化为json字符串&#123;"name":"qinjiang","age":3,"sex":"男"&#125;</span></span><br><span class="line">    <span class="keyword">var</span> jsonUser = <span class="built_in">JSON</span>.stringify(user);</span><br><span class="line">	<span class="comment">//json字符串转化为对象，参数为json字符串</span></span><br><span class="line">	<span class="keyword">var</span> obj = 						      						<span class="built_in">JSON</span>.parse(<span class="string">'&#123;"name":"qinjiang","age":3,"sex":"男"&#125;'</span>);</span><br></pre></td></tr></table></figure>
 
-<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><ul>
+<h3 id="Ajax简述"><a href="#Ajax简述" class="headerlink" title="Ajax简述"></a>Ajax简述</h3><ul>
 <li>原生的js写法   xhr异步请求</li>
 <li>jQury封装好的方法    $(“#name”)ajax(“”)</li>
 <li>axios请求</li>
 </ul>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><ul>
+<li><p>类：一个模板     (原型对象)</p>
+</li>
+<li><p>对象：具体的实例</p>
+</li>
+</ul>
+<h3 id="原型继承"><a href="#原型继承" class="headerlink" title="原型继承"></a>原型继承</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> Student = &#123;</span><br><span class="line">        name:<span class="string">"qinjiang"</span>,</span><br><span class="line">        age: <span class="number">3</span>,</span><br><span class="line">        run: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">"run...."</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">	<span class="keyword">var</span> xiaoming = &#123;</span><br><span class="line">        name:<span class="string">"xiaoming"</span></span><br><span class="line">    &#125;;</span><br><span class="line">	<span class="keyword">var</span> Bird = &#123;  </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//小明的原型是Student</span></span><br><span class="line">    xiaoming._proto_ = Student;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Class继承"><a href="#Class继承" class="headerlink" title="Class继承"></a>Class继承</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给student新增一个方法</span></span><br><span class="line">Student.prototype.hello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    slert(<span class="string">'Hello'</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//ES6之后</span></span><br><span class="line"><span class="comment">//定义一个学生的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name)&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;	</span><br><span class="line">	hello()&#123;</span><br><span class="line">        alert(<span class="string">'hello'</span>)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>继承</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Student.prototype.hello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    slert(<span class="string">'Hello'</span>)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name)&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;	</span><br><span class="line">	hello()&#123;</span><br><span class="line">        alert(<span class="string">'hello'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Xiaostudent</span> <span class="title">extend</span> <span class="title">student</span></span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(name,grade)&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        <span class="keyword">this</span>.grade = grade;</span><br><span class="line">    &#125;</span><br><span class="line">    myGrade()&#123;</span><br><span class="line">        alert(<span class="string">'我是一名小学生'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> xiaoming = <span class="keyword">new</span> student(<span class="string">"xiaoming"</span>);</span><br><span class="line"><span class="keyword">var</span> xiaohong = <span class="keyword">new</span> Xiaostudent(<span class="string">"xiaohong"</span>,<span class="number">1</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>本质：查看对象原型</p>
+<h2 id="操作BOM对象"><a href="#操作BOM对象" class="headerlink" title="操作BOM对象"></a>操作BOM对象</h2><p>JavaScript和浏览器的关系？</p>
+<p>JavaScript诞生就是为了能够让他在浏览器中运行</p>
+<p>BOM：浏览器对象模型</p>
+<ul>
+<li>IE6~11</li>
+<li>Chrome</li>
+<li>Safari</li>
+<li>FireFox</li>
+</ul>
+<blockquote>
+<p>window</p>
+</blockquote>
+<p>window 代表 浏览器窗口</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.alert(<span class="number">1</span>)</span><br><span class="line"><span class="literal">undefined</span></span><br><span class="line"><span class="built_in">window</span>.innerHeight	<span class="comment">//内部高度</span></span><br><span class="line"><span class="number">258</span></span><br><span class="line"><span class="built_in">window</span>.innerWidth	<span class="comment">//内部宽度</span></span><br><span class="line"><span class="number">919</span></span><br><span class="line"><span class="built_in">window</span>.outerHeight	<span class="comment">//外部高度</span></span><br><span class="line"><span class="number">325</span></span><br><span class="line"><span class="built_in">window</span>.outerrWidth	<span class="comment">//外部宽度</span></span><br><span class="line"><span class="number">919</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Navigator</p>
+</blockquote>
+<p>Navigator,封装了浏览器的信息</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">navigator.appName    <span class="comment">//浏览器名称</span></span><br><span class="line">navigator.appVersion    <span class="comment">//版本号</span></span><br><span class="line">navigator.userAgent    <span class="comment">//用户信息</span></span><br><span class="line">navigator.platform    <span class="comment">//系统版本</span></span><br></pre></td></tr></table></figure>
+
+<p>大多数时候不使用navigator对象，因为可能会被人为修改。不建议使用这些属性来判断和编写代码。</p>
+<blockquote>
+<p>screen</p>
+</blockquote>
+<p>屏幕尺寸</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">screen.width</span><br><span class="line"><span class="number">1920</span></span><br><span class="line">screen.height</span><br><span class="line"><span class="number">1080</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>location</p>
+</blockquote>
+<p>location代表当前页面的URL信息</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">host:<span class="string">"www.baidu.com"</span></span><br><span class="line">href:<span class="string">"https://www.baidu.com/"</span></span><br><span class="line">protocol:<span class="string">"https:"</span></span><br><span class="line">reload:f reload()<span class="comment">//刷新网页</span></span><br><span class="line">location.assign(<span class="string">"https://blog.kuangstudy.com/"</span>)设置新的地址</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>document （文本内容）</p>
+</blockquote>
+<p>document代表当前的页面，HTML DOM文档树</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.title</span><br><span class="line"><span class="string">"百度一下，你就知道"</span></span><br><span class="line"><span class="built_in">document</span>.title = <span class="string">'狂神说'</span></span><br><span class="line"><span class="string">"狂神说"</span></span><br></pre></td></tr></table></figure>
+
+<p>获取具体的文档数节点</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dl id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">	&lt;dt&gt;Java&lt;&#x2F;dt&gt;</span><br><span class="line">	&lt;dt&gt;JavaSE&lt;&#x2F;dt&gt;</span><br><span class="line">	&lt;dt&gt;JavaEE&lt;&#x2F;dt&gt;</span><br><span class="line">&lt;&#x2F;dl&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var dl &#x3D; document.getElementById(&#39;app&#39;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>获取cookie</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie</span><br></pre></td></tr></table></figure>
+
+<p>劫持cookie原理</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script src = <span class="string">"aa.js"</span>&gt;&lt;<span class="regexp">/stript&gt;</span></span><br><span class="line"><span class="regexp">&lt;!--恶意人员：获取你的cooike上传到他的服务器 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>服务端可以设置 cooike为httpOnly</p>
+<blockquote>
+<p>history</p>
+</blockquote>
+<p>history代表浏览器的历史记录</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">history.back()  <span class="comment">//后退</span></span><br><span class="line">history.forward()  <span class="comment">//前进</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="操作DOM"><a href="#操作DOM" class="headerlink" title="操作DOM"></a>操作DOM</h2><p>DOM：文本对象模型</p>
+<p>核心：</p>
+<ul>
+<li>更新：更新    Dom节点</li>
+<li>遍历Dom节点：得到Dom节点</li>
+<li>删除：删除一个Dom节点</li>
+<li>添加：添加一个新的节点</li>
+</ul>
+<p>要操作一个Dom节点，就必须要先获得这个Dom节点</p>
+<blockquote>
+<p>获得Dom节点</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;h1&gt;标题一&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">&lt;p id = "p1"&gt;p1&lt;/</span>p&gt;</span><br><span class="line">&lt;p <span class="class"><span class="keyword">class</span> </span>= <span class="string">"p2"</span>&gt;p2&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/获得dom节点   标签</span></span><br><span class="line"><span class="regexp">var h1 = document.getElementsByTagName('h1')</span></span><br><span class="line"><span class="regexp">var p1 = document.getElementsById('p1')</span></span><br><span class="line"><span class="regexp">var p2 = document.getElementsByClassName('h1')</span></span><br></pre></td></tr></table></figure>
+
+<p>这是原生代码，之后一般会使用JQuery</p>
+<blockquote>
+<p>更新节点</p>
+</blockquote>
+<p>操作文本</p>
+<ul>
+<li>innerText 修改文本值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">id1.innerText = <span class="string">'456'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可以解析HTML文本标签</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">id1.innrtHTML = <span class="string">'&lt;strong&gt;123&lt;/strong&gt;'</span></span><br></pre></td></tr></table></figure>
+
+<p>操作JS</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">id1.style.color = <span class="string">'yellow'</span>;</span><br><span class="line">id1.style.fontSize = <span class="string">'20px'</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>删除节点</p>
+</blockquote>
+<p>删除节点的步骤：先获取父节点，在通过父节点删除自己</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;div id =<span class="string">"father"</span>&gt;</span><br><span class="line">	&lt;h1&gt;标题一&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">	&lt;p id = "p1"&gt;p1&lt;/</span>p&gt;</span><br><span class="line">	&lt;p <span class="class"><span class="keyword">class</span> </span>= <span class="string">"p2"</span>&gt;p2&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line">father.removeChild(p1)</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除是一个动态的过程</span></span><br><span class="line">father.removeChild(father.children[<span class="number">0</span>])</span><br><span class="line">father.removeChild(father.children[<span class="number">1</span>])</span><br><span class="line">father.removeChild(father.children[<span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<p>注意：删除多个节点的时候，children是在时刻变化的，删除节点的时候一定要注意</p>
+<blockquote>
+<p>插入节点</p>
+</blockquote>
+<p>我们获得了某个DOM节点，假设这个DOM节点是空的，我们通过innerHTML就可以增加一个元素，但是这个DOM节点已经存在元素了，就不能这么做了，会产生覆盖。</p>
+<ul>
+<li>追加    appendChild</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;p id = <span class="string">'js'</span>&gt;JavaScript&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;div id = 'list'&gt;</span></span><br><span class="line"><span class="regexp">    &lt;p id = "se"&gt;JavaSE&lt;/</span>p&gt;</span><br><span class="line">	&lt;p id = <span class="string">"ee"</span>&gt;JavaEE&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">	&lt;p id = "me"&gt;JavaME&lt;/</span>p&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">        var js = docoment.getElmentById('js');</span></span><br><span class="line"><span class="regexp">		var list = docoment.getElmentById('list');</span></span><br><span class="line"><span class="regexp">		list.appendChild(js);/</span><span class="regexp">/追加到后面</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个新的标签,实现插入    document.createElement</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> js = <span class="built_in">document</span>.getElementById(<span class="string">'js'</span>);   <span class="comment">//已经存在的节点</span></span><br><span class="line">	<span class="keyword">var</span> list = <span class="built_in">document</span>.getElementById(<span class="string">'list'</span>);</span><br><span class="line"><span class="comment">// 通过JS创建一个新的节点</span></span><br><span class="line">	<span class="keyword">var</span> newP = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);<span class="comment">//创建一个P标签</span></span><br><span class="line">	newP.id = <span class="string">'newP'</span>;</span><br><span class="line">	newP.innerText = <span class="string">'Helllo,kuangshen'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个标签节点</span></span><br><span class="line">	<span class="keyword">var</span> myScript = <span class="built_in">document</span>.creatElement(<span class="string">'script'</span>);</span><br><span class="line">	myScript.setAttribute(<span class="string">'type'</span>,<span class="string">'text/css'</span>);</span><br><span class="line"><span class="comment">//可以创建一个style标签</span></span><br><span class="line"><span class="keyword">var</span> myStyle = <span class="built_in">document</span>.creatElement(<span class="string">'style'</span>);<span class="comment">//创建了一个空style</span></span><br><span class="line">myStyle.setAttribute(<span class="string">'type'</span>,<span class="string">'text/css'</span>);</span><br><span class="line">myStyle.innerHTML = <span class="string">'body&#123;background-color;chartreuse;&#125;'</span>;<span class="comment">//设置标签内容</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>].appengchild(myStyle)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="操作表单（验证）"><a href="#操作表单（验证）" class="headerlink" title="操作表单（验证）"></a>操作表单（验证）</h2><blockquote>
+<p>表单是什么     form  DOM树</p>
+</blockquote>
+<ul>
+<li>文本框    text</li>
+<li>下拉框     select</li>
+<li>单选框      radio</li>
+<li>多选框      checkbox</li>
+<li>隐藏域      hidden</li>
+<li>密码框      password</li>
+<li>……….</li>
+</ul>
+<p>表单的目的：提交信息</p>
+<blockquote>
+<p>获得要提交的信息</p>
+</blockquote>
+<ul>
+<li>得到输入框的值      input_text.value</li>
+<li>修改输入框的值       input_text.value = ‘123’</li>
+<li>对于单选框，多选框等等固定的值，boy_radio.value只能取到当前的值，</li>
+<li>查看返回的结果       boy_radio.checked;      </li>
+</ul>
+<p>提交表单</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;form action=<span class="string">"post"</span>&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">    	&lt;span&gt;用户名：&lt;span&gt;<span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"username"</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">	&lt;p&gt;</span><br><span class="line">    	&lt;span&gt;密码：&lt;span&gt;<span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"password"</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="comment">//绑定事件   onclick  被点击</span></span><br><span class="line">	&lt;button type=<span class="string">"button"</span> onclick=<span class="string">"aaa()"</span>&gt;提交&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>form&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">aaa</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h2><p>JavaScript</p>
+<p>JQuery库，里面存在大量的javascript函数</p>
+<blockquote>
+<p>获取JQuery</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>= <span class="string">"&lt;script src="</span><span class="attr">http:</span>//<span class="attr">code.jquery.com</span>/<span class="attr">jquery-migrate-1.2.1.min.js</span>"&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>"&gt;</span><br></pre></td></tr></table></figure>
+
+<p>公式：</p>
+<p>$(selector   选择器).action()</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">两种方法</span><br><span class="line"></span><br><span class="line">&lt;a href=<span class="string">""</span> id=<span class="string">"test-jquery"</span>&gt;点我&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">    document.getElementById('id');</span></span><br><span class="line"><span class="regexp">	</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/选择器就是CSS选择器</span></span><br><span class="line"><span class="regexp">$('#text-jquery').click(function()&#123;</span></span><br><span class="line"><span class="regexp">    alert('hello,jquery');</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<p>选择器</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">//原生JS，选择器少，麻烦不好记</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">//标签</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">document</span>.getElementsByTagName();</span></span><br><span class="line"><span class="actionscript">	<span class="comment">//id</span></span></span><br><span class="line"><span class="javascript">	<span class="built_in">document</span>.getElementsById();</span></span><br><span class="line"><span class="actionscript">	<span class="comment">//类</span></span></span><br><span class="line"><span class="javascript">	<span class="built_in">document</span>.getElementsByClassName();</span></span><br><span class="line">    </span><br><span class="line">   </span><br><span class="line"><span class="actionscript">  <span class="comment">//JQuery  css  中的选择器他全部都能用</span></span></span><br><span class="line"><span class="javascript">    $(<span class="string">'p'</span>).click();<span class="comment">//标签选择器</span></span></span><br><span class="line"><span class="javascript">    $(<span class="string">'#id1'</span>).click();<span class="comment">//id选择器</span></span></span><br><span class="line"><span class="javascript">    $(<span class="string">'.class'</span>).click();<span class="comment">//class选择器</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>文档工具站：<a href="https://jquery.cuishifeng.cn/" target="_blank" rel="noopener">https://jquery.cuishifeng.cn/</a></p>
+<blockquote>
+<p>事件</p>
+</blockquote>
+<ul>
+<li>鼠标事件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//按下</span></span><br><span class="line">mousedown()(JQuery)</span><br><span class="line"><span class="comment">//离开</span></span><br><span class="line">mouseleave()(JQuery)</span><br><span class="line"><span class="comment">//移动</span></span><br><span class="line">mousemove()(JQuery)</span><br><span class="line"><span class="comment">//点击结束</span></span><br><span class="line">mouseover()(JQuery)</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>键盘事件</li>
+<li>其他事件</li>
+</ul>
+<h3 id="操作DOM元素"><a href="#操作DOM元素" class="headerlink" title="操作DOM元素"></a>操作DOM元素</h3><p>节点文本操作</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#test-ul li[name=python]'</span>).text();<span class="comment">//获得值</span></span><br><span class="line">$(<span class="string">'#test-ul li[name-python]'</span>).text(<span class="string">'设置值'</span>)；<span class="comment">//设置值</span></span><br><span class="line">$(<span class="string">'#test-ul'</span>).html();  <span class="comment">//获得值</span></span><br><span class="line">$(<span class="string">'#test-ul'</span>).html(<span class="string">'设置值'</span>)  <span class="comment">//设置值</span></span><br></pre></td></tr></table></figure>
+
+<p>CSS的操作</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#test-ul li[name=python]'</span>).css(&#123;<span class="string">"color"</span>,<span class="string">"red"</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>元素的显示和隐藏：本质 display:none</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">'#test-ul li[name=python]'</span>).show()</span><br><span class="line">$(<span class="string">'#test-ul li[name=python]'</span>).hide()</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML5</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/07/13/HTML5/</url>
+    <content><![CDATA[<h1 id="HTML详解"><a href="#HTML详解" class="headerlink" title="HTML详解"></a>HTML详解<a id="more"></a></h1><h2 id="初识HTML"><a href="#初识HTML" class="headerlink" title="初识HTML"></a>初识HTML</h2><ul>
+<li>Hper Text Markup Language(超文本标记语言)</li>
+<li>W3C     万维网联盟</li>
+<li>W3C标准包括<ul>
+<li>结构化标准语言（HTML    XML）</li>
+<li>表现标准语言（CSS）</li>
+<li>行为标准（DOM，ECMAScript）</li>
+</ul>
+</li>
+</ul>
+<h2 id="HTML的基本结构"><a href="#HTML的基本结构" class="headerlink" title="HTML的基本结构"></a>HTML的基本结构</h2><p>网页头部</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我的第一个网页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>主体部分</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&lt; body&gt;  ，&lt; /body&gt;等成对出现的标签（&lt; body&gt; 为开放标签     &lt; /body&gt;为闭合标签 ）</p>
+</li>
+<li><p>&lt; meta charset=”UTF-8”&gt;为自闭合标签</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE：      &gt;</span>      <span class="comment">&lt;!--告诉浏览器要使用什么规范--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>我的第一个程序<span class="tag">&lt;/<span class="name">title</span>&gt;</span>    <span class="comment">&lt;!--网页的标题--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>      <span class="comment">&lt;!--mate 描述性标签，用来描述网站的信息，可做SEO--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta  name &#x3D;&quot;keywords&quot; content&#x3D;&quot;西部开源&quot; &gt;</span><br><span class="line">&lt;meta name&#x3D;&quot;description&quot; content&#x3D;&quot;可以学JAVA&quot; &gt;	&lt;！--网站描述--&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="网页基本标签"><a href="#网页基本标签" class="headerlink" title="网页基本标签"></a>网页基本标签</h2><ul>
+<li><p>标题标签</p>
+<ul>
+<li>（&lt; h1&gt;一级标签&lt; /h1&gt;）</li>
+<li>（&lt; h2&gt;一级标签&lt; /h2&gt;）</li>
+<li>（&lt; h3&gt;一级标签&lt; /h3&gt;）</li>
+</ul>
+</li>
+<li><p>段落标签</p>
+<ul>
+<li>（&lt; p&gt;段落&lt; /p&gt;）</li>
+</ul>
+</li>
+<li><p>换行标签</p>
+<ul>
+<li>（br  换行）自闭合标签</li>
+</ul>
+</li>
+<li><p>水平线标签</p>
+<ul>
+<li>（&lt; /hr&gt;）</li>
+</ul>
+</li>
+<li><p>字体样式标签</p>
+<ul>
+<li>粗体（&lt; stong&gt;  &lt; /stong&gt;）</li>
+<li>斜体（&lt; em&gt;&lt; /em&gt;）</li>
+</ul>
+</li>
+<li><p>特殊符号（&amp;     ）</p>
+<ul>
+<li>空格（&amp;nbsp；）</li>
+<li>大于号   (&amp;gt ;）</li>
+<li>小于号   (&amp;lt ;)</li>
+<li>版权符号（&amp;copy；）</li>
+</ul>
+</li>
+</ul>
+<h2 id="图像标签"><a href="#图像标签" class="headerlink" title="图像标签"></a>图像标签</h2><ul>
+<li>img标签学习<ul>
+<li>&lt; img src&gt;<ul>
+<li>src     图片地址<ul>
+<li>相对地址（常用）../      –上一级目录</li>
+<li>绝对地址</li>
+</ul>
+</li>
+<li>alt     图片名字</li>
+<li>title     鼠标悬停显示的文字</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="链接标签"><a href="#链接标签" class="headerlink" title="链接标签"></a>链接标签</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;a href&#x3D;&quot;&quot;&gt;&lt;&#x2F;a&gt;       &lt;!--必填，表示要跳转的网址</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>target     以何种方式打开窗口</p>
+<ul>
+<li>blank     在一个新的网页中打开</li>
+<li>self         在本网页中打开</li>
+</ul>
+</li>
+<li><p>锚链接</p>
+<ul>
+<li>需要一个锚标记</li>
+<li>#加标记name </li>
+</ul>
+</li>
+<li><p>功能性链接</p>
+<ul>
+<li><p>邮件链接： mailto</p>
+</li>
+<li><p>QQ链接：</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">href</span>=<span class="string">"http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">src</span>=<span class="string">"http://wpa.qq.com/pa?p=2::52"</span> <span class="attr">alt</span>=<span class="string">"点击我"</span> <span class="attr">title</span>=<span class="string">"点击我"</span>/&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="行内元素和块元素"><a href="#行内元素和块元素" class="headerlink" title="行内元素和块元素"></a>行内元素和块元素</h2><ul>
+<li>块元素<ul>
+<li>无论内容多少，该元素独占一行</li>
+<li>（p、h1-h6）</li>
+</ul>
+</li>
+<li>行内元素<ul>
+<li>内容撑开宽度，左右都是行元素的可以排在一行</li>
+<li>（a.strong.em…..）</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>无序列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ol&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>有序列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;JAVA&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;前端&lt;&#x2F;li&gt;</span><br><span class="line">	&lt;li&gt;C语言&lt;&#x2F;li&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自定义列表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">    &lt;dt&gt;学科&lt;&#x2F;dt&gt;</span><br><span class="line">    &lt;dd&gt;JAVA&lt;&#x2F;dd&gt;</span><br><span class="line">    &lt;dd&gt;Linux&lt;&#x2F;dd&gt;</span><br><span class="line">&lt;&#x2F;dl&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><ul>
+<li><p>表格标签table</p>
+<ul>
+<li><p>行标签   tr</p>
+</li>
+<li><p>列标签   td</p>
+</li>
+<li><p>边框   border</p>
+</li>
+<li><p>跨列   colspan</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;td colspan&#x3D;&quot;4&quot;&gt;1-1&lt;&#x2F;td&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>跨行  rowspan</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;td rowspan&#x3D;&quot;2&quot;&gt;2-1&lt;&#x2F;td&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="视频和音频"><a href="#视频和音频" class="headerlink" title="视频和音频"></a>视频和音频</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;video src&#x3D;&quot;..&#x2F;resources&#x2F;video&#x2F;NOGIZAKA46_&gt;&lt;&#x2F;video&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>src     资源路径</li>
+<li>controls    控制条 </li>
+<li>autoplay    自动播放</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;audio src&#x3D;&quot;..&#x2F;resources&#x2F;audio&#x2F;LOSER%20-%20米津玄師.mp3&quot;&gt;&lt;&#x2F;audio&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>controls    控制条 </li>
+<li>autoplay    自动播放</li>
+</ul>
+<h2 id="页面结构分析"><a href="#页面结构分析" class="headerlink" title="页面结构分析"></a>页面结构分析</h2><ul>
+<li>header    标题头部区域的内容</li>
+<li>footer     标题脚部区域的内容</li>
+<li>section    Web页面中的一块独立区域</li>
+<li>article      独立的文章内容</li>
+<li>aside      相关内容或应用</li>
+<li>nav      导航类辅助内容</li>
+</ul>
+<h2 id="iframe内联框架"><a href="#iframe内联框架" class="headerlink" title="iframe内联框架"></a>iframe内联框架</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">height</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>src    地址</li>
+<li>w-h    高度宽度   </li>
+</ul>
+<h2 id="表单语法"><a href="#表单语法" class="headerlink" title="表单语法"></a>表单语法</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;form action&#x3D;&quot;&quot;&gt;&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>action   表单提交的位置，可以是网站，也可以是一个请求处理的地址</li>
+<li>method    post，get 提交方式<ul>
+<li>get     信息可以在url中看到，不安全，高速</li>
+<li>post    比较安全，传输大文件</li>
+</ul>
+</li>
+</ul>
+<p>文本输入框    input</p>
+<ul>
+<li>type     指定元素类型<ul>
+<li>text  文本框</li>
+<li>password    密码框</li>
+<li>submit    提交</li>
+<li>reset    重置</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>注册<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"我的第一个程序.html"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>用户户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span><span class="attr">name</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password "</span><span class="attr">name</span>=<span class="string">"psd"</span> &gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"reset"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="表单元素格式"><a href="#表单元素格式" class="headerlink" title="表单元素格式"></a>表单元素格式</h3><ul>
+<li>type    指定元素类型      （都需要name属性）<ul>
+<li>text   文本框（默认）</li>
+<li>password    密码框</li>
+<li>checkbox   单选框</li>
+<li>radio   单选框       必须有初值，且单选框的name需一致</li>
+<li>submit    按钮提交</li>
+<li>reset    按钮重置</li>
+<li>file     文件域</li>
+<li>hidden 隐藏域</li>
+<li>image   图片点击</li>
+<li>button   按钮</li>
+</ul>
+</li>
+<li>name    指定表单元素的名称</li>
+<li>value    元素的初始值      type为radio时必须指定一个值</li>
+<li>size   指定表单元素的初始宽度。当type为text或password时，表单元素的大小以字符为单位。对于其它类型，宽度以像素为单位</li>
+<li>maxlength    type为text或password时，输入的最大字符</li>
+<li>checked     type为radio或checkbox时，指定按钮是否被选中</li>
+</ul>
+<p>单选框   radio</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span><span class="attr">value</span>=<span class="string">"boy"</span>  <span class="attr">name</span>=<span class="string">"sex"</span> /&gt;</span>男</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span><span class="attr">value</span>=<span class="string">"girl"</span> <span class="attr">name</span>=<span class="string">"sex"</span> /&gt;</span>女</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>多选框    checkbox</p>
+<ul>
+<li>checked    默认选中</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"game"</span><span class="attr">name</span>=<span class="string">"hobby"</span> &gt;</span>游戏</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"go"</span><span class="attr">name</span>=<span class="string">"hobby"</span> <span class="attr">checked</span>&gt;</span>逛街</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"hua"</span><span class="attr">name</span>=<span class="string">"hobby"</span> &gt;</span>化妆</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>按钮  button</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span><span class="attr">name</span>=<span class="string">"but1"</span> <span class="attr">value</span>=<span class="string">"点击"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"image"</span><span class="attr">src</span>=<span class="string">"../resources/image/mmexport1564926230808.jpg"</span><span class="attr">alt</span>=<span class="string">"tutu"</span><span class="attr">width</span>=<span class="string">"200"</span><span class="attr">height</span>=<span class="string">"200"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>下拉框/列表框      select</p>
+<ul>
+<li><p>select    列表</p>
+</li>
+<li><p>option  value=“      ”     选项的值</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"列表名称"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"china"</span>&gt;</span>中国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"ruishi"</span>&gt;</span>瑞士<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"deguo"</span>&gt;</span>德国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"meiguo"</span>&gt;</span>美国<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>文本域   textarea</p>
+<ul>
+<li>cols   长度</li>
+<li>rows   宽度</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">"textarea"</span> <span class="attr">cols</span>=<span class="string">"10"</span> <span class="attr">rows</span>=<span class="string">"10"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>文件域    file</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"files"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">name</span>=<span class="string">"bon1"</span> <span class="attr">value</span>=<span class="string">"上传"</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>邮件验证     email</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;email&quot;name&#x3D;&quot;email&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>URL验证   url</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;url&quot; name&#x3D;&quot;url&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>数字验证  number</p>
+<ul>
+<li>max</li>
+<li>min</li>
+<li>step     递增或递减</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;number&quot;name&#x3D;&quot;number&quot; max&#x3D;&quot;100&quot;min&#x3D;&quot;10&quot;step&#x3D;&quot;1&quot; &gt;</span><br></pre></td></tr></table></figure>
+
+<p>滑块     range</p>
+<ul>
+<li>max</li>
+<li>min</li>
+<li>step    递增或递减 </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span><span class="attr">name</span>=<span class="string">"huakuai"</span><span class="attr">max</span>=<span class="string">"100"</span><span class="attr">min</span>=<span class="string">"1"</span><span class="attr">step</span>=<span class="string">"1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>搜索框   search</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span><span class="attr">name</span>=<span class="string">"sousuo"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="表单的应用"><a href="#表单的应用" class="headerlink" title="表单的应用"></a>表单的应用</h2><ul>
+<li><p>只读域   readonly</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span><span class="attr">value</span>=<span class="string">"boy"</span>  <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">readonly</span>/&gt;</span>男</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>禁用域    disabled</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">value</span>=<span class="string">"game"</span><span class="attr">name</span>=<span class="string">"hobby"</span>  <span class="attr">disabled</span>&gt;</span>游戏</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>隐藏域   hidden</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password "</span><span class="attr">name</span>=<span class="string">"psd"</span> <span class="attr">hidden</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>增强鼠标的可用性   lable<ul>
+<li>for=“进入某个id中”</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"mark"</span>&gt;</span>你点我试试<span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="表单初级验证"><a href="#表单初级验证" class="headerlink" title="表单初级验证"></a>表单初级验证</h2><ul>
+<li>提示信息：placeholder=“请输入用户名”</li>
+<li>非空判断：required</li>
+<li>正则表达式:    pattern     百度可得</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo的搭建</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
+<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
+<li>安装主题</li>
+</ul>
+<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
+<ul>
+<li>更新</li>
+</ul>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
+<p>用Hexo写一篇博客</p>
+<pre><code>$ hexo n &quot;我的第一篇博客&quot;
+INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
+<pre><code> hexo clean          # 清除所有记录 
+$ hexo generate       # 生成静态网页 简写：hexo g
+$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1706,6 +1878,22 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 ]]></content>
       <tags>
         <tag>框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java上线流程</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/06/12/Java%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Java项目上线流程"><a href="#Java项目上线流程" class="headerlink" title="Java项目上线流程"></a>Java项目上线流程<a id="more"></a></h1><ul>
+<li>企业项目</li>
+</ul>
+<p>定需求（开会）—&gt;写需求文档（同时可以技术选型）—&gt;设计原型—&gt;开发前端代码（后端代码也可以同时进行开发）—&gt;前后端代码进行测试—&gt;上传到公网—&gt;客户在使用中也是一个测试—&gt;出现了bug或功能不全在更新。</p>
+<ul>
+<li>自己开发的项目</li>
+</ul>
+<p>项目代码写好以后在本地运行测试完毕—&gt;购买域名和服务器—&gt;域名的解析（简单的说就是将域名和服务器的ip绑定，以后访问时就直接找到你的服务器，这就叫做DNS解析）—&gt;在服务器上搭建项目运行的环境（数据库，web容器，redis，Nginx）—&gt;项目上线</p>
+<h2 id="学习路线的问题"><a href="#学习路线的问题" class="headerlink" title="学习路线的问题"></a>学习路线的问题</h2>]]></content>
+      <tags>
+        <tag>Java项目</tag>
       </tags>
   </entry>
   <entry>
