@@ -1145,22 +1145,6 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
-    <title>Java上线流程</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/12/Java%E4%B8%8A%E7%BA%BF%E6%B5%81%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="Java项目上线流程"><a href="#Java项目上线流程" class="headerlink" title="Java项目上线流程"></a>Java项目上线流程<a id="more"></a></h1><ul>
-<li>企业项目</li>
-</ul>
-<p>定需求（开会）—&gt;写需求文档（同时可以技术选型）—&gt;设计原型—&gt;开发前端代码（后端代码也可以同时进行开发）—&gt;前后端代码进行测试—&gt;上传到公网—&gt;客户在使用中也是一个测试—&gt;出现了bug或功能不全在更新。</p>
-<ul>
-<li>自己开发的项目</li>
-</ul>
-<p>项目代码写好以后在本地运行测试完毕—&gt;购买域名和服务器—&gt;域名的解析（简单的说就是将域名和服务器的ip绑定，以后访问时就直接找到你的服务器，这就叫做DNS解析）—&gt;在服务器上搭建项目运行的环境（数据库，web容器，redis，Nginx）—&gt;项目上线</p>
-<h2 id="学习路线的问题"><a href="#学习路线的问题" class="headerlink" title="学习路线的问题"></a>学习路线的问题</h2>]]></content>
-      <tags>
-        <tag>Java项目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript</title>
     <url>/Mr-lee-MQ.hithub.io/2020/07/24/JavaScript/</url>
     <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript<a id="more"></a></h1><p>JavaScript是一门世界上最流行的脚本语言。</p>
@@ -2089,7 +2073,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   <entry>
     <title>网站及软件推荐</title>
     <url>/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<h1 id="网站推荐"><a href="#网站推荐" class="headerlink" title="网站推荐"></a>网站推荐</h1><h2 id="影视类"><a href="#影视类" class="headerlink" title="影视类"></a>影视类</h2><blockquote>
+    <content><![CDATA[<h1 id="网站推荐"><a href="#网站推荐" class="headerlink" title="网站推荐"></a>网站推荐<a id="more"></a></h1><h2 id="影视类"><a href="#影视类" class="headerlink" title="影视类"></a>影视类</h2><blockquote>
 <p>4K屋</p>
 </blockquote>
 <p><a href="http://www.kkkkwo.com/tv/" target="_blank" rel="noopener">http://www.kkkkwo.com/tv/</a>        </p>
