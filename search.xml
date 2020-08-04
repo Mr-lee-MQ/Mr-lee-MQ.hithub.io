@@ -1115,7 +1115,7 @@ int main()
   <entry>
     <title>Hexo的搭建</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="软件安装及部署"><a href="#软件安装及部署" class="headerlink" title="软件安装及部署"></a>软件安装及部署<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+    <content><![CDATA[<h1 id="软件安装部署及更新"><a href="#软件安装部署及更新" class="headerlink" title="软件安装部署及更新"></a>软件安装部署及更新<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
 <h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
 <h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
 <li>安装主题</li>
@@ -1136,7 +1136,8 @@ INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编
 <pre><code> hexo clean          # 清除所有记录 
 $ hexo generate       # 生成静态网页 简写：hexo g
 $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre>]]></content>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="2020年8月4日11-36-49"><a href="#2020年8月4日11-36-49" class="headerlink" title="2020年8月4日11:36:49"></a>2020年8月4日11:36:49</h3><p>将图片存放在同名文件夹中，放到图床上，然后将Markdown的详细链接放到博客中即可插入图片</p>
+]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -2231,59 +2232,58 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <h2 id="软件推荐"><a href="#软件推荐" class="headerlink" title="软件推荐"></a>软件推荐</h2><blockquote>
 <p>Bandzip</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803222730589.png" alt="image-20200803222730589"></p>
+<p><a href="https://www.wailian.work/image/DATUU5" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803222730589.png" alt="image-20200803222730589.png"></a></p>
 <p>没有广告的解压工具</p>
 <blockquote>
 <p>冰点下载器</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223014824.png" alt="image-20200803223014824"></p>
+<p><a href="https://www.wailian.work/image/DATj3V" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223014824.png" alt="image-20200803223014824.png"></a></p>
 <p>用于免费下载百度文库里的付费文章</p>
 <blockquote>
 <p>XMind</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223124772.png" alt="image-20200803223124772"></p>
+<p><a href="https://www.wailian.work/image/DATsJe" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223124772.png" alt="image-20200803223124772.png"></a></p>
 <p>思维导图制作工具</p>
 <blockquote>
 <p>PanDownload</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223211553.png" alt="image-20200803223211553"></p>
+<p><a href="https://www.wailian.work/image/DATy9c" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223211553.png" alt="image-20200803223211553.png"></a></p>
 <p>免费百度网盘下载工具</p>
 <blockquote>
 <p>Bypass</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223335814.png" alt="image-20200803223335814"></p>
+<p><a href="https://www.wailian.work/image/DAT7I8" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223335814.png" alt="image-20200803223335814.png"></a></p>
 <p>抢车票专用</p>
 <blockquote>
 <p>PDF Candy Desktop PRO</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223458599.png" alt="image-20200803223458599"></p>
+<p><a href="https://www.wailian.work/image/DAZvpo" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223458599.png" alt="image-20200803223458599.png"></a></p>
 <p>PDF转换工具，免费，无文件大小限制</p>
 <blockquote>
 <p>洛雪音乐助手</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223659802.png" alt="image-20200803223659802"></p>
+<p><a href="https://www.wailian.work/image/DAZArS" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223659802.png" alt="image-20200803223659802.png"></a></p>
 <p>免费音乐下载器</p>
 <blockquote>
 <p>SpeedPanX</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803223922785.png" alt="image-20200803223922785"></p>
+<p><a href="https://www.wailian.work/image/DAZZ5l" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803223922785.png" alt="image-20200803223922785.png"></a></p>
 <p>付费百度网盘下载工具，便宜且速度超快</p>
 <blockquote>
 <p>Snipaste_latest</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803224051434.png" alt="image-20200803224051434"></p>
+<p><a href="https://www.wailian.work/image/DAZXbR" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803224051434.png" alt="image-20200803224051434.png"></a></p>
 <p>小巧的截图工具</p>
 <blockquote>
 <p>TakeColor</p>
 </blockquote>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/08/03/%E7%BD%91%E7%AB%99%E5%8F%8A%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/image-20200803224226609.png" alt="image-20200803224226609"></p>
+<p><a href="https://www.wailian.work/image/DAZFK9" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803224226609.png" alt="image-20200803224226609.png"></a></p>
 <p>取色器</p>
 <blockquote>
 <p>Typora</p>
 </blockquote>
 <p><a href="https://www.wailian.work/image/DAZ08q" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803224300409.png" alt="image-20200803224300409.png"></a></p>
 <p>简洁方便的Markdown编辑工具</p>
-<p><img src="http://s1.wailian.download/2020/06/10/image-20200530172929530.png" alt="image-20200530172929530.png"></p>
 ]]></content>
   </entry>
 </search>
