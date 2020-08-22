@@ -762,78 +762,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Git</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
-    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git<a id="more"></a></h1><h2 id="idea安装Git"><a href="#idea安装Git" class="headerlink" title="idea安装Git"></a>idea安装Git</h2><ul>
-<li><p>[下载地址]:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
-</li>
-<li><p>安装默认</p>
-</li>
-<li><p>运行测试：win+r,cmd  打开控制台，输入git指令，看到下图即表示安装成功</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5793.png" alt="运行测试"></p>
-</li>
-</ul>
-<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
-<li><p>菜单-&gt;settings-&gt;Version Control-&gt;Git-&gt;Path to Git executable: 设置为<a href="https://how2j.cn/k/idea/idea-git-install/1359.html" target="_blank" rel="noopener">安装git</a>中所安装的git.exe</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5794.png" alt="为IDEA指定git路径"></p>
-</li>
-<li><p>接下来为github设置账号密码：<br>菜单-&gt;settings-&gt;Version Control-&gt;GitHub-&gt;Create API Token</p>
-</li>
-<li><p><img src="https://stepimagewm.how2j.cn/5795.png" alt="设置github账号"></p>
-</li>
-</ul>
-<h2 id="idea-pull项目"><a href="#idea-pull项目" class="headerlink" title="idea pull项目"></a>idea pull项目</h2><ul>
-<li>checkout：菜单-&gt;VCS-&gt;Chekout from Version Control-&gt;GitHub</li>
-<li><img src="https://stepimagewm.how2j.cn/5797.png" alt="checkout"></li>
-<li>输入项目参数：Git Repositor URL:<a href="https://github.com/how2j/higit.git" target="_blank" rel="noopener">https://github.com/how2j/higit.git</a><br>Parent Directory: e:\project<br>Directory Name: higit<br>然后点击 Clone</li>
-<li><img src="https://stepimagewm.how2j.cn/5798.png" alt="输入项目参数"></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的搭建</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="软件安装部署及更新"><a href="#软件安装部署及更新" class="headerlink" title="软件安装部署及更新"></a>软件安装部署及更新<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
-<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
-<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
-<li>安装主题</li>
-</ul>
-<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
-<ul>
-<li>配置</li>
-</ul>
-<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
-<ul>
-<li>更新</li>
-</ul>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
-<p>用Hexo写一篇博客</p>
-<pre><code>$ hexo n &quot;我的第一篇博客&quot;
-INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
-<pre><code> hexo clean          # 清除所有记录 
-$ hexo generate       # 生成静态网页 简写：hexo g
-$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="2020年8月4日11-36-49"><a href="#2020年8月4日11-36-49" class="headerlink" title="2020年8月4日11:36:49"></a>2020年8月4日11:36:49</h3><ul>
-<li><p>将图片存放在同名文件夹中，放到图床上，然后将Markdown的详细链接放到博客中即可插入图片</p>
-</li>
-<li><p>网易云音乐更换音乐<a href="https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id" target="_blank" rel="noopener">https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HTML5</title>
     <url>/Mr-lee-MQ.hithub.io/2020/07/13/HTML5/</url>
     <content><![CDATA[<h1 id="HTML详解"><a href="#HTML详解" class="headerlink" title="HTML详解"></a>HTML详解<a id="more"></a></h1><h2 id="初识HTML"><a href="#初识HTML" class="headerlink" title="初识HTML"></a>初识HTML</h2><ul>
@@ -1151,6 +1079,78 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
+    <title>Git</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git<a id="more"></a></h1><h2 id="idea安装Git"><a href="#idea安装Git" class="headerlink" title="idea安装Git"></a>idea安装Git</h2><ul>
+<li><p>[下载地址]:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
+</li>
+<li><p>安装默认</p>
+</li>
+<li><p>运行测试：win+r,cmd  打开控制台，输入git指令，看到下图即表示安装成功</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5793.png" alt="运行测试"></p>
+</li>
+</ul>
+<h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><ul>
+<li><p>菜单-&gt;settings-&gt;Version Control-&gt;Git-&gt;Path to Git executable: 设置为<a href="https://how2j.cn/k/idea/idea-git-install/1359.html" target="_blank" rel="noopener">安装git</a>中所安装的git.exe</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5794.png" alt="为IDEA指定git路径"></p>
+</li>
+<li><p>接下来为github设置账号密码：<br>菜单-&gt;settings-&gt;Version Control-&gt;GitHub-&gt;Create API Token</p>
+</li>
+<li><p><img src="https://stepimagewm.how2j.cn/5795.png" alt="设置github账号"></p>
+</li>
+</ul>
+<h2 id="idea-pull项目"><a href="#idea-pull项目" class="headerlink" title="idea pull项目"></a>idea pull项目</h2><ul>
+<li>checkout：菜单-&gt;VCS-&gt;Chekout from Version Control-&gt;GitHub</li>
+<li><img src="https://stepimagewm.how2j.cn/5797.png" alt="checkout"></li>
+<li>输入项目参数：Git Repositor URL:<a href="https://github.com/how2j/higit.git" target="_blank" rel="noopener">https://github.com/how2j/higit.git</a><br>Parent Directory: e:\project<br>Directory Name: higit<br>然后点击 Clone</li>
+<li><img src="https://stepimagewm.how2j.cn/5798.png" alt="输入项目参数"></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo的搭建</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="软件安装部署及更新"><a href="#软件安装部署及更新" class="headerlink" title="软件安装部署及更新"></a>软件安装部署及更新<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
+<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
+<li>安装主题</li>
+</ul>
+<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
+<ul>
+<li>更新</li>
+</ul>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
+<p>用Hexo写一篇博客</p>
+<pre><code>$ hexo n &quot;我的第一篇博客&quot;
+INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
+<pre><code> hexo clean          # 清除所有记录 
+$ hexo generate       # 生成静态网页 简写：hexo g
+$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="2020年8月4日11-36-49"><a href="#2020年8月4日11-36-49" class="headerlink" title="2020年8月4日11:36:49"></a>2020年8月4日11:36:49</h3><ul>
+<li><p>将图片存放在同名文件夹中，放到图床上，然后将Markdown的详细链接放到博客中即可插入图片</p>
+</li>
+<li><p>网易云音乐更换音乐<a href="https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id" target="_blank" rel="noopener">https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Javase_数组</title>
     <url>/Mr-lee-MQ.hithub.io/2020/08/21/Javase-%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组<a id="more"></a></h1><h2 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h2><ul>
@@ -1249,54 +1249,6 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <li>比较数组：通过equals方法比较数组中元素值是否相等。</li>
 <li>查找数组元素：通过binarySearch方法能对排序好的数组进行二分查找操作。</li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>Javase_方法</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/20/Javase-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法<a id="more"></a></h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println()</span><br><span class="line">    </span><br><span class="line">    System   系统类</span><br><span class="line">    out      对象</span><br><span class="line">    println  方法</span><br></pre></td></tr></table></figure>
-
-<p>方法即是功能块。一个方法完成一个功能，有利于后期的拓展。</p>
-<p>命名规则：首字母小写，后用驼峰命名法。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">     <span class="keyword">int</span> sum = add(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">     System.<span class="function">out <span class="title">println</span><span class="params">(sum)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//add就是方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a+b; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>方法包含一个方法头和一个方法体。</p>
-<ul>
-<li>修饰符：定义该方法的访问类型</li>
-<li>返回值类型：方法可能会返回值</li>
-<li>方法名：方法的实际名称。方法名和参数表共同构成方法签名。</li>
-<li>参数类型：方法被调用时，传递值给参数。<ul>
-<li>形式参数：在方法被调用时用于接收外界输入的数据</li>
-<li>实参：调用方法时实际传给方法的数据</li>
-</ul>
-</li>
-<li>方法体：包含具体的语句，定义该方法的功能。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">修饰符 返回值类型 方法名（参数类型 参数名）&#123;</span><br><span class="line">    ...</span><br><span class="line">    方法体</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>重载就是在一个类中，有相同的函数名称，但形参不同的函数。</p>
-<p>方法重载的规则：</p>
-<ul>
-<li>方法名称必须相同</li>
-<li>参数列表必须不同</li>
-<li>方法的返回值类型可以相同也可以不同</li>
-<li>仅仅返回类型不同不足以成为方法的重载。</li>
-</ul>
-<p>实现理论：</p>
-<p>方法名相同时，编译器会根据调用方法的参数个数，参数类型等去逐个匹配，以选择对应的方法，如果匹配失败，则编译器会报错。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ADHero</span> <span class="keyword">extends</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">" 进行了一次攻击 ，但是不确定打中谁了"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">(Hero h1)</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"对"</span> + h1.name + <span class="string">"进行了一次攻击 "</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">(Hero h1, Hero h2)</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"同时对"</span> + h1.name + <span class="string">"和"</span> + h2.name + <span class="string">"进行了攻击 "</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ADHero bh = <span class="keyword">new</span> ADHero();</span><br><span class="line">        bh.name = <span class="string">"赏金猎人"</span>;</span><br><span class="line"> </span><br><span class="line">        Hero h1 = <span class="keyword">new</span> Hero();</span><br><span class="line">        h1.name = <span class="string">"盖伦"</span>;</span><br><span class="line">        Hero h2 = <span class="keyword">new</span> Hero();</span><br><span class="line">        h2.name = <span class="string">"提莫"</span>;</span><br><span class="line"> </span><br><span class="line">        bh.attack(h1);</span><br><span class="line">        bh.attack(h1, h2);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>一个方法中只能指定一个可变参数，他必须是方法的最后一个参数，任何普通的参数必须在他之前声明。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//输入若干个double类型数据，比较大小后输出最大值</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">       printMax(...number:<span class="number">34</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">56.5</span>);</span><br><span class="line">       printMax(<span class="keyword">new</span> <span class="keyword">double</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;);</span><br><span class="line">   &#125; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printMax</span><span class="params">(<span class="keyword">double</span>... number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(number.length == <span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"No argument passed"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> result = number[<span class="number">0</span>];</span><br><span class="line">        <span class="comment">//排序</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt; number.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(number[i]&gt;result)&#123;</span><br><span class="line">                result = number[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"The max value is "</span> + result)；</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归就是A方法调用A方法，即自己调用自己。</p>
-<p>递归结构包括两部分</p>
-<ul>
-<li>递归头：什么时候不调用自身方法。如果没有头，将进入死循环</li>
-<li>递归体：什么时候需要调用自身方法。 </li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//阶乘的算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo06</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arge)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> n*f(n:n-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
   <entry>
@@ -1942,6 +1894,54 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
+    <title>Javase_方法</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/08/20/Javase-%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法<a id="more"></a></h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println()</span><br><span class="line">    </span><br><span class="line">    System   系统类</span><br><span class="line">    out      对象</span><br><span class="line">    println  方法</span><br></pre></td></tr></table></figure>
+
+<p>方法即是功能块。一个方法完成一个功能，有利于后期的拓展。</p>
+<p>命名规则：首字母小写，后用驼峰命名法。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">     <span class="keyword">int</span> sum = add(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">     System.<span class="function">out <span class="title">println</span><span class="params">(sum)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//add就是方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a+b; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法包含一个方法头和一个方法体。</p>
+<ul>
+<li>修饰符：定义该方法的访问类型</li>
+<li>返回值类型：方法可能会返回值</li>
+<li>方法名：方法的实际名称。方法名和参数表共同构成方法签名。</li>
+<li>参数类型：方法被调用时，传递值给参数。<ul>
+<li>形式参数：在方法被调用时用于接收外界输入的数据</li>
+<li>实参：调用方法时实际传给方法的数据</li>
+</ul>
+</li>
+<li>方法体：包含具体的语句，定义该方法的功能。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">修饰符 返回值类型 方法名（参数类型 参数名）&#123;</span><br><span class="line">    ...</span><br><span class="line">    方法体</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>重载就是在一个类中，有相同的函数名称，但形参不同的函数。</p>
+<p>方法重载的规则：</p>
+<ul>
+<li>方法名称必须相同</li>
+<li>参数列表必须不同</li>
+<li>方法的返回值类型可以相同也可以不同</li>
+<li>仅仅返回类型不同不足以成为方法的重载。</li>
+</ul>
+<p>实现理论：</p>
+<p>方法名相同时，编译器会根据调用方法的参数个数，参数类型等去逐个匹配，以选择对应的方法，如果匹配失败，则编译器会报错。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ADHero</span> <span class="keyword">extends</span> <span class="title">Hero</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">" 进行了一次攻击 ，但是不确定打中谁了"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">(Hero h1)</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"对"</span> + h1.name + <span class="string">"进行了一次攻击 "</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">attack</span><span class="params">(Hero h1, Hero h2)</span> </span>&#123;</span><br><span class="line">        System.out.println(name + <span class="string">"同时对"</span> + h1.name + <span class="string">"和"</span> + h2.name + <span class="string">"进行了攻击 "</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ADHero bh = <span class="keyword">new</span> ADHero();</span><br><span class="line">        bh.name = <span class="string">"赏金猎人"</span>;</span><br><span class="line"> </span><br><span class="line">        Hero h1 = <span class="keyword">new</span> Hero();</span><br><span class="line">        h1.name = <span class="string">"盖伦"</span>;</span><br><span class="line">        Hero h2 = <span class="keyword">new</span> Hero();</span><br><span class="line">        h2.name = <span class="string">"提莫"</span>;</span><br><span class="line"> </span><br><span class="line">        bh.attack(h1);</span><br><span class="line">        bh.attack(h1, h2);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>一个方法中只能指定一个可变参数，他必须是方法的最后一个参数，任何普通的参数必须在他之前声明。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//输入若干个double类型数据，比较大小后输出最大值</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">       printMax(...number:<span class="number">34</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">56.5</span>);</span><br><span class="line">       printMax(<span class="keyword">new</span> <span class="keyword">double</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;);</span><br><span class="line">   &#125; </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printMax</span><span class="params">(<span class="keyword">double</span>... number)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(number.length == <span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">"No argument passed"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> result = number[<span class="number">0</span>];</span><br><span class="line">        <span class="comment">//排序</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt; number.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(number[i]&gt;result)&#123;</span><br><span class="line">                result = number[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"The max value is "</span> + result)；</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归就是A方法调用A方法，即自己调用自己。</p>
+<p>递归结构包括两部分</p>
+<ul>
+<li>递归头：什么时候不调用自身方法。如果没有头，将进入死循环</li>
+<li>递归体：什么时候需要调用自身方法。 </li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//阶乘的算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo06</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arge)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> n*f(n:n-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>Mybatis框架</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
     <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
@@ -2033,196 +2033,6 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 ]]></content>
       <tags>
         <tag>框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>maven项目管理</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="Maven项目管理"><a href="#Maven项目管理" class="headerlink" title="Maven项目管理"></a>Maven项目管理<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
-<li><p>jar包管理</p>
-<ul>
-<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
-<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
-</ul>
-</li>
-<li><p>Maven是跨平台的可以在window、linux上使用。</p>
-</li>
-<li><p>清晰的项目结构</p>
-</li>
-<li><p>多工程开发，将模块拆分成若干个工程，利于团队协作开发。</p>
-</li>
-<li><p>一键构建项目：使用命令行可以对项目进行一键构建，操作系统中无需安装eclipse和tomcat。</p>
-<h2 id="Maven入门"><a href="#Maven入门" class="headerlink" title="Maven入门"></a>Maven入门</h2></li>
-<li><p>下载，安装，配置环境变量Maven；</p>
-<ul>
-<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>     下载后解压，放到工作目录下。<ul>
-<li>bin：配置文件，脚本</li>
-<li>boot：类加载器的框架</li>
-<li>conf：配置文件     sttings.xml主要用到的配置文件（全局配置）</li>
-<li>lib：库文件</li>
-</ul>
-</li>
-<li><img src="http://s1.wailian.download/2020/06/10/image-20200530172929530.png" alt="image-20200530172929530.png"></li>
-</ul>
-</li>
-<li><p>变量值Maven安装路径到bin目录之前</p>
-</li>
-</ul>
-<h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
-<li><p>jar包管理</p>
-<ul>
-<li><p>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</p>
-</li>
-<li><p>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</p>
-</li>
-<li><p>Maven项目通过坐标的方式从本地仓库获取jar包</p>
-<ul>
-<li><p>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</p>
-</li>
-<li><p>本地仓库：存放了很多Jar包，供Maven项目使用。</p>
-</li>
-<li><p>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</p>
-</li>
-<li><p>多个Maven项目都可以从本地仓库获取jar包</p>
-</li>
-<li><p>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径····</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localRepository&gt;&#x2F;path&#x2F;to&#x2F;local&#x2F;repo&lt;&#x2F;localRepository&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
-<p><a href="https://www.wailian.work/image/AjEarS" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200530175433411.png" alt="image-20200530175433411.png"></a></p>
-<ul>
-<li>中央仓库（MVN）<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></li>
-</ul>
-<p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
-<h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
-<li>在settings.xml文件中的mirrors下添加mirror标签</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line"></span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line"></span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line"></span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line"></span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>maven是由纯java开发，是跨平台的可以在window，linux，mac上使用</li>
-<li>清晰的项目结构</li>
-<li>使用Maven将大型项目按照模块拆分成若干工程，不同的团队维护各自的工程，可大大的提升开发效率。<ul>
-<li>大型商城项目按业务分成商品管理，用户管理，订单管理等模块</li>
-<li>中小型项目按照传统项目分为Web，Service，Dao层，依照员工的业务能力分配工作</li>
-</ul>
-</li>
-</ul>
-<h2 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a>Maven常用命令</h2><ul>
-<li><p>mvn       命令（在工程目录下）</p>
-</li>
-<li><p>clean            清理</p>
-</li>
-<li><p>compile          编译，只编译main文件，不编译test中的代码（记得常clean）</p>
-</li>
-<li><p>test-compile    编译test目录中的代码 </p>
-</li>
-<li><p>package     打包           打包完的名字是由pom.xml中的(artifactId——version—-packaging)决定的</p>
-<ul>
-<li>Java项目—–打成jar包          </li>
-<li>web项目—–打成war包</li>
-</ul>
-</li>
-<li><p>install：    发布项目到本地仓库，用在打jar包上，打成jar包可以被其他项目使用</p>
-</li>
-<li><p>tomcat：run：    一键构建项目</p>
-</li>
-</ul>
-<h2 id="Maven的生命周期"><a href="#Maven的生命周期" class="headerlink" title="Maven的生命周期"></a>Maven的生命周期</h2><ul>
-<li>Clean       生命周期：clean</li>
-<li>Default      生命周期：compile，test-compile，test，package，install</li>
-<li>Silt              生命周期：site命令，生成项目描述文档静态页</li>
-<li>不同的生命周期可以一起执行，例如先clean再compile</li>
-</ul>
-<h2 id="Maven命令的执行顺序"><a href="#Maven命令的执行顺序" class="headerlink" title="Maven命令的执行顺序"></a>Maven命令的执行顺序</h2><ul>
-<li>在相同生命周期中的命令才会受执行顺序的影响</li>
-<li>Default生命周期中的命令执行顺序：<ul>
-<li>compile&lt;—test-compile&lt;—test&lt;—package&lt;—install</li>
-</ul>
-</li>
-</ul>
-<h2 id="Maven入门程序"><a href="#Maven入门程序" class="headerlink" title="Maven入门程序"></a>Maven入门程序</h2><ul>
-<li><p>创建Maven项目</p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjEdI8" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132200007.png" alt="image-20200531132200007.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjE28B" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132333105.png" alt="image-20200531132333105.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjE9a0" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132454709.png" alt="image-20200531132454709.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjEW5l" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132531764.png" alt="image-20200531132531764.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjEN5b" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531115832479.png" alt="image-20200531115832479.png"></a></p>
-</li>
-<li><p><img src="http://s1.wailian.download/2020/06/10/sp200610_113715.png" alt="sp200610_113715.png"></p>
-</li>
-</ul>
-<ul>
-<li><p>在src—&gt;main–&gt;webapp下创建WEB-INF目录，并在目录下创建web.xml</p>
-</li>
-<li><p>修改Maven默认编译级别</p>
-<ul>
-<li>全局编译级别–&gt;修改settings.xml</li>
-<li>项目级别修改–&gt;项目对应的pox.xml</li>
-</ul>
-</li>
-<li><p>在Java Resourcese -&gt; src/main/java下写代码，创建包和Servlet；</p>
-</li>
-<li><p>添加servlet-api</p>
-</li>
-<li><p>在servlet-api中添加scope标签，值为：proviede；</p>
-<ul>
-<li>如果不加此标签有很大几率报错，因为tomcat中也有servlet-api的包导致冲突；</li>
-</ul>
-</li>
-<li><p>运行：发生错误，原因是maven默认使用tomcat6.xx，不支持@WebServle注解；</p>
-<ul>
-<li>解决方案1：需要去web.xml中配置Servlet;</li>
-<li>解决方案2：配置高版本tomcat插件；</li>
-</ul>
-</li>
-<li><p>最后测试，启动服务，在地址栏输入请求，显示结果；</p>
-</li>
-<li><p>报错可以更新Maven</p>
-</li>
-</ul>
-<h2 id="IDEA-Maven设置"><a href="#IDEA-Maven设置" class="headerlink" title="IDEA Maven设置"></a>IDEA Maven设置</h2><ul>
-<li><p>下载与配置Maven</p>
-</li>
-<li><p>建立Maven本地仓库</p>
-</li>
-<li><p>IDEA设置：</p>
-<p>File-&gt;Settings-&gt;Build, Execute, Deployment-&gt;Build Tools-&gt;Maven<br>修改 Maven home directory: d:/software/apache-maven-3.5.0<br>修改 User settings file: D:\software\apache-maven-3.5.0\conf\settings.xml<br>Local repository 会被自动识别为 d:\maven\repository</p>
-</li>
-<li><p>新建项目</p>
-<ul>
-<li>左边选择Maven</li>
-<li>勾选Create from archetype</li>
-<li>选择org.apache.maven.archetypes:maven-archetype-quickstart</li>
-<li>Maven项目创建后，IDEA还会做一些初始化的工作，那么需要点击右下角的 Import Changes</li>
-</ul>
-</li>
-<li><p>Idea Maven增加Jar</p>
-<ul>
-<li>修改pom.xml</li>
-<li><img src="http://s1.wailian.download/2020/06/10/5761.png" alt="5761.png"></li>
-<li>在修改了pom.xml之后，IDEA上会弹出这么一个 Maven projects need to be imported，点击Import Changes</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>maven</tag>
       </tags>
   </entry>
   <entry>
@@ -2439,5 +2249,195 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <p><a href="https://www.wailian.work/image/DAZ08q" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/08/04/image-20200803224300409.png" alt="image-20200803224300409.png"></a></p>
 <p>简洁方便的Markdown编辑工具</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>maven项目管理</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="Maven项目管理"><a href="#Maven项目管理" class="headerlink" title="Maven项目管理"></a>Maven项目管理<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
+<li><p>jar包管理</p>
+<ul>
+<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
+<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
+</ul>
+</li>
+<li><p>Maven是跨平台的可以在window、linux上使用。</p>
+</li>
+<li><p>清晰的项目结构</p>
+</li>
+<li><p>多工程开发，将模块拆分成若干个工程，利于团队协作开发。</p>
+</li>
+<li><p>一键构建项目：使用命令行可以对项目进行一键构建，操作系统中无需安装eclipse和tomcat。</p>
+<h2 id="Maven入门"><a href="#Maven入门" class="headerlink" title="Maven入门"></a>Maven入门</h2></li>
+<li><p>下载，安装，配置环境变量Maven；</p>
+<ul>
+<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>     下载后解压，放到工作目录下。<ul>
+<li>bin：配置文件，脚本</li>
+<li>boot：类加载器的框架</li>
+<li>conf：配置文件     sttings.xml主要用到的配置文件（全局配置）</li>
+<li>lib：库文件</li>
+</ul>
+</li>
+<li><img src="http://s1.wailian.download/2020/06/10/image-20200530172929530.png" alt="image-20200530172929530.png"></li>
+</ul>
+</li>
+<li><p>变量值Maven安装路径到bin目录之前</p>
+</li>
+</ul>
+<h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
+<li><p>jar包管理</p>
+<ul>
+<li><p>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</p>
+</li>
+<li><p>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</p>
+</li>
+<li><p>Maven项目通过坐标的方式从本地仓库获取jar包</p>
+<ul>
+<li><p>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</p>
+</li>
+<li><p>本地仓库：存放了很多Jar包，供Maven项目使用。</p>
+</li>
+<li><p>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</p>
+</li>
+<li><p>多个Maven项目都可以从本地仓库获取jar包</p>
+</li>
+<li><p>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径····</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localRepository&gt;&#x2F;path&#x2F;to&#x2F;local&#x2F;repo&lt;&#x2F;localRepository&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
+<p><a href="https://www.wailian.work/image/AjEarS" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200530175433411.png" alt="image-20200530175433411.png"></a></p>
+<ul>
+<li>中央仓库（MVN）<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></li>
+</ul>
+<p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
+<h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
+<li>在settings.xml文件中的mirrors下添加mirror标签</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line"></span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line"></span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line"></span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line"></span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>maven是由纯java开发，是跨平台的可以在window，linux，mac上使用</li>
+<li>清晰的项目结构</li>
+<li>使用Maven将大型项目按照模块拆分成若干工程，不同的团队维护各自的工程，可大大的提升开发效率。<ul>
+<li>大型商城项目按业务分成商品管理，用户管理，订单管理等模块</li>
+<li>中小型项目按照传统项目分为Web，Service，Dao层，依照员工的业务能力分配工作</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a>Maven常用命令</h2><ul>
+<li><p>mvn       命令（在工程目录下）</p>
+</li>
+<li><p>clean            清理</p>
+</li>
+<li><p>compile          编译，只编译main文件，不编译test中的代码（记得常clean）</p>
+</li>
+<li><p>test-compile    编译test目录中的代码 </p>
+</li>
+<li><p>package     打包           打包完的名字是由pom.xml中的(artifactId——version—-packaging)决定的</p>
+<ul>
+<li>Java项目—–打成jar包          </li>
+<li>web项目—–打成war包</li>
+</ul>
+</li>
+<li><p>install：    发布项目到本地仓库，用在打jar包上，打成jar包可以被其他项目使用</p>
+</li>
+<li><p>tomcat：run：    一键构建项目</p>
+</li>
+</ul>
+<h2 id="Maven的生命周期"><a href="#Maven的生命周期" class="headerlink" title="Maven的生命周期"></a>Maven的生命周期</h2><ul>
+<li>Clean       生命周期：clean</li>
+<li>Default      生命周期：compile，test-compile，test，package，install</li>
+<li>Silt              生命周期：site命令，生成项目描述文档静态页</li>
+<li>不同的生命周期可以一起执行，例如先clean再compile</li>
+</ul>
+<h2 id="Maven命令的执行顺序"><a href="#Maven命令的执行顺序" class="headerlink" title="Maven命令的执行顺序"></a>Maven命令的执行顺序</h2><ul>
+<li>在相同生命周期中的命令才会受执行顺序的影响</li>
+<li>Default生命周期中的命令执行顺序：<ul>
+<li>compile&lt;—test-compile&lt;—test&lt;—package&lt;—install</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven入门程序"><a href="#Maven入门程序" class="headerlink" title="Maven入门程序"></a>Maven入门程序</h2><ul>
+<li><p>创建Maven项目</p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjEdI8" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132200007.png" alt="image-20200531132200007.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjE28B" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132333105.png" alt="image-20200531132333105.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjE9a0" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132454709.png" alt="image-20200531132454709.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjEW5l" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132531764.png" alt="image-20200531132531764.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjEN5b" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531115832479.png" alt="image-20200531115832479.png"></a></p>
+</li>
+<li><p><img src="http://s1.wailian.download/2020/06/10/sp200610_113715.png" alt="sp200610_113715.png"></p>
+</li>
+</ul>
+<ul>
+<li><p>在src—&gt;main–&gt;webapp下创建WEB-INF目录，并在目录下创建web.xml</p>
+</li>
+<li><p>修改Maven默认编译级别</p>
+<ul>
+<li>全局编译级别–&gt;修改settings.xml</li>
+<li>项目级别修改–&gt;项目对应的pox.xml</li>
+</ul>
+</li>
+<li><p>在Java Resourcese -&gt; src/main/java下写代码，创建包和Servlet；</p>
+</li>
+<li><p>添加servlet-api</p>
+</li>
+<li><p>在servlet-api中添加scope标签，值为：proviede；</p>
+<ul>
+<li>如果不加此标签有很大几率报错，因为tomcat中也有servlet-api的包导致冲突；</li>
+</ul>
+</li>
+<li><p>运行：发生错误，原因是maven默认使用tomcat6.xx，不支持@WebServle注解；</p>
+<ul>
+<li>解决方案1：需要去web.xml中配置Servlet;</li>
+<li>解决方案2：配置高版本tomcat插件；</li>
+</ul>
+</li>
+<li><p>最后测试，启动服务，在地址栏输入请求，显示结果；</p>
+</li>
+<li><p>报错可以更新Maven</p>
+</li>
+</ul>
+<h2 id="IDEA-Maven设置"><a href="#IDEA-Maven设置" class="headerlink" title="IDEA Maven设置"></a>IDEA Maven设置</h2><ul>
+<li><p>下载与配置Maven</p>
+</li>
+<li><p>建立Maven本地仓库</p>
+</li>
+<li><p>IDEA设置：</p>
+<p>File-&gt;Settings-&gt;Build, Execute, Deployment-&gt;Build Tools-&gt;Maven<br>修改 Maven home directory: d:/software/apache-maven-3.5.0<br>修改 User settings file: D:\software\apache-maven-3.5.0\conf\settings.xml<br>Local repository 会被自动识别为 d:\maven\repository</p>
+</li>
+<li><p>新建项目</p>
+<ul>
+<li>左边选择Maven</li>
+<li>勾选Create from archetype</li>
+<li>选择org.apache.maven.archetypes:maven-archetype-quickstart</li>
+<li>Maven项目创建后，IDEA还会做一些初始化的工作，那么需要点击右下角的 Import Changes</li>
+</ul>
+</li>
+<li><p>Idea Maven增加Jar</p>
+<ul>
+<li>修改pom.xml</li>
+<li><img src="http://s1.wailian.download/2020/06/10/5761.png" alt="5761.png"></li>
+<li>在修改了pom.xml之后，IDEA上会弹出这么一个 Maven projects need to be imported，点击Import Changes</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>maven</tag>
+      </tags>
   </entry>
 </search>
