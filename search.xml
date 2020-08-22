@@ -1153,7 +1153,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   <entry>
     <title>Javase_数组</title>
     <url>/Mr-lee-MQ.hithub.io/2020/08/21/Javase-%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h2><ul>
+    <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组<a id="more"></a></h1><h2 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h2><ul>
 <li>数组是相同类型数据的有序集合</li>
 <li>数组描述的是相同类型的若干个数据，按照一定的先后次序排列组合而成</li>
 <li>每一个数据称做一个数组元素，每个数组元素可以通过一个下标来访问他们。</li>
@@ -1254,7 +1254,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   <entry>
     <title>Javase_方法</title>
     <url>/Mr-lee-MQ.hithub.io/2020/08/20/Javase-%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println()</span><br><span class="line">    </span><br><span class="line">    System   系统类</span><br><span class="line">    out      对象</span><br><span class="line">    println  方法</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法<a id="more"></a></h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println()</span><br><span class="line">    </span><br><span class="line">    System   系统类</span><br><span class="line">    out      对象</span><br><span class="line">    println  方法</span><br></pre></td></tr></table></figure>
 
 <p>方法即是功能块。一个方法完成一个功能，有利于后期的拓展。</p>
 <p>命名规则：首字母小写，后用驼峰命名法。</p>
