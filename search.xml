@@ -327,7 +327,7 @@
 
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">position</span><span class="selector-pseudo">:relative</span>;   <span class="comment">/*相对定位：上下左右*/</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">        <span class="selector-tag">body</span>&#123;</span><br><span class="line">           <span class="attribute">padding</span>:<span class="number">20px</span>;</span><br><span class="line">       &#125;</span><br><span class="line">        <span class="selector-tag">div</span>&#123;</span><br><span class="line">            <span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">            <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#0000ff</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-id">#first</span>&#123;</span><br><span class="line">            <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#0000ff</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: aqua;</span><br><span class="line">            <span class="attribute">position</span>:relative;   <span class="comment">/*相对定位：上下左右*/</span></span><br><span class="line">            <span class="attribute">top</span>:-<span class="number">20px</span>;</span><br><span class="line">            <span class="attribute">left</span>:<span class="number">20px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-id">#second</span>&#123;</span><br><span class="line">            <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#0000ff</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: cyan;</span><br><span class="line">            <span class="attribute">position</span>:relative;</span><br><span class="line">            <span class="attribute">left</span>:<span class="number">20px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-id">#third</span>&#123;</span><br><span class="line">            <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#0000ff</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: antiquewhite;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">&lt;div id="father"&gt;</span><br><span class="line">    &lt;div id="first"&gt;第一个盒子&lt;/div&gt;</span><br><span class="line">    &lt;div id="second"&gt;第二个盒子&lt;/div&gt;</span><br><span class="line">    &lt;div id="third"&gt;第三个盒子&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 
-<p><a href="https://www.wailian.work/image/QfcpF0" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200723_182303.png" alt="sp200723_182303.png"></a></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/07/15/CSS3/sp200723_182303.png" alt="sp200723_182303.png"></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-id">#box</span>&#123;</span></span><br><span class="line">            border: 1px solid red;</span><br><span class="line">            height: 300px;</span><br><span class="line">            width: 300px;</span><br><span class="line">            padding: 10px;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        a&#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            width: 100px;</span><br><span class="line"><span class="css">            <span class="selector-tag">background</span>: <span class="selector-id">#ff55fa</span>;</span></span><br><span class="line">            text-align: center;</span><br><span class="line">            line-height: 100px;</span><br><span class="line">            text-decoration: none;</span><br><span class="line">            display: block;</span><br><span class="line">            color: white;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">background</span>: <span class="selector-tag">rgba</span>(0, 0, 255, 0<span class="selector-class">.98</span>);</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.a2</span>&#123;</span></span><br><span class="line">            position: relative;</span><br><span class="line">            left: 200px;</span><br><span class="line">            top: -100px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.a4</span>&#123;</span></span><br><span class="line">            position: relative;</span><br><span class="line">            right: -200px;</span><br><span class="line">            top: -100px;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.a5</span>&#123;</span></span><br><span class="line">            position: relative;</span><br><span class="line"><span class="css">            <span class="selector-tag">right</span><span class="selector-pseudo">:-100px</span>;</span></span><br><span class="line">            top: -300px;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"a1"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>链接一<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"a2"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>链接二<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"a3"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>链接三<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"a4"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>链接四<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"a5"</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>链接五<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3><p>position:absolute</p>
@@ -349,416 +349,6 @@
 ]]></content>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言基础</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/17/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础<a id="more"></a></h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;                        //这是编译预处理指令</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                               <span class="comment">//定义主函数</span></span></span><br><span class="line"><span class="function"></span>&#123;                                        <span class="comment">//函数开始的标志</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"This is C program.\n"</span>);      <span class="comment">//输出所指定的一行信息     </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;                            <span class="comment">//函数执行完毕时返回函数值0  </span></span><br><span class="line">&#125;                                        <span class="comment">//函数结束的标志</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>main是函数的名字，表示“主函数”；每一个C语言程序必须有一个main函数</li>
-<li>main函数前面的int表示此函数的类型是int类型（整型），即在执行主函数后会得到一个值（即函数值），其值为整型。</li>
-<li>return0；的作用是当main函数执行结束前将整数0作为函数值，返回到调用函数处。</li>
-<li>函数体用{}括起来。</li>
-<li>printf是C编译系统提供的函数库中的输出函数。printf函数中双引号内的字符串“This is a C program”。”安原样输出。\n是换行符，即在输出“This is a C program”后，显示屏上的光标位置移到下一行的开头。</li>
-<li>每一个语句最后都有一个分号，表示语句结束。</li>
-<li>.h 头文件。</li>
-<li>#include&lt;stdio.h&gt;预处理指令</li>
-</ul>
-<p><strong>注释</strong>     </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;第一行注释</span><br><span class="line">&#x2F;&#x2F;继续注释</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*一整块</span><br><span class="line">都是注释*&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在字符串中的//和/*都不作为注释的开始。而是作为字符串的一部分。</li>
-</ul>
-<p><strong>求两个整数之和</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b,sun;</span><br><span class="line">	a=<span class="number">123</span>;</span><br><span class="line">	b=<span class="number">456</span>;</span><br><span class="line">	sum=a+b;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"sum is %d \n"</span>,sum);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>比较两个整数中的较大者</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>;            <span class="comment">//对被调用函数max的声明</span></span><br><span class="line">	<span class="keyword">int</span> a,b,c;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>&amp;a,&amp;b);</span><br><span class="line">	c=<span class="built_in">max</span>(a,b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"max=%d\n"</span>,c);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="keyword">int</span> z;</span><br><span class="line">	<span class="keyword">if</span>(x&gt;z)z=x;</span><br><span class="line">	<span class="keyword">else</span> z=y;</span><br><span class="line">	<span class="keyword">return</span> (z);			</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>max(a,b)调用max函数，在调用时将a和b作为max函数的实际参数（在主函数负责传送值）的值传送给max函数中的形式参数（在子函数中负责接收值） </li>
-</ul>
-<p><strong>C语言程序的结构</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/06/17/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/sp200618_004749.png" alt></p>
-<p><strong>C程序运行步骤</strong></p>
-<p>编辑 源程序.c        编译目标程序.obj          编译成功转为可执行目标程序.exe文件</p>
-<p><strong>求9开算术平方根</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">9</span>,y;</span><br><span class="line">	y=<span class="built_in">sqrt</span>(x); 															</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>sqrt()函数为math的一个函数。</li>
-</ul>
-<p><strong>数据类型及其运算</strong></p>
-<ul>
-<li><p>基本类型</p>
-<ul>
-<li><p>整型类型</p>
-<ul>
-<li>基本类型  int                                 2B         </li>
-<li>短整型  short  int</li>
-<li>长整型  long  int                           4B</li>
-<li>双长整型  long  long  int</li>
-<li>字符型  char                                 1B                                 char默认值为无符号的，若%u输出负数，结果异常                  （-128~127）</li>
-<li>希尔型  bool           默认为0</li>
-</ul>
-</li>
-<li><p>浮点类型</p>
-<ul>
-<li><p>单精度浮点型  float                        4B</p>
-</li>
-<li><p>双精度浮点型   double                   8B</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>枚举类型enum</p>
-</li>
-<li><p>空类型void</p>
-</li>
-<li><p>派生类型</p>
-<ul>
-<li>指针类型 *</li>
-<li>数组类型[]</li>
-<li>结构体类型union</li>
-<li>函数类型</li>
-</ul>
-</li>
-</ul>
-<p><strong>常量与变量</strong></p>
-<ul>
-<li><p>整数常量</p>
-<ul>
-<li>整型常量：十进制，八进制（0作为前缀）十六进制（0X或0x作为前缀）U（unsigned  无符号整数）L（long  长整数）后缀可大写，也可小写。</li>
-</ul>
-</li>
-<li><p>实型常量</p>
-<ul>
-<li>小数形式： 123.123456</li>
-<li>指数形式：<ul>
-<li>必须包含小数点</li>
-<li>指数（E或e后的数字）</li>
-<li>带符号的指数是用e或E引入的（e或E后不能有小数点或小数）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>字符常量</p>
-<ul>
-<li><p>一个普通的字符   ‘x’</p>
-</li>
-<li><p>转义字符</p>
-</li>
-<li><pre><code>\\              \字符
-\a                \警报铃声
-\b                \退格键
-\f                \换页符
-\n                \换行符
-\r                \回车
-\t                \水平制表符
-\v                \垂直制表符
-\ooo            \一到三位的八进制数
-\xhh...            \一个或多个数字的十六进制数
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  + 字符串常量    “123”     “boy”</span><br><span class="line"></span><br><span class="line">  + 符号常量     #define  PI   3.1416                 \\注意行末没有分号</span><br><span class="line"></span><br><span class="line">+ 变量（变量名由字母，数字，下划线组成。必须是字母或下划线开头）</span><br><span class="line"></span><br><span class="line">  + C区分大小写</span><br><span class="line"></span><br><span class="line">**标识符**</span><br><span class="line"></span><br><span class="line">关键字</span><br><span class="line"></span><br><span class="line">![](sp200618_020047.png)</span><br><span class="line"></span><br><span class="line">**原，反，补码**</span><br><span class="line"></span><br><span class="line">原码-反码：   除符号位外，其他数按位取反。</span><br><span class="line"></span><br><span class="line">反码-补码：   最后一位   +1。</span><br><span class="line"></span><br><span class="line">补码-原码：   对该补码再求补码 </span><br><span class="line"></span><br><span class="line">+ 0的反码不唯一</span><br><span class="line">+ 0的补码唯一 </span><br><span class="line"></span><br><span class="line">**运算符和表达式**</span><br><span class="line"></span><br><span class="line">运算符：用来表示不同运算的符号</span><br><span class="line"></span><br><span class="line">表达式：由运算符和操作数组成的式子9&gt;5？ 100:200</span><br><span class="line"></span><br><span class="line">优先级：指当不同的运算符进行混合运算时，运算顺序由运算符的优先级决定。</span><br><span class="line"></span><br><span class="line">综合性：指运算符可以和左边的表达式结合，也可以跟右边的表达式结合</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**运算符优先级**</span><br><span class="line"></span><br><span class="line">1.第一优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ []			数组下标							 </span><br><span class="line">+ ()             圆括号                		      </span><br><span class="line">+ .              成员选择（对象）     </span><br><span class="line">+ -&gt;            成员选择（指针）             </span><br><span class="line"></span><br><span class="line">2.第二优先级（右到左）</span><br><span class="line"></span><br><span class="line">+ －　        负号运算符                  </span><br><span class="line">+   type       强制类型转换       </span><br><span class="line">+ ++              自增运算符    </span><br><span class="line">+ －－           自减运算符</span><br><span class="line">+ ＊　　　　取值运算符</span><br><span class="line">+ &amp;                 取地址运算符</span><br><span class="line">+ ！                逻辑非运算符</span><br><span class="line">+ ~                   按位取反运算符</span><br><span class="line">+ sizeof          长度运算符</span><br><span class="line"></span><br><span class="line">3.第三优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ &#x2F;                    除</span><br><span class="line">+ ＊　　　　　乘</span><br><span class="line">+ %                    取余</span><br><span class="line"></span><br><span class="line">4.第四优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ ＋　　　　　加</span><br><span class="line">+ －　　　　　减</span><br><span class="line"></span><br><span class="line">5.第五优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ &lt;&lt;                    左移</span><br><span class="line">+ ＞＞                右移</span><br><span class="line"></span><br><span class="line">6.第六优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ ＞</span><br><span class="line">+ ＞＝</span><br><span class="line">+ ＜</span><br><span class="line">+ ＜＝</span><br><span class="line"></span><br><span class="line">7.第七优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ &#x3D;&#x3D;                    等于</span><br><span class="line">+ ！&#x3D;                  不等于</span><br><span class="line"></span><br><span class="line">8.第八优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ &amp;                      按位与</span><br><span class="line"></span><br><span class="line">9.第九优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ ^                          按位异或</span><br><span class="line"></span><br><span class="line">10.第十优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ |                          按位或</span><br><span class="line"></span><br><span class="line">11.第十一优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ &amp;&amp;                      逻辑与</span><br><span class="line"></span><br><span class="line">12.第十二优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ ||                        逻辑或</span><br><span class="line"></span><br><span class="line">13.第十三优先级（右到左）</span><br><span class="line"></span><br><span class="line">+ ？：                     条件运算符</span><br><span class="line"></span><br><span class="line">14.第十四优先级（右到左）</span><br><span class="line"></span><br><span class="line">+ &#x3D;                           赋值运算符</span><br><span class="line">+ &#x2F;&#x3D;                          除后赋值</span><br><span class="line">+ *&#x3D;                         乘后赋值</span><br><span class="line">+ %&#x3D;                        取余后赋值</span><br><span class="line">+ +&#x3D;                         加后赋值</span><br><span class="line">+ -&#x3D;                          减后赋值</span><br><span class="line">+ &lt;&lt;&#x3D;                       左移后赋值</span><br><span class="line">+ ＞＞&#x3D;                   右移后赋值</span><br><span class="line">+ &amp;&#x3D;                         按位与后赋值</span><br><span class="line">+ ^&#x3D;                         按位异或后赋值</span><br><span class="line">+ |&#x3D;                          按位或后赋值</span><br><span class="line"></span><br><span class="line">15.第十五优先级（左到右）</span><br><span class="line"></span><br><span class="line">+ ，                            逗号运算符</span><br><span class="line"></span><br><span class="line">**sizeof长度运算符和strlen（）**</span><br><span class="line"></span><br><span class="line">+ **sizeof**   操作符以字节形式给出了其操作数的存储大小。操作数的存储大小由操作数的类型决定。操作数可以是一个表达式或者括在括号里的类型名</span><br><span class="line"></span><br><span class="line">  + &#96;&#96;&#96;c</span><br><span class="line">    #include&lt;stdio.h&gt;</span><br><span class="line">    int main()</span><br><span class="line">    &#123;</span><br><span class="line">    	printf(&quot;%d&quot;,sizeof(int));                 &#x2F;&#x2F;输出为4</span><br><span class="line">    	return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></code></pre></li>
-<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>{
-    <span class="keyword">int</span> a[<span class="number">50</span>];
-    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,<span class="keyword">sizeof</span>(a));                  <span class="comment">//输出为200</span>
-    <span class="keyword">int</span> *b = <span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">50</span>];
-
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>    printf(&quot;%d&quot;,sizeof(*b));                  //输出为4
-    return 0;
-
-}
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">+ **strlen()**         求字符串长度</span><br><span class="line"></span><br><span class="line">+ &#96;&#96;&#96;c</span><br><span class="line">  #include&lt;stdio.h&gt;</span><br><span class="line">  #include&lt;string.h&gt;</span><br><span class="line">  int main()</span><br><span class="line">  &#123;</span><br><span class="line">  	char arr1[] &#x3D;&quot;abcdef&quot;;				&#x2F;&#x2F;字符串</span><br><span class="line">  	char arr2[] &#x3D;&#123;‘a’‘b’‘c’‘d’‘e’‘f’&#125;;  &#x2F;&#x2F;6个字符。没有\0.</span><br><span class="line">  	</span><br><span class="line">  	printf(&quot;%d\n&quot;,sizeof(arr1)); 		&#x2F;&#x2F;结果为7，arr1为数组名</span><br><span class="line">      									&#x2F;&#x2F;放进去求的是数组的总大小</span><br><span class="line">      									&#x2F;&#x2F;arr1中的字符串还包括\0。</span><br><span class="line">  	printf(&quot;%d\n&quot;,sizeof(arr2));		&#x2F;&#x2F;结果为6</span><br><span class="line">  	</span><br><span class="line">  	</span><br><span class="line">  	printf(&quot;%d\n&quot;,strlen(arr1));		&#x2F;&#x2F;结果为6，\0不统计</span><br><span class="line">  	printf(&quot;%d\n&quot;,strlen(arr2));		&#x2F;&#x2F;结果为6，没有\0。</span><br><span class="line">  	return 0;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></code></pre><p><strong>算数运算符和表达式</strong>     （+ -   *   /    %）</p>
-<ul>
-<li><p>“%”运算符两侧的运算分量<strong>必须是整型数据</strong>，且<strong>运算结果的正负号与“%”左边的运算分量</strong>相同</p>
-</li>
-<li><p>＊　／　％的优先级高于+  -  ，结合性均为从左到右。</p>
-</li>
-<li><p>＋　－　*    /     运算的两个数中，如果其中一个为实数，则结果是double型       （整数  int    实数  float（单精度）  double（双精度），字符   char）</p>
-</li>
-<li><p>当“/”的两个运算分量均为整数时，计算结果也必须为整数。</p>
-</li>
-<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>{
-    <span class="keyword">int</span> x;
-    <span class="keyword">double</span> y;
-    x=<span class="number">20</span>/<span class="number">3</span>*<span class="number">3</span>;
-    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,x);                <span class="comment">//20/3=6   6*3=18</span>
-    x=<span class="number">20</span>/<span class="number">3.0</span>*<span class="number">3</span>;                        <span class="comment">//出现小数点默认double类型  30/6=6.66                                        //6.66*3=19.9=20    四舍五入</span>
-    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,x);                <span class="comment">//以%d输出结果仍为整数</span>
-    y=<span class="number">20</span>/<span class="number">3.0</span>*<span class="number">3</span>;                        <span class="comment">//默认为double</span>
-    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>,y);                <span class="comment">//%f输出20.000000</span>
-    y=<span class="number">20</span>/<span class="number">3</span>*<span class="number">3</span>;
-    <span class="built_in">printf</span>(<span class="string">"%f\n"</span>,y);                <span class="comment">//18.000000</span>
-}
-&lt;!--￼<span class="number">8</span>--&gt;
-
-**逻辑与**
-
-当逻辑与前面为假时，逻辑与后面的表达式被短路
-
-**逻辑或**
-
-当逻辑或前面的值为真时，逻辑或后的表达式被短路
-
-逻辑非
-
-！真=假
-
-！假=真
-
-！<span class="number">0</span> = <span class="number">1</span>
-</code></pre>
-</li>
-</ul>
-<p><strong>赋值运算符和表达式</strong>   </p>
-<ul>
-<li>赋值表达式的格式为：变量=表达式。</li>
-<li>赋值表达式的值等于右边表达式的值，而结果的类型由左边变量的类型决定。</li>
-<li>a+=b+c等价于a=a+(b+c)             a-=b+c等价于a=a-(b+c)               a* =b+c等价于 a= a*(b+c)</li>
-</ul>
-<p><strong>条件运算符和表达式</strong></p>
-<p>“? :  “   是C语言里面唯一的一个三目运算符。</p>
-<p>“表达式1 ？表达式2：表达式3”，先计算表达式1的值，若为真则返回表达式2的值作为整个条件表达式的值，否则返回条件表达式3的值。</p>
-<p><strong>自增自减运算符</strong></p>
-<p>++i ：先自增1，在使用i</p>
-<p>i++ ：先使用i，再自增1</p>
-<p><strong>逗号表达式</strong></p>
-<p>逗号既可以作为函数参数列表的分隔符，也可以作为运算符。</p>
-<ul>
-<li>逗号表达式格式为：表达式1，表达式2，表达式3……….表达式n；</li>
-<li>结合性从左到右，整个函数表达式的值就是表达式n（即为最后一个表达式的值）；</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a =(a=<span class="number">100</span>,<span class="number">20</span>,<span class="number">200</span>);</span><br><span class="line">	<span class="keyword">int</span> b =(b=<span class="number">100</span>,<span class="number">20</span>,b+<span class="number">300</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a);				<span class="comment">//200</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,b);				<span class="comment">//400</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>*<em>不同数据类型间的混合运算 *</em></p>
-<p><strong>自动类型转换</strong></p>
-<p>如果一个运算符两侧的数据类型不同，则先自动进行类型转换，使二者成为一种数据类型，然后进行运算。整型，实型，字符型，数据间可以进行混合运算。规律为：</p>
-<ul>
-<li>+、-、*、/运算的两个数中有一个数为float或double型，结果是 double 型，因为系统将所有 float 型数据都先转换为 double 型，然后进行运算。</li>
-<li>如果int型与float或double型数据进行运算， 先把int型和float型数据转换为 double 型，然后进行运算，结果是 double 型。</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=<span class="number">3</span>,j;</span><br><span class="line">	<span class="keyword">float</span> f=<span class="number">2.5</span>;</span><br><span class="line">	<span class="keyword">double</span> d =<span class="number">7.5</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%1f"</span>,<span class="number">10</span>+<span class="string">'a'</span>+i*f-d/<span class="number">3</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>进行 10+′a′的运算，′a′的值是整数 97，运算结果为 107。</li>
-<li>由于“ * ”比“+”优先级高，先进行 i*f 的运算。先将 i 与 f 都转成 double 型，运算结果为 7.5，double 型。</li>
-<li>整数 107 与ｉ*ｆ的积相加。先将整数 107 转换成双精度数，相加结果为 114.5，double 型。</li>
-<li>进行d/3 的运算， 先将3 转换成 double 型， d/3 结果为 2.5， double型。</li>
-<li>将10+′a′+i*f的结果114.5与d/3的商2.5相减， 结果为112.0，double 型。</li>
-</ul>
-<p><strong>强制类型转换</strong></p>
-<p>（类型名）（表达式）</p>
-<p>（int）（x+y）         将x+y的值转换为int</p>
-<p>（int）x+y                  将x的值转换为int，然后再加上y</p>
-<p><strong>C语句</strong></p>
-<ul>
-<li>if（）…else…（条件语句）</li>
-<li>for（）…（循环语句）</li>
-<li>while（）…（循环语句）</li>
-<li>do…while  ()   (循环语句)</li>
-<li>continue（结束本次循环语句）</li>
-<li>break（中止执行switch或循环语句）</li>
-<li>switch（多分支选择结构）</li>
-<li>return（从函数返回语句）</li>
-</ul>
-<p><strong>函数调用语句</strong>   </p>
-<p>函数调用语句由一个函数调用加一个分号构成。</p>
-<p>其中printf(“This is a C statement.”)是一个函数调用，加一个分号成为一个语句。</p>
-<p><strong>表达式语句</strong></p>
-<p>表达式语句是由一个表达式加一个分号构成，最典型的是由赋值语句表达式构成一个赋值语句。</p>
-<p><strong>；   只有一个分号的语句叫空语句</strong>。</p>
-<p><strong>输入输出</strong></p>
-<p>C语言本身不提供输入输出语句，提供输入输出语句的是C标准函数库即（#include&lt;stdio.h&gt;）</p>
-<p>​        <strong>printf函数</strong></p>
-<ul>
-<li><p>printf（格式控制，输出列表）</p>
-</li>
-<li><p>“格式控制”是对双引号括起来的一个字符串，称为格式控制字符串，简称格式字符串。</p>
-<ul>
-<li>格式声明。格式声明由“%”和格式字符组成。作用是将输出的数据转换为指定的格式后输出。</li>
-<li>普通字符。普通字符即需要在输出是原样输出的字符。</li>
-</ul>
-</li>
-<li><p>输出列表是程序需要输出的一些数据，可以是常量，变量或表达式。</p>
-<ul>
-<li>%d   十进制整数</li>
-<li>%o   八进制整数</li>
-<li>%x   十六进制整型</li>
-<li>%f    单精度实型，默认小数点后6位，超出6位，四舍五入</li>
-<li>%lf   双精度类型     最多15位有效数字</li>
-<li>%c   输出一个字符</li>
-<li>%s   输出一个字符串</li>
-<li>%u    无符号十进制形式输出整数</li>
-</ul>
-</li>
-<li><p><strong>宽度精度控制输出</strong></p>
-<ul>
-<li><pre><code>#include&lt;stdio.h&gt;
-int main()
-{
-    int a =1234;        //四个宽度
-    printf(&quot;%d,%2d,%6d&quot;,a,a,a);        //1234,1234,  1234
-}
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  + %**2**d  宽度     </span><br><span class="line">    + 实际宽度&gt;所求宽度         按原值输出</span><br><span class="line">    + 实际宽度&lt;所求宽度        原值前补空格</span><br><span class="line">    + %**n.m**f   宽度加精度。    m：宽度     n：精度     %.**mf**</span><br><span class="line">    + 先求精度再看宽度</span><br><span class="line"></span><br><span class="line">+ **scanf函数**</span><br><span class="line"></span><br><span class="line">  +  scanf 函数中的格式控制后面应当是变量地址，而不是变量名。</span><br><span class="line">  + 如果在格式控制字符串中除了格式声明以外还有其他字符，则在输入数据时在对应的位置上应输入与这些字符相同的字符。</span><br><span class="line">  + 在用“％c”格式声明输入字符时，空格字符和“转义字符”中的字符都作为有效字符输入。</span><br><span class="line">  + 在输入数值数据时，如输入空格、回车、Tab 键或遇非法字符(不属于数值的字符)，认为该数据结束。</span><br><span class="line"></span><br><span class="line">+ **putchar函数**</span><br><span class="line"></span><br><span class="line">  + putchar 函数既可以输出可显示字符，也可以输出控制字符和转义字符。putchar(c)中的 c 可以是字符常量、整型常量、字符变量或整型变量。（其值在ASCII码之内）</span><br><span class="line"></span><br><span class="line">  + &#96;&#96;&#96;c</span><br><span class="line">    #include&lt;stdio.h&gt;</span><br><span class="line">    int main()</span><br><span class="line">    &#123;</span><br><span class="line">    	char a&#x3D; &#39;B&#39;,b&#x3D;&#39;O&#39;,c&#x3D;&#39;Y&#39;;    &#x2F;&#x2F;定义3个字符常量并初始化</span><br><span class="line">    	putchar(a);					&#x2F;&#x2F;向显示器输出字符B</span><br><span class="line">    	putchar(b);					&#x2F;&#x2F;向显示器输出字符O</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></code></pre></li>
-</ul>
-</li>
-<li><p><strong>getchar函数</strong></p>
-<ul>
-<li><p>函数没有参数</p>
-</li>
-<li><p>函数的值就是从输入设备得到的字符。</p>
-</li>
-<li><p>只能接收一个字符。</p>
-</li>
-<li><pre><code class="c"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>
-<span class="function"></span>{
-
-    <span class="keyword">int</span> a=<span class="number">66</span>,b=<span class="number">79</span>,c=<span class="number">89</span>;
-    <span class="built_in">putchar</span>(a);         <span class="comment">//ASCII码为字母B</span>
-    <span class="built_in">putchar</span>(b);            <span class="comment">//ASCII码为字母O</span>
-    <span class="built_in">putchar</span>(c);            <span class="comment">//ASCII码为字母Y</span>
-    <span class="built_in">putchar</span> (<span class="string">'\n'</span>);
-    <span class="keyword">return</span> <span class="number">0</span>;
-}
-
-&lt;!--￼<span class="number">12</span>--&gt;
-<span class="keyword">if</span>（表达式） 语句<span class="number">1</span>
-&lt;!--￼<span class="number">13</span>--&gt;
-<span class="keyword">if</span>（表达式）    语句<span class="number">1</span>
-    <span class="keyword">else</span> 语句<span class="number">2</span>
-&lt;!--￼<span class="number">14</span>--&gt;
-<span class="keyword">if</span>(表达式 <span class="number">1</span>) 语句 <span class="number">1</span>
-<span class="keyword">else</span> <span class="keyword">if</span>(表达式 <span class="number">2</span>) 语句 <span class="number">2</span>
-<span class="keyword">else</span> <span class="keyword">if</span>(表达式 <span class="number">3</span>) 语句 <span class="number">3</span>  
- 
-<span class="keyword">else</span> <span class="keyword">if</span>(表达式 m) 语句 m
-<span class="keyword">else</span> 语句 m+<span class="number">1</span>
-&lt;!--￼<span class="number">15</span>--&gt;
-<span class="keyword">if</span>()
-    <span class="keyword">if</span>() 语句 <span class="number">1</span>                 <span class="comment">//内嵌 if</span>
-    <span class="keyword">else</span> 语句 <span class="number">2</span>
-<span class="keyword">else</span>
-    <span class="keyword">if</span>() 语句 <span class="number">3</span>                 <span class="comment">//内嵌 if</span>
-    <span class="keyword">else</span> 语句 <span class="number">4</span>
-
-&lt;!--￼<span class="number">16</span>--&gt;
-<span class="keyword">switch</span>(表达式)
-{
-  <span class="keyword">case</span> 常量 <span class="number">1</span>: 语句 <span class="number">1</span>
-  <span class="keyword">case</span> 常量 <span class="number">2</span>: 语句 <span class="number">2</span> 
-  <span class="keyword">case</span> 常量 n: 语句 n
-  <span class="keyword">default</span>: 语句 n+<span class="number">1</span> 
-}</code></pre>
-</li>
-<li><p>和最多一个以 default 开头的行</p>
-</li>
-<li><p>可以没有 default 标号</p>
-</li>
-<li><p>每一个 case 常量必须互不相同</p>
-</li>
-<li><p>连带向下，可用break终止</p>
-</li>
-<li><p>最后一个 case 子句(今为 default 子句)中可不加 break 语句。</p>
-</li>
-</ul>
-</li>
-<li><p><strong>while循环语句</strong></p>
-<ul>
-<li>while（表达式） 语句</li>
-<li>表达式为真时，则执行 while 循环语句。while 循环的特点是先判断条件表达式，后执行循环体语句</li>
-</ul>
-</li>
-<li><p><strong>do…while语句</strong></p>
-<ul>
-<li>do<br>语句<br>while(表达式);</li>
-<li>先无条件地执行循环体，然后判断循环条件是否成立。 <strong>循环至少执行 1 次</strong></li>
-</ul>
-</li>
-<li><p><strong>for循环</strong>                    （while能实现的，for均可实现）</p>
-<ul>
-<li>for(表达式 1；表达式 2；表达式 3）<ul>
-<li>表达式 1: 设置初始条件，只执行一次。可以为零个、一个或多个变量设置初值。</li>
-<li>表达式 2: 是循环条件表达式，用来判定是否继续循环。在每次执行循环体前先执行此表达式，决定是否继续执行循环。</li>
-<li>表达式 3: 作为循环的调整，例如使循环变量增值，它是在执行完循环体后才进行的。 一般用于知道循环次数用 for 循环。 </li>
-</ul>
-</li>
-<li><strong>for语句执行过程</strong><ul>
-<li>求解表达式 1。 </li>
-<li>求解表达式 2，若此条件表达式的值为真(非 0)，则执行 for 语句中的循环体，然后执行第(3)步。 若为假(0)，则结束循环，转到第(5)步。 </li>
-<li>求解表达式 3。 </li>
-<li>转回步骤(2)继续执行。 </li>
-<li>循环结束，执行 for 语句下面的一个语句。</li>
-</ul>
-</li>
-<li><strong>for循环注意</strong><ul>
-<li>在执行完循环体后，循环变量的值“超过”循环终值，循环结束。</li>
-<li>“表达式 1”可以省略，即不设置初值，但表达式 1 后的分号不能省略。<strong>注意</strong>     应在 for 语句之 前给循环变量赋以初值。</li>
-<li>表达式 2 也可以省略，即不用表达式 2 来作为循环条件表达式，不设置和检查循环的条件。此时循环 无终止地进行下去,也就是认为表达式 2 始终为真。 <strong>（死循环）</strong></li>
-<li>表达式 3 也可以省略</li>
-<li>分号不能省略。</li>
-</ul>
-</li>
-<li>改变循环执行的状态    <strong>break 和continun</strong><ul>
-<li><strong>break</strong><ul>
-<li><strong>用break语句提前终止循环</strong></li>
-<li>作用：使流程跳到循环体之外，接着执行循环体下面的语句。 </li>
-<li>break 语句只能用于循环语句和 switch 语句之中，而不能单独使用。 </li>
-</ul>
-</li>
-<li><strong>continue</strong><ul>
-<li><strong>用 continue 语句提前结束本次循环</strong> </li>
-<li>作用：结束本次循环，即跳过循环体中下面尚未执行的语句，转到循环体结束点之前，接着执行 for 语句中的“表达式 3”，然后进行下一次是否执行循环的判定。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h2><p><strong>怎样定义一维数组</strong></p>
-<ul>
-<li>数组是一组有序数据的集合。下标代表数据在数组中的序号。</li>
-<li>数组中的每一个元素都属于同一个数据类型。</li>
-<li>数组必须先定义再使用。</li>
-<li>类型符   数组名  [常量表达式]                int a[10]         下标0~9</li>
-</ul>
-<p><strong>怎样引用一维数组元素</strong></p>
-<ul>
-<li>数组名 [下标]</li>
-<li>只能单个引用，不能一次调用全部元素的值（可用干循环结构一个一个调用）</li>
-</ul>
-<p><strong>一维数组的赋值</strong></p>
-<ul>
-<li>用赋值语句对数组元素逐个赋值</li>
-<li>采用初始化赋值   （在编译时段定义）int a {，，，，，}<ul>
-<li>可以对全部元素赋初值</li>
-<li>可以只给部分元素赋初值</li>
-</ul>
-</li>
-<li>动态赋值（scanf（））</li>
-<li></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -983,6 +573,74 @@ int main()
 ]]></content>
       <tags>
         <tag>开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo的搭建</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="软件安装部署及更新"><a href="#软件安装部署及更新" class="headerlink" title="软件安装部署及更新"></a>软件安装部署及更新<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
+<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
+<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
+<li>安装主题</li>
+</ul>
+<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
+<ul>
+<li>配置</li>
+</ul>
+<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
+<ul>
+<li>更新</li>
+</ul>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
+<p>用Hexo写一篇博客</p>
+<pre><code>$ hexo n &quot;我的第一篇博客&quot;
+INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
+<pre><code> hexo clean          # 清除所有记录 
+$ hexo generate       # 生成静态网页 简写：hexo g
+$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="2020年8月4日11-36-49"><a href="#2020年8月4日11-36-49" class="headerlink" title="2020年8月4日11:36:49"></a>2020年8月4日11:36:49</h3><ul>
+<li><p>将图片存放在同名文件夹中，放到图床上，然后将Markdown的详细链接放到博客中即可插入图片</p>
+</li>
+<li><p>网易云音乐更换音乐<a href="https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id" target="_blank" rel="noopener">https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSON</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/08/05/JSON/</url>
+    <content><![CDATA[<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON<a id="more"></a></h1><p><strong>要求及语法格式</strong></p>
+<ul>
+<li>对象表示为键值对</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> &lt;!-- 键名写在前面并用双引号<span class="string">""</span>包裹，使用:分割，然后紧接着值--&gt;</span><br><span class="line">&#123;<span class="string">"name"</span>:<span class="string">"qinjiang"</span>&#125;</span><br><span class="line">&#123;<span class="string">"age"</span>:<span class="string">"3"</span>&#125;</span><br><span class="line">&#123;<span class="string">"sex"</span>:<span class="string">"男"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>数据由逗号分割</li>
+<li>花括号保存对象</li>
+<li>方括号保存数组</li>
+</ul>
+<p><strong>JSON和JS对象的关系</strong>:</p>
+<p>JSON是JS对象的字符串表示法，他使用文本表示一个JS对象的信息，本质是一个字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>:<span class="string">'hello'</span>,<span class="attr">b</span>:<span class="string">'World'</span>&#125;;<span class="comment">//这是一个对象，注意键名也是可以使用引号包裹。</span></span><br><span class="line"><span class="keyword">var</span> json = <span class="string">'&#123;"a":"Hello","b":"World"&#125;'</span>;<span class="comment">//这是一个JSON字符串，本质是一个字符串</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>JSON和JS对象互转</strong></p>
+<p>JSON字符串转换为JS对象，使用JSON.parse()方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(<span class="string">'&#123;"a":"Hello","b":"World"&#125;'</span>);</span><br><span class="line"><span class="comment">//结果是&#123;a:'Hello',b:'World'&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>JS对象转换为JSON字符串，使用JSON.stringify()方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> json = <span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="string">'Hello'</span>,<span class="attr">b</span>:<span class="string">'World'</span>&#125;);</span><br><span class="line"><span class="comment">//结果是'&#123;"a":"Hello","b":"World"&#125;'</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1297,74 +955,6 @@ int main()
 <li>非空判断：required</li>
 <li>正则表达式:    pattern     百度可得</li>
 </ul>
-]]></content>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo的搭建</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="软件安装部署及更新"><a href="#软件安装部署及更新" class="headerlink" title="软件安装部署及更新"></a>软件安装部署及更新<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
-<h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
-<h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
-<li>安装主题</li>
-</ul>
-<p>git clone –depth=1 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus.git" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus.git</a> ./yilia-plus</p>
-<ul>
-<li>配置</li>
-</ul>
-<p>修改hexo根目录下的 _config.yml ➡️ theme: yilia-plus</p>
-<ul>
-<li>更新</li>
-</ul>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-<p>源于 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a></p>
-<p>用Hexo写一篇博客</p>
-<pre><code>$ hexo n &quot;我的第一篇博客&quot;
-INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md</code></pre><p>编辑完保存文件，重启Hexo服务</p>
-<pre><code> hexo clean          # 清除所有记录 
-$ hexo generate       # 生成静态网页 简写：hexo g
-$ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&amp;&amp;连接起来也可以</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="2020年8月4日11-36-49"><a href="#2020年8月4日11-36-49" class="headerlink" title="2020年8月4日11:36:49"></a>2020年8月4日11:36:49</h3><ul>
-<li><p>将图片存放在同名文件夹中，放到图床上，然后将Markdown的详细链接放到博客中即可插入图片</p>
-</li>
-<li><p>网易云音乐更换音乐<a href="https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id" target="_blank" rel="noopener">https://music.163.com/#，选择外链id后进入主题下config文件下更改音乐id</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSON</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/05/JSON/</url>
-    <content><![CDATA[<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON<a id="more"></a></h1><p><strong>要求及语法格式</strong></p>
-<ul>
-<li>对象表示为键值对</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> &lt;!-- 键名写在前面并用双引号<span class="string">""</span>包裹，使用:分割，然后紧接着值--&gt;</span><br><span class="line">&#123;<span class="string">"name"</span>:<span class="string">"qinjiang"</span>&#125;</span><br><span class="line">&#123;<span class="string">"age"</span>:<span class="string">"3"</span>&#125;</span><br><span class="line">&#123;<span class="string">"sex"</span>:<span class="string">"男"</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>数据由逗号分割</li>
-<li>花括号保存对象</li>
-<li>方括号保存数组</li>
-</ul>
-<p><strong>JSON和JS对象的关系</strong>:</p>
-<p>JSON是JS对象的字符串表示法，他使用文本表示一个JS对象的信息，本质是一个字符串。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>:<span class="string">'hello'</span>,<span class="attr">b</span>:<span class="string">'World'</span>&#125;;<span class="comment">//这是一个对象，注意键名也是可以使用引号包裹。</span></span><br><span class="line"><span class="keyword">var</span> json = <span class="string">'&#123;"a":"Hello","b":"World"&#125;'</span>;<span class="comment">//这是一个JSON字符串，本质是一个字符串</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>JSON和JS对象互转</strong></p>
-<p>JSON字符串转换为JS对象，使用JSON.parse()方法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(<span class="string">'&#123;"a":"Hello","b":"World"&#125;'</span>);</span><br><span class="line"><span class="comment">//结果是&#123;a:'Hello',b:'World'&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>JS对象转换为JSON字符串，使用JSON.stringify()方法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> json = <span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="string">'Hello'</span>,<span class="attr">b</span>:<span class="string">'World'</span>&#125;);</span><br><span class="line"><span class="comment">//结果是'&#123;"a":"Hello","b":"World"&#125;'</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <tags>
         <tag>前端</tag>
@@ -4527,6 +4117,196 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
+    <title>Maven</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/30/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="Maven项目管理工具"><a href="#Maven项目管理工具" class="headerlink" title="Maven项目管理工具"></a>Maven项目管理工具<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
+<li><p>jar包管理</p>
+<ul>
+<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
+<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
+</ul>
+</li>
+<li><p>Maven是跨平台的可以在window、linux上使用。</p>
+</li>
+<li><p>清晰的项目结构</p>
+</li>
+<li><p>多工程开发，将模块拆分成若干个工程，利于团队协作开发。</p>
+</li>
+<li><p>一键构建项目：使用命令行可以对项目进行一键构建，操作系统中无需安装eclipse和tomcat。</p>
+<h2 id="Maven入门"><a href="#Maven入门" class="headerlink" title="Maven入门"></a>Maven入门</h2></li>
+<li><p>下载，安装，配置环境变量Maven；</p>
+<ul>
+<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>     下载后解压，放到工作目录下。<ul>
+<li>bin：配置文件，脚本</li>
+<li>boot：类加载器的框架</li>
+<li>conf：配置文件     sttings.xml主要用到的配置文件（全局配置）</li>
+<li>lib：库文件</li>
+</ul>
+</li>
+<li><img src="http://s1.wailian.download/2020/06/10/image-20200530172929530.png" alt="image-20200530172929530.png"></li>
+</ul>
+</li>
+<li><p>变量值Maven安装路径到bin目录之前</p>
+</li>
+</ul>
+<h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
+<li><p>jar包管理</p>
+<ul>
+<li><p>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</p>
+</li>
+<li><p>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</p>
+</li>
+<li><p>Maven项目通过坐标的方式从本地仓库获取jar包</p>
+<ul>
+<li><p>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</p>
+</li>
+<li><p>本地仓库：存放了很多Jar包，供Maven项目使用。</p>
+</li>
+<li><p>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</p>
+</li>
+<li><p>多个Maven项目都可以从本地仓库获取jar包</p>
+</li>
+<li><p>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径····</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localRepository&gt;&#x2F;path&#x2F;to&#x2F;local&#x2F;repo&lt;&#x2F;localRepository&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
+<p><a href="https://www.wailian.work/image/AjEarS" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200530175433411.png" alt="image-20200530175433411.png"></a></p>
+<ul>
+<li>中央仓库（MVN）<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></li>
+</ul>
+<p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
+<h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
+<li>在settings.xml文件中的mirrors下添加mirror标签</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line"></span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line"></span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line"></span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line"></span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>maven是由纯java开发，是跨平台的可以在window，linux，mac上使用</li>
+<li>清晰的项目结构</li>
+<li>使用Maven将大型项目按照模块拆分成若干工程，不同的团队维护各自的工程，可大大的提升开发效率。<ul>
+<li>大型商城项目按业务分成商品管理，用户管理，订单管理等模块</li>
+<li>中小型项目按照传统项目分为Web，Service，Dao层，依照员工的业务能力分配工作</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a>Maven常用命令</h2><ul>
+<li><p>mvn       命令（在工程目录下）</p>
+</li>
+<li><p>clean            清理</p>
+</li>
+<li><p>compile          编译，只编译main文件，不编译test中的代码（记得常clean）</p>
+</li>
+<li><p>test-compile    编译test目录中的代码 </p>
+</li>
+<li><p>package     打包           打包完的名字是由pom.xml中的(artifactId——version—-packaging)决定的</p>
+<ul>
+<li>Java项目—–打成jar包          </li>
+<li>web项目—–打成war包</li>
+</ul>
+</li>
+<li><p>install：    发布项目到本地仓库，用在打jar包上，打成jar包可以被其他项目使用</p>
+</li>
+<li><p>tomcat：run：    一键构建项目</p>
+</li>
+</ul>
+<h2 id="Maven的生命周期"><a href="#Maven的生命周期" class="headerlink" title="Maven的生命周期"></a>Maven的生命周期</h2><ul>
+<li>Clean       生命周期：clean</li>
+<li>Default      生命周期：compile，test-compile，test，package，install</li>
+<li>Silt              生命周期：site命令，生成项目描述文档静态页</li>
+<li>不同的生命周期可以一起执行，例如先clean再compile</li>
+</ul>
+<h2 id="Maven命令的执行顺序"><a href="#Maven命令的执行顺序" class="headerlink" title="Maven命令的执行顺序"></a>Maven命令的执行顺序</h2><ul>
+<li>在相同生命周期中的命令才会受执行顺序的影响</li>
+<li>Default生命周期中的命令执行顺序：<ul>
+<li>compile&lt;—test-compile&lt;—test&lt;—package&lt;—install</li>
+</ul>
+</li>
+</ul>
+<h2 id="Maven入门程序"><a href="#Maven入门程序" class="headerlink" title="Maven入门程序"></a>Maven入门程序</h2><ul>
+<li><p>创建Maven项目</p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjEdI8" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132200007.png" alt="image-20200531132200007.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjE28B" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132333105.png" alt="image-20200531132333105.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjE9a0" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132454709.png" alt="image-20200531132454709.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjEW5l" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132531764.png" alt="image-20200531132531764.png"></a></p>
+</li>
+<li><p><a href="https://www.wailian.work/image/AjEN5b" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531115832479.png" alt="image-20200531115832479.png"></a></p>
+</li>
+<li><p><img src="http://s1.wailian.download/2020/06/10/sp200610_113715.png" alt="sp200610_113715.png"></p>
+</li>
+</ul>
+<ul>
+<li><p>在src—&gt;main–&gt;webapp下创建WEB-INF目录，并在目录下创建web.xml</p>
+</li>
+<li><p>修改Maven默认编译级别</p>
+<ul>
+<li>全局编译级别–&gt;修改settings.xml</li>
+<li>项目级别修改–&gt;项目对应的pox.xml</li>
+</ul>
+</li>
+<li><p>在Java Resourcese -&gt; src/main/java下写代码，创建包和Servlet；</p>
+</li>
+<li><p>添加servlet-api</p>
+</li>
+<li><p>在servlet-api中添加scope标签，值为：proviede；</p>
+<ul>
+<li>如果不加此标签有很大几率报错，因为tomcat中也有servlet-api的包导致冲突；</li>
+</ul>
+</li>
+<li><p>运行：发生错误，原因是maven默认使用tomcat6.xx，不支持@WebServle注解；</p>
+<ul>
+<li>解决方案1：需要去web.xml中配置Servlet;</li>
+<li>解决方案2：配置高版本tomcat插件；</li>
+</ul>
+</li>
+<li><p>最后测试，启动服务，在地址栏输入请求，显示结果；</p>
+</li>
+<li><p>报错可以更新Maven</p>
+</li>
+</ul>
+<h2 id="IDEA-Maven设置"><a href="#IDEA-Maven设置" class="headerlink" title="IDEA Maven设置"></a>IDEA Maven设置</h2><ul>
+<li><p>下载与配置Maven</p>
+</li>
+<li><p>建立Maven本地仓库</p>
+</li>
+<li><p>IDEA设置：</p>
+<p>File-&gt;Settings-&gt;Build, Execute, Deployment-&gt;Build Tools-&gt;Maven<br>修改 Maven home directory: d:/software/apache-maven-3.5.0<br>修改 User settings file: D:\software\apache-maven-3.5.0\conf\settings.xml<br>Local repository 会被自动识别为 d:\maven\repository</p>
+</li>
+<li><p>新建项目</p>
+<ul>
+<li>左边选择Maven</li>
+<li>勾选Create from archetype</li>
+<li>选择org.apache.maven.archetypes:maven-archetype-quickstart</li>
+<li>Maven项目创建后，IDEA还会做一些初始化的工作，那么需要点击右下角的 Import Changes</li>
+</ul>
+</li>
+<li><p>Idea Maven增加Jar</p>
+<ul>
+<li>修改pom.xml</li>
+<li><img src="http://s1.wailian.download/2020/06/10/5761.png" alt="5761.png"></li>
+<li>在修改了pom.xml之后，IDEA上会弹出这么一个 Maven projects need to be imported，点击Import Changes</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL</title>
     <url>/Mr-lee-MQ.hithub.io/2020/11/01/MySQL/</url>
     <content><![CDATA[<h1 id="1-初识MySQL"><a href="#1-初识MySQL" class="headerlink" title="1.初识MySQL"></a>1.初识MySQL<a id="more"></a></h1><p>JavaEE：企业及开发  Web</p>
@@ -4758,100 +4538,6 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
-    <title>Mybatis框架</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
-<p>​            采用ORM思想解决了实体与数据库映射的问题，对JDBC进行了封装。</p>
-<ul>
-<li>ORM：（对象关系映射）就是把数据库表和实体类的属性对应起来，让我们可以操作实体类实现操作数据库表。</li>
-</ul>
-<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><ul>
-<li>表现层:　 用于展示数据</li>
-<li>业务层: 　用于处理业务需求</li>
-<li>持久层: 　是和数据交互的</li>
-</ul>
-<h2 id="持久层技术解决方案"><a href="#持久层技术解决方案" class="headerlink" title="持久层技术解决方案"></a>持久层技术解决方案</h2><h3 id="JDBC技术"><a href="#JDBC技术" class="headerlink" title="JDBC技术"></a>JDBC技术</h3><p>　　　　　　Connection<br>　　　　　　PreparedStatemnet<br>　　　　　　ResultSet</p>
-<h3 id="Spring-的JdbcTemplate："><a href="#Spring-的JdbcTemplate：" class="headerlink" title="Spring 的JdbcTemplate："></a>Spring 的JdbcTemplate：</h3><p>　　Spring中对JDBC的简单封装</p>
-<h3 id="Apache的DBUtils："><a href="#Apache的DBUtils：" class="headerlink" title="Apache的DBUtils："></a>Apache的DBUtils：</h3><p>　　它和Spring的 jdbcTemplate 很像，也是对JDBC的简单封装</p>
-<h3 id="持久层"><a href="#持久层" class="headerlink" title="持久层"></a>持久层</h3><p>数据持久化</p>
-<ul>
-<li>持久化就是将程序的数据在持久状态和瞬间状态转化的过程</li>
-<li>内存：<strong>断电即失</strong></li>
-<li>数据库（jdbc），io文件持久化。</li>
-</ul>
-<p>持久层</p>
-<p>Dao层，Service层，Controller层</p>
-<ul>
-<li>完成持久化工作的代码块</li>
-<li>层界限十分明显</li>
-</ul>
-<h2 id="JDBC编程分析"><a href="#JDBC编程分析" class="headerlink" title="JDBC编程分析"></a>JDBC编程分析</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;    </span><br><span class="line">                  <span class="comment">//数据库连接</span></span><br><span class="line">			Connection connection = <span class="keyword">null</span>;  </span><br><span class="line">                 <span class="comment">//预编译的Statement</span></span><br><span class="line">			PreparedStatement preparedStatement = <span class="keyword">null</span>;    </span><br><span class="line">			ResultSet resultSet = <span class="keyword">null</span>;    </span><br><span class="line">    <span class="keyword">try</span> &#123;     <span class="comment">//加载数据库驱动    					  				  </span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>); <span class="comment">//通过驱动管理类获取数据库链接     </span></span><br><span class="line">        connection =  DriverManager </span><br><span class="line">.getConnection(<span class="string">"jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"</span>,<span class="string">"root"</span>, <span class="string">"mysql"</span>);   <span class="comment">//用户名密码</span></span><br><span class="line">    						<span class="comment">//定义 sql 语句 ?表示占位符    </span></span><br><span class="line">        String sql = <span class="string">"select * from user where username = ?"</span>; </span><br><span class="line">                          <span class="comment">//获取预处理 statement     </span></span><br><span class="line">        preparedStatement = connection.prepareStatement(sql); </span><br><span class="line">                         <span class="comment">//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的 参数值        </span></span><br><span class="line">        preparedStatement.setString(<span class="number">1</span>, <span class="string">"王五"</span>);     </span><br><span class="line">                         <span class="comment">//向数据库发出 sql 执行查询，查询出结果集     </span></span><br><span class="line">        resultSet =  preparedStatement.executeQuery(); </span><br><span class="line">                          <span class="comment">//遍历查询结果集     </span></span><br><span class="line">        <span class="keyword">while</span>(resultSet.next())&#123;              				                         System.out.println(resultSet.getString(<span class="string">"id"</span>)+<span class="string">"                              "</span>+resultSet.getString(<span class="string">"username"</span>));     </span><br><span class="line">              &#125;   </span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;     </span><br><span class="line">        e.printStackTrace(); </span><br><span class="line">   &#125;<span class="keyword">finally</span>&#123;     </span><br><span class="line">        <span class="comment">//释放资源     </span></span><br><span class="line">        <span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       resultSet.close(); </span><br><span class="line">     		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(preparedStatement!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                preparedStatement.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace(); </span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                connection.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                <span class="comment">// TODO Auto-generated catch block       </span></span><br><span class="line">                e.printStackTrace();      &#125; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">上边使用 jdbc 的原始方法（未经封装）实现了查询数据库表记录的操作。</span><br></pre></td></tr></table></figure>
-
-<h2 id="原生JDBC的问题"><a href="#原生JDBC的问题" class="headerlink" title="原生JDBC的问题"></a>原生JDBC的问题</h2><ol>
-<li>数据库连接，使用时就创建，不使用就立即释放，对数据库进行频繁的连接开启和关闭，造成数据库资源浪费，影响数据库性能。</li>
-</ol>
-<p>​       解决方案：使用数据库连接池管理数据库连接。</p>
-<ol start="2">
-<li><p>将sql语句硬编码到java中，如果sql语句修改，需要重新编译java代码，不利于系统维护。</p>
-<p>解决方案： 将sql语句配置到xml文件中，即使sql变化，不需要对java代码进行重新编译。</p>
-</li>
-</ol>
-<h2 id="Mybatis的概述"><a href="#Mybatis的概述" class="headerlink" title="Mybatis的概述"></a>Mybatis的概述</h2><p>​    Mybatis是一个持久层框架，用java编写。</p>
-<p>​    它封装了jdbc操作的很多细节，使开发者只需要关注sql语句本身，而无需关注注册驱动，创建链接等繁杂过程。</p>
-<p>​    它使用了ORM思想，实现了结果集的封装</p>
-<p>​        ORM：</p>
-<p>​                    Object Relational Mappging 对象关系映射</p>
-<p>​        简单的说：</p>
-<p>​                    就是把数据库表和实体类及实体类的的属性对应起来</p>
-<p>​                    让我们可以操作实体类就实现操作数据库</p>
-<h2 id="Mybatis实现的基本原理"><a href="#Mybatis实现的基本原理" class="headerlink" title="Mybatis实现的基本原理"></a>Mybatis实现的基本原理</h2><ul>
-<li>应用程序找Mybatis要数据</li>
-<li>mybatis从数据库中找来数据<ul>
-<li>通过mybatis-config.xml 定位哪个数据库</li>
-<li>通过Category.xml执行对应的select语句</li>
-<li>基于Category.xml把返回的数据库记录封装在Category对象中</li>
-<li>把多个Category对象装在一个Category集合中</li>
-</ul>
-</li>
-<li>返回一个Category集合</li>
-</ul>
-<h2 id="Mybatis框架流程"><a href="#Mybatis框架流程" class="headerlink" title="Mybatis框架流程"></a>Mybatis框架流程</h2><ul>
-<li>sqlMapConfig.xml(是mybatis的全局配置文件)配置了数据源，事务等mybatis运行环境，配置了映射文件（配置sql语句）mapper.xml(映射文件)，mapper.xml，mapper.xml………</li>
-<li>sqlSessionFactory（会话工厂），根据配置文件创建工厂     作用：创建sqlsession。</li>
-<li>sqlSession（会话），是一个接口，面向（程序员）的接口    作用：操作数据库（发出sql增删改查）</li>
-<li>Executor（执行器），也是一个接口（基本执行器，缓存执行器）   作用：sqlsession内部通过执行器操作数据库</li>
-</ul>
-<h2 id="Mybatis的入门"><a href="#Mybatis的入门" class="headerlink" title="Mybatis的入门"></a>Mybatis的入门</h2><ul>
-<li><p>在pom.xml文件中写入打包方式</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;packaging&gt;jar&lt;&#x2F;packaging&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>mybatis官网复制依赖代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;&#x2F;version&gt;		版本号</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>官网下载Mybatis框架</p>
-</li>
-<li><p>创建maven工程</p>
-</li>
-<li><p>在pom.xml文件中添加Mybatis的坐标</p>
-</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;      </span><br><span class="line">		&lt;version&gt;3.4.5&lt;&#x2F;version&gt;</span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;junit&lt;&#x2F;groupId&gt;   单元测试</span><br><span class="line">		&lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.10&lt;&#x2F;version&gt;</span><br><span class="line">		&lt;scope&gt;test&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;     </span><br><span class="line">		&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;     						&lt;version&gt;5.1.6&lt;&#x2F;version&gt;     </span><br><span class="line">		&lt;scope&gt;runtime&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;log4j&lt;&#x2F;groupId&gt;  日志   </span><br><span class="line">		&lt;artifactId&gt;log4j&lt;&#x2F;artifactId&gt;    </span><br><span class="line">        &lt;version&gt;1.2.12&lt;&#x2F;version&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;   </span><br><span class="line">&lt;&#x2F;dependencies&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<p>​     </p>
-]]></content>
-      <tags>
-        <tag>后端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue</title>
     <url>/Mr-lee-MQ.hithub.io/2020/08/04/Vue/</url>
     <content><![CDATA[<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue "></a>Vue <a id="more"></a></h1><p>网络通信：axios</p>
@@ -4956,193 +4642,97 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
       </tags>
   </entry>
   <entry>
-    <title>maven</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/30/maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="Maven项目管理工具"><a href="#Maven项目管理工具" class="headerlink" title="Maven项目管理工具"></a>Maven项目管理工具<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
-<li><p>jar包管理</p>
+    <title>Mybatis框架</title>
+    <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
+<p>​            采用ORM思想解决了实体与数据库映射的问题，对JDBC进行了封装。</p>
 <ul>
-<li>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</li>
-<li>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</li>
+<li>ORM：（对象关系映射）就是把数据库表和实体类的属性对应起来，让我们可以操作实体类实现操作数据库表。</li>
+</ul>
+<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h2><ul>
+<li>表现层:　 用于展示数据</li>
+<li>业务层: 　用于处理业务需求</li>
+<li>持久层: 　是和数据交互的</li>
+</ul>
+<h2 id="持久层技术解决方案"><a href="#持久层技术解决方案" class="headerlink" title="持久层技术解决方案"></a>持久层技术解决方案</h2><h3 id="JDBC技术"><a href="#JDBC技术" class="headerlink" title="JDBC技术"></a>JDBC技术</h3><p>　　　　　　Connection<br>　　　　　　PreparedStatemnet<br>　　　　　　ResultSet</p>
+<h3 id="Spring-的JdbcTemplate："><a href="#Spring-的JdbcTemplate：" class="headerlink" title="Spring 的JdbcTemplate："></a>Spring 的JdbcTemplate：</h3><p>　　Spring中对JDBC的简单封装</p>
+<h3 id="Apache的DBUtils："><a href="#Apache的DBUtils：" class="headerlink" title="Apache的DBUtils："></a>Apache的DBUtils：</h3><p>　　它和Spring的 jdbcTemplate 很像，也是对JDBC的简单封装</p>
+<h3 id="持久层"><a href="#持久层" class="headerlink" title="持久层"></a>持久层</h3><p>数据持久化</p>
+<ul>
+<li>持久化就是将程序的数据在持久状态和瞬间状态转化的过程</li>
+<li>内存：<strong>断电即失</strong></li>
+<li>数据库（jdbc），io文件持久化。</li>
+</ul>
+<p>持久层</p>
+<p>Dao层，Service层，Controller层</p>
+<ul>
+<li>完成持久化工作的代码块</li>
+<li>层界限十分明显</li>
+</ul>
+<h2 id="JDBC编程分析"><a href="#JDBC编程分析" class="headerlink" title="JDBC编程分析"></a>JDBC编程分析</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;    </span><br><span class="line">                  <span class="comment">//数据库连接</span></span><br><span class="line">			Connection connection = <span class="keyword">null</span>;  </span><br><span class="line">                 <span class="comment">//预编译的Statement</span></span><br><span class="line">			PreparedStatement preparedStatement = <span class="keyword">null</span>;    </span><br><span class="line">			ResultSet resultSet = <span class="keyword">null</span>;    </span><br><span class="line">    <span class="keyword">try</span> &#123;     <span class="comment">//加载数据库驱动    					  				  </span></span><br><span class="line">        Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>); <span class="comment">//通过驱动管理类获取数据库链接     </span></span><br><span class="line">        connection =  DriverManager </span><br><span class="line">.getConnection(<span class="string">"jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8"</span>,<span class="string">"root"</span>, <span class="string">"mysql"</span>);   <span class="comment">//用户名密码</span></span><br><span class="line">    						<span class="comment">//定义 sql 语句 ?表示占位符    </span></span><br><span class="line">        String sql = <span class="string">"select * from user where username = ?"</span>; </span><br><span class="line">                          <span class="comment">//获取预处理 statement     </span></span><br><span class="line">        preparedStatement = connection.prepareStatement(sql); </span><br><span class="line">                         <span class="comment">//设置参数，第一个参数为 sql 语句中参数的序号（从 1 开始），第二个参数为设置的 参数值        </span></span><br><span class="line">        preparedStatement.setString(<span class="number">1</span>, <span class="string">"王五"</span>);     </span><br><span class="line">                         <span class="comment">//向数据库发出 sql 执行查询，查询出结果集     </span></span><br><span class="line">        resultSet =  preparedStatement.executeQuery(); </span><br><span class="line">                          <span class="comment">//遍历查询结果集     </span></span><br><span class="line">        <span class="keyword">while</span>(resultSet.next())&#123;              				                         System.out.println(resultSet.getString(<span class="string">"id"</span>)+<span class="string">"                              "</span>+resultSet.getString(<span class="string">"username"</span>));     </span><br><span class="line">              &#125;   </span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;     </span><br><span class="line">        e.printStackTrace(); </span><br><span class="line">   &#125;<span class="keyword">finally</span>&#123;     </span><br><span class="line">        <span class="comment">//释放资源     </span></span><br><span class="line">        <span class="keyword">if</span>(resultSet!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       resultSet.close(); </span><br><span class="line">     		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(preparedStatement!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                preparedStatement.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace(); </span><br><span class="line">            &#125;     </span><br><span class="line">        &#125;     </span><br><span class="line">        <span class="keyword">if</span>(connection!=<span class="keyword">null</span>)&#123;      </span><br><span class="line">            <span class="keyword">try</span> &#123;       </span><br><span class="line">                connection.close();      </span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                <span class="comment">// TODO Auto-generated catch block       </span></span><br><span class="line">                e.printStackTrace();      &#125; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line">上边使用 jdbc 的原始方法（未经封装）实现了查询数据库表记录的操作。</span><br></pre></td></tr></table></figure>
+
+<h2 id="原生JDBC的问题"><a href="#原生JDBC的问题" class="headerlink" title="原生JDBC的问题"></a>原生JDBC的问题</h2><ol>
+<li>数据库连接，使用时就创建，不使用就立即释放，对数据库进行频繁的连接开启和关闭，造成数据库资源浪费，影响数据库性能。</li>
+</ol>
+<p>​       解决方案：使用数据库连接池管理数据库连接。</p>
+<ol start="2">
+<li><p>将sql语句硬编码到java中，如果sql语句修改，需要重新编译java代码，不利于系统维护。</p>
+<p>解决方案： 将sql语句配置到xml文件中，即使sql变化，不需要对java代码进行重新编译。</p>
+</li>
+</ol>
+<h2 id="Mybatis的概述"><a href="#Mybatis的概述" class="headerlink" title="Mybatis的概述"></a>Mybatis的概述</h2><p>​    Mybatis是一个持久层框架，用java编写。</p>
+<p>​    它封装了jdbc操作的很多细节，使开发者只需要关注sql语句本身，而无需关注注册驱动，创建链接等繁杂过程。</p>
+<p>​    它使用了ORM思想，实现了结果集的封装</p>
+<p>​        ORM：</p>
+<p>​                    Object Relational Mappging 对象关系映射</p>
+<p>​        简单的说：</p>
+<p>​                    就是把数据库表和实体类及实体类的的属性对应起来</p>
+<p>​                    让我们可以操作实体类就实现操作数据库</p>
+<h2 id="Mybatis实现的基本原理"><a href="#Mybatis实现的基本原理" class="headerlink" title="Mybatis实现的基本原理"></a>Mybatis实现的基本原理</h2><ul>
+<li>应用程序找Mybatis要数据</li>
+<li>mybatis从数据库中找来数据<ul>
+<li>通过mybatis-config.xml 定位哪个数据库</li>
+<li>通过Category.xml执行对应的select语句</li>
+<li>基于Category.xml把返回的数据库记录封装在Category对象中</li>
+<li>把多个Category对象装在一个Category集合中</li>
 </ul>
 </li>
-<li><p>Maven是跨平台的可以在window、linux上使用。</p>
-</li>
-<li><p>清晰的项目结构</p>
-</li>
-<li><p>多工程开发，将模块拆分成若干个工程，利于团队协作开发。</p>
-</li>
-<li><p>一键构建项目：使用命令行可以对项目进行一键构建，操作系统中无需安装eclipse和tomcat。</p>
-<h2 id="Maven入门"><a href="#Maven入门" class="headerlink" title="Maven入门"></a>Maven入门</h2></li>
-<li><p>下载，安装，配置环境变量Maven；</p>
-<ul>
-<li><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>     下载后解压，放到工作目录下。<ul>
-<li>bin：配置文件，脚本</li>
-<li>boot：类加载器的框架</li>
-<li>conf：配置文件     sttings.xml主要用到的配置文件（全局配置）</li>
-<li>lib：库文件</li>
+<li>返回一个Category集合</li>
 </ul>
-</li>
-<li><img src="http://s1.wailian.download/2020/06/10/image-20200530172929530.png" alt="image-20200530172929530.png"></li>
+<h2 id="Mybatis框架流程"><a href="#Mybatis框架流程" class="headerlink" title="Mybatis框架流程"></a>Mybatis框架流程</h2><ul>
+<li>sqlMapConfig.xml(是mybatis的全局配置文件)配置了数据源，事务等mybatis运行环境，配置了映射文件（配置sql语句）mapper.xml(映射文件)，mapper.xml，mapper.xml………</li>
+<li>sqlSessionFactory（会话工厂），根据配置文件创建工厂     作用：创建sqlsession。</li>
+<li>sqlSession（会话），是一个接口，面向（程序员）的接口    作用：操作数据库（发出sql增删改查）</li>
+<li>Executor（执行器），也是一个接口（基本执行器，缓存执行器）   作用：sqlsession内部通过执行器操作数据库</li>
 </ul>
+<h2 id="Mybatis的入门"><a href="#Mybatis的入门" class="headerlink" title="Mybatis的入门"></a>Mybatis的入门</h2><ul>
+<li><p>在pom.xml文件中写入打包方式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;packaging&gt;jar&lt;&#x2F;packaging&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>变量值Maven安装路径到bin目录之前</p>
+<li><p>mybatis官网复制依赖代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">  &lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;</span><br><span class="line">  &lt;version&gt;x.x.x&lt;&#x2F;version&gt;		版本号</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>官网下载Mybatis框架</p>
+</li>
+<li><p>创建maven工程</p>
+</li>
+<li><p>在pom.xml文件中添加Mybatis的坐标</p>
 </li>
 </ul>
-<h2 id="Maven的优点"><a href="#Maven的优点" class="headerlink" title="Maven的优点"></a>Maven的优点</h2><ul>
-<li><p>jar包管理</p>
-<ul>
-<li><p>从Maven中央仓库获取标准的规范的jar包以及相关依赖的jar包，避免自己下载到错误的jar包。</p>
-</li>
-<li><p>本地仓库统一管理jar包，使得jar包与项目分离，减轻项目体积。</p>
-</li>
-<li><p>Maven项目通过坐标的方式从本地仓库获取jar包</p>
-<ul>
-<li><p>坐标：由公司/组织名（groupld）+ 项目名/子项目名（artifactld）+版本号（version）组成。</p>
-</li>
-<li><p>本地仓库：存放了很多Jar包，供Maven项目使用。</p>
-</li>
-<li><p>Maven通过建立本地仓库索引，可以快速的找到符合要求的jar包，从而解决效率问题。</p>
-</li>
-<li><p>多个Maven项目都可以从本地仓库获取jar包</p>
-</li>
-<li><p>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径····</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">localRepository&gt;&#x2F;path&#x2F;to&#x2F;local&#x2F;repo&lt;&#x2F;localRepository&gt;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;      </span><br><span class="line">		&lt;version&gt;3.4.5&lt;&#x2F;version&gt;</span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;junit&lt;&#x2F;groupId&gt;   单元测试</span><br><span class="line">		&lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.10&lt;&#x2F;version&gt;</span><br><span class="line">		&lt;scope&gt;test&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;     </span><br><span class="line">		&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;     						&lt;version&gt;5.1.6&lt;&#x2F;version&gt;     </span><br><span class="line">		&lt;scope&gt;runtime&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;log4j&lt;&#x2F;groupId&gt;  日志   </span><br><span class="line">		&lt;artifactId&gt;log4j&lt;&#x2F;artifactId&gt;    </span><br><span class="line">        &lt;version&gt;1.2.12&lt;&#x2F;version&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;   </span><br><span class="line">&lt;&#x2F;dependencies&gt;</span><br></pre></td></tr></table></figure>
 
 
 
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Maven三中仓库概念"><a href="#Maven三中仓库概念" class="headerlink" title="Maven三中仓库概念"></a>Maven三中仓库概念</h2><p>本地仓库，远程仓库，中央仓库</p>
-<p><a href="https://www.wailian.work/image/AjEarS" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200530175433411.png" alt="image-20200530175433411.png"></a></p>
-<ul>
-<li>中央仓库（MVN）<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></li>
-</ul>
-<p>优先级：本地—–远程—–中央                本地仓库没有也没有远程仓库，则直接去中央仓库找。</p>
-<h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
-<li>在settings.xml文件中的mirrors下添加mirror标签</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line"></span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line"></span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line"></span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line"></span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
 
 
 
-<ul>
-<li>maven是由纯java开发，是跨平台的可以在window，linux，mac上使用</li>
-<li>清晰的项目结构</li>
-<li>使用Maven将大型项目按照模块拆分成若干工程，不同的团队维护各自的工程，可大大的提升开发效率。<ul>
-<li>大型商城项目按业务分成商品管理，用户管理，订单管理等模块</li>
-<li>中小型项目按照传统项目分为Web，Service，Dao层，依照员工的业务能力分配工作</li>
-</ul>
-</li>
-</ul>
-<h2 id="Maven常用命令"><a href="#Maven常用命令" class="headerlink" title="Maven常用命令"></a>Maven常用命令</h2><ul>
-<li><p>mvn       命令（在工程目录下）</p>
-</li>
-<li><p>clean            清理</p>
-</li>
-<li><p>compile          编译，只编译main文件，不编译test中的代码（记得常clean）</p>
-</li>
-<li><p>test-compile    编译test目录中的代码 </p>
-</li>
-<li><p>package     打包           打包完的名字是由pom.xml中的(artifactId——version—-packaging)决定的</p>
-<ul>
-<li>Java项目—–打成jar包          </li>
-<li>web项目—–打成war包</li>
-</ul>
-</li>
-<li><p>install：    发布项目到本地仓库，用在打jar包上，打成jar包可以被其他项目使用</p>
-</li>
-<li><p>tomcat：run：    一键构建项目</p>
-</li>
-</ul>
-<h2 id="Maven的生命周期"><a href="#Maven的生命周期" class="headerlink" title="Maven的生命周期"></a>Maven的生命周期</h2><ul>
-<li>Clean       生命周期：clean</li>
-<li>Default      生命周期：compile，test-compile，test，package，install</li>
-<li>Silt              生命周期：site命令，生成项目描述文档静态页</li>
-<li>不同的生命周期可以一起执行，例如先clean再compile</li>
-</ul>
-<h2 id="Maven命令的执行顺序"><a href="#Maven命令的执行顺序" class="headerlink" title="Maven命令的执行顺序"></a>Maven命令的执行顺序</h2><ul>
-<li>在相同生命周期中的命令才会受执行顺序的影响</li>
-<li>Default生命周期中的命令执行顺序：<ul>
-<li>compile&lt;—test-compile&lt;—test&lt;—package&lt;—install</li>
-</ul>
-</li>
-</ul>
-<h2 id="Maven入门程序"><a href="#Maven入门程序" class="headerlink" title="Maven入门程序"></a>Maven入门程序</h2><ul>
-<li><p>创建Maven项目</p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjEdI8" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132200007.png" alt="image-20200531132200007.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjE28B" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132333105.png" alt="image-20200531132333105.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjE9a0" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132454709.png" alt="image-20200531132454709.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjEW5l" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531132531764.png" alt="image-20200531132531764.png"></a></p>
-</li>
-<li><p><a href="https://www.wailian.work/image/AjEN5b" target="_blank" rel="noopener"><img src="http://s1.wailian.download/2020/06/10/image-20200531115832479.png" alt="image-20200531115832479.png"></a></p>
-</li>
-<li><p><img src="http://s1.wailian.download/2020/06/10/sp200610_113715.png" alt="sp200610_113715.png"></p>
-</li>
-</ul>
-<ul>
-<li><p>在src—&gt;main–&gt;webapp下创建WEB-INF目录，并在目录下创建web.xml</p>
-</li>
-<li><p>修改Maven默认编译级别</p>
-<ul>
-<li>全局编译级别–&gt;修改settings.xml</li>
-<li>项目级别修改–&gt;项目对应的pox.xml</li>
-</ul>
-</li>
-<li><p>在Java Resourcese -&gt; src/main/java下写代码，创建包和Servlet；</p>
-</li>
-<li><p>添加servlet-api</p>
-</li>
-<li><p>在servlet-api中添加scope标签，值为：proviede；</p>
-<ul>
-<li>如果不加此标签有很大几率报错，因为tomcat中也有servlet-api的包导致冲突；</li>
-</ul>
-</li>
-<li><p>运行：发生错误，原因是maven默认使用tomcat6.xx，不支持@WebServle注解；</p>
-<ul>
-<li>解决方案1：需要去web.xml中配置Servlet;</li>
-<li>解决方案2：配置高版本tomcat插件；</li>
-</ul>
-</li>
-<li><p>最后测试，启动服务，在地址栏输入请求，显示结果；</p>
-</li>
-<li><p>报错可以更新Maven</p>
-</li>
-</ul>
-<h2 id="IDEA-Maven设置"><a href="#IDEA-Maven设置" class="headerlink" title="IDEA Maven设置"></a>IDEA Maven设置</h2><ul>
-<li><p>下载与配置Maven</p>
-</li>
-<li><p>建立Maven本地仓库</p>
-</li>
-<li><p>IDEA设置：</p>
-<p>File-&gt;Settings-&gt;Build, Execute, Deployment-&gt;Build Tools-&gt;Maven<br>修改 Maven home directory: d:/software/apache-maven-3.5.0<br>修改 User settings file: D:\software\apache-maven-3.5.0\conf\settings.xml<br>Local repository 会被自动识别为 d:\maven\repository</p>
-</li>
-<li><p>新建项目</p>
-<ul>
-<li>左边选择Maven</li>
-<li>勾选Create from archetype</li>
-<li>选择org.apache.maven.archetypes:maven-archetype-quickstart</li>
-<li>Maven项目创建后，IDEA还会做一些初始化的工作，那么需要点击右下角的 Import Changes</li>
-</ul>
-</li>
-<li><p>Idea Maven增加Jar</p>
-<ul>
-<li>修改pom.xml</li>
-<li><img src="http://s1.wailian.download/2020/06/10/5761.png" alt="5761.png"></li>
-<li>在修改了pom.xml之后，IDEA上会弹出这么一个 Maven projects need to be imported，点击Import Changes</li>
-</ul>
-</li>
-</ul>
+
+
+
+<p>​     </p>
 ]]></content>
       <tags>
-        <tag>开发工具</tag>
+        <tag>后端</tag>
       </tags>
   </entry>
   <entry>
