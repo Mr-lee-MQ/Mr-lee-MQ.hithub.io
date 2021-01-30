@@ -4579,7 +4579,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   <entry>
     <title>Mybatis框架</title>
     <url>/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/</url>
-    <content><![CDATA[<h1 id="MyBatis框架"><a href="#MyBatis框架" class="headerlink" title="MyBatis框架"></a>MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
+    <content><![CDATA[<h1 id="1、MyBatis框架"><a href="#1、MyBatis框架" class="headerlink" title="1、MyBatis框架"></a>1、MyBatis框架<a id="more"></a></h1><p>​            mybatis通过XML或注解的方式将要执行的各种statement配置起来，并通过java对象和statement中的sql的动态参数进行映射生成最终执行的sql语句，最后由mybatis框架执行sql并将结果映射为java对象并返回。</p>
 <p>​            采用ORM思想解决了实体与数据库映射的问题，对JDBC进行了封装。</p>
 <ul>
 <li>ORM：（对象关系映射）就是把数据库表和实体类的属性对应起来，让我们可以操作实体类实现操作数据库表。</li>
@@ -4594,7 +4594,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <h3 id="Apache的DBUtils："><a href="#Apache的DBUtils：" class="headerlink" title="Apache的DBUtils："></a>Apache的DBUtils：</h3><p>　　它和Spring的 jdbcTemplate 很像，也是对JDBC的简单封装</p>
 <h3 id="持久层"><a href="#持久层" class="headerlink" title="持久层"></a>持久层</h3><p>数据持久化</p>
 <ul>
-<li>持久化就是将程序的数据在持久状态和瞬间状态转化的过程</li>
+<li>持久化就是将程序的数据在持久状态和瞬时状态转化的过程 </li>
 <li>内存：<strong>断电即失</strong></li>
 <li>数据库（jdbc），io文件持久化。</li>
 </ul>
@@ -4623,8 +4623,15 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <p>​        简单的说：</p>
 <p>​                    就是把数据库表和实体类及实体类的的属性对应起来</p>
 <p>​                    让我们可以操作实体类就实现操作数据库</p>
+<h3 id="如何获得Myybatis？"><a href="#如何获得Myybatis？" class="headerlink" title="如何获得Myybatis？"></a>如何获得Myybatis？</h3><ul>
+<li>Maven仓库：<a href="https://mvnrepository.com/artifact/org.mybatis/mybatis" target="_blank" rel="noopener">https://mvnrepository.com/artifact/org.mybatis/mybatis</a></li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>中文文档：<a href="https://mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">https://mybatis.org/mybatis-3/zh/index.html</a></p>
+<p>Github：<a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener">https://github.com/mybatis/mybatis-3</a></p>
 <h2 id="Mybatis实现的基本原理"><a href="#Mybatis实现的基本原理" class="headerlink" title="Mybatis实现的基本原理"></a>Mybatis实现的基本原理</h2><ul>
-<li>应用程序找Mybatis要数据</li>
+<li>应用程序找Mybatis要数据 </li>
 <li>mybatis从数据库中找来数据<ul>
 <li>通过mybatis-config.xml 定位哪个数据库</li>
 <li>通过Category.xml执行对应的select语句</li>
@@ -4656,14 +4663,55 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 </ul>
   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;dependencies&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;org.mybatis&lt;&#x2F;groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;mybatis&lt;&#x2F;artifactId&gt;      </span><br><span class="line">		&lt;version&gt;3.4.5&lt;&#x2F;version&gt;</span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;junit&lt;&#x2F;groupId&gt;   单元测试</span><br><span class="line">		&lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;</span><br><span class="line">		&lt;version&gt;4.10&lt;&#x2F;version&gt;</span><br><span class="line">		&lt;scope&gt;test&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;     </span><br><span class="line">		&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;     						&lt;version&gt;5.1.6&lt;&#x2F;version&gt;     </span><br><span class="line">		&lt;scope&gt;runtime&lt;&#x2F;scope&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;    </span><br><span class="line">	&lt;dependency&gt;     </span><br><span class="line">		&lt;groupId&gt;log4j&lt;&#x2F;groupId&gt;  日志   </span><br><span class="line">		&lt;artifactId&gt;log4j&lt;&#x2F;artifactId&gt;    </span><br><span class="line">        &lt;version&gt;1.2.12&lt;&#x2F;version&gt;    </span><br><span class="line">	&lt;&#x2F;dependency&gt;   </span><br><span class="line">&lt;&#x2F;dependencies&gt;</span><br></pre></td></tr></table></figure>
 
+<h1 id="2、第一个Mybatis程序"><a href="#2、第一个Mybatis程序" class="headerlink" title="2、第一个Mybatis程序"></a>2、第一个Mybatis程序</h1><p>思路：环境搭建–&gt;导入Mybatis–&gt;编写代码–&gt;测试</p>
+<h2 id="2-1、搭建环境"><a href="#2-1、搭建环境" class="headerlink" title="2.1、搭建环境"></a>2.1、搭建环境</h2><p>搭建数据库</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> <span class="string">`mybatis`</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="string">`mybatis`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="string">`user`</span>(</span><br><span class="line">	<span class="string">`id`</span> <span class="built_in">int</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span> primary <span class="keyword">key</span>,</span><br><span class="line">    <span class="string">`name`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">default</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="string">`pwd`</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">default</span> <span class="literal">null</span></span><br><span class="line">) <span class="keyword">engine</span>=<span class="keyword">innodb</span> <span class="keyword">default</span> <span class="keyword">charset</span>=utf8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="string">`user`</span>(<span class="string">`id`</span>,<span class="string">`name`</span>,<span class="string">`pwd`</span>) <span class="keyword">values</span></span><br><span class="line">(<span class="number">1</span>,<span class="string">'狂神'</span>,<span class="string">'123456'</span>),</span><br><span class="line">(<span class="number">2</span>,<span class="string">'张三'</span>,<span class="string">'123456'</span>),</span><br><span class="line">(<span class="number">3</span>,<span class="string">'李四'</span>,<span class="string">'123890'</span>)</span><br></pre></td></tr></table></figure>
 
+<p>新建项目</p>
+<ol>
+<li>新建一个Maven普通项目</li>
+<li>删除src目录</li>
+<li>导入Maven依赖</li>
+</ol>
+<h2 id="2-2、创建一个模块"><a href="#2-2、创建一个模块" class="headerlink" title="2.2、创建一个模块"></a>2.2、创建一个模块</h2><ul>
+<li>编写mybatis的核心配置文件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis-config.xml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">configuration</span></span></span><br><span class="line"><span class="meta">  <span class="meta-keyword">PUBLIC</span> <span class="meta-string">"-//mybatis.org//DTD Config 3.0//EN"</span></span></span><br><span class="line"><span class="meta">  <span class="meta-string">"http://mybatis.org/dtd/mybatis-3-config.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"development"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"development"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"POOLED"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"$&#123;driver&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;url&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;username&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;password&#125;"</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"org/mybatis/example/BlogMapper.xml"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>编写mybatis工具类MybatisUtils</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//sqlSessionFactory---&gt;sqlSession</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MybatisUtils</span></span>&#123;</span><br><span class="line">    paivate <span class="keyword">static</span> SqlSessionFactory salSessionFactory;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="comment">//使用Mybatis第一步:获取sqlSessionfactory对象</span></span><br><span class="line">            String resource = <span class="string">"mybatis-config.xml"</span>;</span><br><span class="line">            InputStream inputStream = Resources.getResourceAsStream(resource);</span><br><span class="line">            sqlSessionFactory = <span class="keyword">new</span> sqlSessionFactoryBuilder().build(inputStream);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//既然有了sqlSessionFactory,顾名思义,我们就可以从中获得sqlSession的实例了。</span></span><br><span class="line">    <span class="comment">//SqlSession完全包含了面向数据库执行SQL命令所需的方法。</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SqlSession <span class="title">getSqlSession</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">return</span> sqlSessionFactory.openSession;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="2-3、编写代码"><a href="#2-3、编写代码" class="headerlink" title="2.3、编写代码"></a>2.3、编写代码</h2><ul>
+<li>实体类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//实体类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String pwd;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">get,set,toString略</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>Dao接口</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">userDao</span></span>&#123;</span><br><span class="line">    <span class="function">List&lt;User&gt; <span class="title">getUserList</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>接口实现类（由原来的UserDaoimp转变为一个Mapper配置文件）</li>
+</ul>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> ?&gt;</span><br><span class="line">	&lt;!DOCTYPE mapper</span><br><span class="line">  		PUBLIC <span class="string">"-//mybatis.org//DTD Mapper 3.0//EN"</span></span><br><span class="line">  		<span class="string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span>&gt;</span><br><span class="line">    </span><br><span class="line"> &lt;!--namespace=绑定一个对应的Dao/Mapper接口--&gt;   </span><br><span class="line">&lt;mapper namespace=<span class="string">"com.kuang.dao.UserDao"</span>&gt;</span><br><span class="line">    </span><br><span class="line">  &lt;select id=<span class="string">"selectBlog"</span> resultType=<span class="string">"Blog"</span>&gt;</span><br><span class="line">    select * from mybatis.user</span><br><span class="line">  &lt;/select&gt;</span><br><span class="line">&lt;mappers&gt;</span><br><span class="line">    &lt;mapper resource=<span class="string">"org/mybatis/example/BlogMapper.xml"</span>/&gt;</span><br><span class="line">  &lt;/mappers&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
 
+<h2 id="2-4、测试"><a href="#2-4、测试" class="headerlink" title="2.4、测试"></a>2.4、测试</h2><ul>
+<li>junit测试</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoTest</span></span>&#123;</span><br><span class="line">    <span class="meta">@test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//第一步:获取sqlSession对象</span></span><br><span class="line">        sqlSession sqlsession = MybatisUtils.getSqlSession();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//方式一:getMapper</span></span><br><span class="line">        UserDao userDao = sqlSession.getMapper(UserDao<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        List&lt;User&gt; userList = userDao.getUserList(); </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(User user : userList)&#123;</span><br><span class="line">            System.out.println(user);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//关闭sqlSession</span></span><br><span class="line">        sqlSession.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<p>遇到的问题：</p>
+<ol>
+<li>配置文件没有注册</li>
+<li>绑定接口错误</li>
+<li>方法名不对</li>
+<li>返回类型不对</li>
+<li>Maven导出资源问题</li>
+</ol>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/05/27/Mybatis%E6%A1%86%E6%9E%B6/image-20210106215610689.png" alt="image-20210106215610689"></p>
 <p>​     </p>
 ]]></content>
       <tags>
@@ -4967,9 +5015,8 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   </entry>
   <entry>
     <title>数据结构与算法绪论</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/10/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%BB%AA%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="数据结构与算法绪论"><a href="#数据结构与算法绪论" class="headerlink" title="数据结构与算法绪论"></a>数据结构与算法绪论<a id="more"></a></h1><p><strong>字符串匹配问题</strong></p>
-<ul>
+    <url>/Mr-lee-MQ.hithub.io/2020/10/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法<a id="more"></a></h1><h2 id="1、数据结构和算法内容介绍"><a href="#1、数据结构和算法内容介绍" class="headerlink" title="1、数据结构和算法内容介绍"></a>1、数据结构和算法内容介绍</h2><h3 id="1-1、字符串匹配问题"><a href="#1-1、字符串匹配问题" class="headerlink" title="1.1、字符串匹配问题"></a>1.1、字符串匹配问题</h3><ul>
 <li><p>有一个字符串 str 1 = “”硅硅谷 尚硅谷你尚硅 尚硅谷 你尚硅谷你尚硅你好”“，和一个子串 str2 = ”尚硅谷 你尚硅你“ </p>
 </li>
 <li><p>现在要判断str1是否含有str2,如果存在，就返回第一次出现的位置，如果没有，则返回-1</p>
@@ -4979,8 +5026,11 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <li><p>你的思路是什么？</p>
 </li>
 </ul>
-<p><strong>暴力匹配</strong></p>
-<p><strong>KMP算法</strong>（部分匹配表）</p>
+<p><strong>方法1：暴力匹配</strong></p>
+<p><strong>方法2：KMP算法（正解）</strong>（部分匹配表）</p>
+<h3 id="1-2、汉诺塔游戏"><a href="#1-2、汉诺塔游戏" class="headerlink" title="1.2、汉诺塔游戏"></a>1.2、汉诺塔游戏</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/10/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image-20210125163727388.png" alt="image-20210125163727388"></p>
+<h3 id="1-3、八皇后问题"><a href="#1-3、八皇后问题" class="headerlink" title="1.3、八皇后问题"></a>1.3、八皇后问题</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/10/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image-20210125164322087.png" alt="image-20210125164322087"></p>
+<h3 id="1-4、骑士周游问题"><a href="#1-4、骑士周游问题" class="headerlink" title="1.4、骑士周游问题"></a>1.4、骑士周游问题</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2020/10/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/image-20210125165449719.png" alt="image-20210125165449719"></p>
 ]]></content>
       <tags>
         <tag>数据结构和算法</tag>
