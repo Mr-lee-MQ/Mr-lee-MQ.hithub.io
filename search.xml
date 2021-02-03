@@ -4369,7 +4369,10 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
 <p>在my.ini中配置默认的编码</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">character-<span class="keyword">set</span>-<span class="keyword">server</span>=utf8</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-6、修改和删除表"><a href="#2-6、修改和删除表" class="headerlink" title="2.6、修改和删除表"></a>2.6、修改和删除表</h3>]]></content>
+<h3 id="2-6、修改和删除表"><a href="#2-6、修改和删除表" class="headerlink" title="2.6、修改和删除表"></a>2.6、修改和删除表</h3><blockquote>
+<p>修改</p>
+</blockquote>
+]]></content>
       <tags>
         <tag>后端</tag>
       </tags>
