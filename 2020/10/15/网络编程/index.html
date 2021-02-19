@@ -29,7 +29,7 @@
 
     <script src="/Mr-lee-MQ.hithub.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/Mr-lee-MQ.hithub.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -521,25 +521,25 @@
 </ul>
 </li>
 </ul>
-<pre><code class="java">//测试IP
-public class TestInetAddress{
-    public static void main(String[] args){
-       try{
-           //查询本机Ip地址 三种方法
-           InetAddress inetAddress1 = InetAddress.getByName(&quot;127.0.0.1&quot;);
-           System.out.println(inetAddress1);
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//测试IP</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestInetAddress</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">try</span><span class="token punctuation">{</span>
+           <span class="token comment" spellcheck="true">//查询本机Ip地址 三种方法</span>
+           InetAddress inetAddress1 <span class="token operator">=</span> InetAddress<span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>inetAddress1<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-           InetAddress inetAddress3 = InetAddress.getByName(&quot;localhost&quot;);
-           System.out.println(inetAddress3);
+           InetAddress inetAddress3 <span class="token operator">=</span> InetAddress<span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>inetAddress3<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-           InetAddress inetAddress4 = InetAddress.getLocalHost();                                           System.out.println(inetAddress4);
+           InetAddress inetAddress4 <span class="token operator">=</span> InetAddress<span class="token punctuation">.</span><span class="token function">getLocalHost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>inetAddress4<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
 
-       }catch(UnknowHostException e){
-           e.printStrackTrace();
-       }
-    }</code></pre>
+       <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>UnknowHostException e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           e<span class="token punctuation">.</span><span class="token function">printStrackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
 <h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>端口表示计算机上的一个程序的进程。</p>
 <ul>
 <li><p>不同的进程有不同的端口号。端口号不能重复，用于区分软件</p>
@@ -566,28 +566,28 @@ public class TestInetAddress{
 </ul>
 </li>
 <li><p>动态，私有:49152~65535</p>
-<pre><code class="bash">netstat -ano # 查看所有的端口
-netstat -ano|findstr &quot;5900&quot; # 查看指定的端口
-tasklist|findstr &quot;8696&quot;  # 查看指定端口的进程</code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">netstat</span> -ano <span class="token comment" spellcheck="true"># 查看所有的端口</span>
+<span class="token function">netstat</span> -ano<span class="token operator">|</span>findstr <span class="token string">"5900"</span> <span class="token comment" spellcheck="true"># 查看指定的端口</span>
+tasklist<span class="token operator">|</span>findstr <span class="token string">"8696"</span>  <span class="token comment" spellcheck="true"># 查看指定端口的进程</span></code></pre>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code class="java">public class TestInetSocketAddress{
-    public static void main(String){
-        InetSocketAddress socketAddress = new InetSocketAddress(&quot;127.0.0.1&quot;, 8080);
-        InetSocketAddress socketAddress = new InetSocketAddress(&quot;localhost&quot;,8080);
-        System.out.println(&quot;socketAddress&quot;);
-        System.out.println(&quot;socketAddress2&quot;);
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestInetSocketAddress</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        InetSocketAddress socketAddress <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InetSocketAddress</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">,</span> <span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        InetSocketAddress socketAddress <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InetSocketAddress</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">,</span><span class="token number">8080</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"socketAddress"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"socketAddress2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        System.out.println(socketAddress.getAddress());           System.out.println(socketAddress.getHostName());
-        //hosts  地址
-        System.out.println(socketAddress.getPort());
-        //端口
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>socketAddress<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>socketAddress<span class="token punctuation">.</span><span class="token function">getHostName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//hosts  地址</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>socketAddress<span class="token punctuation">.</span><span class="token function">getPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//端口</span>
 
 
-    }
-}</code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h2 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h2><p>协议：约定，就好比现在说的是普通话</p>
 <p>网络通信协议：速率，传输码率，代码结构，传输控制</p>
 <p><strong>TCP/IP协议簇</strong>：实际上是一组协议</p>
@@ -629,134 +629,134 @@ tasklist|findstr &quot;8696&quot;  # 查看指定端口的进程</code></pre>
 <h3 id="TCP实现聊天"><a href="#TCP实现聊天" class="headerlink" title="TCP实现聊天"></a>TCP实现聊天</h3><p>客户端：</p>
 <p>1.连接服务器Socket</p>
 <p>2.发送消息</p>
-<pre><code class="java">//客户端
-public class TcpClientDemo01{
-    public static void main(String[] args){
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//客户端</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TcpClientDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-        try{
-            //1.要知道服务器的地址
-            InetAddress serverIP = InetAddress.getByName(&quot;127.0.0.1&quot;);
-            int port  = 9999;
-            //2.创建一个socket连接
-            Socket socket = new Socket(serverIP,port);
-            //3.发送消息 io流
-            OutputStream os = socket.getOutputStream();
-            os.write(&quot;你好，欢迎学习狂神说Java&quot;.getBytes());
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//1.要知道服务器的地址</span>
+            InetAddress serverIP <span class="token operator">=</span> InetAddress<span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> port  <span class="token operator">=</span> <span class="token number">9999</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//2.创建一个socket连接</span>
+            Socket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Socket</span><span class="token punctuation">(</span>serverIP<span class="token punctuation">,</span>port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//3.发送消息 io流</span>
+            OutputStream os <span class="token operator">=</span> socket<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            os<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"你好，欢迎学习狂神说Java"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
 
 
-    }
-}</code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <p>服务端：</p>
 <p>1.建立服务的端口Server Socket</p>
 <p>2.等待用户的连接  accept</p>
 <p>3.接收用户的消息</p>
-<pre><code class="java">//服务端
-public class TcpServerDemo01{
-    public static void main(String[] args){
-        try{
-            //1.得有一个地址
-            ServerSocket serverSocket = new ServerSocket(9999);
-            //2.等待客户端连接过来
-            Socket socket = serverSocket.accept();
-            //3.读取客户端的消息
-            IputStream is = socket.getInputStream();
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//服务端</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TcpServerDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//1.得有一个地址</span>
+            ServerSocket serverSocket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ServerSocket</span><span class="token punctuation">(</span><span class="token number">9999</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//2.等待客户端连接过来</span>
+            Socket socket <span class="token operator">=</span> serverSocket<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//3.读取客户端的消息</span>
+            IputStream is <span class="token operator">=</span> socket<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            /*
+            <span class="token comment" spellcheck="true">/*
             byte[] buffer = new byte[1024];
             int len;
             while((len=is.read(buffer))!=-1){
                 String msg = new String(buffer,0,len);
                 System.out.println(msg);
-                */
+                */</span>
 
-            //管道流
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            byte[] buffer = new byte[1024];
-            int lenl;
-            while((len=is.read(buffer))!=-1){
-                baos.write(buffer,0,len);
-            }
+            <span class="token comment" spellcheck="true">//管道流</span>
+            ByteArrayOutputStream baos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ByteArrayOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> lenl<span class="token punctuation">;</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token operator">=</span>is<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                baos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
 
-            System.out.println(baos.toString());
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>baos<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            }
-        }catch(IOException e){
-            e.printStackTrace();
-        }finally{
-        //关闭资源
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>IOException e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//关闭资源</span>
 
-    }
+    <span class="token punctuation">}</span>
 
 
-    }
-}</code></pre>
-<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><pre><code class="java">//客户端
-public class TcpClientDemo02{
-    public static void main(String[] args){
-        //1.创建一个Socket连接
-         Socket socket = new Socket(InteAddress.getByName(&quot;127.0.0.1&quot;),9000);
-        //2.创建一个输出流
-        OutputStream os = socket.getOutputStream();
-        //3.读取文件
-        FileInputStream fis = new FileInputStream(new File(&quot;qinjiang.jpg&quot;));
-        //4.写出文件
-        byte[] buffer = new byte[1024];
-        int len;
-        while((len=fis.read(buffer))!=-1){
-            os.write(buffer,0,len);
-        }
-        //通知服务器，我已经结束了
-        socket.shutdownOutput();//我已经传输完毕了
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//客户端</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TcpClientDemo02</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//1.创建一个Socket连接</span>
+         Socket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Socket</span><span class="token punctuation">(</span>InteAddress<span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">9000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//2.创建一个输出流</span>
+        OutputStream os <span class="token operator">=</span> socket<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//3.读取文件</span>
+        FileInputStream fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"qinjiang.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//4.写出文件</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token operator">=</span>fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            os<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//通知服务器，我已经结束了</span>
+        socket<span class="token punctuation">.</span><span class="token function">shutdownOutput</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//我已经传输完毕了</span>
 
-        //确定服务器接收完毕，才能断开连接
-        InputStream inputStream = socket.getInputStream();
-        //String byte[]
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        byte[] buffer2 = new byte[1024];
-        int len2;
-        while((len2=inputStream.read(buffer2))!=-1){
-            baos.write(buffer2,0,len2);
-        } 
-        System.out.println(baos.toString());
+        <span class="token comment" spellcheck="true">//确定服务器接收完毕，才能断开连接</span>
+        InputStream inputStream <span class="token operator">=</span> socket<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//String byte[]</span>
+        ByteArrayOutputStream baos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ByteArrayOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len2<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len2<span class="token operator">=</span>inputStream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            baos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer2<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>len2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>baos<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //5.关闭资源
-        baos.close();
-        inputStream.close();
-        fis.close();
-        os.close();
-        socket.close();
-    }
-}</code></pre>
-<pre><code class="java">//服务端
-public class TcpServerDemo02{
-    public static void mian(String[] args) throws Exception {        //1.创建服务
-        ServerSocket serverSocket = new ServerSocket(9000);
-        //2.监听客户端的连接
-        serverSocket.accept();//阻塞式监听，会一直等待客户端连接
-        //3.获取输入流
-        InOutputStream is = socket.getInputStream();
-        //4.文件传输
-        FileOutputStream fos = new FileOutputStream(new File(&quot;receive.jpg&quot;));
-        byte[] buffer = new byte[1024];
-        int len;
-        while((len=is.read(buffer))!=-1){
-            fos.write(buffer, 0, len);
-        }
-        //通知客户端我接收完毕了
-        OutputStream os = socket.getOutputStream();
-        os.write(&quot;我接受完毕了，你可以断开了&quot;,getBytes());
+        <span class="token comment" spellcheck="true">//5.关闭资源</span>
+        baos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inputStream<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        os<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//服务端</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TcpServerDemo02</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">mian</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">//1.创建服务</span>
+        ServerSocket serverSocket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ServerSocket</span><span class="token punctuation">(</span><span class="token number">9000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//2.监听客户端的连接</span>
+        serverSocket<span class="token punctuation">.</span><span class="token function">accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//阻塞式监听，会一直等待客户端连接</span>
+        <span class="token comment" spellcheck="true">//3.获取输入流</span>
+        InOutputStream is <span class="token operator">=</span> socket<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//4.文件传输</span>
+        FileOutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"receive.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token operator">=</span>is<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//通知客户端我接收完毕了</span>
+        OutputStream os <span class="token operator">=</span> socket<span class="token punctuation">.</span><span class="token function">getOutputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        os<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"我接受完毕了，你可以断开了"</span><span class="token punctuation">,</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //5.关闭资源
-        fos.close();
-        is.close();
-        socket.close();
-        serverSocket.close();
-}</code></pre>
+        <span class="token comment" spellcheck="true">//5.关闭资源</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        is<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        serverSocket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h3><p>服务端</p>
 <ul>
 <li>自定义  S</li>
@@ -768,230 +768,230 @@ public class TcpServerDemo02{
 <li>浏览器    B</li>
 </ul>
 <h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><p>发短信：不用连接，需要知道对方的地址</p>
-<pre><code class="java">//发送端
-//不需要连接服务器
-public class UdpClientDemo01{
-    public static void main(String[] args){
-        //1.建立一个Socket
-         DatagramSocket socket = new DatagramSocket();
-        //2.建个包
-        String msg = &quot;你好啊，服务器&quot;;
-        //发送给谁
-        InetAddress localhost = InetAddress.getByName(&quot;localhost&quot;);
-        int port = 9000;
-        //数据，数据的起始位置，要发送给谁
-        DatagramPacket packet = new DatagramPacket(msg.getBytes(),0,msg.getBytes().length,localhost,port);
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//发送端</span>
+<span class="token comment" spellcheck="true">//不需要连接服务器</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UdpClientDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//1.建立一个Socket</span>
+         DatagramSocket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//2.建个包</span>
+        String msg <span class="token operator">=</span> <span class="token string">"你好啊，服务器"</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//发送给谁</span>
+        InetAddress localhost <span class="token operator">=</span> InetAddress<span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> port <span class="token operator">=</span> <span class="token number">9000</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//数据，数据的起始位置，要发送给谁</span>
+        DatagramPacket packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>msg<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token punctuation">,</span>localhost<span class="token punctuation">,</span>port<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //3.发送包
-        socket.send(packet);
-        //4.关闭流
-        socket.close();
-    }
-}</code></pre>
-<pre><code class="java">//接收端
-//还是要等待客户端的连接
-public class UdpServerdemo01{
-    public static void main(String[] args) throw Exception{
-        //开放端口
-        DatagramSocket socket = new Datagramsocket(9000);
-        //连接数据包
-        byte[] buffer = new byte[1024];
-        DatagramPacket packet = new DatagramPacket(buffer,0,buffer.length);
+        <span class="token comment" spellcheck="true">//3.发送包</span>
+        socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//4.关闭流</span>
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//接收端</span>
+<span class="token comment" spellcheck="true">//还是要等待客户端的连接</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UdpServerdemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throw</span> Exception<span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//开放端口</span>
+        DatagramSocket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Datagramsocket</span><span class="token punctuation">(</span><span class="token number">9000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//连接数据包</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        DatagramPacket packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>buffer<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        socket.receive(packet);//阻塞接收
+        socket<span class="token punctuation">.</span><span class="token function">receive</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//阻塞接收</span>
 
-        System.out.println(packet.getAddress());
-        System.out.println(new String(packet.getData(),0,packet.getLength()));
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>packet<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>packet<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>packet<span class="token punctuation">.</span><span class="token function">getLength</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //关闭连接
-        socket.close();
+        <span class="token comment" spellcheck="true">//关闭连接</span>
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    }
-}</code></pre>
-<h3 id="在线咨询"><a href="#在线咨询" class="headerlink" title="在线咨询"></a>在线咨询</h3><pre><code class="java">//发送端
-public class UdpSenderDemo01{
-    public static void main(String[] args){
-      DatagramSocket socket = new DatagramSocket(8888);
-      //准备数据：控制台读取 System.in
-      BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while(true){
-            String data = reader.readLine();
-            byte[] datas = data.getBytes();
-            DatagramPacket packet = new DatagramPacket(datas,0,datas.length,new InetSocketAddress(&quot;localhost&quot;,6666));
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="在线咨询"><a href="#在线咨询" class="headerlink" title="在线咨询"></a>在线咨询</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//发送端</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UdpSenderDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      DatagramSocket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramSocket</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">//准备数据：控制台读取 System.in</span>
+      BufferedReader reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            String data <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> datas <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            DatagramPacket packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>datas<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>datas<span class="token punctuation">.</span>length<span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">InetSocketAddress</span><span class="token punctuation">(</span><span class="token string">"localhost"</span><span class="token punctuation">,</span><span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            socket.send(packet);
-            if(data.equals(&quot;bye&quot;)){
-                break;
-            }
-        }
+            socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"bye"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
 
-        socket.close();
-    }
-}</code></pre>
-<pre><code class="java">//接收端
-public class UdpReceiveDemo01{
-    public static void main(String[] args) throws Exception{
-        DatagramSocket socket = new DatagramSocket(6666);
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//接收端</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UdpReceiveDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception<span class="token punctuation">{</span>
+        DatagramSocket socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramSocket</span><span class="token punctuation">(</span><span class="token number">6666</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        while(true){
-            //准备接收包裹
-            byte[] container = new byte[1024];
-            DatagramPacket packet = new DatagramPacket(container,0,container.length);
-            socket.receive(packet);//阻塞式接收包裹
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//准备接收包裹</span>
+            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> container <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            DatagramPacket packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>container<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            socket<span class="token punctuation">.</span><span class="token function">receive</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//阻塞式接收包裹</span>
 
-            //断开连接  bye
-            byte[] data = packet.getData();
-            String receiveData = new String(data,0,data.length);
+            <span class="token comment" spellcheck="true">//断开连接  bye</span>
+            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data <span class="token operator">=</span> packet<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            String receiveData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            System.out.println(receiveData);
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>receiveData<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-            if(receiveData.equals(&quot;bye&quot;)){
-                break;
-            }
-        }
+            <span class="token keyword">if</span><span class="token punctuation">(</span>receiveData<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"bye"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
 
-    }
-}</code></pre>
-<h3 id="Udp多线程在线咨询"><a href="#Udp多线程在线咨询" class="headerlink" title="Udp多线程在线咨询"></a>Udp多线程在线咨询</h3><pre><code class="java">
-//发送线程
-public class TalkSend implements Runnable{
-    DatagramSocket socket = null;
-    BufferedReader reader = null;
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="Udp多线程在线咨询"><a href="#Udp多线程在线咨询" class="headerlink" title="Udp多线程在线咨询"></a>Udp多线程在线咨询</h3><pre class=" language-java"><code class="language-java">
+<span class="token comment" spellcheck="true">//发送线程</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TalkSend</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span><span class="token punctuation">{</span>
+    DatagramSocket socket <span class="token operator">=</span> null<span class="token punctuation">;</span>
+    BufferedReader reader <span class="token operator">=</span> null<span class="token punctuation">;</span>
 
-    private int formPort;
-    private String toIP;
-    private int toPort;
+    <span class="token keyword">private</span> <span class="token keyword">int</span> formPort<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> String toIP<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> toPort<span class="token punctuation">;</span>
 
-    public TlakSend(int formPort,String toIP,int toPort){
-        this.fromPort = formPort;
-        this.toIP = toIP;
-        this.toPort = toPort;
+    <span class="token keyword">public</span> <span class="token function">TlakSend</span><span class="token punctuation">(</span><span class="token keyword">int</span> formPort<span class="token punctuation">,</span>String toIP<span class="token punctuation">,</span><span class="token keyword">int</span> toPort<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>fromPort <span class="token operator">=</span> formPort<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>toIP <span class="token operator">=</span> toIP<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>toPort <span class="token operator">=</span> toPort<span class="token punctuation">;</span>
 
-        try{
-            socket = new DatagramSockt(formPort);
-             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-    }
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramSockt</span><span class="token punctuation">(</span>formPort<span class="token punctuation">)</span><span class="token punctuation">;</span>
+             BufferedReader reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BufferedReader</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">InputStreamReader</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-    @Overrode 
-    public void run(){
-        while(true){
-            try{
-                String data = reader.readLine();
-                byte[] datas = data.getByte();
-                DatagramPacket packet = new DatagramPacket(datas,0,datas.length,new InetSocketAddress(this.toIP,this.toPort));
+    <span class="token annotation punctuation">@Overrode</span> 
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span><span class="token punctuation">{</span>
+                String data <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">readLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> datas <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">getByte</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                DatagramPacket packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>datas<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>datas<span class="token punctuation">.</span>length<span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">InetSocketAddress</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>toIP<span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>toPort<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-                socket.send(packet);
-                if(data.equals(&quot;bye&quot;)){
-                    break;
-                }
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-        }
-        socket.close();
+                socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"bye"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>Exception e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    }
-}</code></pre>
-<pre><code class="java">//接收线程
-public class TalkReceive implements Runnable{
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//接收线程</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TalkReceive</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span><span class="token punctuation">{</span>
 
-    DatagramSocket socket = null;
-    private int port;
-    private String msgFrom;
+    DatagramSocket socket <span class="token operator">=</span> null<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> port<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> String msgFrom<span class="token punctuation">;</span>
 
-    public TalkReceive(int port,String msgFrom){
-        this.port = port;
-        this.msgFrom = msgFrom;
-        try{
-            socket = new DatagramSocket(port);
-        }catch(SocketException e){
-            e.printStackTrace();
-        }
-    }
+    <span class="token keyword">public</span> <span class="token function">TalkReceive</span><span class="token punctuation">(</span><span class="token keyword">int</span> port<span class="token punctuation">,</span>String msgFrom<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>port <span class="token operator">=</span> port<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>msgFrom <span class="token operator">=</span> msgFrom<span class="token punctuation">;</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            socket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramSocket</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>SocketException e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
 
-    @Override
-    public void run(){
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-        while(true){
-            try{
-                //准备接收包裹
-                byte[] container = new byte[1024];
-                DatagramPacket packet = new DatagramPacket(container,0,container.length);
-                socket.receive(packet);//阻塞式接收包裹
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">try</span><span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//准备接收包裹</span>
+                <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> container <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                DatagramPacket packet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DatagramPacket</span><span class="token punctuation">(</span>container<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>container<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                socket<span class="token punctuation">.</span><span class="token function">receive</span><span class="token punctuation">(</span>packet<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//阻塞式接收包裹</span>
 
-                //断开连接  bye
-                byte[] data = packet.getData();
-                String receiveData = new String(Data,0,data.length);
+                <span class="token comment" spellcheck="true">//断开连接  bye</span>
+                <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data <span class="token operator">=</span> packet<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                String receiveData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>Data<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-                System.out.println(msgFrom+&quot;:&quot;+receiveData);
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>msgFrom<span class="token operator">+</span><span class="token string">":"</span><span class="token operator">+</span>receiveData<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-                if(receiveData.equalus(&quot;bye&quot;)){
-                    break;
-                }
-            }catch(IoExecption e){
-                e.printStackTrace();
-            }
-        }
-        socket.close();
-    }
-}
+                <span class="token keyword">if</span><span class="token punctuation">(</span>receiveData<span class="token punctuation">.</span><span class="token function">equalus</span><span class="token punctuation">(</span><span class="token string">"bye"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>IoExecption e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        socket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<pre><code class="java">//
-public class TalkStudent{
-   public static void main(String[] args){
-       //开启两个线程
-       new Thread(new TalkSend(7777,&quot;localhost&quot;,9999)).start();
-       new Thread(new Receive(8888,&quot;老师&quot;)).start();
-   } 
-}</code></pre>
-<pre><code class="java">public class TalkTeacher{
-    public static void main(String[] args){
-        new Thread(new TalkSend(5555,&quot;localhost&quot;,8888)).start();
-        new Thread(new TalkReceive(9999,&quot;学生&quot;)).start();
-    }
-}</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TalkStudent</span><span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token comment" spellcheck="true">//开启两个线程</span>
+       <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TalkSend</span><span class="token punctuation">(</span><span class="token number">7777</span><span class="token punctuation">,</span><span class="token string">"localhost"</span><span class="token punctuation">,</span><span class="token number">9999</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Receive</span><span class="token punctuation">(</span><span class="token number">8888</span><span class="token punctuation">,</span><span class="token string">"老师"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TalkTeacher</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TalkSend</span><span class="token punctuation">(</span><span class="token number">5555</span><span class="token punctuation">,</span><span class="token string">"localhost"</span><span class="token punctuation">,</span><span class="token number">8888</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TalkReceive</span><span class="token punctuation">(</span><span class="token number">9999</span><span class="token punctuation">,</span><span class="token string">"学生"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>同一定位资源符：定位资源的，定位互联网上的某一个资源</p>
 <p>DNS 域名解析   <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>    </p>
-<pre><code>协议：//ip地址：端口/项目名/资源</code></pre><pre><code class="java">public class URLDemo01{
-    public static void main(String[] args){
-        URL url = new URL(&quot;http://localhost:8080/helloworld/index.jsp?username=kuangshen&amp;password=123&quot;);
-        System.out.println(url.getProtocol());//协议
-        System.out.println(url.getHost());//z主机ip
-        System.out.println(url.getPort());//端口
-        System.out.println(url.getPath());//文件地址
-        System.out.println(url.getFile());//文件全路径
-        System.out.println(url.getQuery());//参数
+<pre><code>协议：//ip地址：端口/项目名/资源</code></pre><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">URLDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        URL url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/helloworld/index.jsp?username=kuangshen&amp;password=123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">getProtocol</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//协议</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">getHost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//z主机ip</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">getPort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//端口</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">getPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//文件地址</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">getFile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//文件全路径</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>url<span class="token punctuation">.</span><span class="token function">getQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//参数</span>
 
-    }
-}</code></pre>
-<pre><code class="java">public class UrlDemo{
-    public static void main(String[] args) throws Exception{
-        //1.下载地址
-        URL url = new URL(&quot;http://localhost:8080/qinjiang/SecurtyFile.txt&quot;);
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UrlDemo</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception<span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//1.下载地址</span>
+        URL url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8080/qinjiang/SecurtyFile.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //2.连接到这个资源的HTTP
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+        <span class="token comment" spellcheck="true">//2.连接到这个资源的HTTP</span>
+        HttpURLConnection urlConnection <span class="token operator">=</span> <span class="token punctuation">(</span>HttpURLConnection<span class="token punctuation">)</span> url<span class="token punctuation">.</span><span class="token function">openConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        InputStream inputStream = urlConnection.getInputStream();
+        InputStream inputStream <span class="token operator">=</span> urlConnection<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        FileOutputStream fos = new FileOutputStream(&quot;SecurityFile.txt&quot;);
+        FileOutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"SecurityFile.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        byte[] buffer = new byte[1024];
-        int len;
-        while((len=inputStream.read(buffer))!=-1){
-            fos.write(buffer,0,len);//写出这个数据
-        }
-        fos.close();
-        inputStream.close();
-        urlConnection.disconnect();//断开连接
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> buffer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len<span class="token operator">=</span>inputStream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//写出这个数据</span>
+        <span class="token punctuation">}</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        inputStream<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        urlConnection<span class="token punctuation">.</span><span class="token function">disconnect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//断开连接</span>
 
 
-    }
-}</code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 
                 
             </div>

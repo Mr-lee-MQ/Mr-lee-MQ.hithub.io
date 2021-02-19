@@ -29,7 +29,7 @@
 
     <script src="/Mr-lee-MQ.hithub.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/Mr-lee-MQ.hithub.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -474,24 +474,24 @@
 <li>异常指程序运行中出现的不期而至的各种情况，如：文件找不到，网络连接失败，非法参数等。</li>
 <li>异常发生在程序运行期间，他影响了正常的程序执行流程。</li>
 </ul>
-<pre><code class="java">//死循环，错误
-public class Demo01{
-    public static void main(String[] args){
-        new Demo01().a();
-    }
-    public void a(){
-        b();
-    }
-    public void b(){
-        a();
-    }
-}</code></pre>
-<pre><code class="java">//异常
-public class Demo01(){
-    public static void main(String[] args){
-        System.out.println(11/0);
-    }
-}</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//死循环，错误</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">new</span> <span class="token class-name">Demo01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//异常</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token operator">/</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h2 id="简单分类"><a href="#简单分类" class="headerlink" title="简单分类"></a>简单分类</h2><ul>
 <li>要理解Java异常处理是如何工作的，你需要掌握以下<strong>三种类型的异常</strong>：<ul>
 <li><strong>检查型异常</strong>：最具的代表性异常就是用户错误或问题引起的异常，这是程序员无法预见的。例如要打开一个不存在的文件，一个异常就发生了，这些异常在编译时不能被简单地忽略。</li>
@@ -527,38 +527,38 @@ public class Demo01(){
 <li>捕获异常</li>
 <li>异常处理的五个关键字:try ,catch,finally,throw,throws</li>
 </ul>
-<pre><code class="java">public class Test{
-   public static void main(String[] args){
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+   <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
 
-       int a = 1;
-       int b = 0;    
+       <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+       <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    
 
-       try{
-           //try监控区域
-           System.out.println(a/b);
-       }catch {ArithmeticException e}{//catch  想要捕获的异常类型
-               System.out.println(&quot;程序出现异常，变量b不能为0&quot;);
-       }finally {//处理善后工作
-           System.out.println(&quot;finally&quot;);
-       }
+       <span class="token keyword">try</span><span class="token punctuation">{</span>
+           <span class="token comment" spellcheck="true">//try监控区域</span>
+           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token operator">/</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token keyword">catch</span> <span class="token punctuation">{</span>ArithmeticException e<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//catch  想要捕获的异常类型</span>
+               System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"程序出现异常，变量b不能为0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//处理善后工作</span>
+           System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"finally"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
 
-       //finally可以不用，无论有没有异常都会执行
-   } 
-}</code></pre>
+       <span class="token comment" spellcheck="true">//finally可以不用，无论有没有异常都会执行</span>
+   <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span></code></pre>
 <ul>
 <li>可以连续捕获异常，但范围要逐渐变大。捕获到异常后，后面的不再执行。</li>
 <li>快捷键   Ctrl   Alt  +  T</li>
 </ul>
-<pre><code class="java">public static void main(String[] args){
-    int a = 1;
-    int b = 0;
-    public void test(int a,int b) throws ArithemticExceotion{
-      if(b == 0){
-            throw new ArithmeticException();
-            //主动抛出异常，一般在方法中使用  
-    }
-    }
-}</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span><span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token keyword">throws</span> ArithemticExceotion<span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>b <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArithmeticException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//主动抛出异常，一般在方法中使用  </span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><ul>
 <li>使用Java内置的异常类可以描述在编程时出现的大部分异常情况。除此之外，用户还可以自定义异常，用户自定义异常类，只需继承<strong>Exception</strong>类即可</li>
 <li>使用自定义异常类步骤<ul>
@@ -569,40 +569,40 @@ public class Demo01(){
 </ul>
 </li>
 </ul>
-<pre><code class="java">//自定义异常
-public class MyException extends Exception{
-    //传递数字&gt;10;
-    private int detail;
-    public MyException(int a){
-        this.detail = a;
-    }
-    //toString:异常的打印信息
-    @override
-    public String toString(){
-        return &quot;MyException{&quot; + &quot;detail=&quot; + detail +
-    &#39;}&#39;;
-    }
-}</code></pre>
-<pre><code class="java">public class Test{
-    //可能会存在的异常的方法
-    static void test (int a) throws MyException{
-        System.out.println(&quot;传递的参数为：&quot; + a);
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//自定义异常</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyException</span> <span class="token keyword">extends</span> <span class="token class-name">Exception</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//传递数字>10;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> detail<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">MyException</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>detail <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//toString:异常的打印信息</span>
+    <span class="token annotation punctuation">@override</span>
+    <span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"MyException{"</span> <span class="token operator">+</span> <span class="token string">"detail="</span> <span class="token operator">+</span> detail <span class="token operator">+</span>
+    <span class="token string">'}'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//可能会存在的异常的方法</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">test</span> <span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token keyword">throws</span> MyException<span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"传递的参数为："</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        if(a&gt;10){
-            throw new MyException(a);//抛出
-        }
-        System.out.println(&quot;ok&quot;);
-    }
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token operator">></span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">MyException</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//抛出</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"ok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
 
-    public static void main (String[] args){
-        try{
-            test(a);
-        } catch(MyException e){
-            System.out.println(&quot;MyException=&gt;&quot;+e);
-        }
-    }
-}</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span> <span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token function">test</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>MyException e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"MyException=>"</span><span class="token operator">+</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="实际应用中的经验总结"><a href="#实际应用中的经验总结" class="headerlink" title="实际应用中的经验总结"></a>实际应用中的经验总结</h3><ul>
 <li>处理运行时异常时，采用逻辑去合理规避同时辅助try-catch处理</li>
 <li>在多重catch块后面，可以加一个catch（Exception）来处理可能会被遗漏的异常</li>

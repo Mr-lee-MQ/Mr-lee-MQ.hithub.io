@@ -29,7 +29,7 @@
 
     <script src="/Mr-lee-MQ.hithub.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/Mr-lee-MQ.hithub.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -479,7 +479,7 @@
 </ul>
 <p><a href="https://www.wailian.work/image/QmMm4p" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200921_152057.png" alt="sp200921_152057.png"></a></p>
 <h2 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h2><h3 id="字节输出流-OutputStream"><a href="#字节输出流-OutputStream" class="headerlink" title="字节输出流 OutputStream"></a>字节输出流 OutputStream</h3><p>OutputStream 抽象类是表示字节输出流的所有类的超类，将指定的字节信息写出到目的地。输出流接受输出字节并将这些字节发送到某个接收器。</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 Java.io.OutputStream 抽象类是表示字节输出流的所有类的超类，将指定的字节信息写出到目的地。它定义了字节输出流的基本共性功能方法。
 
     public void close();关闭此输出流并释放与此流相关联的任何系统资源。
@@ -489,8 +489,8 @@ Java.io.OutputStream 抽象类是表示字节输出流的所有类的超类，�
     public abstract void write(int b);将指定的字节输出流。
 
 
-*/</code></pre>
-<pre><code class="java">/*
+*/</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 java.io.FileOutputStream extends OutputStream
 
 FileOutputStream:文件字节输出流
@@ -508,84 +508,84 @@ FileOutputStream:文件字节输出流
         3.会把FileOutputStream对象指向创建好的文件。
 
     写入数据的原理：
-        Java程序--&gt;JVM(java虚拟机)--&gt;OS(操作系统)--&gt;OS调用写数据的方法--&gt;把数据写入文件中
+        Java程序-->JVM(java虚拟机)-->OS(操作系统)-->OS调用写数据的方法-->把数据写入文件中
 
         字节输出流的使用步骤(重点):
             1.创建一个FileOutputStream对象，构造方法中传递写入数据的目的地。
             2.调用FileOutputStream对象中的方法write，把数据写入到文件中。
             3.释放资源(流使用会占用一定的内存，使用完毕要把内存清空，提高程序的效率)
 
-*/
+*/</span>
 
 
-public class Demo01OutputStream{
-    public static void main(String[] args){
-        //创建一个FileOutputStream对象，构造方法中传递写入数据的目的地
-        FileOutputStream fos = new FileOutputStream(&quot;09.IOAndProperties\\a.txt&quot;);
-        //调用FileOutputStream对象中的方法write，把数据写入到文件中。
-        //public abstract void write(int b);将指定的字节输出流。
-        fos.write(97);
-        fos.close();
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01OutputStream</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//创建一个FileOutputStream对象，构造方法中传递写入数据的目的地</span>
+        FileOutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"09.IOAndProperties\\a.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//调用FileOutputStream对象中的方法write，把数据写入到文件中。</span>
+        <span class="token comment" spellcheck="true">//public abstract void write(int b);将指定的字节输出流。</span>
+        fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">97</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    }
+    <span class="token punctuation">}</span>
 
-}</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>文件存储原理</strong></p>
 <p><a href="https://www.wailian.work/image/QmMtHG" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200922_155941.png" alt="sp200922_155941.png"></a></p>
-<h3 id="字节输出流写多个字节的方法"><a href="#字节输出流写多个字节的方法" class="headerlink" title="字节输出流写多个字节的方法"></a>字节输出流写多个字节的方法</h3><pre><code class="java">/*
+<h3 id="字节输出流写多个字节的方法"><a href="#字节输出流写多个字节的方法" class="headerlink" title="字节输出流写多个字节的方法"></a>字节输出流写多个字节的方法</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 一次写多个字节的方法:
     public void write(byte[] b):将b.length字节从指定的字节数组写入此输出流
     public void write(byte[], int off, int len):从指定的字节数组写入len字节，从偏移量off开始输出到此输出流。
 
-*/
+*/</span>
 
- public class Demo02OutputStream{
-     public static void main(String[] args){
-         //创建FileOutputStream对象，构造方法
-         FileOutputStream fos = new FileOutputStream(new File(&quot;09_IOAndProperties\\b.txt&quot;));
-         //调用FileOutputStream对象中的方法write，把数据写入到文件中。
-         //在文件中显示100，写个字节
-         fos.write(49);
-         fos.write(48);
-         fos.write(48);
+ <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02OutputStream</span><span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">//创建FileOutputStream对象，构造方法</span>
+         FileOutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\b.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token comment" spellcheck="true">//调用FileOutputStream对象中的方法write，把数据写入到文件中。</span>
+         <span class="token comment" spellcheck="true">//在文件中显示100，写个字节</span>
+         fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">49</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-         /*
+         <span class="token comment" spellcheck="true">/*
              public void write(byte[] b):将b.length字节从指定的字节数组写入此输出流。
              一次写多个字节:
                  如果写的第一个字节是正数，那么显示的时候会查询ASCII码表。
                  如果写的第一个字母是负数，那第一个字节会和第二个字节，两个字节组成一个中文显示，查询系统默认码表(GBK)
 
 
-         */
-         byte[] bytes = {-65,-66,-67,68,69};//[烤暘E]
-         fos.write(bytes);
+         */</span>
+         <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">-</span><span class="token number">65</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">66</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">67</span><span class="token punctuation">,</span><span class="token number">68</span><span class="token punctuation">,</span><span class="token number">69</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//[烤暘E]</span>
+         fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-         /*
+         <span class="token comment" spellcheck="true">/*
          public void write(byte[], int off, int len):把字节数组的一部分写入文件中
          从指定的字节数组写入len字节，从偏移量off开始输出到此输出流。
          int off:数组的开始索引
          int len:写几个字节
 
-         */
-         fos.write(byte, 1, 2);//BC
+         */</span>
+         fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//BC</span>
 
 
-         /*
+         <span class="token comment" spellcheck="true">/*
          写入字符的方法：可以使用String类中的方法把字符串，转换为字节数组。
          byte[] getBytes()  把字符串转换为字节数组
-         */
-         byte[] bytes2 = &quot;你好&quot;.getBytes();
-         System.out.println(Arrays.toString(bytes2));//[-28, -67, -96, -27, -91, -67]
-         fos.write(bytes2);
+         */</span>
+         <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes2 <span class="token operator">=</span> <span class="token string">"你好"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Arrays<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>bytes2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//[-28, -67, -96, -27, -91, -67]</span>
+         fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>bytes2<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
 
-         //释放资源
-         fos.close();
-     }
- }</code></pre>
+         <span class="token comment" spellcheck="true">//释放资源</span>
+         fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span></code></pre>
 <h3 id="数据追加续写"><a href="#数据追加续写" class="headerlink" title="数据追加续写"></a>数据追加续写</h3><p>每次运行程序时，创建输出流对象，都会清空目标文件中的数据。如何保留目标文件中数据，还能继续添加新数据呢</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 追加写/续写：使用两个参数的构造方法
     FileOutputStream(String name, boolean append)创建一个向具有指定  name  的文件中写入数据的输出文件流
     FileOutputStream(File file, boolean append)创建一个向指定File对象表示的文件中写入数据的文件输出流。
@@ -599,19 +599,19 @@ public class Demo01OutputStream{
     linux:/n
     mac:/r
 
-*/
-public class Demo03OutputStream{
-    public static void main(String[] args){
-      FileOutputStream fos = new fileOutputStream(&quot;09_IOAndProperties\\c.txt,true&quot;);
-        for(int i = 1;i&lt;=10;i++){
-            fos.write(&quot;你好&quot;.getBytes());
-            fos.write(&quot;\r\n&quot;.getBytes());
-        }
-        fos.close();
-    }
-}</code></pre>
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo03OutputStream</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      FileOutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">fileOutputStream</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\c.txt,true"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"你好"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"\r\n"</span><span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="字节输入流"><a href="#字节输入流" class="headerlink" title="字节输入流"></a>字节输入流</h3><p>Java.io.InputStream抽象类是表示字节输入流的所有类的超类，可以读取字节信息到内存中。他定义了字节输入流的基本共性功能方法。</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
     Java.io.InputStream:字节输入流
     此抽象类是表示字节输入流的所有类的超类。
 
@@ -634,62 +634,62 @@ public class Demo03OutputStream{
             2.会把FileInputStream对象指定构造方法中要读取的文件
 
 
-*/</code></pre>
+*/</span></code></pre>
 <h3 id="读取字节数据"><a href="#读取字节数据" class="headerlink" title="读取字节数据"></a>读取字节数据</h3><p>读取字节：read方法，每次可以读取一个字节的数据，提升为int类型，读取到文件末尾，返回-1。</p>
-<pre><code class="java">/*
-读取数据的原理(硬盘--&gt;内存)
-    java程序--&gt;JVM--&gt;OS--&gt;OS读取数据的方法--&gt;读取文件
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+读取数据的原理(硬盘-->内存)
+    java程序-->JVM-->OS-->OS读取数据的方法-->读取文件
 
 字节输入流的使用步骤(重点)
     1.创建FileInputStream对象，构造方法中绑定要读取的数据源
     2.使用FileInputStream对象中的方法read，读取文件
     3.释放资源
-*/
+*/</span>
 
-public class Demo01InputStream{
-    public static void main(String[] args){
-        //创建FileInputStream对象，构造方法中绑定要读取的数据源
-        FileInputStream fis = new FileInputStream(&quot;09_IOAndProperties\\a.txt&quot;);
-        //使用FileInputStream对象中的方法read，读取文件
-        //int read()读取文件中的一个字节并返回，读取到文件的末尾返回-1。
-        int len = fis.read();
-        System.out.println(len);//97  a
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01InputStream</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//创建FileInputStream对象，构造方法中绑定要读取的数据源</span>
+        FileInputStream fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\a.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用FileInputStream对象中的方法read，读取文件</span>
+        <span class="token comment" spellcheck="true">//int read()读取文件中的一个字节并返回，读取到文件的末尾返回-1。</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//97  a</span>
 
-        len = fis.read();
-        System.out.println(len);//98  b
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//98  b</span>
 
-        len = fis.read();
-        System.out.println(len);//99  c
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//99  c</span>
 
-        len = fis.read();
-        System.out.println(len);//  -1
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  -1</span>
 
-        len = fis.read();
-        System.out.println(len);//  -1
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//  -1</span>
 
 
-        /*
+        <span class="token comment" spellcheck="true">/*
         读取文件是一个重复的过程，所以可以用循环优化
         while循环结束条件，读取到-1的时候结束
 
-        */
+        */</span>
 
 
-        int len =0;//记录读取到的字节
-        while((len = fis.read())!= -1){
-            System.out.println((char)len);//abc
-        }
+        <span class="token keyword">int</span> len <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//记录读取到的字节</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//abc</span>
+        <span class="token punctuation">}</span>
 
 
 
-        //释放资源
-        fis.close();
-    }
+        <span class="token comment" spellcheck="true">//释放资源</span>
+        fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-}</code></pre>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>文件读取一个字节原理</strong></p>
 <p><a href="https://www.wailian.work/image/QmMdKc" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200923_081602.png" alt="sp200923_081602.png"></a></p>
-<h3 id="字节输入流一次读取多个字节"><a href="#字节输入流一次读取多个字节" class="headerlink" title="字节输入流一次读取多个字节"></a>字节输入流一次读取多个字节</h3><pre><code class="java">/*
+<h3 id="字节输入流一次读取多个字节"><a href="#字节输入流一次读取多个字节" class="headerlink" title="字节输入流一次读取多个字节"></a>字节输入流一次读取多个字节</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 字节输入流一次读取多个字节的方法:
     int read(byte[] b)从输入流中读取一定数量的字符，并将其存储在缓冲区数组b中。
 明确两件事情：
@@ -704,58 +704,58 @@ String类的构造方法
         offset:数组的开始索引
         length:转换的字节个数
 
-*/
-public class Demo02InputStream{
-    public static void main(String[] args){
-        //创建FileInputStream对象，构造方法中绑定要读取的数据源
-        FileInputStream fis = new FileInputStream(&quot;09_IOAndProperties\\b.txt&quot;);
-        //使用FileInputStream对象的方法read读取文件
-        //int read(byte[] b)从输入流中读取一定数量的字节，并将其存储在缓冲区数组  b 中。
-        byte[] bytes = new byte[2];
-        int len = fis.read(bytes);
-        System.out.println(len);//2
-        System.out.println(Array.toString(bytes));//[65, 66]
-        System.out.println(new String(bytes));//AB
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02InputStream</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//创建FileInputStream对象，构造方法中绑定要读取的数据源</span>
+        FileInputStream fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\b.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用FileInputStream对象的方法read读取文件</span>
+        <span class="token comment" spellcheck="true">//int read(byte[] b)从输入流中读取一定数量的字节，并将其存储在缓冲区数组  b 中。</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//2</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//[65, 66]</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//AB</span>
 
-        len = fis.read(bytes);
-        System.out.println(len);//2
-        System.out.println(new String(bytes));//CD
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//2</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//CD</span>
 
-        len = fis.read(bytes);
-        System.out.println(len);//1
-        System.out.println(new String(bytes));//ED
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//1</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//ED</span>
 
-        len = fis.read(bytes);
-        System.out.println(len);//-1
-        System.out.println(new String(bytes));//ED
+        len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//-1</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//ED</span>
 
 
-        /*
+        <span class="token comment" spellcheck="true">/*
         读取也是一个重复的过程，可以使用循环优化
         用while循环
         while循环结束的条件，读取到-1结束 
-        */
+        */</span>
 
-        byte[] bytes = new byte[1024];//存储读到的多个字节
-        int len = 0;//记录每次读取的有效字节个数
-        while((len = fis.read(bytes))!=-1){
-            //String(byte[] bytes, int offset, int length)把字节数组的一部分转换为字符串
-            offset:数组的开始索引
-            length:转换的字节个数
-         System.out.println(new String(bytes,0,len));
-        }
-
-
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储读到的多个字节</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//记录每次读取的有效字节个数</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//String(byte[] bytes, int offset, int length)把字节数组的一部分转换为字符串</span>
+            offset<span class="token operator">:</span>数组的开始索引
+            length<span class="token operator">:</span>转换的字节个数
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>bytes<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
 
-        //释放资源
-        fid.close();
-    }
-}</code></pre>
+
+
+        <span class="token comment" spellcheck="true">//释放资源</span>
+        fid<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>文件读取多个字节原理</strong></p>
 <p><a href="https://www.wailian.work/image/QmMHOf" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200923_085831.png" alt="sp200923_085831.png"></a></p>
 <h3 id="文件复制"><a href="#文件复制" class="headerlink" title="文件复制"></a>文件复制</h3><p><a href="https://www.wailian.work/image/QmMni6" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200923_092941.png" alt="sp200923_092941.png"></a></p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 文件复制的练习：一读一写
 
 明确：
@@ -768,48 +768,48 @@ public class Demo02InputStream{
     3.使用字节输入流对象中的方法read读取文件
     4.使用字节输出流中的方法write，把读取到的字节写入到目的地文件中
     5.释放资源
-*/
+*/</span>
 
-public class Demo01CopyFile{
-    public static void main(String[] args){
-        //创建一个字节输入流对象，构造方法中绑定要读取的数据源
-        FileInputStream fis = new FileInputStream(&quot;c:\\1.jpg&quot;);
-        //创建一个字节输出流对象，构造方法中绑定要写入的目的地
-        FileOutputStream fos = new FileOutputStream(&quot;d:\\1.jpg&quot;);
-
-
-
-
-        //第一种方法：使用字节输入流对象中的方法read读取文件
-        int len = 0;
-        while((len = fis.read())!=-1){
-            //使用字节输出流中的方法write，把读取到的字节写入到目的地文件中
-            fos.write(len);
-        }
-
-        //第二种方法：使用数组缓冲读取多个字节，写入多个字节
-        byte[] bytes = new byte[1024];
-        //使用字节输入流对象中的方法read读取文件
-        int len = 0;//每次 读取的有效字节个数
-        while(len = fis.read(bytes)!=-1){
-            //使用字节输出流中的方法write，把读取到的字节写入到目的地文件中
-            fos.write(bytes, 0,len);
-        }
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01CopyFile</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//创建一个字节输入流对象，构造方法中绑定要读取的数据源</span>
+        FileInputStream fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"c:\\1.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//创建一个字节输出流对象，构造方法中绑定要写入的目的地</span>
+        FileOutputStream fos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span><span class="token string">"d:\\1.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
 
 
-        //释放资源(先关闭写的，后关闭取的)
-        fos.close();
-        fis.close();
+        <span class="token comment" spellcheck="true">//第一种方法：使用字节输入流对象中的方法read读取文件</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//使用字节输出流中的方法write，把读取到的字节写入到目的地文件中</span>
+            fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-    }
+        <span class="token comment" spellcheck="true">//第二种方法：使用数组缓冲读取多个字节，写入多个字节</span>
+        <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用字节输入流对象中的方法read读取文件</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//每次 读取的有效字节个数</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>len <span class="token operator">=</span> fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//使用字节输出流中的方法write，把读取到的字节写入到目的地文件中</span>
+            fos<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>bytes<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-}
+
+
+
+        <span class="token comment" spellcheck="true">//释放资源(先关闭写的，后关闭取的)</span>
+        fos<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
 </code></pre>
 <h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><p>当使用字节流读取文本文件时，可能会有一些问题。就是遇到中文字符时，可能不会显示完整的字符，那是因为一个中文字符可能会占用多个字节存储。所以java提供了一些字符流类，以字符为单位读写数据，专门用于处理文本文件。</p>
 <h3 id="字符输入流-Reader"><a href="#字符输入流-Reader" class="headerlink" title="字符输入流  [Reader]"></a>字符输入流  [Reader]</h3><p>java.io.Reader抽象类是表示用于读取字符流的所有类的超类，可以读取字符信息到内存中。他定义了字符输入流的基本共性功能方法。</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 java.io.Reader:字符输入流，是字符输入流的超类，定义了一些共性的成员方法，是一个抽象类
 
 共性的成员方法：
@@ -837,39 +837,39 @@ FileReader:文件字符输入流
     2.使用FileReader对象中的方法read读取文件
     3.释放资源
 
-*/
+*/</span>
 
-public class Demo02Reader{
-    public static void main(String[] args) throws IOException{
-        //1.创建FileReader对象，构造方法中绑定要读取的数据源
-        FileReader fr = new FileReader(&quot;09_IOAndProperties\\c.txt&quot;);
-        //2.使用FileReader对象中的方法read读取文件
-        //int read()读取单个字符并返回。
-        int len = 0;
-        while((len = fr.read())!=-1){
-            System.out.println((char)len);
-        }
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02Reader</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> IOException<span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//1.创建FileReader对象，构造方法中绑定要读取的数据源</span>
+        FileReader fr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\c.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//2.使用FileReader对象中的方法read读取文件</span>
+        <span class="token comment" spellcheck="true">//int read()读取单个字符并返回。</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len <span class="token operator">=</span> fr<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-        //int read(char[] cbuf)一次读取多个字符，将字符写入数组。
-        char[] cs = new char[1024];//存储读取到的多个字符
-        int len = 0;//记录的是每次读取的有效字符个数
-        while((len = fr.read(cs))!=-1){
-            /*
+        <span class="token comment" spellcheck="true">//int read(char[] cbuf)一次读取多个字符，将字符写入数组。</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">char</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储读取到的多个字符</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//记录的是每次读取的有效字符个数</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>len <span class="token operator">=</span> fr<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>cs<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">/*
             String类的构造方法
             String(char[] value)把字符数组转换为字符串
             String(char[] value, int offset, int count)把字符数组的一部分转换为字符串
 
-            */
-            System.out.println(new String(cs, 0, len));
+            */</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>cs<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
-        }
-        //3.释放资源
-        fr.close();
-    }
-}</code></pre>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//3.释放资源</span>
+        fr<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="字符输出流-Writer"><a href="#字符输出流-Writer" class="headerlink" title="字符输出流 [Writer]"></a>字符输出流 [Writer]</h3><p>java.io.Write抽象类是表示用于写出字符流的所有类的超类，将指定的字符信息写出到目的地。他定义了字节输出流的基本共性功能方法。</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 java.io.Writer:字符输出流，是所有字符输出流的最顶层的父类，是一个抽象类
 
 共性的成员方法:
@@ -904,33 +904,33 @@ java.io.Writer:字符输出流，是所有字符输出流的最顶层的父类�
         4.释放资源(会把内存缓冲区中的数据刷新到文件中)
 
 
-*/
+*/</span>
 
-public class Demo01Writer{
-    public static void main(String[] args){
-        //1.创建FileWriter对象，构造方法中绑定要写入数据的目的地
-        FileWriter fw = new FileWriter(&quot;09_IOAndProperties\\d.txt&quot;);
-        //使用FileWrite中的方法write，把数据写入到内存缓冲区中(字符转换为字节的过程)
-        //void write(int c) 写入单个字符。
-        fw.write(97);
-        //3.使用FileWriter中的方法flush，把内存缓冲区的数据，刷新到文件中。
-        fw.flush();
-        //4.释放资源(会把内存缓冲区中的数据刷新到文件中)
-        fw.close();
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Writer</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//1.创建FileWriter对象，构造方法中绑定要写入数据的目的地</span>
+        FileWriter fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\d.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用FileWrite中的方法write，把数据写入到内存缓冲区中(字符转换为字节的过程)</span>
+        <span class="token comment" spellcheck="true">//void write(int c) 写入单个字符。</span>
+        fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token number">97</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//3.使用FileWriter中的方法flush，把内存缓冲区的数据，刷新到文件中。</span>
+        fw<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//4.释放资源(会把内存缓冲区中的数据刷新到文件中)</span>
+        fw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    }
-}</code></pre>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 id="关闭和刷新的区别"><a href="#关闭和刷新的区别" class="headerlink" title="关闭和刷新的区别"></a>关闭和刷新的区别</h3><p>因为内置缓冲区的原因，如果不关闭输出流，无法写出字符到文件中。但是关闭的对象，是无法继续写出数据的。如果我们既想写出数据，又想继续使用流，就需要flush方法了</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 flush和close方法的区别
     flush:刷新缓冲区，该对象可以继续使用
     close:先刷新缓冲区，然后再通知系统释放资源，流对象不能再使用了。
-*/</code></pre>
-<h3 id="字符输出流写数据的其他方法"><a href="#字符输出流写数据的其他方法" class="headerlink" title="字符输出流写数据的其他方法"></a>字符输出流写数据的其他方法</h3><pre><code class="java">    void write(char[] cbuf)写入字符数组
-    abstract void write(char[] cbuf, int off, int len)写入字符数组的某一部分，off数组开始索引，len写的字符个数。
-    void write(String str)写入字符串
-    void write(String str, int off, int len)写入字符串的某一部分，off字符串的开始索引，len写的字符个数。</code></pre>
-<h3 id="字符输出流的续写和换行"><a href="#字符输出流的续写和换行" class="headerlink" title="字符输出流的续写和换行"></a>字符输出流的续写和换行</h3><pre><code class="java">/*
+*/</span></code></pre>
+<h3 id="字符输出流写数据的其他方法"><a href="#字符输出流写数据的其他方法" class="headerlink" title="字符输出流写数据的其他方法"></a>字符输出流写数据的其他方法</h3><pre class=" language-java"><code class="language-java">    <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cbuf<span class="token punctuation">)</span>写入字符数组
+    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cbuf<span class="token punctuation">,</span> <span class="token keyword">int</span> off<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span>写入字符数组的某一部分，off数组开始索引，len写的字符个数。
+    <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span>写入字符串
+    <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span>String str<span class="token punctuation">,</span> <span class="token keyword">int</span> off<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span>写入字符串的某一部分，off字符串的开始索引，len写的字符个数。</code></pre>
+<h3 id="字符输出流的续写和换行"><a href="#字符输出流的续写和换行" class="headerlink" title="字符输出流的续写和换行"></a>字符输出流的续写和换行</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 续写和换行
 续写,追加写:使用两个参数的构造方法
     FileWriter(String fileName, boolean append)
@@ -945,9 +945,9 @@ flush和close方法的区别
         linux:/n
         mac:/r
 
-*/</code></pre>
+*/</span></code></pre>
 <h2 id="IO异常的处理"><a href="#IO异常的处理" class="headerlink" title="IO异常的处理"></a>IO异常的处理</h2><p>在实际开发中，不能直接把异常抛出，应该使用try….catch….finally代码块。</p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 在1.7之前使用 try..catch..finally处理流中的异常
 格式：
     try{
@@ -958,38 +958,38 @@ flush和close方法的区别
         一定会执行的代码
         资源释放
     }
-*/
+*/</span>
 
-public class Demo01TryCatch{
-    public static void main(String[] args){
-        //提高变量fw的作用域，让finally可以使用
-        //变量在定义的时候，可以没有值，但在使用的时候必须有值
-        //fw = new FileWriter(&quot;09_IOAndProperties\\g.txt&quot;, true);执行失败，fw没有值，fw.close会报错
-        FileWriter fw = null;
-        try{
-            //可能会产生异常的代码
-            fw = new FileWriter(&quot;09_IOAndProperties\\g.txt&quot;,teue);
-            for(int i = 0; i&lt;10 ;i++){
-                fw.write(&quot;HelloWorld&quot;+i+&quot;\r\n&quot;);
-            }
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01TryCatch</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//提高变量fw的作用域，让finally可以使用</span>
+        <span class="token comment" spellcheck="true">//变量在定义的时候，可以没有值，但在使用的时候必须有值</span>
+        <span class="token comment" spellcheck="true">//fw = new FileWriter("09_IOAndProperties\\g.txt", true);执行失败，fw没有值，fw.close会报错</span>
+        FileWriter fw <span class="token operator">=</span> null<span class="token punctuation">;</span>
+        <span class="token keyword">try</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//可能会产生异常的代码</span>
+            fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\g.txt"</span><span class="token punctuation">,</span>teue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">10</span> <span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                fw<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"HelloWorld"</span><span class="token operator">+</span>i<span class="token operator">+</span><span class="token string">"\r\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
 
-        }catch(IOException){
-            //异常的处理逻辑
-            System.out.println(e);
-        }finally{
-            //一定会执行的代码
-            try{
-                //fw.close方法声明抛出了IOException异常对象。
-                fw.close(); 
-            } catch(IOException e){
-                e.printStackTrace();
-            }
+        <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span>IOException<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//异常的处理逻辑</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">finally</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//一定会执行的代码</span>
+            <span class="token keyword">try</span><span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//fw.close方法声明抛出了IOException异常对象。</span>
+                fw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span>IOException e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
 
-        }
-    }
-}</code></pre>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 <p><strong>JDK1.7的新特性</strong></p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 JDK7新特性
 在try的后面可以增加一个()，在括号中可以定义流对象
 那么这个流对象的作用域就在try中有效
@@ -1001,9 +1001,9 @@ try中的代码执行完毕，会自动把流对象释放，不用写finally
         异常的处理逻辑
     }
 
-*/</code></pre>
+*/</span></code></pre>
 <p><strong>JDK9新特性</strong></p>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 JDK9新特性
 try的前面可以定义流对象
 在try后面的()中可以直接引入流对象的名称(变量名)
@@ -1017,10 +1017,10 @@ try的前面可以定义流对象
         异常的处理逻辑
     }
 
-*/</code></pre>
+*/</span></code></pre>
 <h2 id="属性集"><a href="#属性集" class="headerlink" title="属性集"></a>属性集</h2><h3 id="Properties类"><a href="#Properties类" class="headerlink" title="Properties类"></a>Properties类</h3><p>Properties类表示了一个持久的属性集。Properties可保存在流中或从流中加载。属性列表中每个键及其对应值都是一个字符串。</p>
-<pre><code class="java">/*
-java.util.Properties集合 extends Hashtable&lt;k,v&gt; implement Map&lt;k,v&gt;
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
+java.util.Properties集合 extends Hashtable&lt;k,v> implement Map&lt;k,v>
 
 Properties类表示了一个持久的属性集。Properties 可保存在流中或从流中加载。
 Properties集合是一个唯一和IO流结合的集合
@@ -1030,51 +1030,51 @@ Properties集合是一个唯一和IO流结合的集合
     属性列表中每个键及其对应值都是一个字符串。
         Properties集合时一个双列集合，key和value默认都是字符串。
 
-*/
+*/</span>
 
 
-public class Demo01Properties{
-    public static void main(String[] args){
-        show01();
-    }
-    /*
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Properties</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">show01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/*
     使用Properties集合存储数据。遍历取出Properties集合中的数据
     Properties集合是一个双列集合，key和value默认都是字符串
     Properties集合有一些操作字符串的特有方法
         Object setPropersites(String key, String value)调用Hashtable的方法 put。
         String getProperty(String key) 通过key找到value值，此方法相当于Map集合中的get(key)方法。
-        Set&lt;String&gt; stringPropertyNames() 返回此属性列表的键集，其中该键及其对应值是字符串，此方法相当于Map集合中的keySet方法
+        Set&lt;String> stringPropertyNames() 返回此属性列表的键集，其中该键及其对应值是字符串，此方法相当于Map集合中的keySet方法
 
-    */
-    private static void show01(){    
-        //创建Properties集合对象
-        Properties prop = new Properties();
-        //使用setProperty往集合中添加数据
-        prop.setProperty(&quot;赵丽颖&quot;， &quot;168&quot;);
-        prop.setProperty(&quot;迪丽热巴&quot;， &quot;165&quot;);
-        prop.setProperty(&quot;古力娜扎&quot;， &quot;160&quot;);
+    */</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">show01</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    
+        <span class="token comment" spellcheck="true">//创建Properties集合对象</span>
+        Properties prop <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用setProperty往集合中添加数据</span>
+        prop<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"赵丽颖"</span>， <span class="token string">"168"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        prop<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"迪丽热巴"</span>， <span class="token string">"165"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        prop<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"古力娜扎"</span>， <span class="token string">"160"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //使用stringPropertyNames把集合中的键取出,存储到一个Set集合中
-        Set&lt;String&gt; set = prop.stringPropertyName();
+        <span class="token comment" spellcheck="true">//使用stringPropertyNames把集合中的键取出,存储到一个Set集合中</span>
+        Set<span class="token operator">&lt;</span>String<span class="token operator">></span> set <span class="token operator">=</span> prop<span class="token punctuation">.</span><span class="token function">stringPropertyName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //遍历Set集合，取出Properties集合的每一个键
-        for (String key : set){
-            //使用getProperty方法通过key获取value
-            string value = prop.getProperty(key);
-            System.out.println(key+&quot;=&quot;+value);
-        }
+        <span class="token comment" spellcheck="true">//遍历Set集合，取出Properties集合的每一个键</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>String key <span class="token operator">:</span> set<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//使用getProperty方法通过key获取value</span>
+            string value <span class="token operator">=</span> prop<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>key<span class="token operator">+</span><span class="token string">"="</span><span class="token operator">+</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-    }
+    <span class="token punctuation">}</span>
 
-}</code></pre>
-<pre><code class="java">/*
+<span class="token punctuation">}</span></code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 可以使用Properties集合中的方法store，把集合中的临时数据，持久化写入到硬盘中存储
     void store(OutputStream out, String comments)
     void store(Writer writer, String comments)
     参数:
         OutputStream out:字节输出流，不能写入中文
         Writer write:字符输出流，可以写中文
-        String comments:注释，用来解释说明保存的文件是做什么的，不能使用中文，会产生乱码，默认是Unicode编码，一般使用&quot;&quot;空字符串。
+        String comments:注释，用来解释说明保存的文件是做什么的，不能使用中文，会产生乱码，默认是Unicode编码，一般使用""空字符串。
 
         使用步骤:
             1.创建一个Properties集合对象，添加数据。
@@ -1082,34 +1082,34 @@ public class Demo01Properties{
             3.使用Properties集合中的方法store，把集合中的临时数据，持久化写入硬盘中存储。
             4.释放资源。
 
-*/
-public class Demo01Properties{
-    public static void main(String[] args){
-        show02();
-}
-    private static void show02(){
-        //创建Properties集合对象
-        Properties prop = new Properties();
-        //使用setProperty往集合中添加数据
-        prop.setProperty(&quot;赵丽颖&quot;， &quot;168&quot;);
-        prop.setProperty(&quot;迪丽热巴&quot;， &quot;165&quot;);
-        prop.setProperty(&quot;古力娜扎&quot;， &quot;160&quot;); 
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Properties</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">show02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">show02</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//创建Properties集合对象</span>
+        Properties prop <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用setProperty往集合中添加数据</span>
+        prop<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"赵丽颖"</span>， <span class="token string">"168"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        prop<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"迪丽热巴"</span>， <span class="token string">"165"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        prop<span class="token punctuation">.</span><span class="token function">setProperty</span><span class="token punctuation">(</span><span class="token string">"古力娜扎"</span>， <span class="token string">"160"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 
-        //创建字节输出流/字符输出流对象，构造方法中绑定要输出的目的地.
-        FileWriter fw = new FileWriter(&quot;09_IOAndProperties\\prop.txt&quot;);
-        //使用Properties集合中的方法store,把集合中的临时数据，持久化写入硬盘中存储
-        prop.store(fw, &quot;save data&quot;);
-        //释放资源
-        fw.close();
+        <span class="token comment" spellcheck="true">//创建字节输出流/字符输出流对象，构造方法中绑定要输出的目的地.</span>
+        FileWriter fw <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileWriter</span><span class="token punctuation">(</span><span class="token string">"09_IOAndProperties\\prop.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用Properties集合中的方法store,把集合中的临时数据，持久化写入硬盘中存储</span>
+        prop<span class="token punctuation">.</span><span class="token function">store</span><span class="token punctuation">(</span>fw<span class="token punctuation">,</span> <span class="token string">"save data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//释放资源</span>
+        fw<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
-    }
+    <span class="token punctuation">}</span>
 
 </code></pre>
-<pre><code class="java">/*
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
 可以使用Properties集合中的方法load，把硬盘中保存的文件(键值对)，读取到集合中使用。
 
-*/</code></pre>
+*/</span></code></pre>
 
                 
             </div>
