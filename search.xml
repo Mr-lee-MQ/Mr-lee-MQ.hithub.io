@@ -5557,8 +5557,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   <entry>
     <title>Spring</title>
     <url>/Mr-lee-MQ.hithub.io/2021/02/19/Spring/</url>
-    <content><![CDATA[<p><strong>Spring</strong> <a id="more"></a></p>
-<h2 id="1-1、简介"><a href="#1-1、简介" class="headerlink" title="1.1、简介"></a>1.1、简介</h2><h2 id="1-2、优点"><a href="#1-2、优点" class="headerlink" title="1.2、优点"></a>1.2、优点</h2><p> Spring是一个开源的免费的框架(容器)！</p>
+    <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring "></a>Spring <a id="more"></a></h1><h2 id="1-1、简介"><a href="#1-1、简介" class="headerlink" title="1.1、简介"></a>1.1、简介</h2><h2 id="1-2、优点"><a href="#1-2、优点" class="headerlink" title="1.2、优点"></a>1.2、优点</h2><p> Spring是一个开源的免费的框架(容器)！</p>
 <h1 id="2-IOC理论推导"><a href="#2-IOC理论推导" class="headerlink" title="2.IOC理论推导"></a>2.IOC理论推导</h1><p> 1.UserDao接口</p>
 <p> 2.UserDaoImpl实现类</p>
 <p> 3.UserService业务接口</p>
