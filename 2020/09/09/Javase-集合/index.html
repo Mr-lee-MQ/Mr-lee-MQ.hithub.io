@@ -538,24 +538,172 @@
 <p>左子树和右子树数量相等。</p>
 <p><a href="https://www.wailian.work/image/QmMOOR" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200909_152303.png" alt="sp200909_152303.png"></a></p>
 <h2 id="ArrayList集合"><a href="#ArrayList集合" class="headerlink" title="ArrayList集合"></a>ArrayList集合</h2><h3 id="ArrayList集合概述和基本使用"><a href="#ArrayList集合概述和基本使用" class="headerlink" title="ArrayList集合概述和基本使用"></a>ArrayList集合概述和基本使用</h3><p>java.util.ArrayList是大小可变的数组的实现，存储在内的数据称为元素，此类提供一些方法来操作内部存储的元素，ArrayList中可不断添加元素，其大小也自动增长。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">数组的长度不可以发生改变。</span></span><br><span class="line"><span class="comment">但是ArrayList集合的长度是可以随意变化的。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">对于ArrayList来说，由一个尖括号&lt;E&gt;代表泛型。</span></span><br><span class="line"><span class="comment">泛型：也就是装在集合当中的所有元素，全都是统一的什么类型。</span></span><br><span class="line"><span class="comment">注意：泛型只能是引用类型，不能是基本类型。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">注意事项：</span></span><br><span class="line"><span class="comment">	对于ArrayList集合来说，直接打印得到的不是地址值，而是内容。如果内容为空，得到的是空的中括号。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02ArrayList</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建了一个ArrayList集合，集合的名称是list，里面装的全都是String字符串类型的数据。</span></span><br><span class="line">        ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        System.out.println(list);<span class="comment">//[]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//向集合中添加数据，需要用到add方法。</span></span><br><span class="line">        list.add(<span class="string">"赵丽颖"</span>);</span><br><span class="line">        list.add(<span class="string">"迪丽热巴"</span>);</span><br><span class="line">        System.out.println(list);<span class="comment">//[赵丽颖, 迪丽热巴]</span></span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+数组的长度不可以发生改变。
+但是ArrayList集合的长度是可以随意变化的。
 
-<h3 id="ArrayLiat集合常用方法及遍历"><a href="#ArrayLiat集合常用方法及遍历" class="headerlink" title="ArrayLiat集合常用方法及遍历"></a>ArrayLiat集合常用方法及遍历</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">ArrayList当中的常用方法：</span></span><br><span class="line"><span class="comment">	public boolean add(E e);向集合中添加元素，参数类型和泛型一致</span></span><br><span class="line"><span class="comment">	public E get(int index);从集合中获取元素，参数是索引编号，返回值就是对应位置的元素。</span></span><br><span class="line"><span class="comment">	public E remove(int index);从集合中删除元素，参数是索引编号，返回值就是被删掉的元素。</span></span><br><span class="line"><span class="comment">	public int size();获取集合的尺寸长度，返回值是集合中包含的元素个数。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo03ArrayListMethod</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">        ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        System.out.println(list);<span class="comment">//[]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//向集合中添加元素：add</span></span><br><span class="line">        <span class="keyword">boolean</span> success = list.add(<span class="string">"柳岩"</span>);</span><br><span class="line">        System.out.println(list);<span class="comment">//柳岩</span></span><br><span class="line">        System.out.println(<span class="string">"添加的动作是否成功："</span>+ success);<span class="comment">//true</span></span><br><span class="line">        list.add(<span class="string">"高圆圆"</span>);</span><br><span class="line">        list.add(<span class="string">"赵又廷"</span>);</span><br><span class="line">        System.out.println(list);<span class="comment">//[柳岩， 高圆圆， 赵又廷]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//从集合中获取元素：get。索引从0开始。</span></span><br><span class="line">        String name  = list.get(<span class="number">2</span>);</span><br><span class="line">        System.out.println(<span class="string">"第二号索引位置："</span>+name);<span class="comment">//赵又廷</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//从集合中删除元素：remove。索引从0开始。</span></span><br><span class="line">        String whoRemoved = list.remove(<span class="number">3</span>);</span><br><span class="line">        System.out.println(<span class="string">"被删除的人是："</span>+whoRemoved);</span><br><span class="line">        System.out.println(list);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//获取集合的长度尺寸，也就是其中元素的个数</span></span><br><span class="line">        <span class="keyword">int</span> size = list.size();</span><br><span class="line">        System.out.println(<span class="string">"集合的长度是："</span>+size);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+对于ArrayList来说，由一个尖括号&lt;E&gt;代表泛型。
+泛型：也就是装在集合当中的所有元素，全都是统一的什么类型。
+注意：泛型只能是引用类型，不能是基本类型。
 
+注意事项：
+    对于ArrayList集合来说，直接打印得到的不是地址值，而是内容。如果内容为空，得到的是空的中括号。
+*/
+
+public class Demo02ArrayList{
+    public static void main(String[] args){
+        //创建了一个ArrayList集合，集合的名称是list，里面装的全都是String字符串类型的数据。
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        System.out.println(list);//[]
+
+        //向集合中添加数据，需要用到add方法。
+        list.add(&quot;赵丽颖&quot;);
+        list.add(&quot;迪丽热巴&quot;);
+        System.out.println(list);//[赵丽颖, 迪丽热巴]
+    } 
+
+}</code></pre>
+<h3 id="ArrayLiat集合常用方法及遍历"><a href="#ArrayLiat集合常用方法及遍历" class="headerlink" title="ArrayLiat集合常用方法及遍历"></a>ArrayLiat集合常用方法及遍历</h3><pre><code class="java">/*
+ArrayList当中的常用方法：
+    public boolean add(E e);向集合中添加元素，参数类型和泛型一致
+    public E get(int index);从集合中获取元素，参数是索引编号，返回值就是对应位置的元素。
+    public E remove(int index);从集合中删除元素，参数是索引编号，返回值就是被删掉的元素。
+    public int size();获取集合的尺寸长度，返回值是集合中包含的元素个数。
+*/
+
+public class Demo03ArrayListMethod{
+    public static void main(String []args){
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        System.out.println(list);//[]
+
+        //向集合中添加元素：add
+        boolean success = list.add(&quot;柳岩&quot;);
+        System.out.println(list);//柳岩
+        System.out.println(&quot;添加的动作是否成功：&quot;+ success);//true
+        list.add(&quot;高圆圆&quot;);
+        list.add(&quot;赵又廷&quot;);
+        System.out.println(list);//[柳岩， 高圆圆， 赵又廷]
+
+        //从集合中获取元素：get。索引从0开始。
+        String name  = list.get(2);
+        System.out.println(&quot;第二号索引位置：&quot;+name);//赵又廷
+
+        //从集合中删除元素：remove。索引从0开始。
+        String whoRemoved = list.remove(3);
+        System.out.println(&quot;被删除的人是：&quot;+whoRemoved);
+        System.out.println(list);
+
+        //获取集合的长度尺寸，也就是其中元素的个数
+        int size = list.size();
+        System.out.println(&quot;集合的长度是：&quot;+size);
+    }
+}</code></pre>
 <p>遍历集合</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04ArrayListEach</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">"迪丽热巴"</span>);</span><br><span class="line">        list.add(<span class="string">"古力娜扎"</span>);</span><br><span class="line">        list.add(<span class="string">"马尔扎哈"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//遍历集合</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++)&#123;</span><br><span class="line">            System.out.println(list.get(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class Demo04ArrayListEach{
+    public static void main(String[] args){
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;迪丽热巴&quot;);
+        list.add(&quot;古力娜扎&quot;);
+        list.add(&quot;马尔扎哈&quot;);
 
-<h3 id="ArrayList集合存储基本数据类型"><a href="#ArrayList集合存储基本数据类型" class="headerlink" title="ArrayList集合存储基本数据类型"></a>ArrayList集合存储基本数据类型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">如果希望向集合ArrayList当中存储基本数据类型，必须使用基本类型对应的包装类。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo05ArrayListBasic</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayList&lt;String&gt; listA = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//错误写法!泛型只能是引用类型，不能是基本类型</span></span><br><span class="line">        </span><br><span class="line">        ArrayList&lt;Integer&gt; listC = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        listC.add(<span class="number">100</span>);</span><br><span class="line">        listC.add(<span class="number">200</span>);</span><br><span class="line">        System.out.println(list);<span class="comment">//[100, 200]</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> num = listC.get(<span class="number">1</span>);</span><br><span class="line">        System.out.println(num);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        //遍历集合
+        for(int i = 0; i &lt; list.size(); i++){
+            System.out.println(list.get(i));
+        }
+    }
+}</code></pre>
+<h3 id="ArrayList集合存储基本数据类型"><a href="#ArrayList集合存储基本数据类型" class="headerlink" title="ArrayList集合存储基本数据类型"></a>ArrayList集合存储基本数据类型</h3><pre><code class="java">/*
+如果希望向集合ArrayList当中存储基本数据类型，必须使用基本类型对应的包装类。
+*/
 
+public class Demo05ArrayListBasic{
+    public static void main(String[] args){
+        ArrayList&lt;String&gt; listA = new ArrayList&lt;&gt;();
+        //错误写法!泛型只能是引用类型，不能是基本类型
+
+        ArrayList&lt;Integer&gt; listC = new ArrayList&lt;&gt;();
+        listC.add(100);
+        listC.add(200);
+        System.out.println(list);//[100, 200]
+
+        int num = listC.get(1);
+        System.out.println(num);
+    }
+}</code></pre>
 <h3 id="数值添加到集合"><a href="#数值添加到集合" class="headerlink" title="数值添加到集合"></a>数值添加到集合</h3><p>生成6个1~33之间的随机数，添加到集合，并遍历集合。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01ArrayList</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建Random对象</span></span><br><span class="line">        Random random = <span class="keyword">new</span> Random();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//创建ArrayList对象</span></span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//添加随机数到集合</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;<span class="number">6</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> r = random.nextInt(<span class="number">33</span>) + <span class="number">1</span>;</span><br><span class="line">            list.add(r);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//遍历集合输出</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;list.size();i++)&#123;</span><br><span class="line">            System.out.println(list.get(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class Test01ArrayList{
+    public static void main(String[] args){
+        //创建Random对象
+        Random random = new Random();
 
+        //创建ArrayList对象
+        ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+
+        //添加随机数到集合
+        for (int i =0;i&lt;6;i++){
+            int r = random.nextInt(33) + 1;
+            list.add(r);
+        }
+
+        //遍历集合输出
+        for (int i = 0;i &lt;list.size();i++){
+            System.out.println(list.get(i));
+        }
+    }
+}</code></pre>
 <h3 id="对象添加到集合"><a href="#对象添加到集合" class="headerlink" title="对象添加到集合"></a>对象添加到集合</h3><p>自定义4个学生对象，添加到集合，并遍历</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test02ArrayList</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建集合对象</span></span><br><span class="line">        ArrayList&lt;Student&gt; list = <span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line">        <span class="comment">//创建学生对象</span></span><br><span class="line">        Student s1 = <span class="keyword">new</span> Student(<span class="string">"赵丽颖"</span>,<span class="number">18</span>);</span><br><span class="line">        Student s2 = <span class="keyword">new</span> Student(<span class="string">"唐嫣"</span>,<span class="number">20</span>);</span><br><span class="line">        Student s3 = <span class="keyword">new</span> Student(<span class="string">"景甜"</span>,<span class="number">25</span>);</span><br><span class="line">        Student s4 = <span class="keyword">new</span> Student(<span class="string">"柳岩"</span>,<span class="number">19</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//把学生对象作为元素添加到集合中</span></span><br><span class="line">        list.add(s1);</span><br><span class="line">        list.add(s2);</span><br><span class="line">        list.add(s3);</span><br><span class="line">        list.add(s4);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//遍历集合</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; list.size(); x++)&#123;</span><br><span class="line">            Student s = list.get(x);</span><br><span class="line">            System.out.println(s.getName()+<span class="string">"---"</span>+s.getAge());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class Test02ArrayList{
+    public static void main(String[] args){
+        //创建集合对象
+        ArrayList&lt;Student&gt; list = new ArrayList&lt;Student&gt;();
+        //创建学生对象
+        Student s1 = new Student(&quot;赵丽颖&quot;,18);
+        Student s2 = new Student(&quot;唐嫣&quot;,20);
+        Student s3 = new Student(&quot;景甜&quot;,25);
+        Student s4 = new Student(&quot;柳岩&quot;,19);
 
+        //把学生对象作为元素添加到集合中
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+        list.add(s4);
+
+        //遍历集合
+        for(int x = 0; x &lt; list.size(); x++){
+            Student s = list.get(x);
+            System.out.println(s.getName()+&quot;---&quot;+s.getAge());
+        }
+    }
+}</code></pre>
 <h3 id="打印集合方法"><a href="#打印集合方法" class="headerlink" title="打印集合方法"></a>打印集合方法</h3><p>定义指定格式打印集合的方法（ArrayList类型作为参数），使用{}扩起集合，使用@分隔每个元素。格式按照{元素@元素@元素}。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test03ArrayList</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建集合对象</span></span><br><span class="line">        ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//添加字符串到集合中</span></span><br><span class="line">        list.add(<span class="string">"张三丰"</span>);</span><br><span class="line">        list.add(<span class="string">"宋远桥"</span>);</span><br><span class="line">        list.add(<span class="string">"张无忌"</span>);</span><br><span class="line">        list.add(<span class="string">"殷梨亭"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//调用方法</span></span><br><span class="line">        printArrayList(list);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printArrayList</span><span class="params">(ArrayList&lt;String&gt; list)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"&#123;"</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++)&#123;</span><br><span class="line">          String name = list.get(i);</span><br><span class="line">            <span class="keyword">if</span>(i == list.size()-<span class="number">1</span>)&#123;</span><br><span class="line">                System/out.println(name +<span class="string">"&#125;"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                System.out.print(name + <span class="string">"@"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class Test03ArrayList{
+    public static void main(String[] args){
+        //创建集合对象
+        ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();
 
+        //添加字符串到集合中
+        list.add(&quot;张三丰&quot;);
+        list.add(&quot;宋远桥&quot;);
+        list.add(&quot;张无忌&quot;);
+        list.add(&quot;殷梨亭&quot;);
+
+        //调用方法
+        printArrayList(list);
+    }
+
+
+    public static void printArrayList(ArrayList&lt;String&gt; list){
+        System.out.println(&quot;{&quot;);
+        for(int i = 0; i &lt; list.size(); i++){
+          String name = list.get(i);
+            if(i == list.size()-1){
+                System/out.println(name +&quot;}&quot;);
+            }else{
+                System.out.print(name + &quot;@&quot;);
+            }
+        }
+    }   
+}</code></pre>
 <h2 id="Collection集合"><a href="#Collection集合" class="headerlink" title="Collection集合"></a>Collection集合</h2><h3 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h3><p>集合按照其存储结构可以分为两大类，分别是单列集合Collection和双列集合Map。</p>
 <ul>
 <li>Collection:单列集合类的根接口，用于存储一系列符合某种规则的元素，他有两个重要的子接口，分别是List和Set。其中，List的特点是元素有序，元素可重复。Set的特点是元素无序，而且不可重复 。</li>
@@ -579,63 +727,570 @@
 </ul>
 </li>
 </ul>
-<h3 id="Collection集合常用方法"><a href="#Collection集合常用方法" class="headerlink" title="Collection集合常用方法"></a>Collection集合常用方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span></span>;		向集合中添加元素</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(E e)</span></span>;	删除集合中的某个元素</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>;			清空集合所有元素</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(E e)</span></span>;	判断集合中是否包含某个元素</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;		判断集合是否为空</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;				获取集合的长度</span><br><span class="line">Object[] toArray();		将集合转成一个数组</span><br></pre></td></tr></table></figure>
+<h3 id="Collection集合常用方法"><a href="#Collection集合常用方法" class="headerlink" title="Collection集合常用方法"></a>Collection集合常用方法</h3><pre><code class="java">boolean add(E e);        向集合中添加元素
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">boolean add(E e);		向集合中添加元素</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">boolean remove(E e);	删除集合中的某个元素</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">void clear();			清空集合所有元素</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">boolean contains(E e);	判断集合中是否包含某个元素</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">boolean isEmpty();		判断集合是否为空</span></span><br><span class="line"><span class="comment">int size();				获取集合的长度</span></span><br><span class="line"><span class="comment">Object[] toArray();		将集合转成一个数组</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test01</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建集合对象</span></span><br><span class="line">        Collection&lt;String&gt; coll = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//boolean add(E e);  向集合中添加元素</span></span><br><span class="line">        coll.add(<span class="string">"hello"</span>);</span><br><span class="line">        coll.add(<span class="string">"world"</span>);</span><br><span class="line">        coll.add(<span class="string">"heima"</span>);</span><br><span class="line">        coll.add(<span class="string">"java"</span>);</span><br><span class="line">        System.out.println(coll);<span class="comment">//[hello, world, heima, java]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//boolean remove(E e);  删除集合中的某个元素</span></span><br><span class="line">        <span class="keyword">boolean</span> result = coll.remove(<span class="string">"hello2"</span>)；</span><br><span class="line">        System.out.println(result);<span class="comment">//true</span></span><br><span class="line">        System.out.println(coll);<span class="comment">//[world, heima, java]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//void clear();   清空集合所有的元素</span></span><br><span class="line">        coll.clear();</span><br><span class="line">        System.out.println(coll);  <span class="comment">//[]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//boolean contains(E e);  判断集合中是否包含某个元素</span></span><br><span class="line">        <span class="keyword">boolean</span> result = coll.contains(<span class="string">"java"</span>);</span><br><span class="line">        System.out.println(result);  <span class="comment">//true</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//boolean isEmpty();  判断集合是否为空。</span></span><br><span class="line">        System.out.println(coll.isEmpty());  <span class="comment">//true</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//int size();  获取集合长度</span></span><br><span class="line">        System.out.println(coll.size());</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//Object[] toArray();</span></span><br><span class="line">        Object[] arr = coll.toArray()</span><br><span class="line">        <span class="comment">//遍历数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.length; i++)&#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+boolean remove(E e);    删除集合中的某个元素
 
-<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">java.util.List接口extends Collection接口</span></span><br><span class="line"><span class="comment">List接口的特点：</span></span><br><span class="line"><span class="comment">	有序的集合，存储元素和取出元素的顺序是一致的。</span></span><br><span class="line"><span class="comment">	有索引，包含了一些带索引的方法。</span></span><br><span class="line"><span class="comment">	允许存储重复的元素。</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">List接口中带索引的方法(特有)：</span></span><br><span class="line"><span class="comment">	public void add(int index, E element):将指定的元素，添加到该集合中的指定位置上。</span></span><br><span class="line"><span class="comment">    public E get(int index):返回集合中指定位置的元素。</span></span><br><span class="line"><span class="comment">    public E remove(int index):移除列表中指定位置的元素，返回的是被移除的元素。</span></span><br><span class="line"><span class="comment">    public E set(int index, E element):用指定元素替换集合中指定位置的元素，返回值的更新前的元素。</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">注意：</span></span><br><span class="line"><span class="comment">	操作索引的时候，一定要防止索引越界异常。</span></span><br><span class="line"><span class="comment">	IndexOutOfBoundsException:索引越界异常，集合会报。</span></span><br><span class="line"><span class="comment">	ArrayIndexOutOfBoundsException:数组索引越界异常。</span></span><br><span class="line"><span class="comment">	StringIndexOutOfBoundsException:字符串索引越界异常。</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01List</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    	<span class="comment">//创建一个List集合对象，多态</span></span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//使用add方发往集合中添加元素</span></span><br><span class="line">        list.add(<span class="string">"a"</span>);</span><br><span class="line">        list.add(<span class="string">"b"</span>);</span><br><span class="line">        lisr.add(<span class="string">"c"</span>);</span><br><span class="line">        list.add(<span class="string">"d"</span>);</span><br><span class="line">        list,add(<span class="string">"a"</span>);</span><br><span class="line">        <span class="comment">//打印集合</span></span><br><span class="line">        System.out.println(list);<span class="comment">//[a, b, c, d, a]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment">//public void add(int index, E element):将指定的元素，添加到该集合中的指定位置上。</span></span><br><span class="line"><span class="comment">//在c和d之间添加一个itheima</span></span><br><span class="line">        list.add(<span class="number">3</span>,<span class="string">"itheima"</span>);</span><br><span class="line">        System.out.println(list);<span class="comment">//[a, b, c, itheima, d, a]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment">//public E remove(int index):移除列表中指定位置的元素，返回的是被移除的元素。</span></span><br><span class="line"><span class="comment">//移除元素</span></span><br><span class="line">        String removeE = list.remove(<span class="number">2</span>);</span><br><span class="line">        System.out.println(<span class="string">"被移除的元素："</span>+removeE);<span class="comment">//被移除的元素c</span></span><br><span class="line">        System.out.println(list);<span class="comment">//[a, b, itheima, d, a]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment">//public E set(int index, E element):用指定元素替换集合中指定位置的元素，返回值的更新前的元素。</span></span><br><span class="line"><span class="comment">//把最后一个a，替换成A</span></span><br><span class="line">        String setE = list.set(<span class="number">4</span>, <span class="string">"A"</span>);</span><br><span class="line">        System.out.println(<span class="string">"被替换的元素:"</span>+ setE);<span class="comment">//被替换的元素：a</span></span><br><span class="line">        System.out.println(list);<span class="comment">//[a, b, itheima, d, A]</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment">//List集合遍历有3种方式</span></span><br><span class="line">		<span class="comment">//使用普通的for循环</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;list.size(); i++)&#123;</span><br><span class="line">            <span class="comment">//public E get (int index);返回集合中指定位置的元素。</span></span><br><span class="line">            String s = list.get(i);</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"-----------------"</span>);</span><br><span class="line">        <span class="comment">//使用迭代器</span></span><br><span class="line">        Iterator&lt;String&gt; it = list.iterator();</span><br><span class="line">        <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">            String s = it.next();</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">        <span class="comment">//使用增强for</span></span><br><span class="line">        <span class="keyword">for</span>(String s: list)&#123;</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+void clear();            清空集合所有元素
 
+boolean contains(E e);    判断集合中是否包含某个元素
+
+boolean isEmpty();        判断集合是否为空
+int size();                获取集合的长度
+Object[] toArray();        将集合转成一个数组</code></pre>
+<pre><code class="java">/*
+boolean add(E e);        向集合中添加元素
+
+boolean remove(E e);    删除集合中的某个元素
+
+void clear();            清空集合所有元素
+
+boolean contains(E e);    判断集合中是否包含某个元素
+
+boolean isEmpty();        判断集合是否为空
+int size();                获取集合的长度
+Object[] toArray();        将集合转成一个数组
+*/
+
+
+public class Test01{
+    public static void main(String[] args){
+        //创建集合对象
+        Collection&lt;String&gt; coll = new ArrayList&lt;&gt;();
+        //boolean add(E e);  向集合中添加元素
+        coll.add(&quot;hello&quot;);
+        coll.add(&quot;world&quot;);
+        coll.add(&quot;heima&quot;);
+        coll.add(&quot;java&quot;);
+        System.out.println(coll);//[hello, world, heima, java]
+
+
+        //boolean remove(E e);  删除集合中的某个元素
+        boolean result = coll.remove(&quot;hello2&quot;)；
+        System.out.println(result);//true
+        System.out.println(coll);//[world, heima, java]
+
+
+        //void clear();   清空集合所有的元素
+        coll.clear();
+        System.out.println(coll);  //[]
+
+
+        //boolean contains(E e);  判断集合中是否包含某个元素
+        boolean result = coll.contains(&quot;java&quot;);
+        System.out.println(result);  //true
+
+
+        //boolean isEmpty();  判断集合是否为空。
+        System.out.println(coll.isEmpty());  //true
+
+
+        //int size();  获取集合长度
+        System.out.println(coll.size());
+
+
+        //Object[] toArray();
+        Object[] arr = coll.toArray()
+        //遍历数组
+        for(int i = 0;i &lt; arr.length; i++){
+            System.out.println(arr[i]);
+        }
+
+    }
+
+}</code></pre>
+<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><pre><code class="java">/*
+java.util.List接口extends Collection接口
+List接口的特点：
+    有序的集合，存储元素和取出元素的顺序是一致的。
+    有索引，包含了一些带索引的方法。
+    允许存储重复的元素。
+
+
+List接口中带索引的方法(特有)：
+    public void add(int index, E element):将指定的元素，添加到该集合中的指定位置上。
+    public E get(int index):返回集合中指定位置的元素。
+    public E remove(int index):移除列表中指定位置的元素，返回的是被移除的元素。
+    public E set(int index, E element):用指定元素替换集合中指定位置的元素，返回值的更新前的元素。
+
+注意：
+    操作索引的时候，一定要防止索引越界异常。
+    IndexOutOfBoundsException:索引越界异常，集合会报。
+    ArrayIndexOutOfBoundsException:数组索引越界异常。
+    StringIndexOutOfBoundsException:字符串索引越界异常。
+
+
+*/
+
+public class Demo01List{
+    public static void main(String[] args){
+        //创建一个List集合对象，多态
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        //使用add方发往集合中添加元素
+        list.add(&quot;a&quot;);
+        list.add(&quot;b&quot;);
+        lisr.add(&quot;c&quot;);
+        list.add(&quot;d&quot;);
+        list,add(&quot;a&quot;);
+        //打印集合
+        System.out.println(list);//[a, b, c, d, a]
+
+
+//public void add(int index, E element):将指定的元素，添加到该集合中的指定位置上。
+//在c和d之间添加一个itheima
+        list.add(3,&quot;itheima&quot;);
+        System.out.println(list);//[a, b, c, itheima, d, a]
+
+
+//public E remove(int index):移除列表中指定位置的元素，返回的是被移除的元素。
+//移除元素
+        String removeE = list.remove(2);
+        System.out.println(&quot;被移除的元素：&quot;+removeE);//被移除的元素c
+        System.out.println(list);//[a, b, itheima, d, a]
+
+
+//public E set(int index, E element):用指定元素替换集合中指定位置的元素，返回值的更新前的元素。
+//把最后一个a，替换成A
+        String setE = list.set(4, &quot;A&quot;);
+        System.out.println(&quot;被替换的元素:&quot;+ setE);//被替换的元素：a
+        System.out.println(list);//[a, b, itheima, d, A]
+
+
+//List集合遍历有3种方式
+        //使用普通的for循环
+        for(int i = 0; i &lt;list.size(); i++){
+            //public E get (int index);返回集合中指定位置的元素。
+            String s = list.get(i);
+            System.out.println(s);
+        }
+        System.out.println(&quot;-----------------&quot;);
+        //使用迭代器
+        Iterator&lt;String&gt; it = list.iterator();
+        while(it.hasNext()){
+            String s = it.next();
+            System.out.println(s);
+        }
+        System.out.println(&quot;--------------&quot;);
+        //使用增强for
+        for(String s: list){
+            System.out.println(s);
+        }
+
+    }
+}</code></pre>
 <h3 id="ArrayList集合-1"><a href="#ArrayList集合-1" class="headerlink" title="ArrayList集合"></a>ArrayList集合</h3><p>​        java.util.ArrayList集合是数据存储的结构是<strong>数组</strong>结构。<strong>元素增删慢，查找快。</strong>由于日常开发中使用最多的功能为查询结构，遍历数据，所以ArrayList是最常用的集合。</p>
 <p>原因：</p>
 <p>​    底层是一个数组结构，添加一个元素是将整个数组复制以后，再添加一个长度。所以增删慢。效率低。</p>
 <h3 id="LinkedList集合"><a href="#LinkedList集合" class="headerlink" title="LinkedList集合"></a>LinkedList集合</h3><p>​        java.util.LinkedList集合数据存储的结构是<strong>链表</strong>结构。<strong>方便元素添加删除</strong>的集合。LinkedList是一个<strong>双向链表</strong>。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">LinkedList集合的特点：</span></span><br><span class="line"><span class="comment">	1.底层是一个链表结构：查询慢，增删快</span></span><br><span class="line"><span class="comment">	2.里面包含了大量操作首尾元素的方法。</span></span><br><span class="line"><span class="comment">	注意：使用LinkedList集合特有的方法，不能使用多态。</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+LinkedList集合的特点：
+    1.底层是一个链表结构：查询慢，增删快
+    2.里面包含了大量操作首尾元素的方法。
+    注意：使用LinkedList集合特有的方法，不能使用多态。
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addFirst</span><span class="params">(E e)</span>:将指定元素插入此列表的开头</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addLast</span><span class="params">(E e)</span>:将指定元素添加到此列表的结尾</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(E e)</span>:将元素推入此列表所表示的堆栈。</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">getFirst</span><span class="params">()</span>:返回此列表的第一个元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">getLast</span><span class="params">()</span>:返回此列表的最后一个元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">removeFirst</span><span class="params">()</span>:移除并返回此列表的第一个元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">removeLast</span><span class="params">()</span>:移除并返回此列表的最后一个元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">pop</span><span class="params">()</span>:从此列表所表示的堆栈处弹出一个元素</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span>:如果列表不包含元素，则返回<span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
+*/</code></pre>
+<pre><code class="java">public void addFirst(E e):将指定元素插入此列表的开头
+public void addLast(E e):将指定元素添加到此列表的结尾
+public void push(E e):将元素推入此列表所表示的堆栈。
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02LinkedList</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        show01();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//public void addFirst(E e):将指定元素插入此列表的开头</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show01</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建LinkedList集合对象</span></span><br><span class="line">        LinkedList&lt;String&gt; linked = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//使用add方法往集合中添加元素</span></span><br><span class="line">        linked.add(<span class="string">"a"</span>);</span><br><span class="line">        linked.add(<span class="string">"b"</span>);</span><br><span class="line">        linked.add(<span class="string">"c"</span>);</span><br><span class="line">        System.out.println(linked);<span class="comment">//[a, b, c]</span></span><br><span class="line">        <span class="comment">//public void addFirst(E e):将指定元素插入此列表的开头。</span></span><br><span class="line">        linked.addFirst(<span class="string">"www"</span>);</span><br><span class="line">        System.out.println(linked);<span class="comment">//[www, a, b, c]</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+public E getFirst():返回此列表的第一个元素
+public E getLast():返回此列表的最后一个元素
 
+public E removeFirst():移除并返回此列表的第一个元素
+public E removeLast():移除并返回此列表的最后一个元素
+public E pop():从此列表所表示的堆栈处弹出一个元素
+
+public boolean isEmpty():如果列表不包含元素，则返回true</code></pre>
+<pre><code class="java">public class Demo02LinkedList{
+    public static void main(String[] args){
+        show01();
+    }
+
+    //public void addFirst(E e):将指定元素插入此列表的开头
+    private static void show01(){
+        //创建LinkedList集合对象
+        LinkedList&lt;String&gt; linked = new LinkedList&lt;&gt;();
+        //使用add方法往集合中添加元素
+        linked.add(&quot;a&quot;);
+        linked.add(&quot;b&quot;);
+        linked.add(&quot;c&quot;);
+        System.out.println(linked);//[a, b, c]
+        //public void addFirst(E e):将指定元素插入此列表的开头。
+        linked.addFirst(&quot;www&quot;);
+        System.out.println(linked);//[www, a, b, c]
+    }
+}</code></pre>
 <h3 id="Vector集合"><a href="#Vector集合" class="headerlink" title="Vector集合"></a>Vector集合</h3><p>Vector类可以实现可增长的对象<strong>数组</strong>。Vector是同步的。单线程。</p>
 <h2 id="Set接口"><a href="#Set接口" class="headerlink" title="Set接口"></a>Set接口</h2><h3 id="HashSet集合"><a href="#HashSet集合" class="headerlink" title="HashSet集合"></a>HashSet集合</h3><p>​        java.util.HashSet是Set接口的一个实现类，它所存储的元素的元素是不可重复的，并且元素都是无序的（即存储顺序不一致）HashSet底层的实现是HashMap支持。</p>
 <p>​        HashSet是根据对象的哈希值来确定元素在集合中的存储位置，因此具有良好的存取和查找技能。保证元素唯一性的方式依赖于hashCode和equals方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Set接口的特点：</span></span><br><span class="line"><span class="comment">	1.不允许存储重复的元素</span></span><br><span class="line"><span class="comment">	2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历</span></span><br><span class="line"><span class="comment">HashSet特点：</span></span><br><span class="line"><span class="comment">	1.不允许存储重复的元素</span></span><br><span class="line"><span class="comment">	2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历</span></span><br><span class="line"><span class="comment">	3.是一个无序的集合，存储元素和取出元素的顺序有可能不一致</span></span><br><span class="line"><span class="comment">	4.底层是一个哈希表结构(查询的速度非常快)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01Set</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="comment">//使用add方法添加元素</span></span><br><span class="line">        set.add(<span class="string">"1"</span>);</span><br><span class="line">        set.add(<span class="string">"3"</span>);</span><br><span class="line">        set.add(<span class="string">"2"</span>);</span><br><span class="line">        set.add(<span class="string">"1"</span>);</span><br><span class="line">        <span class="comment">//使用迭代器遍历set集合</span></span><br><span class="line">        Iterator&lt;Integer&gt; it = set.iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">        Integer n = it.next();</span><br><span class="line">        System.out.println(n);<span class="comment">//1,2,3</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//使用增强for遍历set集合</span></span><br><span class="line">        System.out.println(<span class="string">"------------"</span>);</span><br><span class="line">        <span class="keyword">for</span> (Integer i : set)&#123;</span><br><span class="line">            System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+Set接口的特点：
+    1.不允许存储重复的元素
+    2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历
+HashSet特点：
+    1.不允许存储重复的元素
+    2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历
+    3.是一个无序的集合，存储元素和取出元素的顺序有可能不一致
+    4.底层是一个哈希表结构(查询的速度非常快)
 
+*/
+
+
+public class Demo01Set{
+    public static void main(String[] args){
+        Set&lt;Integer&gt; set = new HashSet&lt;&gt;();
+        //使用add方法添加元素
+        set.add(&quot;1&quot;);
+        set.add(&quot;3&quot;);
+        set.add(&quot;2&quot;);
+        set.add(&quot;1&quot;);
+        //使用迭代器遍历set集合
+        Iterator&lt;Integer&gt; it = set.iterator();
+        while (it.hasNext()){
+        Integer n = it.next();
+        System.out.println(n);//1,2,3
+        }
+        //使用增强for遍历set集合
+        System.out.println(&quot;------------&quot;);
+        for (Integer i : set){
+            System.out.println(i);
+        }
+
+    }
+}</code></pre>
 <h3 id="HashSet集合存储数据的结构（哈希表）"><a href="#HashSet集合存储数据的结构（哈希表）" class="headerlink" title="HashSet集合存储数据的结构（哈希表）"></a>HashSet集合存储数据的结构（哈希表）</h3><p>​        <strong>JDK1.8之前，哈希表底层采用数组+ 链表实现，即使用链表处理冲突，同一hash值的链表都存储在一个链表里。</strong>但是当位于一个桶中的元素较多，即hash值相等的元素较多时，通过key值依次查找的效率较低。而在JDK1.8中，<strong>哈希表存储采用数组+链表+红黑树实现，当链表长度超过阈值（8）时，将链表转换为红黑树，这样就大大减少了查找时间</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*</span></span><br><span class="line"><span class="comment"> 哈希值：是一个十进制的整数，由系统随机给出（就是对象的地址值，是一个逻辑地址，是模拟出来的地址，不是数据实际存储的物理地址）</span></span><br><span class="line"><span class="comment"> 在Object类有一个方法，可以获取对象的哈希值</span></span><br><span class="line"><span class="comment"> int hashCode()	返回该对象的哈希码值</span></span><br><span class="line"><span class="comment"> hashCode的源码：</span></span><br><span class="line"><span class="comment"> 	public native int hashCode();</span></span><br><span class="line"><span class="comment"> 	native:代表该方法调用的是本地操作系统的方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01HashCode</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mian</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//Person类继承了Object类，所以可以使用Object类的hashCode方法</span></span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="keyword">int</span> h1 = p1.hashCode();</span><br><span class="line">        System.out.println(h1);</span><br><span class="line">        <span class="comment">//47851648225</span></span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person();</span><br><span class="line">        <span class="keyword">int</span> h2 = p2.hashCode();</span><br><span class="line">        System.out.println(h2);</span><br><span class="line">        <span class="comment">//421560258416  </span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        toString方法的源码：</span></span><br><span class="line"><span class="comment">        	reyurn getClass().getName() + "@" + Integer.toHexString(hashCode());</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        System.out.println(p1);</span><br><span class="line">        <span class="comment">//com.itheima.demo03.hashCode.Person@841461c</span></span><br><span class="line">        System.out.println(p2);</span><br><span class="line">        <span class="comment">//com.itheima.demo03.hashCode.Person@156654b</span></span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        String类的哈希值</span></span><br><span class="line"><span class="comment">        	String类重写Object类的hashCode方法</span></span><br><span class="line"><span class="comment">        </span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        String s1 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        String s2 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        System.out.println(s1.hashCode());<span class="comment">//96354</span></span><br><span class="line">        System.out.println(s2,hashCode());<span class="comment">//96354</span></span><br><span class="line">        </span><br><span class="line">        System.out.println(<span class="string">"重地"</span>.hashCode());<span class="comment">//1179395</span></span><br><span class="line">         System.out.println(<span class="string">"通话"</span>.hashCode());<span class="comment">//1179395</span></span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java"> /*
+ 哈希值：是一个十进制的整数，由系统随机给出（就是对象的地址值，是一个逻辑地址，是模拟出来的地址，不是数据实际存储的物理地址）
+ 在Object类有一个方法，可以获取对象的哈希值
+ int hashCode()    返回该对象的哈希码值
+ hashCode的源码：
+     public native int hashCode();
+     native:代表该方法调用的是本地操作系统的方法
+ */
 
+public class Demo01HashCode{
+    public static void mian(String[] args){
+        //Person类继承了Object类，所以可以使用Object类的hashCode方法
+        Person p1 = new Person();
+        int h1 = p1.hashCode();
+        System.out.println(h1);
+        //47851648225
+        Person p2 = new Person();
+        int h2 = p2.hashCode();
+        System.out.println(h2);
+        //421560258416  
+
+
+        /*
+        toString方法的源码：
+            reyurn getClass().getName() + &quot;@&quot; + Integer.toHexString(hashCode());
+
+        */
+        System.out.println(p1);
+        //com.itheima.demo03.hashCode.Person@841461c
+        System.out.println(p2);
+        //com.itheima.demo03.hashCode.Person@156654b
+
+
+
+        /*
+        String类的哈希值
+            String类重写Object类的hashCode方法
+
+        */
+        String s1 = new String(&quot;abc&quot;);
+        String s2 = new String(&quot;abc&quot;);
+        System.out.println(s1.hashCode());//96354
+        System.out.println(s2,hashCode());//96354
+
+        System.out.println(&quot;重地&quot;.hashCode());//1179395
+         System.out.println(&quot;通话&quot;.hashCode());//1179395
+
+    }
+}</code></pre>
 <p><a href="https://www.wailian.work/image/QmMJEr" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200917_100959.png" alt="sp200917_100959.png"></a></p>
-<h3 id="Set集合存储元素不重复的原理"><a href="#Set集合存储元素不重复的原理" class="headerlink" title="Set集合存储元素不重复的原理"></a>Set集合存储元素不重复的原理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">![sp200917_200305](Javase-集合/sp200917_200305.png<span class="comment">/*</span></span><br><span class="line"><span class="comment">	Set集合不允许存储重复元素的原理</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02HashSetSaveString</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建HashSet集合对象</span></span><br><span class="line">        HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        String s1 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        String s2 = <span class="keyword">new</span> String(<span class="string">"abc"</span>);</span><br><span class="line">        set.add(s1);</span><br><span class="line">        set.add(s2);</span><br><span class="line">        </span><br><span class="line">        set.add(<span class="string">"重地"</span>);</span><br><span class="line">        set.add(<span class="string">"通话"</span>);</span><br><span class="line">        set.add(<span class="string">"abc"</span>);</span><br><span class="line">        System.out.println(set);<span class="comment">//[重地， 通话， abc]</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Set集合存储元素不重复的原理"><a href="#Set集合存储元素不重复的原理" class="headerlink" title="Set集合存储元素不重复的原理"></a>Set集合存储元素不重复的原理</h3><pre><code class="java">![sp200917_200305](Javase-集合/sp200917_200305.png/*
+    Set集合不允许存储重复元素的原理
+*/
 
+public class Demo02HashSetSaveString {
+    public static void main(String[] args){
+        //创建HashSet集合对象
+        HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
+        String s1 = new String(&quot;abc&quot;);
+        String s2 = new String(&quot;abc&quot;);
+        set.add(s1);
+        set.add(s2);
+
+        set.add(&quot;重地&quot;);
+        set.add(&quot;通话&quot;);
+        set.add(&quot;abc&quot;);
+        System.out.println(set);//[重地， 通话， abc]
+    }
+}</code></pre>
 <p><a href="https://www.wailian.work/image/QmMUM1" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200917_200305.png" alt="sp200917_200305.png"></a></p>
 <h3 id="HashSet存储自定义类型元素"><a href="#HashSet存储自定义类型元素" class="headerlink" title="HashSet存储自定义类型元素"></a>HashSet存储自定义类型元素</h3><p>给HashSet中存放自定义元素类型时，需要重写对象中的hashCode方法和equals方法，建立自己的比较方式，才能保证HashSet集合中的对象唯一。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	HashSet 存储自定义类型元素</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	set集合报错元素唯一：</span></span><br><span class="line"><span class="comment">		存储的元素(String，Integer,...Student,Person.),必须重写hashCode方法和equlas方法。</span></span><br><span class="line"><span class="comment">	需求：</span></span><br><span class="line"><span class="comment">		同名同年龄的人，视为同一个人，只能存储一次。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo03HashSetSavePerson</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建HashSet集合存储Person</span></span><br><span class="line">        HashSet&lt;Person&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person(<span class="string">"小美女"</span>,<span class="number">18</span>);</span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person(<span class="string">"小美女"</span>,<span class="number">18</span>);</span><br><span class="line">        Person p3 = <span class="keyword">new</span> Person(<span class="string">"小美女"</span>,<span class="number">19</span>);</span><br><span class="line">        System.out.println(p1.hashCode());</span><br><span class="line">        System.out.println(p2.hashCode());<span class="comment">//哈希值不同</span></span><br><span class="line">        </span><br><span class="line">        System.out.println(p1==p2);<span class="comment">//false</span></span><br><span class="line">        System.out.println(p1.equals p2);<span class="comment">//false</span></span><br><span class="line">        </span><br><span class="line">        set.add(p1);</span><br><span class="line">        set.add(p2);</span><br><span class="line">        set.add(p3);</span><br><span class="line">        </span><br><span class="line">        System.out.println(set);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+    HashSet 存储自定义类型元素
 
+    set集合报错元素唯一：
+        存储的元素(String，Integer,...Student,Person.),必须重写hashCode方法和equlas方法。
+    需求：
+        同名同年龄的人，视为同一个人，只能存储一次。
+
+*/
+
+public class Demo03HashSetSavePerson{
+    public static void main(String[] args){
+        //创建HashSet集合存储Person
+        HashSet&lt;Person&gt; set = new HashSet&lt;&gt;();
+        Person p1 = new Person(&quot;小美女&quot;,18);
+        Person p2 = new Person(&quot;小美女&quot;,18);
+        Person p3 = new Person(&quot;小美女&quot;,19);
+        System.out.println(p1.hashCode());
+        System.out.println(p2.hashCode());//哈希值不同
+
+        System.out.println(p1==p2);//false
+        System.out.println(p1.equals p2);//false
+
+        set.add(p1);
+        set.add(p2);
+        set.add(p3);
+
+        System.out.println(set);
+    }
+}</code></pre>
 <p><strong>Person类重写hashCode方法和equlas方法。</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span>  age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        </span><br><span class="line">    &#125; </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span>  <span class="comment">//重写equals方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(o == <span class="keyword">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Person person = (Person) o;</span><br><span class="line">        <span class="keyword">return</span> age == Person.age &amp;&amp; Object.equals(name, person.name);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span>   <span class="comment">//重写hashCode方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> Object.hash(name, age);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span>   <span class="comment">//重写toString方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Person &#123;"</span> + <span class="string">"name='"</span> + name + <span class="string">'\''</span>+ </span><br><span class="line">                <span class="string">", age = "</span>+ age +<span class="string">'&#125;'</span><span class="string">"        </span></span><br><span class="line"><span class="string">                       &#125;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    public String getName()&#123;</span></span><br><span class="line"><span class="string">        return name;</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    public void setName(String name)&#123;</span></span><br><span class="line"><span class="string">        this.name = name;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">public class Person{
+    private String name;
+    private int age;
 
+    public Person(){
+
+    }
+
+    public Person(String name, int  age){
+        this.name = name;
+        this.age = age;
+
+    } 
+
+
+    @Override  //重写equals方法
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == Person.age &amp;&amp; Object.equals(name, person.name);
+    }
+
+
+    @Override   //重写hashCode方法
+    public int hashCode(){
+
+        return Object.hash(name, age);
+    }
+
+
+    @Override   //重写toString方法
+    public String toString(){
+        return &quot;Person {&quot; + &quot;name=&#39;&quot; + name + &#39;\&#39;&#39;+ 
+                &quot;, age = &quot;+ age +&#39;}&#39;&quot;        
+                       }
+    }
+
+
+
+    public String getName(){
+        return name;
+
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+}</code></pre>
 <h3 id="LinkedHashSet集合"><a href="#LinkedHashSet集合" class="headerlink" title="LinkedHashSet集合"></a>LinkedHashSet集合</h3><p>它是由链表和哈希表组合的一个数据存储结构。此链接列表定义了迭代顺序，即按照将元素插到set中的顺序进行迭代。</p>
 <p>注意：</p>
 <p>​    插入顺序不受set中重新插入的元素的影响。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	java.util.LinkedHashSet集合 extends HashSet集合</span></span><br><span class="line"><span class="comment">	LInkedHashSet集合的特点：</span></span><br><span class="line"><span class="comment">		底层是一个哈希表(数组+链表/红黑树)+链表(多的这条链表用于记录元素的存储顺序，保证元素有序)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo04LinkedhashSet</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        HashSet&lt;String&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        set.add(<span class="string">"www"</span>);</span><br><span class="line">        set.add(<span class="string">"abc"</span>);</span><br><span class="line">        set.add(<span class="string">"abc"</span>);</span><br><span class="line">        set.add(<span class="string">"itcast"</span>);</span><br><span class="line">        System.out.println(set);<span class="comment">//[abc, www, itcast]无序，不允许重复。</span></span><br><span class="line">        </span><br><span class="line">        LinkedHashSet&lt;String&gt; linked = <span class="keyword">new</span> LinkedHashSet&lt;&gt;();</span><br><span class="line">        linked.add(<span class="string">"www"</span>);</span><br><span class="line">        linked.add(<span class="string">"abc"</span>);</span><br><span class="line">        linked.add(<span class="string">"abc"</span>);</span><br><span class="line">        linked.add(<span class="string">"itcast"</span>);</span><br><span class="line">        System.out.println(linked);<span class="comment">//[www, abc, itcast]有序，不允许重复。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+    java.util.LinkedHashSet集合 extends HashSet集合
+    LInkedHashSet集合的特点：
+        底层是一个哈希表(数组+链表/红黑树)+链表(多的这条链表用于记录元素的存储顺序，保证元素有序)
+*/
 
+public class Demo04LinkedhashSet {
+    public static void main(String[] args){
+        HashSet&lt;String&gt; set = new HashSet&lt;&gt;();
+        set.add(&quot;www&quot;);
+        set.add(&quot;abc&quot;);
+        set.add(&quot;abc&quot;);
+        set.add(&quot;itcast&quot;);
+        System.out.println(set);//[abc, www, itcast]无序，不允许重复。
+
+        LinkedHashSet&lt;String&gt; linked = new LinkedHashSet&lt;&gt;();
+        linked.add(&quot;www&quot;);
+        linked.add(&quot;abc&quot;);
+        linked.add(&quot;abc&quot;);
+        linked.add(&quot;itcast&quot;);
+        System.out.println(linked);//[www, abc, itcast]有序，不允许重复。
+    }
+}</code></pre>
 <h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>注意事项：</p>
 <p>​    1.一个方法的参数列表，只能有一个可变参数。</p>
 <p>​    2.如果方法的参数有多个，那么可变参数必须写在参数列表的末尾。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">可变参数：是JDK1.5之后出现的新特性</span></span><br><span class="line"><span class="comment">适用前提：</span></span><br><span class="line"><span class="comment">	当方法的参数列表数据类型已经确定，但是参数个数不确定，就可以使用可变参数。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">是用格式：定义方法时使用</span></span><br><span class="line"><span class="comment">	修饰符 返回值类型 方法名 (数据类型...变量名)&#123;&#125;</span></span><br><span class="line"><span class="comment">可变参数原理：</span></span><br><span class="line"><span class="comment">	可变参数底层是一个数组，根据传递参数个数不同，会创建不同长度的数组，来存储这些参数</span></span><br><span class="line"><span class="comment">	传递的参数个数，可以是0个(不传递)，1,2...多个</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01VarArgs</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mian</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> i = add(<span class="number">10</span>,<span class="number">20</span>,<span class="number">12</span>,<span class="number">56</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	定义计算(0~n)整数和的方法</span></span><br><span class="line"><span class="comment">	已知:计算整数的和，数据类型已经确定int</span></span><br><span class="line"><span class="comment">	但是参数的个数不确定，就可以使用可变参数</span></span><br><span class="line"><span class="comment">	add();就会创建一个长度为0的数组</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span>...arr)</span></span>&#123;</span><br><span class="line">      <span class="comment">//定义一个初始化的变量，记录累加求和</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//遍历数组，获取数组中的每一个元素</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i : arr)&#123;</span><br><span class="line">            sum += i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//把求到的和返回</span></span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+可变参数：是JDK1.5之后出现的新特性
+适用前提：
+    当方法的参数列表数据类型已经确定，但是参数个数不确定，就可以使用可变参数。
 
+是用格式：定义方法时使用
+    修饰符 返回值类型 方法名 (数据类型...变量名){}
+可变参数原理：
+    可变参数底层是一个数组，根据传递参数个数不同，会创建不同长度的数组，来存储这些参数
+    传递的参数个数，可以是0个(不传递)，1,2...多个
+
+*/
+
+public class Demo01VarArgs{
+    public static void mian(String[] args){
+        int i = add(10,20,12,56);
+        System.out.println(i);
+
+}
+    /*
+    定义计算(0~n)整数和的方法
+    已知:计算整数的和，数据类型已经确定int
+    但是参数的个数不确定，就可以使用可变参数
+    add();就会创建一个长度为0的数组
+    */
+    public static int add(int...arr){
+      //定义一个初始化的变量，记录累加求和
+        int sum = 0;
+        //遍历数组，获取数组中的每一个元素
+        for(int i : arr){
+            sum += i;
+        }
+        //把求到的和返回
+        return sum;
+    }
+
+
+}</code></pre>
 <p><strong>可变参数的特殊写法</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">metmod</span><span class="params">(Object...)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">public static void metmod(Object...){
 
+}</code></pre>
 <h2 id="Collections集合工具类"><a href="#Collections集合工具类" class="headerlink" title="Collections集合工具类"></a>Collections集合工具类</h2><h3 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h3><p>java.utils.Collections是集合工具类，用来对集合进行操作。</p>
 <p>部分方法如下:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">public static &lt;T&gt; boolean addAll(Collection&lt;T&gt; c, T...elements)	:往集合中添加一些元素</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">public static void shuffle(List&lt;&gt; list)	:打乱集合顺序。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">public static &lt;T&gt; void sort(List&lt;T&gt; list)	:将集合中元素按照默认规则排序。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">public static &lt;T&gt; void sort(List&lt;T&gt; list,Comparator&lt;? super.T&gt; )	:将集合中元素按照指定规则排序。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+public static &lt;T&gt; boolean addAll(Collection&lt;T&gt; c, T...elements)    :往集合中添加一些元素
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	public static &lt;T&gt; boolean addAll(Collection&lt;T&gt; c, T...elements)	:往集合中添加一些元素</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	public static void shuffle(List&lt;&gt; list)	:打乱集合顺序。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01Collections</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayList&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="comment">//往集合中添加多个元素</span></span><br><span class="line">        				      Collections.addAll(list,<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>);</span><br><span class="line">        <span class="comment">//可变参数，参数个数不受限制</span></span><br><span class="line">        System.out.println(list);<span class="comment">//[a, b, c, d, e]</span></span><br><span class="line">        </span><br><span class="line">      <span class="comment">//打乱集合顺序</span></span><br><span class="line">       Collections.shuffle(list);</span><br><span class="line">        System.out.println(list);<span class="comment">//[b, d, c, a, e]        </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+public static void shuffle(List&lt;&gt; list)    :打乱集合顺序。
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">public static &lt;T&gt; void sort(List&lt;T&gt; list)	:将集合中元素按照默认规则排序。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">注意：</span></span><br><span class="line"><span class="comment">	sort(list&lt;T&gt; list)适用前提</span></span><br><span class="line"><span class="comment">	被排序的集合里边存储的元素，必须实现Comparable，重写接口中的方法compareTo定义排序的规则。</span></span><br><span class="line"><span class="comment">	Comparable接口的排序规则:</span></span><br><span class="line"><span class="comment">		自己(this)-参数:升序</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02Sort</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; list01 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        liat.add(<span class="number">2</span>);</span><br><span class="line">        System.out.println(list01);<span class="comment">//[1, 3, 2]</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//使用sort方法</span></span><br><span class="line">        Collections.sort(list01);<span class="comment">//默认是升序</span></span><br><span class="line">        </span><br><span class="line">        System.out.println(list01);<span class="comment">//[1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+public static &lt;T&gt; void sort(List&lt;T&gt; list)    :将集合中元素按照默认规则排序。
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">public static &lt;T&gt; void sort(List&lt;T&gt; list,Comparator&lt;? super.T&gt; )	:将集合中元素按照指定规则排序。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Comparator和Comparable的区别：</span></span><br><span class="line"><span class="comment">	Comparable: 自己(this)和别人(参数)比较，自己需要实现Comparable接口，重写比较的规则compare方法。</span></span><br><span class="line"><span class="comment">	Comparator: 相当于找了一个第三方的裁判比较两个。</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">Comparator的排序规则:</span></span><br><span class="line"><span class="comment">	o1-o2:升序</span></span><br><span class="line"><span class="comment">	o2-o1:降序</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo03sort</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayLiat&lt;Integer&gt; List01 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list01.add(<span class="number">1</span>);</span><br><span class="line">        list01.add(<span class="number">3</span>);</span><br><span class="line">        list01.add(<span class="number">2</span>);</span><br><span class="line">        System.out.println(list01);<span class="comment">//[1, 3, 2]</span></span><br><span class="line">        </span><br><span class="line">        Collections.sort(list01, &#123;</span><br><span class="line">            <span class="comment">//重写比较的规则</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer01, Integer02)</span></span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o1-o2;  <span class="comment">//升序</span></span><br><span class="line">                <span class="keyword">return</span> o2-o1;  <span class="comment">//降序</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        System.out.println(list01);</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//自定义类型,需要重写toString </span></span><br><span class="line">        </span><br><span class="line">        ArrayList&lt;Student&gt; list02 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list02.add(<span class="keyword">new</span> Student(<span class="string">"迪丽热巴"</span>, <span class="number">18</span>));</span><br><span class="line">        list02.add(<span class="keyword">new</span> Student(<span class="string">"古力娜扎"</span>, <span class="number">20</span>));</span><br><span class="line">        liat02.add(<span class="keyword">new</span> Student(<span class="string">"杨幂"</span>, <span class="number">17</span>));</span><br><span class="line">        </span><br><span class="line">        Collections.sort(list02, &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student <span class="number">01</span>, Student <span class="number">02</span>)</span></span>&#123;</span><br><span class="line">                <span class="comment">//按照年龄升序</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">01</span>.getAge() - <span class="number">02</span>.getAge();</span><br><span class="line">                <span class="comment">//如果两个人年龄相同，再使用姓名的第一个字母比较</span></span><br><span class="line">                <span class="keyword">if</span>(result == <span class="number">0</span>)&#123;</span><br><span class="line">                    result = <span class="number">01</span>.getName().charAt(<span class="number">0</span>) - <span class="number">02</span>.getName().charAt(<span class="number">0</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> result;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;);</span><br><span class="line">        System.out.println(list02);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+public static &lt;T&gt; void sort(List&lt;T&gt; list,Comparator&lt;? super.T&gt; )    :将集合中元素按照指定规则排序。
+*/</code></pre>
+<pre><code class="java">/*
+    public static &lt;T&gt; boolean addAll(Collection&lt;T&gt; c, T...elements)    :往集合中添加一些元素
 
+    public static void shuffle(List&lt;&gt; list)    :打乱集合顺序。
+*/
+
+public class Demo01Collections {
+    public static void main(String[] args){
+        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+        //往集合中添加多个元素
+                              Collections.addAll(list,&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;);
+        //可变参数，参数个数不受限制
+        System.out.println(list);//[a, b, c, d, e]
+
+      //打乱集合顺序
+       Collections.shuffle(list);
+        System.out.println(list);//[b, d, c, a, e]        
+    }
+}</code></pre>
+<pre><code class="java">/*
+public static &lt;T&gt; void sort(List&lt;T&gt; list)    :将集合中元素按照默认规则排序。
+
+注意：
+    sort(list&lt;T&gt; list)适用前提
+    被排序的集合里边存储的元素，必须实现Comparable，重写接口中的方法compareTo定义排序的规则。
+    Comparable接口的排序规则:
+        自己(this)-参数:升序
+
+*/
+
+public class Demo02Sort{
+    public static void main(String[] args){
+        ArrayList&lt;Integer&gt; list01 = new ArrayList&lt;&gt;();
+        list.add(1);
+        list.add(3);
+        liat.add(2);
+        System.out.println(list01);//[1, 3, 2]
+
+        //使用sort方法
+        Collections.sort(list01);//默认是升序
+
+        System.out.println(list01);//[1, 2, 3]
+
+    }
+}</code></pre>
+<pre><code class="java">/*
+public static &lt;T&gt; void sort(List&lt;T&gt; list,Comparator&lt;? super.T&gt; )    :将集合中元素按照指定规则排序。
+
+Comparator和Comparable的区别：
+    Comparable: 自己(this)和别人(参数)比较，自己需要实现Comparable接口，重写比较的规则compare方法。
+    Comparator: 相当于找了一个第三方的裁判比较两个。
+
+Comparator的排序规则:
+    o1-o2:升序
+    o2-o1:降序
+*/
+
+public class Demo03sort{
+    public static void main(String[] args){
+        ArrayLiat&lt;Integer&gt; List01 = new ArrayList&lt;&gt;();
+        list01.add(1);
+        list01.add(3);
+        list01.add(2);
+        System.out.println(list01);//[1, 3, 2]
+
+        Collections.sort(list01, {
+            //重写比较的规则
+            @Override
+            public int compare(Integer01, Integer02){
+                return o1-o2;  //升序
+                return o2-o1;  //降序
+            }
+        });
+
+        System.out.println(list01);
+
+
+        //自定义类型,需要重写toString 
+
+        ArrayList&lt;Student&gt; list02 = new ArrayList&lt;&gt;();
+        list02.add(new Student(&quot;迪丽热巴&quot;, 18));
+        list02.add(new Student(&quot;古力娜扎&quot;, 20));
+        liat02.add(new Student(&quot;杨幂&quot;, 17));
+
+        Collections.sort(list02, {
+            @Override
+            public int compare(Student 01, Student 02){
+                //按照年龄升序
+                return 01.getAge() - 02.getAge();
+                //如果两个人年龄相同，再使用姓名的第一个字母比较
+                if(result == 0){
+                    result = 01.getName().charAt(0) - 02.getName().charAt(0);
+                }
+                return result;
+            }
+
+        });
+        System.out.println(list02);
+    }
+}</code></pre>
 <h2 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h2><p>此键映射到值得对象。一个映射不能包含重复的建；每个键最多只能映射到一个值。</p>
 <ul>
 <li>Collection中的集合，元素是孤立存在的，向集合中存储元素采用一个个元素的方式存储。</li>
@@ -644,8 +1299,110 @@
 <li>Map中的集合不能包含重复的键，值可以重复；每个键只能对应一个值。</li>
 </ul>
 <p><a href="https://www.wailian.work/image/QmMkN9" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200919_232025.png" alt="sp200919_232025.png"></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Map集合的特点:</span></span><br><span class="line"><span class="comment">	1.Map集合是一个双列集合，一个元素包含两个值(一个key，一个value)</span></span><br><span class="line"><span class="comment">	2.Map集合中的元素，key和value的数据类型可以相同，也可以不同。</span></span><br><span class="line"><span class="comment">	3.Map集合中的元素，key是不允许重复的，value是可以重复的。</span></span><br><span class="line"><span class="comment">	4.Map集合中的元素，key和value是一一对应。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">HashMap集合的特点:</span></span><br><span class="line"><span class="comment">	1.hashMap集合底层是哈希表，查询速度快。</span></span><br><span class="line"><span class="comment">		JDK1.8之前，数组+单向链表</span></span><br><span class="line"><span class="comment">		JDK1.8之后，数组+单向链表/红黑树(链表的长度超过8):提高查询的速度。</span></span><br><span class="line"><span class="comment">	2.hashMap集合是一个无序的集合，存储元素和取出元素的顺序有可能不一致。</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">LinkedHashMap的特点:</span></span><br><span class="line"><span class="comment">	1.LinkedHashMap集合底层是哈希表+链表(保证迭代顺序)</span></span><br><span class="line"><span class="comment">	2.LinkedHashMap集合是一个有序的集合，存储元素和取出元素的顺序是一致的</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01Map</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        show01();</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    public  V put(K key, V value):把指定的键与指定的值添加到Map集合中。</span></span><br><span class="line"><span class="comment">    返回值：V</span></span><br><span class="line"><span class="comment">    	存储键值对的时候，key不重复，返回值V是null</span></span><br><span class="line"><span class="comment">    	存储键值对的时候，key重复，会使用新的value替换map中重复的value，返回被替换的value值。</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">show01</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建Map集合对象，多态</span></span><br><span class="line">        Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        map.put(<span class="string">"冷锋"</span>，<span class="string">"龙小云"</span>);</span><br><span class="line">        map.put(<span class="string">"杨过"</span>，<span class="string">"小龙女"</span>);</span><br><span class="line">        map.put(<span class="string">"尹志平"</span>，<span class="string">"小龙女"</span>);</span><br><span class="line">        </span><br><span class="line">        System.out.println(map);</span><br><span class="line">        <span class="comment">//&#123;杨过=小龙女， 尹志平=小龙女， 冷锋=龙小云&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    public V remove(Object key):把指定的键所对应的的键值对元素 在Map集合中删除，返回被删除元素的值。</span></span><br><span class="line"><span class="comment">    返回值:V</span></span><br><span class="line"><span class="comment">    	key存在，v返回被删除的值</span></span><br><span class="line"><span class="comment">    	key不存在，v返回null</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show02</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建Map集合对象</span></span><br><span class="line">        Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"赵丽颖"</span>,<span class="number">168</span>);</span><br><span class="line">        map.put(<span class="string">"杨颖"</span>,<span class="number">165</span>);</span><br><span class="line">        map.put(<span class="string">"林志玲"</span>,<span class="number">178</span>);</span><br><span class="line">        System.out.println(map);</span><br><span class="line">        </span><br><span class="line">        Integer v1 = map.remove(<span class="string">"林志玲"</span>);</span><br><span class="line">        System.out.println(<span class="string">"v1"</span>+v1);<span class="comment">//v1：178</span></span><br><span class="line">        </span><br><span class="line">        System.out.println(map);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    public V get(Object key) 根据指定的键，在Map集合中获取对应的值。</span></span><br><span class="line"><span class="comment">    	返回值:</span></span><br><span class="line"><span class="comment">    		key存在，返回对应的value值</span></span><br><span class="line"><span class="comment">    		key不存在，返回null</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show03</span><span class="params">()</span></span>&#123;</span><br><span class="line">         <span class="comment">//创建Map集合对象</span></span><br><span class="line">        Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"赵丽颖"</span>,<span class="number">168</span>);</span><br><span class="line">        map.put(<span class="string">"杨颖"</span>,<span class="number">165</span>);</span><br><span class="line">        map.put(<span class="string">"林志玲"</span>,<span class="number">178</span>);</span><br><span class="line">        </span><br><span class="line">        Integer v1 = map.get(<span class="string">"杨颖"</span>);</span><br><span class="line">        System.out.println(<span class="string">"v1:"</span>+v1);<span class="comment">//v1:165</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">   <span class="comment">/*</span></span><br><span class="line"><span class="comment">   boolean containsKey(Object key) 判断集合中是否包含指定的键。</span></span><br><span class="line"><span class="comment">   	包含返回true，不包含返回false</span></span><br><span class="line"><span class="comment">   </span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">     <span class="comment">//创建Map集合对象</span></span><br><span class="line">        Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"赵丽颖"</span>,<span class="number">168</span>);</span><br><span class="line">        map.put(<span class="string">"杨颖"</span>,<span class="number">165</span>);</span><br><span class="line">        map.put(<span class="string">"林志玲"</span>,<span class="number">178</span>);</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">boolean</span> b1 = map.containsKey(<span class="string">"赵丽颖"</span>);</span><br><span class="line">    	System.out.println(<span class="string">"b1:"</span> +b1);<span class="comment">//ture</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+Map集合的特点:
+    1.Map集合是一个双列集合，一个元素包含两个值(一个key，一个value)
+    2.Map集合中的元素，key和value的数据类型可以相同，也可以不同。
+    3.Map集合中的元素，key是不允许重复的，value是可以重复的。
+    4.Map集合中的元素，key和value是一一对应。
 
+
+HashMap集合的特点:
+    1.hashMap集合底层是哈希表，查询速度快。
+        JDK1.8之前，数组+单向链表
+        JDK1.8之后，数组+单向链表/红黑树(链表的长度超过8):提高查询的速度。
+    2.hashMap集合是一个无序的集合，存储元素和取出元素的顺序有可能不一致。
+
+LinkedHashMap的特点:
+    1.LinkedHashMap集合底层是哈希表+链表(保证迭代顺序)
+    2.LinkedHashMap集合是一个有序的集合，存储元素和取出元素的顺序是一致的
+
+*/
+
+public class Demo01Map{
+    public static void main(String[] args){
+        show01();
+
+    }
+
+    /*
+    public  V put(K key, V value):把指定的键与指定的值添加到Map集合中。
+    返回值：V
+        存储键值对的时候，key不重复，返回值V是null
+        存储键值对的时候，key重复，会使用新的value替换map中重复的value，返回被替换的value值。
+
+
+    */
+
+    public static show01(){
+        //创建Map集合对象，多态
+        Map&lt;String,String&gt; map = new HashMap&lt;&gt;();
+
+        map.put(&quot;冷锋&quot;，&quot;龙小云&quot;);
+        map.put(&quot;杨过&quot;，&quot;小龙女&quot;);
+        map.put(&quot;尹志平&quot;，&quot;小龙女&quot;);
+
+        System.out.println(map);
+        //{杨过=小龙女， 尹志平=小龙女， 冷锋=龙小云}
+    }
+
+
+
+    /*
+    public V remove(Object key):把指定的键所对应的的键值对元素 在Map集合中删除，返回被删除元素的值。
+    返回值:V
+        key存在，v返回被删除的值
+        key不存在，v返回null
+    */
+    private static void show02(){
+        //创建Map集合对象
+        Map&lt;String,Integer&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;赵丽颖&quot;,168);
+        map.put(&quot;杨颖&quot;,165);
+        map.put(&quot;林志玲&quot;,178);
+        System.out.println(map);
+
+        Integer v1 = map.remove(&quot;林志玲&quot;);
+        System.out.println(&quot;v1&quot;+v1);//v1：178
+
+        System.out.println(map);
+    }
+
+
+    /*
+    public V get(Object key) 根据指定的键，在Map集合中获取对应的值。
+        返回值:
+            key存在，返回对应的value值
+            key不存在，返回null
+
+    */
+    private static void show03(){
+         //创建Map集合对象
+        Map&lt;String,Integer&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;赵丽颖&quot;,168);
+        map.put(&quot;杨颖&quot;,165);
+        map.put(&quot;林志玲&quot;,178);
+
+        Integer v1 = map.get(&quot;杨颖&quot;);
+        System.out.println(&quot;v1:&quot;+v1);//v1:165
+    }
+
+
+
+   /*
+   boolean containsKey(Object key) 判断集合中是否包含指定的键。
+       包含返回true，不包含返回false
+
+   */
+     //创建Map集合对象
+        Map&lt;String,Integer&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;赵丽颖&quot;,168);
+        map.put(&quot;杨颖&quot;,165);
+        map.put(&quot;林志玲&quot;,178);
+
+        boolean b1 = map.containsKey(&quot;赵丽颖&quot;);
+        System.out.println(&quot;b1:&quot; +b1);//ture
+}</code></pre>
 <h3 id="Map集合遍历-键找值方式"><a href="#Map集合遍历-键找值方式" class="headerlink" title="Map集合遍历   键找值方式"></a>Map集合遍历   键找值方式</h3><p>键找值方式:即通过元素的键，获取键所对应的值</p>
 <p>分析步骤:<br>    1.获取Map中所有的键，由于键是唯一性的，所以返回一个Set集合存储所有的键。方法提示:keyset();</p>
 <p>​    2.遍历键的Set集合，得到每一个键。</p>
@@ -653,19 +1410,191 @@
 <li>根据键，获取键所对应的值，方法提示:get（K key）;</li>
 </ol>
 <p><a href="https://www.wailian.work/image/QmMEWV" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200920_093430.png" alt="sp200920_093430.png"></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	Map集合的第一种遍历方式:通过键找值的方式</span></span><br><span class="line"><span class="comment">	Map集合中的方法:</span></span><br><span class="line"><span class="comment">		Set&lt;K&gt; keySet()  返回此映射中包含的键的Set视图</span></span><br><span class="line"><span class="comment">	实现步骤:</span></span><br><span class="line"><span class="comment">		1.使用Map集合中的方法keySet()，把Map集合所有的key取出来，存储到一个Set集合中</span></span><br><span class="line"><span class="comment">		2.遍历Set集合，获取Map集合中的每一个key</span></span><br><span class="line"><span class="comment">		3.通过Map集合中的方法get(key),通过key找到value</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02KeySet</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="comment">//创建Map集合对象</span></span><br><span class="line">        Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"赵丽颖"</span>,<span class="number">168</span>);</span><br><span class="line">        map.put(<span class="string">"杨颖"</span>,<span class="number">165</span>);</span><br><span class="line">        map.put(<span class="string">"林志玲"</span>,<span class="number">178</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//1.使用Map集合中的方法keySet()，把Map集合所有的key取出来，存储到一个Set集合中</span></span><br><span class="line">        Set&lt;String&gt; set = map.keySet();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//2.遍历Set集合，获取Map集合中的每一个key</span></span><br><span class="line">        <span class="comment">//使用迭代器遍历Set集合</span></span><br><span class="line">        Integer&lt;String&gt; it = set.iterator();</span><br><span class="line">        <span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">            String key = it.next();</span><br><span class="line">            </span><br><span class="line">        <span class="comment">//3.通过Map集合中的方法get(key),通过key找到value</span></span><br><span class="line">            Integer value = map.get(key);</span><br><span class="line">            System.out.println(key+ <span class="string">"="</span> +value);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"----------------"</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//使用增强for遍历Set集合</span></span><br><span class="line">        <span class="keyword">for</span>(String key : set)&#123;</span><br><span class="line">           Integer value = map.get(key);</span><br><span class="line">            System.out.println(key+ <span class="string">"="</span> +value); </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+    Map集合的第一种遍历方式:通过键找值的方式
+    Map集合中的方法:
+        Set&lt;K&gt; keySet()  返回此映射中包含的键的Set视图
+    实现步骤:
+        1.使用Map集合中的方法keySet()，把Map集合所有的key取出来，存储到一个Set集合中
+        2.遍历Set集合，获取Map集合中的每一个key
+        3.通过Map集合中的方法get(key),通过key找到value
 
+*/
+
+
+public class Demo02KeySet{
+    public static void main(String[] args){
+        //创建Map集合对象
+        Map&lt;String,Integer&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;赵丽颖&quot;,168);
+        map.put(&quot;杨颖&quot;,165);
+        map.put(&quot;林志玲&quot;,178);
+
+        //1.使用Map集合中的方法keySet()，把Map集合所有的key取出来，存储到一个Set集合中
+        Set&lt;String&gt; set = map.keySet();
+
+        //2.遍历Set集合，获取Map集合中的每一个key
+        //使用迭代器遍历Set集合
+        Integer&lt;String&gt; it = set.iterator();
+        while (it.hasNext()){
+            String key = it.next();
+
+        //3.通过Map集合中的方法get(key),通过key找到value
+            Integer value = map.get(key);
+            System.out.println(key+ &quot;=&quot; +value);
+
+        }
+        System.out.println(&quot;----------------&quot;);
+
+        //使用增强for遍历Set集合
+        for(String key : set){
+           Integer value = map.get(key);
+            System.out.println(key+ &quot;=&quot; +value); 
+        }
+    }
+}</code></pre>
 <h3 id="Entry键值对对象"><a href="#Entry键值对对象" class="headerlink" title="Entry键值对对象"></a>Entry键值对对象</h3><p>我们已经知道，Map中存放的是两种对象，一种称为key(键)，一种称为value(值)，他们在Map中是一一对应的关系，这一对对象又称作Map中的一个Entry(项)。Entry将键值对的对应关系封装成对象。即键值对对象，这样我们在遍历Map集合时，就可以从每一个键值对Entry对象中获取对应的键与对应的值</p>
 <p><a href="https://www.wailian.work/image/QmM8Ek" target="_blank" rel="noopener"><img src="https://p.130014.xyz/2020/12/11/sp200920_105105.png" alt="sp200920_105105.png"></a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Map集合遍历的第二种方式：使用Entry对象遍历</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	Map集合中的方法:</span></span><br><span class="line"><span class="comment">		Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()  返回此映射中包含的映射关系的Set视图。</span></span><br><span class="line"><span class="comment">		</span></span><br><span class="line"><span class="comment">	实现步骤:</span></span><br><span class="line"><span class="comment">		1.使用Map集合中的方法entrySet(),把Map集合中多个Entry对象取出来，存储到一个Set集合中。</span></span><br><span class="line"><span class="comment">		2.遍历Set集合，获取每一个Entry对象</span></span><br><span class="line"><span class="comment">		3.使用Entry对象中的方法getKey()和getValue()获取键与值</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo03EntrySet</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建Map集合对象</span></span><br><span class="line">        Map&lt;String,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"赵丽颖"</span>,<span class="number">168</span>);</span><br><span class="line">        map.put(<span class="string">"杨颖"</span>,<span class="number">165</span>);</span><br><span class="line">        map.put(<span class="string">"林志玲"</span>,<span class="number">178</span>);</span><br><span class="line">        <span class="comment">//1.使用Map集合中的方法entrySet(),把Map集合中多个Entry对象取出来，存储到一个Set集合中。</span></span><br><span class="line">        Set &lt;Map.Entry&lt;String, Integer&gt;&gt; set = map.entrySet();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//2.遍历Set集合，获取每一个Entry对象</span></span><br><span class="line">        <span class="comment">//使用迭代器遍历Set集合</span></span><br><span class="line">        Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; it = set.iterator();</span><br><span class="line">        <span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">            Map.Entry&lt;String, Integer&gt; entry = it.next();</span><br><span class="line">            <span class="comment">//3.使用Entry对象中的方法getKey()和getValue()获取键与值.</span></span><br><span class="line">            String key = entry.getKey();</span><br><span class="line">            Integer value = entry.getValue();</span><br><span class="line">            System.ou.println(key+<span class="string">"="</span>+value);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+Map集合遍历的第二种方式：使用Entry对象遍历
 
-<h3 id="HashMap存储自定义类型键值"><a href="#HashMap存储自定义类型键值" class="headerlink" title="HashMap存储自定义类型键值"></a>HashMap存储自定义类型键值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">HashMap存储自定义类型键值</span></span><br><span class="line"><span class="comment">Map集合保证key是唯一性的：</span></span><br><span class="line"><span class="comment">	作为key的元素，必须重写hashCode方法和equals方法，保证key唯一。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01HashMapSavePerson</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">msin</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        show01();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    HashMap存储自定义类型键值</span></span><br><span class="line"><span class="comment">    key:String类型</span></span><br><span class="line"><span class="comment">    	String类型重写hashCode方法和equals方法，保证key唯一。</span></span><br><span class="line"><span class="comment">    value:Person类型</span></span><br><span class="line"><span class="comment">    	value可以重复</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">show01</span><span class="params">()</span></span>&#123;</span><br><span class="line"> 		<span class="comment">//创建HashMap集合</span></span><br><span class="line">        HashMap&lt;String,Person&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="comment">//往集合中添加元素</span></span><br><span class="line">        map.put(<span class="string">"北京"</span>,<span class="keyword">new</span> Person(<span class="string">"张三"</span>,<span class="number">18</span>));</span><br><span class="line">        map.put(<span class="string">"上海"</span>,<span class="keyword">new</span> Person(<span class="string">"李四"</span>,<span class="number">19</span>));</span><br><span class="line">        map.put(<span class="string">"广州"</span>,<span class="keyword">new</span> Person(<span class="string">"王五"</span>,<span class="number">20</span>));</span><br><span class="line">        map.put(<span class="string">"北京"</span>,<span class="keyword">new</span> Person(<span class="string">"赵六"</span>,<span class="number">18</span>));</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//使用keySet加增强for遍历Map集合</span></span><br><span class="line">        Set&lt;String&gt; set = map.keySet();</span><br><span class="line">        <span class="keyword">for</span> (String key : set)&#123;</span><br><span class="line">            Person value = map.get(key);</span><br><span class="line">            System.out.println(key+<span class="string">"--&gt;"</span>+value);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    Map集合中的方法:
+        Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()  返回此映射中包含的映射关系的Set视图。
 
+    实现步骤:
+        1.使用Map集合中的方法entrySet(),把Map集合中多个Entry对象取出来，存储到一个Set集合中。
+        2.遍历Set集合，获取每一个Entry对象
+        3.使用Entry对象中的方法getKey()和getValue()获取键与值
+
+*/
+
+public class Demo03EntrySet{
+    public static void main(String[] args){
+        //创建Map集合对象
+        Map&lt;String,Integer&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;赵丽颖&quot;,168);
+        map.put(&quot;杨颖&quot;,165);
+        map.put(&quot;林志玲&quot;,178);
+        //1.使用Map集合中的方法entrySet(),把Map集合中多个Entry对象取出来，存储到一个Set集合中。
+        Set &lt;Map.Entry&lt;String, Integer&gt;&gt; set = map.entrySet();
+
+        //2.遍历Set集合，获取每一个Entry对象
+        //使用迭代器遍历Set集合
+        Iterator&lt;Map.Entry&lt;String, Integer&gt;&gt; it = set.iterator();
+        while(it.hasNext()){
+            Map.Entry&lt;String, Integer&gt; entry = it.next();
+            //3.使用Entry对象中的方法getKey()和getValue()获取键与值.
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.ou.println(key+&quot;=&quot;+value);
+        }
+        System.out.println(&quot;--------------&quot;);
+
+    }
+}</code></pre>
+<h3 id="HashMap存储自定义类型键值"><a href="#HashMap存储自定义类型键值" class="headerlink" title="HashMap存储自定义类型键值"></a>HashMap存储自定义类型键值</h3><pre><code class="java">/*
+HashMap存储自定义类型键值
+Map集合保证key是唯一性的：
+    作为key的元素，必须重写hashCode方法和equals方法，保证key唯一。
+
+*/
+
+public class Demo01HashMapSavePerson{
+    public static void msin(String[] args){
+        show01();
+    }
+
+    /*
+    HashMap存储自定义类型键值
+    key:String类型
+        String类型重写hashCode方法和equals方法，保证key唯一。
+    value:Person类型
+        value可以重复
+
+    */
+
+    private static void show01(){
+         //创建HashMap集合
+        HashMap&lt;String,Person&gt; map = new HashMap&lt;&gt;();
+        //往集合中添加元素
+        map.put(&quot;北京&quot;,new Person(&quot;张三&quot;,18));
+        map.put(&quot;上海&quot;,new Person(&quot;李四&quot;,19));
+        map.put(&quot;广州&quot;,new Person(&quot;王五&quot;,20));
+        map.put(&quot;北京&quot;,new Person(&quot;赵六&quot;,18));
+
+        //使用keySet加增强for遍历Map集合
+        Set&lt;String&gt; set = map.keySet();
+        for (String key : set){
+            Person value = map.get(key);
+            System.out.println(key+&quot;--&gt;&quot;+value);
+        }
+
+    }
+}
+</code></pre>
 <h3 id="LinkedHashMap"><a href="#LinkedHashMap" class="headerlink" title="LinkedHashMap"></a>LinkedHashMap</h3><p>在HashMap下面有一个子类LinkedHashMap，它是链表和哈希表组合的一个数据存储结构。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Map接口的哈希表和链接列表实现，具有可预知的迭代顺序。</span></span><br><span class="line"><span class="comment">底层原理：</span></span><br><span class="line"><span class="comment">	哈希表+链表(记录元素的顺序)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo01LinkedHashMap</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        HashMap&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"a"</span>,<span class="string">"a"</span>);</span><br><span class="line">        map.put(<span class="string">"c"</span>,<span class="string">"c"</span>);</span><br><span class="line">        map.put(<span class="string">"b"</span>,<span class="string">"b"</span>);</span><br><span class="line">        map.put(<span class="string">"a"</span>,<span class="string">"d"</span>);</span><br><span class="line">        System.out.println(map);<span class="comment">//key不允许重复，无序</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        LinkedHashMap&lt;String,String&gt; Linked = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</span><br><span class="line">        Linked.put(<span class="string">"a"</span>,<span class="string">"a"</span>);</span><br><span class="line">        Linked.put(<span class="string">"c"</span>,<span class="string">"c"</span>);</span><br><span class="line">        Linked.put(<span class="string">"b"</span>,<span class="string">"b"</span>);</span><br><span class="line">        Linked.put(<span class="string">"a"</span>,<span class="string">"d"</span>);</span><br><span class="line">        System.out.println(Linked);<span class="comment">//key不允许重复，有序&#123;a=b, c=c, b=b&#125;</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+Map接口的哈希表和链接列表实现，具有可预知的迭代顺序。
+底层原理：
+    哈希表+链表(记录元素的顺序)
 
+*/
+
+public class Demo01LinkedHashMap{
+    public static void main(String[] args){
+        HashMap&lt;String,String&gt; map = new HashMap&lt;&gt;();
+        map.put(&quot;a&quot;,&quot;a&quot;);
+        map.put(&quot;c&quot;,&quot;c&quot;);
+        map.put(&quot;b&quot;,&quot;b&quot;);
+        map.put(&quot;a&quot;,&quot;d&quot;);
+        System.out.println(map);//key不允许重复，无序
+
+
+        LinkedHashMap&lt;String,String&gt; Linked = new LinkedHashMap&lt;&gt;();
+        Linked.put(&quot;a&quot;,&quot;a&quot;);
+        Linked.put(&quot;c&quot;,&quot;c&quot;);
+        Linked.put(&quot;b&quot;,&quot;b&quot;);
+        Linked.put(&quot;a&quot;,&quot;d&quot;);
+        System.out.println(Linked);//key不允许重复，有序{a=b, c=c, b=b}
+
+    }
+
+
+
+}</code></pre>
 <h3 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h3><p>此类实现一个哈希表，该哈希表将键映射到对应的值。任何非null对象都可以用作键或值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Hashtable:底层是一个哈希表，是一个单线程，线程安全的集合，速度慢。</span></span><br><span class="line"><span class="comment">HashMap:底层是一个哈希表，是一个线程不安全的集合，是多线程集合，速度快</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">HashMap集合(之前学的所有集合):可以存储null值，null键。</span></span><br><span class="line"><span class="comment">Hashtable集合:不能存储null值，null键。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Hashtable集合和Vector集合，在JDK1.2之后被HashMap和ArrayLi取代。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Hashtable的子类Properties依然活跃在历史舞台</span></span><br><span class="line"><span class="comment">Properties集合是唯一一个和IO流结合的集合。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo02Hashtable</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        HashMap&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="keyword">null</span>,<span class="string">"a"</span>);</span><br><span class="line">        map.put(<span class="string">"b"</span>,<span class="keyword">null</span>);</span><br><span class="line">        map.put(nill,<span class="keyword">null</span>);</span><br><span class="line">        System.out.println(map);<span class="comment">//&#123;null=null, b=null&#125;</span></span><br><span class="line">        </span><br><span class="line">        Hashtable&lt;String,String&gt; table = <span class="keyword">new</span> Hashtable&lt;&gt;();</span><br><span class="line">        table.put(<span class="keyword">null</span>,<span class="string">"a"</span>);</span><br><span class="line">        table.put(<span class="string">"b"</span>,<span class="keyword">null</span>);<span class="comment">//不允许存储空值空键，空指针异常</span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="java">/*
+Hashtable:底层是一个哈希表，是一个单线程，线程安全的集合，速度慢。
+HashMap:底层是一个哈希表，是一个线程不安全的集合，是多线程集合，速度快
+
+HashMap集合(之前学的所有集合):可以存储null值，null键。
+Hashtable集合:不能存储null值，null键。
+
+Hashtable集合和Vector集合，在JDK1.2之后被HashMap和ArrayLi取代。
+
+Hashtable的子类Properties依然活跃在历史舞台
+Properties集合是唯一一个和IO流结合的集合。
+
+*/
+
+public class Demo02Hashtable{
+    public static void main(String[] args){
+        HashMap&lt;String,String&gt; map = new HashMap&lt;&gt;();
+        map.put(null,&quot;a&quot;);
+        map.put(&quot;b&quot;,null);
+        map.put(nill,null);
+        System.out.println(map);//{null=null, b=null}
+
+        Hashtable&lt;String,String&gt; table = new Hashtable&lt;&gt;();
+        table.put(null,&quot;a&quot;);
+        table.put(&quot;b&quot;,null);//不允许存储空值空键，空指针异常
+
+    }
+}
+
+
+</code></pre>
+
                 
             </div>
             <hr/>

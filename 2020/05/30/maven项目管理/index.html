@@ -516,11 +516,7 @@
 <li><p>多个Maven项目都可以从本地仓库获取jar包</p>
 </li>
 <li><p>设置本地仓库：Maven根目录—–conf—-settings.xml，将localRepository标签中的路径替换成自己本地仓库的路径····</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localRepository&gt;&#x2F;path&#x2F;to&#x2F;local&#x2F;repo&lt;&#x2F;localRepository&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
+<pre><code>localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</code></pre></li>
 </ul>
 </li>
 </ul>
@@ -535,11 +531,17 @@
 <h2 id="设置阿里云Maven仓库镜像"><a href="#设置阿里云Maven仓库镜像" class="headerlink" title="设置阿里云Maven仓库镜像"></a>设置阿里云Maven仓库镜像</h2><ul>
 <li>在settings.xml文件中的mirrors下添加mirror标签</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;mirror&gt;</span><br><span class="line"></span><br><span class="line">&lt;id&gt;alimaven&lt;&#x2F;id&gt;</span><br><span class="line"></span><br><span class="line">&lt;name&gt;aliyun maven&lt;&#x2F;name&gt;</span><br><span class="line"></span><br><span class="line">&lt;url&gt;http:&#x2F;&#x2F;maven.aliyun.com&#x2F;nexus&#x2F;content&#x2F;groups&#x2F;public&#x2F;&lt;&#x2F;url&gt;</span><br><span class="line"></span><br><span class="line">&lt;mirrorOf&gt;central&lt;&#x2F;mirrorOf&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;mirror&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;mirror&gt;
 
+&lt;id&gt;alimaven&lt;/id&gt;
 
+&lt;name&gt;aliyun maven&lt;/name&gt;
 
-<ul>
+&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+
+&lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+
+&lt;/mirror&gt;</code></pre><ul>
 <li>maven是由纯java开发，是跨平台的可以在window，linux，mac上使用</li>
 <li>清晰的项目结构</li>
 <li>使用Maven将大型项目按照模块拆分成若干工程，不同的团队维护各自的工程，可大大的提升开发效率。<ul>

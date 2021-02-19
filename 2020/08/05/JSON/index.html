@@ -472,8 +472,10 @@
 <ul>
 <li>对象表示为键值对</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!-- 键名写在前面并用双引号<span class="string">""</span>包裹，使用:分割，然后紧接着值--&gt;</span><br><span class="line">&#123;<span class="string">"name"</span>:<span class="string">"qinjiang"</span>&#125;</span><br><span class="line">&#123;<span class="string">"age"</span>:<span class="string">"3"</span>&#125;</span><br><span class="line">&#123;<span class="string">"sex"</span>:<span class="string">"男"</span>&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript"> &lt;!-- 键名写在前面并用双引号&quot;&quot;包裹，使用:分割，然后紧接着值--&gt;
+{&quot;name&quot;:&quot;qinjiang&quot;}
+{&quot;age&quot;:&quot;3&quot;}
+{&quot;sex&quot;:&quot;男&quot;}</code></pre>
 <ul>
 <li>数据由逗号分割</li>
 <li>花括号保存对象</li>
@@ -481,15 +483,15 @@
 </ul>
 <p><strong>JSON和JS对象的关系</strong>:</p>
 <p>JSON是JS对象的字符串表示法，他使用文本表示一个JS对象的信息，本质是一个字符串。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>:<span class="string">'hello'</span>,<span class="attr">b</span>:<span class="string">'World'</span>&#125;;<span class="comment">//这是一个对象，注意键名也是可以使用引号包裹。</span></span><br><span class="line"><span class="keyword">var</span> json = <span class="string">'&#123;"a":"Hello","b":"World"&#125;'</span>;<span class="comment">//这是一个JSON字符串，本质是一个字符串</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var obj = {a:&#39;hello&#39;,b:&#39;World&#39;};//这是一个对象，注意键名也是可以使用引号包裹。
+var json = &#39;{&quot;a&quot;:&quot;Hello&quot;,&quot;b&quot;:&quot;World&quot;}&#39;;//这是一个JSON字符串，本质是一个字符串</code></pre>
 <p><strong>JSON和JS对象互转</strong></p>
 <p>JSON字符串转换为JS对象，使用JSON.parse()方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">JSON</span>.parse(<span class="string">'&#123;"a":"Hello","b":"World"&#125;'</span>);</span><br><span class="line"><span class="comment">//结果是&#123;a:'Hello',b:'World'&#125;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var obj = JSON.parse(&#39;{&quot;a&quot;:&quot;Hello&quot;,&quot;b&quot;:&quot;World&quot;}&#39;);
+//结果是{a:&#39;Hello&#39;,b:&#39;World&#39;}</code></pre>
 <p>JS对象转换为JSON字符串，使用JSON.stringify()方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = <span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="string">'Hello'</span>,<span class="attr">b</span>:<span class="string">'World'</span>&#125;);</span><br><span class="line"><span class="comment">//结果是'&#123;"a":"Hello","b":"World"&#125;'</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">var json = JSON.stringify({a:&#39;Hello&#39;,b:&#39;World&#39;});
+//结果是&#39;{&quot;a&quot;:&quot;Hello&quot;,&quot;b&quot;:&quot;World&quot;}&#39;</code></pre>
 
                 
             </div>

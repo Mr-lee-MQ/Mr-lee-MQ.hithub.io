@@ -502,8 +502,12 @@
 <li>配置环境变量</li>
 <li>新建mysql配置文件ini</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line">#目录一定换成自己的</span><br><span class="line">basedir = 目录</span><br><span class="line">datadir = 目录</span><br><span class="line">port = <span class="number">3306</span></span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
-
+<pre><code class="java">[mysql]
+#目录一定换成自己的
+basedir = 目录
+datadir = 目录
+port = 3306
+skip-grant-tables</code></pre>
 <ul>
 <li>启动管理员下的CMD，并将路径切换至mysql下的bin目录，然后输入mysql-install（安装mysql）</li>
 <li>再输入 nyaqld – initialize - insecure – user-mysql初始化数据文件。</li>
@@ -513,8 +517,25 @@
 <li>重启mysql即可正常使用</li>
 </ul>
 <h3 id="1-6-连接数据库"><a href="#1-6-连接数据库" class="headerlink" title="1.6 连接数据库"></a>1.6 连接数据库</h3><p><strong>命令行连接</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p123456 <span class="comment">--连接数据库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> mysql.user <span class="keyword">set</span> authentication_string=<span class="keyword">password</span>(<span class="string">'123456'</span>) <span class="keyword">where</span> <span class="keyword">user</span>=<span class="string">'root'</span> <span class="keyword">and</span> Host = <span class="string">'localhost'</span>;<span class="comment">--修改密码权限</span></span><br><span class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;<span class="comment">--刷新权限</span></span><br><span class="line"><span class="comment">-------------------------------------------------------------</span></span><br><span class="line"><span class="comment">--所有的语句用;结尾</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>; <span class="comment">--查看所有的数据库</span></span><br><span class="line"></span><br><span class="line">mysql &gt; use school --切换数据库 use 数据库名</span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>; <span class="comment">--查看数据库中所有的表</span></span><br><span class="line"><span class="keyword">describe</span> student; <span class="comment">--显示数据库中所有的表的信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> westos;<span class="comment">--创建一个数据库</span></span><br><span class="line"></span><br><span class="line">exit;<span class="comment">--退出连接</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--单行注释（SQL的本来的注释）</span></span><br></pre></td></tr></table></figure>
+<pre><code class="sql">mysql -uroot -p123456 --连接数据库
 
+update mysql.user set authentication_string=password(&#39;123456&#39;) where user=&#39;root&#39; and Host = &#39;localhost&#39;;--修改密码权限
+flush privileges;--刷新权限
+-------------------------------------------------------------
+--所有的语句用;结尾
+show databases; --查看所有的数据库
+
+mysql &gt; use school --切换数据库 use 数据库名
+
+show tables; --查看数据库中所有的表
+describe student; --显示数据库中所有的表的信息
+
+create database westos;--创建一个数据库
+
+exit;--退出连接
+
+--单行注释（SQL的本来的注释）
+</code></pre>
 <p><strong>数据库语言</strong></p>
 <p>DDL   定义</p>
 <p>DML   操作</p>
@@ -523,17 +544,14 @@
 <h2 id="2、操作数据库"><a href="#2、操作数据库" class="headerlink" title="2、操作数据库"></a>2、操作数据库</h2><p>操作数据库&gt;操作数据库中的表&gt;操作数据库中的表的数据</p>
 <p>==SQL关键字不区分大小写==</p>
 <h3 id="2-1、-操作数据库"><a href="#2-1、-操作数据库" class="headerlink" title="2.1、 操作数据库"></a>2.1、 操作数据库</h3><p>1.创建数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> [<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] westos;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">CREATE DATABASE [IF NOT EXISTS] westos;</code></pre>
 <p>2.删除数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> westos;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">DROP DATABASE IF EXISTS westos;</code></pre>
 <p>3.使用数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--tab键的上面，如果你的表名或者字段名是一个特殊字符，就需要带这个</span></span><br><span class="line"><span class="keyword">USE</span> <span class="string">`westos`</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">--tab键的上面，如果你的表名或者字段名是一个特殊字符，就需要带这个
+USE `westos`</code></pre>
 <p>4.查看数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">DATABASES</span> <span class="comment">--查看所有的数据库</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">SHOW DATABASES --查看所有的数据库</code></pre>
 <p>对比：SQLyog的可视化操作。</p>
 <p>学习思路：</p>
 <ul>
@@ -615,18 +633,39 @@
 <li>设置默认的值</li>
 <li>sex，默认值为男。 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;每一个表必须存在这5个字段，表示一个记录存在的意义</span><br><span class="line">id		主键</span><br><span class="line">&#96;version&#96;		乐观锁</span><br><span class="line">is_delete		伪删除</span><br><span class="line">get_create		创建时间</span><br><span class="line">get update		修改时间</span><br></pre></td></tr></table></figure>
+<pre><code>//每一个表必须存在这5个字段，表示一个记录存在的意义
+id        主键
+`version`        乐观锁
+is_delete        伪删除
+get_create        创建时间
+get update        修改时间</code></pre><h3 id="2-4、创建数据库表"><a href="#2-4、创建数据库表" class="headerlink" title="2.4、创建数据库表"></a>2.4、创建数据库表</h3><pre><code class="sql">--目标：创建一个school数据库
+--创建学生表（列，字段）  使用SQL创建
+--学号int 登录密码varchar(20) 姓名，性别varchar(2),出生日期(datatime),家庭住址，email
 
-<h3 id="2-4、创建数据库表"><a href="#2-4、创建数据库表" class="headerlink" title="2.4、创建数据库表"></a>2.4、创建数据库表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--目标：创建一个school数据库</span></span><br><span class="line"><span class="comment">--创建学生表（列，字段）  使用SQL创建</span></span><br><span class="line"><span class="comment">--学号int 登录密码varchar(20) 姓名，性别varchar(2),出生日期(datatime),家庭住址，email</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--注意点，使用英文(),表的名称 和 字段 尽量使用``括起来</span></span><br><span class="line"><span class="comment">--AUTO INCREMENT 自增</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`student`</span>(</span><br><span class="line">	<span class="string">`id`</span> <span class="built_in">INT</span>(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT <span class="keyword">COMMENT</span> <span class="string">'学号'</span>,</span><br><span class="line">    <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">not</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">'匿名'</span> <span class="keyword">COMMENT</span> <span class="string">'姓名'</span>,</span><br><span class="line">    PRIMARY <span class="keyword">KEY</span>(<span class="string">'id'</span>)</span><br><span class="line">)<span class="keyword">ENGINE</span> = <span class="keyword">INNODB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8</span><br></pre></td></tr></table></figure>
-
+--注意点，使用英文(),表的名称 和 字段 尽量使用``括起来
+--AUTO INCREMENT 自增
+CREATE TABLE IF NOT EXISTS `student`(
+    `id` INT(4) NOT NULL AUTO_INCREMENT COMMENT &#39;学号&#39;,
+    `name` VARCHAR(30) not NULL DEFAULT &#39;匿名&#39; COMMENT &#39;姓名&#39;,
+    PRIMARY KEY(&#39;id&#39;)
+)ENGINE = INNODB DEFAULT CHARSET=utf8</code></pre>
 <p>格式：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> [<span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] <span class="string">`表名`</span>(</span><br><span class="line"><span class="string">`字段名`</span> 列类型 [属性] [索引] [注释],</span><br><span class="line"><span class="string">`字段名`</span> 列类型 [属性] [索引] [注释],</span><br><span class="line"><span class="string">`字段名`</span> 列类型 [属性] [索引] [注释],</span><br><span class="line">	....</span><br><span class="line"><span class="string">`字段名`</span> 列类型 [属性] [索引] [注释],    </span><br><span class="line">)[表类型][字符集设置][注释]</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">CREATE TABLE [IF NOT EXISTS] `表名`(
+`字段名` 列类型 [属性] [索引] [注释],
+`字段名` 列类型 [属性] [索引] [注释],
+`字段名` 列类型 [属性] [索引] [注释],
+    ....
+`字段名` 列类型 [属性] [索引] [注释],    
+)[表类型][字符集设置][注释]</code></pre>
 <p><strong>常用命令</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> scfool		<span class="comment">--查看创建数据库的语句</span></span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student 		<span class="comment">--查看student数据表的定义语句</span></span><br><span class="line"><span class="keyword">DESC</span> student 					<span class="comment">--显示表的结构</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-5、数据表的类型"><a href="#2-5、数据表的类型" class="headerlink" title="2.5、数据表的类型"></a>2.5、数据表的类型</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--关于数据库引擎</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">INNODBS  默认使用</span></span><br><span class="line"><span class="comment">MYISAM	早些年使用</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">SHOW CREATE DATABASE scfool        --查看创建数据库的语句
+SHOW CREATE TABLE student         --查看student数据表的定义语句
+DESC student                     --显示表的结构</code></pre>
+<h3 id="2-5、数据表的类型"><a href="#2-5、数据表的类型" class="headerlink" title="2.5、数据表的类型"></a>2.5、数据表的类型</h3><pre><code class="sql">--关于数据库引擎
+/*
+INNODBS  默认使用
+MYISAM    早些年使用
+*/</code></pre>
 <table>
 <thead>
 <tr>
@@ -684,13 +723,11 @@
 <blockquote>
 <p>设置数据库的字符集编码</p>
 </blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CHARSET=utf8</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">CHARSET=utf8</code></pre>
 <p>不设置的话，会是mysql默认的字符集编码（不支持中文）</p>
 <p>MySQL的默认编码是Latin1，不支持中文</p>
 <p>在my.ini中配置默认的编码</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">character-<span class="keyword">set</span>-<span class="keyword">server</span>=utf8</span><br></pre></td></tr></table></figure>
-
+<pre><code class="sql">character-set-server=utf8</code></pre>
 <h3 id="2-6、修改和删除表"><a href="#2-6、修改和删除表" class="headerlink" title="2.6、修改和删除表"></a>2.6、修改和删除表</h3><blockquote>
 <p>修改</p>
 </blockquote>
