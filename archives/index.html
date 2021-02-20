@@ -33,16 +33,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -355,7 +345,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/Mr-lee-MQ.hithub.io/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/Mr-lee-MQ.hithub.io/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -483,7 +475,7 @@
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/19.jpg" class="responsive-img" alt="SpringMVC">
                                 
                                 <span class="card-title">SpringMVC</span>
                             </div>
@@ -601,7 +593,7 @@ M
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/5.jpg" class="responsive-img" alt="Mybatis">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/13.jpg" class="responsive-img" alt="Mybatis">
                                 
                                 <span class="card-title">Mybatis</span>
                             </div>
@@ -665,7 +657,7 @@ MyBatis 可以对配置和原生Map使用简单的 XML 或注解
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/9.jpg" class="responsive-img" alt="SSM整合">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/1.jpg" class="responsive-img" alt="SSM整合">
                                 
                                 <span class="card-title">SSM整合</span>
                             </div>
@@ -793,7 +785,7 @@ CREATE TABLE `books` (
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/22.jpg" class="responsive-img" alt="JavaWeb">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/14.jpg" class="responsive-img" alt="JavaWeb">
                                 
                                 <span class="card-title">JavaWeb</span>
                             </div>
@@ -857,7 +849,7 @@ html，css
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/18.jpg" class="responsive-img" alt="MySQL">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/2.jpg" class="responsive-img" alt="MySQL">
                                 
                                 <span class="card-title">MySQL</span>
                             </div>
@@ -921,7 +913,7 @@ html，css
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/19.jpg" class="responsive-img" alt="数据结构与算法">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/3.jpg" class="responsive-img" alt="数据结构与算法">
                                 
                                 <span class="card-title">数据结构与算法</span>
                             </div>
@@ -979,7 +971,7 @@ html，css
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/17.jpg" class="responsive-img" alt="Javase_注解与反射">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/1.jpg" class="responsive-img" alt="Javase_注解与反射">
                                 
                                 <span class="card-title">Javase_注解与反射</span>
                             </div>
@@ -1042,7 +1034,7 @@ Annotation的
                             <div class="card-image">
                                 
                                 
-                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/11.jpg" class="responsive-img" alt="Javase-多线程">
+                                <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/19.jpg" class="responsive-img" alt="Javase-多线程">
                                 
                                 <span class="card-title">Javase-多线程</span>
                             </div>
@@ -1156,9 +1148,9 @@ Annotation的
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="503838841"
+                   id="2083953023"
                    fixed='true'
-                   autoplay='true'
+                   autoplay='false'
                    theme='#42b983'
                    loop='all'
                    order='random'
@@ -1436,6 +1428,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/Mr-lee-MQ.hithub.io/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

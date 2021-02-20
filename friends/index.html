@@ -33,16 +33,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -355,7 +345,9 @@
 
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/Mr-lee-MQ.hithub.io/medias/banner/0.jpg)');
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/Mr-lee-MQ.hithub.io/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
 
@@ -630,9 +622,9 @@
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="503838841"
+                   id="2083953023"
                    fixed='true'
-                   autoplay='true'
+                   autoplay='false'
                    theme='#42b983'
                    loop='all'
                    order='random'
@@ -910,6 +902,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/Mr-lee-MQ.hithub.io/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
