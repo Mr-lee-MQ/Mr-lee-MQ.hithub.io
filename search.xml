@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>CSS3</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/07/15/CSS3/</url>
+    <url>/Mr-lee-MQ.hithub.io/CSS3/</url>
     <content><![CDATA[<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS<a id="more"></a></h1><h2 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h2><ul>
 <li>CSS1.0</li>
 <li>CSS2.0   DIV（块） +   CSS，HTML 和CSS结构分离的思想，网页变得简单，SEO</li>
@@ -652,7 +652,7 @@ color:#000;</code></pre>
   </entry>
   <entry>
     <title>GUI</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/10/05/GUI/</url>
+    <url>/Mr-lee-MQ.hithub.io/GUI/</url>
     <content><![CDATA[<h1 id="GUI编程"><a href="#GUI编程" class="headerlink" title="GUI编程"></a>GUI编程<a id="more"></a></h1><h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
 <li>窗口</li>
 <li>弹窗</li>
@@ -1744,7 +1744,7 @@ Date<span class="token punctuation">.</span>down<span class="token punctuation">
   </entry>
   <entry>
     <title>Git</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/06/10/Git/</url>
+    <url>/Mr-lee-MQ.hithub.io/Git/</url>
     <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git "></a>Git <a id="more"></a></h1><h1 id="第一章：简介"><a href="#第一章：简介" class="headerlink" title="第一章：简介"></a>第一章：简介</h1><h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h2><p>Git（读音为/gɪt/）是一个<strong>开源的分布式版本控制系统</strong>，可以有效、高速地处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 <strong>Linux 内核开发</strong>而开发的一个开放源码的版本控制软件。</p>
 <p><strong>更多简介：</strong></p>
 <p>参考：<a href="https://www.cnblogs.com/randysun/p/11524711.html" target="_blank" rel="noopener">https://www.cnblogs.com/randysun/p/11524711.html</a></p>
@@ -2180,7 +2180,7 @@ cat id_rsa<span class="token punctuation">.</span>pub    #或者 vim id_rsa<span
   </entry>
   <entry>
     <title>HTML5</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/07/13/HTML5/</url>
+    <url>/Mr-lee-MQ.hithub.io/HTML5/</url>
     <content><![CDATA[<h1 id="HTML详解"><a href="#HTML详解" class="headerlink" title="HTML详解"></a>HTML详解<a id="more"></a></h1><h2 id="初识HTML"><a href="#初识HTML" class="headerlink" title="初识HTML"></a>初识HTML</h2><ul>
 <li>Hper Text Markup Language(超文本标记语言)</li>
 <li>W3C     万维网联盟</li>
@@ -2496,7 +2496,7 @@ cat id_rsa<span class="token punctuation">.</span>pub    #或者 vim id_rsa<span
   </entry>
   <entry>
     <title>Hexo的更新迭代</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/24/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+    <url>/Mr-lee-MQ.hithub.io/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="软件安装部署及更新"><a href="#软件安装部署及更新" class="headerlink" title="软件安装部署及更新"></a>软件安装部署及更新<a id="more"></a></h1><h2 id="hexo-github-搭建的个人博客"><a href="#hexo-github-搭建的个人博客" class="headerlink" title="hexo + github 搭建的个人博客"></a>hexo + github 搭建的个人博客</h2><p>源于 <a href="https://www.bilibili.com/video/BV1Yb411a7ty" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty</a></p>
 <h2 id="hexo-gitee-搭建的个人博客"><a href="#hexo-gitee-搭建的个人博客" class="headerlink" title="hexo + gitee 搭建的个人博客"></a>hexo + gitee 搭建的个人博客</h2><p>源于 <a href="https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">https://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
 <h2 id="搭建完成后更换主题"><a href="#搭建完成后更换主题" class="headerlink" title="搭建完成后更换主题"></a>搭建完成后更换主题</h2><ul>
@@ -2532,7 +2532,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   </entry>
   <entry>
     <title>JSON</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/05/JSON/</url>
+    <url>/Mr-lee-MQ.hithub.io/JSON/</url>
     <content><![CDATA[<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON<a id="more"></a></h1><p><strong>要求及语法格式</strong></p>
 <ul>
 <li>对象表示为键值对</li>
@@ -2564,7 +2564,7 @@ $ hexo server         # 启动服务 简写：hexo s</code></pre><p>或者用&am
   </entry>
   <entry>
     <title>Javase-多线程</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/10/17/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    <url>/Mr-lee-MQ.hithub.io/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="多线程详解"><a href="#多线程详解" class="headerlink" title="多线程详解 "></a>多线程详解 <a id="more"></a></h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>线程简介</li>
 <li><strong>线程实现（重点）</strong></li>
@@ -3948,7 +3948,7 @@ Public <span class="token keyword">class</span> <span class="token class-name">T
   </entry>
   <entry>
     <title>JavaScript</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/07/24/JavaScript/</url>
+    <url>/Mr-lee-MQ.hithub.io/JavaScript/</url>
     <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript<a id="more"></a></h1><p>JavaScript是一门世界上最流行的脚本语言。</p>
 <p>严格区分大小写。</p>
 <h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="引入JavaScript"><a href="#引入JavaScript" class="headerlink" title="引入JavaScript"></a>引入JavaScript</h3><ul>
@@ -5009,7 +5009,7 @@ document<span class="token punctuation">.</span><span class="token function">get
   </entry>
   <entry>
     <title>Javase-IO</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/09/20/Javase-IO/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-IO/</url>
     <content><![CDATA[<h1 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O<a id="more"></a></h1><h2 id="IO概述"><a href="#IO概述" class="headerlink" title="IO概述"></a>IO概述</h2><p>Java中的I/O操作主要是指使用Java.io包下的内容，进行输入，输出操作。输入也叫做读取数据，输出也叫做写出数据。</p>
 <ul>
 <li>根据数据的流向分为:输入流和输出流<ul>
@@ -5659,7 +5659,7 @@ Properties集合是一个唯一和IO流结合的集合
   </entry>
   <entry>
     <title>JavaWeb</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/11/07/JavaWeb/</url>
+    <url>/Mr-lee-MQ.hithub.io/JavaWeb/</url>
     <content><![CDATA[<h1 id="JavaWeb"><a href="#JavaWeb" class="headerlink" title="JavaWeb"></a>JavaWeb<a id="more"></a></h1><h2 id="1、基本概念"><a href="#1、基本概念" class="headerlink" title="1、基本概念"></a>1、基本概念</h2><h3 id="1-1、-前言"><a href="#1-1、-前言" class="headerlink" title="1.1、 前言"></a>1.1、 前言</h3><ul>
 <li>web开发，网页的意思</li>
 <li>静态web<ul>
@@ -7227,7 +7227,7 @@ servlet的代码中<span class="token operator">:</span>处理请求，响应，
   </entry>
   <entry>
     <title>Javase_常用类</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/28/Javase-%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
     <content><![CDATA[<h1 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类<a id="more"></a></h1><h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><h3 id="1-1概述"><a href="#1-1概述" class="headerlink" title="1.1概述"></a>1.1概述</h3><p>​        java.lang.Object 类是Java语言中的根类，即所有类的父类。它中描述的所有方法子类都可以使用。在对象实例化时，最终找到的父类就是Object。</p>
 <p>如果一个类没有特别指明父类，那么<strong>默认则继承自Object类</strong></p>
 <h3 id="ToString"><a href="#ToString" class="headerlink" title="ToString"></a>ToString</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/*
@@ -8061,7 +8061,7 @@ Integer iii <span class="token operator">=</span> Integer<span class="token punc
   </entry>
   <entry>
     <title>Javase_异常</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/27/Javase-%E5%BC%82%E5%B8%B8/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<h1 id="异常机制"><a href="#异常机制" class="headerlink" title="异常机制"></a>异常机制<a id="more"></a></h1><h2 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h2><ul>
 <li>实际工作中，遇到的情况不可能是非常完美的。比如：你写的某个模块，用户输入不一定符合你的要求，你的程序要打开某个软件，这个文件可能不存在或者文件格式不对，你要读取数据库的数据，数据可能是空的等。我们的程序再跑着，内存或硬盘可能满了。等等。</li>
 <li>软件程序运行过程中，非常可能遇到刚刚提到的这些异常问题，我们叫<strong>异常</strong>，英文是<strong>Exception</strong>，意思是例外。这些，例外情况，或者叫异常，怎么让我们写的程序做出合理的处理。而不至于程序崩溃。</li>
@@ -8212,7 +8212,7 @@ Integer iii <span class="token operator">=</span> Integer<span class="token punc
   </entry>
   <entry>
     <title>Javase_数组</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/21/Javase-%E6%95%B0%E7%BB%84/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组<a id="more"></a></h1><h2 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h2><ul>
 <li>数组是相同类型数据的有序集合</li>
 <li>数组描述的是相同类型的若干个数据，按照一定的先后次序排列组合而成</li>
@@ -8505,7 +8505,7 @@ a<span class="token punctuation">[</span><span class="token number">1</span><spa
   </entry>
   <entry>
     <title>Javase_方法</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/20/Javase-%E6%96%B9%E6%B3%95/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法<a id="more"></a></h1><pre class=" language-java"><code class="language-java">System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
     System   系统类
@@ -8627,7 +8627,7 @@ a<span class="token punctuation">[</span><span class="token number">1</span><spa
   </entry>
   <entry>
     <title>Javase_注解与反射</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/10/25/Javase-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/</url>
     <content><![CDATA[<h1 id="注解与反射"><a href="#注解与反射" class="headerlink" title="注解与反射"></a>注解与反射<a id="more"></a></h1><p><strong>什么是注解</strong></p>
 <ul>
 <li>Annotation是从JDK5.0开始引入的新技术</li>
@@ -9357,7 +9357,7 @@ WildcardType<span class="token operator">:</span>代表一种通配符类型表�
   </entry>
   <entry>
     <title>Javase-集合</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/09/09/Javase-%E9%9B%86%E5%90%88/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合<a id="more"></a></h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p><strong>栈</strong></p>
 <ul>
 <li><strong>栈：stack</strong>，又称堆栈，它是运算受限的线性表，其限制是仅允许在标的一端进行插入和删除工作，不允许在其他任何位置进行添加，查找，删除等操作</li>
@@ -10491,7 +10491,7 @@ Properties集合是唯一一个和IO流结合的集合。
   </entry>
   <entry>
     <title>Javase_面向对象</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/23/Javase-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <url>/Mr-lee-MQ.hithub.io/Javase-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象<a id="more"></a></h1><p>Java的核心就是oop</p>
 <h2 id="面向过程-amp-面向对象"><a href="#面向过程-amp-面向对象" class="headerlink" title="面向过程&amp;面向对象"></a>面向过程&amp;面向对象</h2><p>面向过程思想</p>
 <ul>
@@ -11301,7 +11301,7 @@ Properties集合是唯一一个和IO流结合的集合。
   </entry>
   <entry>
     <title>Maven</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/05/30/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
+    <url>/Mr-lee-MQ.hithub.io/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="Maven项目管理工具"><a href="#Maven项目管理工具" class="headerlink" title="Maven项目管理工具"></a>Maven项目管理工具<a id="more"></a></h1><h2 id="为什么使用Maven？"><a href="#为什么使用Maven？" class="headerlink" title="为什么使用Maven？"></a>为什么使用Maven？</h2><ul>
 <li><p>jar包管理</p>
 <ul>
@@ -11493,7 +11493,7 @@ Properties集合是唯一一个和IO流结合的集合。
   </entry>
   <entry>
     <title>MySQL</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/11/01/MySQL/</url>
+    <url>/Mr-lee-MQ.hithub.io/MySQL/</url>
     <content><![CDATA[<h1 id="1-初识MySQL"><a href="#1-初识MySQL" class="headerlink" title="1.初识MySQL"></a>1.初识MySQL<a id="more"></a></h1><p>JavaEE：企业及开发  Web</p>
 <p>前端（页面：展示，数据！）</p>
 <p>后台（连接点：连接数据库JDBC，连接前端（控制，控制视图跳转，给前端传递数据））</p>
@@ -11765,7 +11765,7 @@ MYISAM    早些年使用
   </entry>
   <entry>
     <title>SSM整合</title>
-    <url>/Mr-lee-MQ.hithub.io/2021/01/07/SSM%E6%95%B4%E5%90%88/</url>
+    <url>/Mr-lee-MQ.hithub.io/SSM%E6%95%B4%E5%90%88/</url>
     <content><![CDATA[<h1 id="SSM-整合"><a href="#SSM-整合" class="headerlink" title="SSM(整合)"></a>SSM(整合)<a id="more"></a></h1><p><strong>创建一个存放书籍数据的数据库表</strong></p>
 <pre class=" language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token punctuation">`</span>ssm<span class="token punctuation">`</span><span class="token punctuation">;</span>
 <span class="token keyword">USE</span> <span class="token punctuation">`</span>ssm<span class="token punctuation">`</span><span class="token punctuation">;</span>
@@ -12269,7 +12269,7 @@ https://www.springframework.org/schema/context/spring-context.xsd<span class="to
   </entry>
   <entry>
     <title>Mybatis</title>
-    <url>/Mr-lee-MQ.hithub.io/2021/02/08/Mybatis/</url>
+    <url>/Mr-lee-MQ.hithub.io/Mybatis/</url>
     <content><![CDATA[<h1 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis<a id="more"></a></h1><p><img src="https://mybatis.org/images/mybatis-logo.png" alt="MyBatis logo"></p>
 <ul>
 <li>MyBatis 是支持定制化SQL、存储过程以及高级映射的优秀的持久层框架。</li>
@@ -13459,7 +13459,7 @@ void updateAuthorValues(Author author);</code></pre>
   </entry>
   <entry>
     <title>Spring</title>
-    <url>/Mr-lee-MQ.hithub.io/2021/02/19/Spring/</url>
+    <url>/Mr-lee-MQ.hithub.io/Spring/</url>
     <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring "></a>Spring <a id="more"></a></h1><h2 id="1-1、简介"><a href="#1-1、简介" class="headerlink" title="1.1、简介"></a>1.1、简介</h2><h2 id="1-2、优点"><a href="#1-2、优点" class="headerlink" title="1.2、优点"></a>1.2、优点</h2><p> Spring是一个开源的免费的框架(容器)！</p>
 <h1 id="2-IOC理论推导"><a href="#2-IOC理论推导" class="headerlink" title="2.IOC理论推导"></a>2.IOC理论推导</h1><p> 1.UserDao接口</p>
 <p> 2.UserDaoImpl实现类</p>
@@ -14618,7 +14618,7 @@ xmlns:c="http://www.springframework.org/schema/c"</code></pre>
   </entry>
   <entry>
     <title>SpringMVC</title>
-    <url>/Mr-lee-MQ.hithub.io/2021/02/20/SpringMVC/</url>
+    <url>/Mr-lee-MQ.hithub.io/SpringMVC/</url>
     <content><![CDATA[<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC<a id="more"></a></h1><h2 id="什么是MVC"><a href="#什么是MVC" class="headerlink" title="什么是MVC"></a>什么是MVC</h2><ul>
 <li>MVC是模型(Model)、视图(View)、控制器(Controller)的简写，是一种软件设计规范。</li>
 <li>是将业务逻辑、数据、显示分离的方法来组织代码。</li>
@@ -15772,7 +15772,7 @@ Model与ModelAndView的最大区别：
   </entry>
   <entry>
     <title>Vue</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/08/04/Vue/</url>
+    <url>/Mr-lee-MQ.hithub.io/Vue/</url>
     <content><![CDATA[<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue "></a>Vue <a id="more"></a></h1><p>网络通信：axios</p>
 <p>页面跳转：vue-router</p>
 <p>状态管理：vuex</p>
@@ -16104,7 +16104,7 @@ Model与ModelAndView的最大区别：
   </entry>
   <entry>
     <title>数据结构与算法</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/10/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</url>
+    <url>/Mr-lee-MQ.hithub.io/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法<a id="more"></a></h1><h2 id="1、数据结构和算法内容介绍"><a href="#1、数据结构和算法内容介绍" class="headerlink" title="1、数据结构和算法内容介绍"></a>1、数据结构和算法内容介绍</h2><h3 id="1-1、字符串匹配问题"><a href="#1-1、字符串匹配问题" class="headerlink" title="1.1、字符串匹配问题"></a>1.1、字符串匹配问题</h3><ul>
 <li><p>有一个字符串 str 1 = “”硅硅谷 尚硅谷你尚硅 尚硅谷 你尚硅谷你尚硅你好”“，和一个子串 str2 = ”尚硅谷 你尚硅你“ </p>
 </li>
@@ -16127,7 +16127,7 @@ Model与ModelAndView的最大区别：
   </entry>
   <entry>
     <title>Javase-网络编程</title>
-    <url>/Mr-lee-MQ.hithub.io/2020/10/15/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</url>
+    <url>/Mr-lee-MQ.hithub.io/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程 "></a>网络编程 <a id="more"></a></h1><p>TCP:发送请求通信</p>
 <p>UDP:接收通信请求</p>
 <p><strong>网络编程的目的</strong>：传播交流信息，数据交换，通信。</p>
@@ -16660,7 +16660,7 @@ tasklist<span class="token operator">|</span>findstr <span class="token string">
   </entry>
   <entry>
     <title>设计模式</title>
-    <url>/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <url>/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式 "></a>设计模式 <a id="more"></a></h1><h1 id="1、Java设计模式"><a href="#1、Java设计模式" class="headerlink" title="1、Java设计模式"></a>1、Java设计模式</h1><h2 id="1-1、原型设计模式问题"><a href="#1-1、原型设计模式问题" class="headerlink" title="1.1、原型设计模式问题"></a>1.1、原型设计模式问题</h2><ol>
 <li>有请用UML类图画出原型模式核心角色</li>
 <li>原型设计模式的深拷贝和浅拷贝是什么?并写出深拷贝的两种方式的源码</li>
