@@ -457,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-20
+                    2021-02-22
                 </div>
                 
 
@@ -523,10 +523,10 @@
 <p>​    客户端不应该依赖他不需要的接口。即一个类对另一个类的依赖应该建立在最小的接口上。</p>
 <p><strong>实例：</strong></p>
 <p>​    类A通过接口Interface1依赖类B，类C通过接口Interface1依赖类D，如果接口Interface1对于类A和类C说不是最小接口，那么类B和类D必须去实现他们不需要的方法。</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210107210502179.png" alt="image-20210107210502179"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210107210502179.png" alt="image-20210107210502179"></p>
 <p><strong>改进：</strong></p>
 <p>​    将接口Interface1拆分为独立的3个接口，类A和类C分别与他们需要的接口建立依赖关系。</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210107210658648.png" alt="image-20210107210658648"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210107210658648.png" alt="image-20210107210658648"></p>
 <h2 id="2-3、依赖倒转原则"><a href="#2-3、依赖倒转原则" class="headerlink" title="2.3、依赖倒转原则"></a>2.3、依赖倒转原则</h2><p><strong>基本介绍</strong></p>
 <ol>
 <li>高层模块不应该依赖底层模块，二者应该依赖其抽象。</li>
@@ -1061,7 +1061,7 @@
 </ol>
 <h2 id="2-7、合成复用原则"><a href="#2-7、合成复用原则" class="headerlink" title="2.7、合成复用原则"></a>2.7、合成复用原则</h2><p><strong>基本介绍</strong></p>
 <p>原则是尽量使用合成/聚合的方式，而不是使用继承</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108134655716.png" alt="image-20210108134655716"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108134655716.png" alt="image-20210108134655716"></p>
 <p><strong>设计原则核心思想：</strong></p>
 <ol>
 <li>找出应用中可能需要变化之处，把他们独立出来，不要和那些不需要变化的代码混在一起。</li>
@@ -1073,7 +1073,7 @@
 <li>UML本身是一套符号的规定，就像数学符号和化学符号一样，这些符号用于描述软件模型中的各个元素和他们之间的关系，比如类，接口，实现，泛华，依赖，组合，聚合等</li>
 <li>使用UML来建模，常用的工具有Rational Rose，也可以使用一些插件来建模。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108141956726.png" alt="image-20210108141956726"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108141956726.png" alt="image-20210108141956726"></p>
 <p><strong>UML图</strong></p>
 <p>​    画UML图与写文章差不多，都是把自己的思想描述给别人看，关键在于思路和条理。</p>
 <p><strong>UML图分类</strong></p>
@@ -1103,7 +1103,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p>代码转化为类图</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108144336538.png" alt="image-20210108144336538"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108144336538.png" alt="image-20210108144336538"></p>
 <h3 id="3-2-1、依赖关系"><a href="#3-2-1、依赖关系" class="headerlink" title="3.2.1、依赖关系"></a>3.2.1、依赖关系</h3><p>​    只要是在类中用到了对方，那么他们之间就存在依赖关系。如果没有对方，连编译都通过不了。</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PersonServiceBean</span><span class="token punctuation">{</span>
     <span class="token keyword">public</span> PersonDao personDao<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//类</span>
@@ -1121,7 +1121,7 @@
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IDCard</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Department</span><span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108150012386.png" alt="image-20210108150012386"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108150012386.png" alt="image-20210108150012386"></p>
 <p><strong>小结：</strong></p>
 <ol>
 <li>类中用到了对方</li>
@@ -1142,7 +1142,7 @@
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PersonServiceBean</span> <span class="token keyword">extends</span> <span class="token class-name">DaoSuppert</span><span class="token punctuation">{</span>
 
 <span class="token punctuation">}</span></code></pre>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108151856745.png" alt="image-20210108151856745"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108151856745.png" alt="image-20210108151856745"></p>
 <p><strong>小结：</strong></p>
 <ol>
 <li>泛化关系实际上就是继承关系</li>
@@ -1157,7 +1157,7 @@
 
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108153007576.png" alt="image-20210108153007576"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108153007576.png" alt="image-20210108153007576"></p>
 <h3 id="3-2-4、关联关系"><a href="#3-2-4、关联关系" class="headerlink" title="3.2.4、关联关系"></a>3.2.4、关联关系</h3><p>​    关联关系实际上就是类和类之间的联系，它是依赖关系的特例</p>
 <p>​    关联关系具有导航性：即双向关系或单向关系</p>
 <p>​    关联关系具有多重性：如“1”（表示有且仅有一个），“0….”（表示0个或者多个），</p>
@@ -1189,7 +1189,7 @@
         <span class="token keyword">this</span><span class="token punctuation">.</span>monitor <span class="token operator">=</span> monitor<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>  
 <span class="token punctuation">}</span></code></pre>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108155115574.png" alt="image-20210108155115574"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108155115574.png" alt="image-20210108155115574"></p>
 <p>如果Mouse，Monitor和Computer是不可分离的，则升级为<strong>组合关系</strong></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Computer</span><span class="token punctuation">{</span>
     <span class="token keyword">private</span> Mouse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Mouse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1213,7 +1213,7 @@
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Head</span><span class="token punctuation">{</span>
 
 <span class="token punctuation">}</span></code></pre>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108161621202.png" alt="image-20210108161621202"> </p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210108161621202.png" alt="image-20210108161621202"> </p>
 <h1 id="4、设计模式概述"><a href="#4、设计模式概述" class="headerlink" title="4、设计模式概述"></a>4、设计模式概述</h1><h2 id="4-1、设计模式介绍"><a href="#4-1、设计模式介绍" class="headerlink" title="4.1、设计模式介绍"></a>4.1、设计模式介绍</h2><ol>
 <li>设计模式是程序员在面对同类软件工程设计问题所总结出来的有用的经验，模式不是代码，而是某类问题的通用解决方案，设计模式代表了最佳的实践。这些解决方案是众多软件开发人员经过相当长一段时间的试验和错误总结出来的。</li>
 <li>设计模式是本质提高软件的维护性，通用性和扩展性，并降低软件的复杂度。</li>
@@ -1593,7 +1593,7 @@
 <li>完成披萨店订购功能</li>
 </ol>
 <p><strong>传统方法</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210109181410834.png" alt="image-20210109181410834"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210109181410834.png" alt="image-20210109181410834"></p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//传统方法</span>
 <span class="token comment" spellcheck="true">//将Pizza类做成抽象类</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Pizza</span> <span class="token punctuation">{</span>
@@ -1762,7 +1762,7 @@
 </ol>
 <p><strong>简单工厂模式的设计方案</strong></p>
 <p>定义一个可以实例化Pizza对象的类，封装创建对象的代码。</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210112172914146.png" alt="image-20210112172914146"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210112172914146.png" alt="image-20210112172914146"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> factory<span class="token punctuation">.</span>simplefactory<span class="token punctuation">.</span>pizzastore<span class="token punctuation">.</span>order<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> factory<span class="token punctuation">.</span>simplefactory<span class="token punctuation">.</span>pizzastore<span class="token punctuation">.</span>pizza<span class="token punctuation">.</span>CheesePizza<span class="token punctuation">;</span>
@@ -1952,7 +1952,7 @@
 <p>使用简单工厂模式类，比如BJPizzaSimpleFactory，LDPizzaSimpleFactory等等，从当前这个案例来说，也是可以的，但是考虑到项目的规模，以及软件的可维护性，可扩展性都不是特别好。</p>
 <p><strong>思路二</strong></p>
 <p>使用工厂方法模式</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210112222111362.png" alt="image-20210112222111362"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210112222111362.png" alt="image-20210112222111362"></p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//创建四种披萨</span>
 <span class="token keyword">package</span> factory<span class="token punctuation">.</span>factorymethod<span class="token punctuation">.</span>pizzastore<span class="token punctuation">.</span>pizza<span class="token punctuation">;</span>
 
@@ -2075,7 +2075,7 @@
 <li>从设计层面看，抽象工厂模式就是对简单工厂模式的改进（或者称为进一步的抽象）。</li>
 <li>将工厂抽象成两层，AbsFactory（抽象工厂）和具体实现的工厂子类。程序员可以根据创建对象类型使用对应的工厂子类。这样将单个的简单工厂变成了工厂簇，更利于代码的维护和发展。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210115193954740.png" alt="image-20210115193954740"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210115193954740.png" alt="image-20210115193954740"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> factory<span class="token punctuation">.</span>absfactory<span class="token punctuation">.</span>pizzastore<span class="token punctuation">.</span>pizza<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BJCheesePizza</span> <span class="token keyword">extends</span> <span class="token class-name">Pizza</span> <span class="token punctuation">{</span>
@@ -2329,7 +2329,7 @@
 <h2 id="4-5、原型模式"><a href="#4-5、原型模式" class="headerlink" title="4.5、原型模式"></a>4.5、原型模式</h2><p><strong>克隆羊问题</strong></p>
 <p>现在有一只羊tom，姓名为：tom，年龄为：1，颜色为：白色，请编写程序创建和tom羊属性完全相同的10只羊。</p>
 <p><strong>传统方法</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210115215617906.png" alt="image-20210115215617906"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210115215617906.png" alt="image-20210115215617906"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> prototype<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Sheep</span> <span class="token punctuation">{</span>
@@ -2412,7 +2412,7 @@
 <li>形象的理解:孙大圣拔出猴毛，变出其他孙大圣。</li>
 </ol>
 <p><strong>原理结构图说明</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210116153258208.png" alt="image-20210116153258208"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210116153258208.png" alt="image-20210116153258208"></p>
 <ol>
 <li>Prototype:原型类，声明一个克隆自己的接口</li>
 <li>ConcretePrototype:具体的原型类，实现一个克隆自己的操作。</li>
@@ -2535,7 +2535,7 @@ deep <span class="token operator">=</span> supper<span class="token punctuation"
 <li>需要建房子：这一过程为打桩，砌墙，封顶</li>
 <li>房子各有各样的，比如普通房，高楼，别墅，各种房子的过程虽然一样，但是要求不要相同的</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210116160348988.png" alt="image-20210116160348988"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210116160348988.png" alt="image-20210116160348988"></p>
 <p><strong>传统方法</strong></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> builder<span class="token punctuation">;</span>
 
@@ -2602,7 +2602,7 @@ deep <span class="token operator">=</span> supper<span class="token punctuation"
 <li>ConcreBuilder（具体建造者）：实现接口，构建和装配各个部件。</li>
 <li>Director（指挥者）：构建一个使用Builder接口的对象。它主要适用于创建一个复杂的对象。它主要有两个作用，一是：隔离了客户与对象的生产过程。二是：负责控制产品对象的生产过程。</li>
 </ol>
-<h3 id="4-6-2、建造者模式应用实例"><a href="#4-6-2、建造者模式应用实例" class="headerlink" title="4.6.2、建造者模式应用实例"></a>4.6.2、建造者模式应用实例</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210116170912763.png" alt="image-20210116170912763"></p>
+<h3 id="4-6-2、建造者模式应用实例"><a href="#4-6-2、建造者模式应用实例" class="headerlink" title="4.6.2、建造者模式应用实例"></a>4.6.2、建造者模式应用实例</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210116170912763.png" alt="image-20210116170912763"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> builder<span class="token punctuation">.</span>improve<span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">//产品--->Product</span>
@@ -2786,7 +2786,7 @@ deep <span class="token operator">=</span> supper<span class="token punctuation"
 <li>用户调用适配器转换出来的目标接口方法，适配器再调用被适配者的相关接口方法。</li>
 <li>用户收到反馈结果，感觉只是和目标接口交互，如图</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210119155046603.png" alt="image-20210119155046603"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210119155046603.png" alt="image-20210119155046603"></p>
 <h3 id="4-7-3、类适配器模式"><a href="#4-7-3、类适配器模式" class="headerlink" title="4.7.3、类适配器模式"></a>4.7.3、类适配器模式</h3><p><strong>类适配器模式介绍</strong></p>
 <p>基本介绍：Adapter类，通过继承src类，实现dst类接口，完成src-&gt;dst的适配</p>
 <p><strong>类适配器应用实例</strong></p>
@@ -2795,7 +2795,7 @@ deep <span class="token operator">=</span> supper<span class="token punctuation"
 <p>以生活中充电器的例子来讲解适配器，充电器本身相当于Adapter，220V交流电相当于src（即被适配者），我们的目的dst（即 目标）是5V直流电</p>
 </li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210119163516119.png" alt="image-20210119163516119"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210119163516119.png" alt="image-20210119163516119"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> adapter<span class="token punctuation">.</span>classadapter<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//被适配类</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Voltage220V</span> <span class="token punctuation">{</span>
@@ -2871,7 +2871,7 @@ deep <span class="token operator">=</span> supper<span class="token punctuation"
 <li>以生活中充电器的例子来讲解适配器，充电桩本身相当于Adapter，220V交流电相当于src（即被适配者），我们的目的dst（即目标）是5V直流电，使用<strong>对象适配器模式完成</strong></li>
 <li>思路分析：只需要修改适配器即可，如下</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210119190653652.png" alt="image-20210119190653652"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210119190653652.png" alt="image-20210119190653652"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> adapter<span class="token punctuation">.</span>objectadapter<span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">//适配器类继承被适配的类</span>
@@ -2931,7 +2931,7 @@ deep <span class="token operator">=</span> supper<span class="token punctuation"
 <li>当不需要全部实现接口提供的方法时，可以先设计一个抽象类实现接口，并为该接口中每个方法提供一个默认实现（空方法），那么该抽象类的子类可有选择的覆盖父类的某些方法来实现需求。</li>
 <li>适用于一个接口不想使用其所有方法的情况。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210120170102033.png" alt="image-20210120170102033"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210120170102033.png" alt="image-20210120170102033"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> adapter<span class="token punctuation">.</span>interfaceadapter<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Interface4</span> <span class="token punctuation">{</span>
@@ -3013,7 +3013,7 @@ public class Client {
 </ol>
 <h2 id="4-8、桥接模式"><a href="#4-8、桥接模式" class="headerlink" title="4.8、桥接模式"></a>4.8、桥接模式</h2><p><strong>手机操作问题</strong></p>
 <p>现在对不同手机类型的不同手机品牌实现操作编程（比如：开机，关机，上网，打电话等）</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210120181500740.png" alt="image-20210120181500740"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210120181500740.png" alt="image-20210120181500740"></p>
 <p><strong>传统方案解决手机操作问题分析</strong></p>
 <ol>
 <li>扩展性问题（类爆炸），如果我们再增加手机的样式（旋转式），就需要增加各个品牌手机的类，同样如果我们增加一个手机品牌，也要在各个手机样式类下增加。</li>
@@ -3025,7 +3025,7 @@ public class Client {
 <li>是一种结构型设计模式。</li>
 <li>Bridge模式基于类的最小设计原则，通过使用封装，聚合及继承等行为让不同的类承担不同的职责。它的主要特点是把抽象（Abstraction）与行为实现（implementation）分离开来，从而可以保持各部分的独立性以及对他们的功能扩展。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210120191608744.png" alt="image-20210120191608744"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210120191608744.png" alt="image-20210120191608744"></p>
 <h3 id="4-8-2、桥接模式实现案例"><a href="#4-8-2、桥接模式实现案例" class="headerlink" title="4.8.2、桥接模式实现案例"></a>4.8.2、桥接模式实现案例</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> bridge<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//接口</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Brand</span> <span class="token punctuation">{</span>
@@ -3177,7 +3177,7 @@ public class Client {
 <h3 id="4-8-3、桥接模式在JDBC的源码剖析"><a href="#4-8-3、桥接模式在JDBC的源码剖析" class="headerlink" title="4.8.3、桥接模式在JDBC的源码剖析"></a>4.8.3、桥接模式在JDBC的源码剖析</h3><ol>
 <li>jdbc的Driver接口，如果从桥接模式来看，Driver就是一个接口，下面可以有MySQL的Driver，Oracle的Driver，这些就可以当做实现类接口。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210121150137151.png" alt="image-20210121150137151"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210121150137151.png" alt="image-20210121150137151"></p>
 <h3 id="4-8-4、桥接模式的注意事项和细节"><a href="#4-8-4、桥接模式的注意事项和细节" class="headerlink" title="4.8.4、桥接模式的注意事项和细节"></a>4.8.4、桥接模式的注意事项和细节</h3><ol>
 <li>实现了抽象和实现部分的分离，从而极大的提供了系统的灵活性，让抽象部分和实体部分独立开来，这有助于系统进行分层设计，从而产生更好的结构化系统。</li>
 <li>对于系统的高层部分，只需要知道抽象部分和实现部分的接口就可以了，其他的部分由具体业务来完成。</li>
@@ -3211,7 +3211,7 @@ public class Client {
 <li>使用OO的来计算不同种类咖啡的费用：客户可以点单品咖啡，也可以点单品咖啡+调料组合。</li>
 </ol>
 <p><strong>方案一：较差的方案</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210121155242620.png" alt="image-20210121155242620"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210121155242620.png" alt="image-20210121155242620"></p>
 <p><strong>方案一：解决星巴克咖啡订单问题分析</strong></p>
 <ol>
 <li>Drink是一个抽象类，表示饮料。</li>
@@ -3222,7 +3222,7 @@ public class Client {
 <li>问题：这样设计，会有很多的类，当我们增加一个单品咖啡，或者一个新的调料，类的数量会剧增，造成类爆炸。</li>
 </ol>
 <p><strong>方案二：较好的方案</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122130929692.png" alt="image-20210122130929692"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122130929692.png" alt="image-20210122130929692"></p>
 <p><strong>方案二问题分析</strong></p>
 <ol>
 <li>方案2可以控制类的数量，不至于造成类爆炸问题。</li>
@@ -3251,11 +3251,11 @@ public class Client {
 <li><p>在如图Component与ConcreteComponent之间，如果ConcreteComponent类很多，还可以设计一个缓冲层，将共有的部分提取出来，抽象层是一个类。</p>
 </li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122133858614.png" alt="image-20210122133858614"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122133858614.png" alt="image-20210122133858614"></p>
 <p><strong>用装饰者模式设计的方案</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122134420759.png" alt="image-20210122134420759"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122134420759.png" alt="image-20210122134420759"></p>
 <p><strong>装饰者模式下的订单：两份巧克力 + 一份牛奶的LongBlack</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122134714083.png" alt="image-20210122134714083"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122134714083.png" alt="image-20210122134714083"></p>
 <p><strong>说明：</strong></p>
 <ol>
 <li>Milk包含了LongBlack</li>
@@ -3423,11 +3423,11 @@ public class Client {
 <h3 id="4-9-3、装饰者模式在JDK应用中的源码分析"><a href="#4-9-3、装饰者模式在JDK应用中的源码分析" class="headerlink" title="4.9.3、装饰者模式在JDK应用中的源码分析"></a>4.9.3、装饰者模式在JDK应用中的源码分析</h3><ol>
 <li>Java的IO结构，FilterInputStream就是一个装饰者</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122161917360.png" alt="image-20210122161917360"></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122162839804.png" alt="image-20210122162839804"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122161917360.png" alt="image-20210122161917360"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122162839804.png" alt="image-20210122162839804"></p>
 <h2 id="4-10、组合模式"><a href="#4-10、组合模式" class="headerlink" title="4.10、组合模式"></a>4.10、组合模式</h2><p><strong>学校院系展示需求</strong></p>
 <p>编写程序展示一个学校院系结构：需求是这样，要在一个页面中展示出学校的院系组成，一个学校有多个学院，一个学院有多个系。如图</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122163320051.png" alt="image-20210122163320051"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122163320051.png" alt="image-20210122163320051"></p>
 <p> 传统方案直接继承</p>
 <p><strong>传统方案解决学校院系展示存在的问题分析</strong></p>
 <ol>
@@ -3446,9 +3446,9 @@ public class Client {
 <ol>
 <li>组合模式解决这样的问题，当我们的要处理的对象可以生成一颗树形结构，而我们要对树上的节点和叶子进行操作时，它能够提供一致的方式，而不用考虑它是节点还是叶子。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123095431829.png" alt="image-20210123095431829"></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123110116950.png" alt="image-20210123110116950"></p>
-<h3 id="4-10-2、组合模式解决学校院系展示问题"><a href="#4-10-2、组合模式解决学校院系展示问题" class="headerlink" title="4.10.2、组合模式解决学校院系展示问题"></a>4.10.2、组合模式解决学校院系展示问题</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122232754887.png" alt="image-20210122232754887"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123095431829.png" alt="image-20210123095431829"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123110116950.png" alt="image-20210123110116950"></p>
+<h3 id="4-10-2、组合模式解决学校院系展示问题"><a href="#4-10-2、组合模式解决学校院系展示问题" class="headerlink" title="4.10.2、组合模式解决学校院系展示问题"></a>4.10.2、组合模式解决学校院系展示问题</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210122232754887.png" alt="image-20210122232754887"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> composite<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">OrganizationComponent</span> <span class="token punctuation">{</span>
@@ -3651,7 +3651,7 @@ public class Client {
 <h3 id="4-10-3、组合模式在JDK集合的源码分析"><a href="#4-10-3、组合模式在JDK集合的源码分析" class="headerlink" title="4.10.3、组合模式在JDK集合的源码分析"></a>4.10.3、组合模式在JDK集合的源码分析</h3><ol>
 <li>Java的集合类 HashMap就使用了组合模式</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123102850710.png" alt="image-20210123102850710"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123102850710.png" alt="image-20210123102850710"></p>
 <ul>
 <li>Map就是一个抽象的构建（类似我们的Component）</li>
 <li>HashMap是一个中间的构建（Composite），实现了相关的方法（put，putall）</li>
@@ -3680,7 +3680,7 @@ public class Client {
 <li>观影结束后，关闭各种设备</li>
 </ul>
 <p><strong>传统方式解决影院管理</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123111041464.png" alt="image-20210123111041464"><strong>传统方式解决影院管理问题分析</strong></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123111041464.png" alt="image-20210123111041464"><strong>传统方式解决影院管理问题分析</strong></p>
 <ol>
 <li>在ClientTest的main方法中，创建各个子系统的对象，并直接去调用子系统（对象）相关方法，会造成调用过程混乱，没有清晰的过程。</li>
 <li>不利于在ClientTest中，去维护对子系统的操作。</li>
@@ -3691,7 +3691,7 @@ public class Client {
 <li>外观模式（Facade），也叫“过程模式”：外观模式为子系统中的一组接口提供一个一致的界面，此模式定义了一个高层接口，这个接口使得一子系统更加容易使用。</li>
 <li>外观模式通过定义一个一致的接口，用以屏蔽内部子系统的细节，使得调用端只需跟这个接口发生调用，而无需关系这个子系统的内部细节。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123112859703.png" alt="image-20210123112859703"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123112859703.png" alt="image-20210123112859703"></p>
 <p><strong>原理类图说明</strong></p>
 <ol>
 <li>外观类（Facade）：为调用端提供统一的调用接口，外观类知道哪些子系统负责处理请求，从而将调用端的请求代理给适当子系统对象。</li>
@@ -3920,7 +3920,7 @@ public class Client {
 <h3 id="4-11-3、外观模式在MyBatis框架应用的源码分析"><a href="#4-11-3、外观模式在MyBatis框架应用的源码分析" class="headerlink" title="4.11.3、外观模式在MyBatis框架应用的源码分析"></a>4.11.3、外观模式在MyBatis框架应用的源码分析</h3><ol>
 <li>MyBatis中的Configguration去创建MetaObject对象使用到外观模式</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123142153566.png" alt="image-20210123142153566"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123142153566.png" alt="image-20210123142153566"></p>
 <h3 id="4-11-4、外观模式的注意事项和细节"><a href="#4-11-4、外观模式的注意事项和细节" class="headerlink" title="4.11.4、外观模式的注意事项和细节"></a>4.11.4、外观模式的注意事项和细节</h3><ol>
 <li>外观模式对外屏蔽了子系统的细节，因此外观模式降低了客户端对子系统使用的复杂度。</li>
 <li>外观模式对客户端与子系统的耦合关系，让子系统内部的模块更容易维护和扩展。</li>
@@ -3940,7 +3940,7 @@ public class Client {
 <li>直接复制粘贴一份，然后根据客户不同要求，进行定制修改</li>
 <li>给每个网站租用一个空间</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123144554642.png" alt="image-20210123144554642"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123144554642.png" alt="image-20210123144554642"></p>
 <p><strong>传统方案解决网站展现项目分析</strong></p>
 <ol>
 <li>需要的网站结构相似度很高，而且都不是高访问量网站，如果分成多个虚拟空间来处理，相当于一个相同的网站的实例对象很多，造成服务器的资源浪费。</li>
@@ -3955,7 +3955,7 @@ public class Client {
 <li>享元模式经典的应用场景就是池技术了，<strong>String常量池，数据库连接池，缓冲池</strong>等等都是享元模式的应用，享元模式是池技术的重要实现方式。</li>
 </ol>
 <p><strong>享元模式的原理类图</strong></p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123152953104.png" alt="image-20210123152953104"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123152953104.png" alt="image-20210123152953104"></p>
 <p><strong>说明</strong></p>
 <ol>
 <li>FlyWeight是抽象的享元角色，他是产品的抽象类，同时定义出对象的<strong>外部状态和内部状态</strong>的接口和实现</li>
@@ -3971,7 +3971,7 @@ public class Client {
 <li>外部状态指对象得以依赖的一个标记，是随环境改变而改变的，不可共享的状态。</li>
 <li>举个例子：围棋理论上有361个空位可以放棋子，每盘棋都有可能有两三百个棋子对象产生，因为内存空间有限，一台服务器很难维持更多的玩家玩围棋游戏，如果用享元模式来处理棋子，那么棋子对象就可以减少到只有两个实例，这样就很好的解决了对象的开销问题。</li>
 </ol>
-<h3 id="4-12-3、享元模式解决网站展现项目"><a href="#4-12-3、享元模式解决网站展现项目" class="headerlink" title="4.12.3、享元模式解决网站展现项目"></a>4.12.3、享元模式解决网站展现项目</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123194158319.png" alt="image-20210123194158319"></p>
+<h3 id="4-12-3、享元模式解决网站展现项目"><a href="#4-12-3、享元模式解决网站展现项目" class="headerlink" title="4.12.3、享元模式解决网站展现项目"></a>4.12.3、享元模式解决网站展现项目</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123194158319.png" alt="image-20210123194158319"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> flyweight<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">WebSite</span> <span class="token punctuation">{</span>
@@ -4072,7 +4072,7 @@ public class Client {
 <h3 id="4-12-4、享元模式在KDK-Interger的应用源码分析"><a href="#4-12-4、享元模式在KDK-Interger的应用源码分析" class="headerlink" title="4.12.4、享元模式在KDK-Interger的应用源码分析"></a>4.12.4、享元模式在KDK-Interger的应用源码分析</h3><ol>
 <li>Interger中的享元模式</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123195446898.png" alt="image-20210123195446898"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210123195446898.png" alt="image-20210123195446898"></p>
 <p><strong>小结</strong></p>
 <ol>
 <li>在valueOf方法中，先判断值是否在IntegerCache中，如果不在，就创建新的Integer（new），否则，就直接从缓存池中返回。</li>
@@ -4093,7 +4093,7 @@ public class Client {
 <li>被代理的对象可以是远程对象，创建开销大的对象或者需要安全控制的对象</li>
 <li>代理模式有不同的形式，主要是三种：<strong>静态代理，动态代理，Cglib代理（可以在内存中动态创建对象，不需要实现接口）</strong></li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210124105501434.png" alt="image-20210124105501434"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210124105501434.png" alt="image-20210124105501434"></p>
 <h3 id="4-13-2、静态代理"><a href="#4-13-2、静态代理" class="headerlink" title="4.13.2、静态代理"></a>4.13.2、静态代理</h3><p><strong>静态代理模式的介绍</strong></p>
 <p>静态代理在使用时，需要定义接口或者父类，被代理对象（即目标对象）与代理对象一起实现相同的接口或者继承相同的接口</p>
 <p><strong>应用实例</strong></p>
@@ -4104,7 +4104,7 @@ public class Client {
 <li>调用的时候通过调用代理对象的方法来调用目标对象</li>
 <li><strong>特别提醒：</strong>代理对象与目标对象要实现相同的接口，然后通过调用相同的的方法来调用目标对象的方法。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210124123713473.png" alt="image-20210124123713473"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210124123713473.png" alt="image-20210124123713473"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> staticproxy<span class="token punctuation">;</span>
 
 
@@ -4176,7 +4176,7 @@ public class Client {
 <li>JDK实现代理只需要使用newProxyInstance方法，但是该方法需要接受三个参数，完整的写法是：</li>
 </ol>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">static</span> Object <span class="token function">newProxyInstance</span><span class="token punctuation">(</span>ClassLoader loader<span class="token punctuation">,</span>Class<span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">></span><span class="token punctuation">[</span><span class="token punctuation">]</span>interfaces<span class="token punctuation">,</span>invocationHandler h<span class="token punctuation">)</span></code></pre>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210124140843142.png" alt="image-20210124140843142"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210124140843142.png" alt="image-20210124140843142"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> Proxy<span class="token punctuation">.</span>dynamic<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//接口</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span>  <span class="token class-name">ITeacherDao</span> <span class="token punctuation">{</span>
@@ -4273,7 +4273,7 @@ public class Client {
 <li><p>在内存中动态构建子类，注意代理的类不能为final，否则会报错（java.lang.IllegalArgumentException）</p>
 </li>
 <li><p>目标对象的方法如果为final/static,那么就不会被拦截，既不会执行目标对象额外的业务方法</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210125132608017.png" alt="image-20210125132608017"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210125132608017.png" alt="image-20210125132608017"></p>
 </li>
 </ol>
 <h3 id="4-13-5、代理模式（Proxy）的变体"><a href="#4-13-5、代理模式（Proxy）的变体" class="headerlink" title="4.13.5、代理模式（Proxy）的变体"></a>4.13.5、代理模式（Proxy）的变体</h3><p><strong>1. 防火墙代理</strong></p>
@@ -4295,13 +4295,13 @@ public class Client {
 <li>简单说，模板方法模式定义一个操作中的算法的骨架，而将一些步骤延迟到子类中，使得子类可以不改变一个算法的结构，就可以重定义该算法的某些特定步骤。</li>
 <li>这种类型的设计模式属于行为型模式</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210125150616394.png" alt="image-20210125150616394"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210125150616394.png" alt="image-20210125150616394"></p>
 <p><strong>原理类图说明</strong></p>
 <ol>
 <li>AbstractClass抽象类，类中实现了模板方法，定义了算法的骨架，具体子类需要去实现其他的抽象方法 operationr2,3,4.</li>
 <li>ConcreteClass实现抽象方法operationr2,3,4，以完成算法中特点子类的步骤</li>
 </ol>
-<h3 id="4-14-2、模板方法模式解决豆浆制作问题"><a href="#4-14-2、模板方法模式解决豆浆制作问题" class="headerlink" title="4.14.2、模板方法模式解决豆浆制作问题"></a>4.14.2、模板方法模式解决豆浆制作问题</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210125152246729.png" alt="image-20210125152246729"></p>
+<h3 id="4-14-2、模板方法模式解决豆浆制作问题"><a href="#4-14-2、模板方法模式解决豆浆制作问题" class="headerlink" title="4.14.2、模板方法模式解决豆浆制作问题"></a>4.14.2、模板方法模式解决豆浆制作问题</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210125152246729.png" alt="image-20210125152246729"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> Template<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//抽象类，表示豆浆</span>
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">SoyaMilk</span> <span class="token punctuation">{</span>
@@ -4492,7 +4492,7 @@ public class Client {
 <li>通俗易懂的理解，将军发布命令，士兵去执行其中有几个角色，将军（命令发布者），士兵（命令的具体执行者），命令（连接将军和士兵）</li>
 <li>Invoker是调用者（将军），Receiver是被调用者（士兵），MyCommand是命令，实现了Command接口，持有接收对象</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210126131553574.png" alt="image-20210126131553574"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210126131553574.png" alt="image-20210126131553574"></p>
 <p><strong>原理类图说明</strong></p>
 <ol>
 <li>Invoker是调用者角色</li>
@@ -4500,7 +4500,7 @@ public class Client {
 <li>Receiver：接收者角色，知道如何实施和执行一个请求相关的操作。</li>
 <li>ConcreteCommand：将一个接收者对象与一个动作，调用接收者相应的操作，实现execute。</li>
 </ol>
-<h3 id="4-15-2、命令模式解决智能生活项目"><a href="#4-15-2、命令模式解决智能生活项目" class="headerlink" title="4.15.2、命令模式解决智能生活项目"></a>4.15.2、命令模式解决智能生活项目</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210126134630061.png" alt="image-20210126134630061"></p>
+<h3 id="4-15-2、命令模式解决智能生活项目"><a href="#4-15-2、命令模式解决智能生活项目" class="headerlink" title="4.15.2、命令模式解决智能生活项目"></a>4.15.2、命令模式解决智能生活项目</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210126134630061.png" alt="image-20210126134630061"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> command<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//创建命令接口</span>
 <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Command</span> <span class="token punctuation">{</span>
@@ -4823,7 +4823,7 @@ public class Client {
 <li><strong>访问者模式的基本工作原理是：在被访问的类里面加一个对外提供接待访问者的接口。</strong></li>
 <li><strong>访问者模式主要应用场景：需要对一个对象结构中的对象进行很多不同操作</strong>（这些操作彼此没有关联），同时需要避免让这些操作“污染”这些对象的类，可以选用访问者模式解决。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210127141449146.png" alt="image-20210127141449146"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210127141449146.png" alt="image-20210127141449146"></p>
 <p><strong>访问者模式的角色和职责</strong></p>
 <ol>
 <li>Visitor是抽象访问者，为该对象结构中的ConcreteElement的每一个类声明一个visit操作。</li>
@@ -4834,7 +4834,7 @@ public class Client {
 </ol>
 <h3 id="4-16-2、访问者模式应用实例"><a href="#4-16-2、访问者模式应用实例" class="headerlink" title="4.16.2、访问者模式应用实例"></a>4.16.2、访问者模式应用实例</h3><p><strong>应用实例要求</strong></p>
 <p>将人分为男人和女人，对歌手进行评测，当看完某个歌手表演后，得到他们对该歌手不同的评价（评价 有不同的种类，比如 成功，失败等），请使用访问者模式来说实现。</p>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210127150957421.png" alt="image-20210127150957421"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210127150957421.png" alt="image-20210127150957421"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> visitor<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Action</span> <span class="token punctuation">{</span>
@@ -4961,7 +4961,7 @@ public class Client {
 <li>上面提到的双分派，所谓双分派是指不管类怎么变化，我们都能找到期望的方法运行。双分派意味着得到执行的操作取决于请求的种类和两个接收者的类型</li>
 <li>假设我们要添加一个NoBat的状态类，考察Man类和Woman类的反映，由于使用了双分派，只需要增加一个Action子类即可在客户端调用，不需要改动任何其他类的代码。</li>
 </ul>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210127171011926.png" alt="image-20210127171011926"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210127171011926.png" alt="image-20210127171011926"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> visitor<span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
@@ -5031,7 +5031,7 @@ public class Client {
 <li>如果我们的集合元素是用不同的方式实现的，有数组，还有Java的集合类，或者还有其他方式，当客户端要遍历这些集合元素的时候就要适用多种遍历方式而且还会暴露元素的内部结构，可以考虑使用迭代器模式解决。</li>
 <li>迭代器模式，提供一种遍历集合元素的统一接口，用一致的方法去遍历集合元素，不需要知道集合对象的底层表示，即：不暴露其内部结构。</li>
 </ol>
-<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210128115820823.png" alt="image-20210128115820823"></p>
+<p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210128115820823.png" alt="image-20210128115820823"></p>
 <p><strong>迭代器模式的角色和职责</strong></p>
 <ol>
 <li>Iterator：迭代器接口，是系统提供，hasNext，next，remove。</li>
@@ -5040,7 +5040,7 @@ public class Client {
 <li>ConcreteAggregate：具体的聚合持有对象，并提供一个方法，返回一个迭代器，该迭代器可以正确遍历集合。</li>
 <li>Client：客户端，通过Iterator和Aggregate依赖子类。</li>
 </ol>
-<h3 id="4-17-2、以迭代器模式实现案例"><a href="#4-17-2、以迭代器模式实现案例" class="headerlink" title="4.17.2、以迭代器模式实现案例"></a>4.17.2、以迭代器模式实现案例</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/2021/01/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210128123356781.png" alt="image-20210128123356781"></p>
+<h3 id="4-17-2、以迭代器模式实现案例"><a href="#4-17-2、以迭代器模式实现案例" class="headerlink" title="4.17.2、以迭代器模式实现案例"></a>4.17.2、以迭代器模式实现案例</h3><p><img src="/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20210128123356781.png" alt="image-20210128123356781"></p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> iterator<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//系</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Department</span> <span class="token punctuation">{</span>
