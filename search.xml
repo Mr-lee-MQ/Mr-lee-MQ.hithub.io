@@ -21503,4 +21503,28 @@ public class Client {
         <tag>后端</tag>
       </tags>
   </entry>
+  <entry>
+    <title>SSM_Demo</title>
+    <url>/Mr-lee-MQ.hithub.io/SSM-Demo/</url>
+    <content><![CDATA[<h1 id="SSM-Demo"><a href="#SSM-Demo" class="headerlink" title="SSM_Demo"></a>SSM_Demo<a id="more"></a></h1><h2 id="1、基础环境搭建"><a href="#1、基础环境搭建" class="headerlink" title="1、基础环境搭建"></a>1、基础环境搭建</h2><ol>
+<li>创建一个Maven工程</li>
+<li>引入项目依赖的jar包<ul>
+<li>Spring</li>
+<li>SpringMVC</li>
+<li>Mybatis</li>
+<li>数据库连接池，驱动包</li>
+<li>其他包（jstl，servlet-api，junit）</li>
+</ul>
+</li>
+<li>引入bootstrap前端框架</li>
+<li>编写SSM整合的关键配置文件<ul>
+<li>web.xml，spring,springmvc，mybatis</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>练手Demo</tag>
+      </tags>
+  </entry>
 </search>
