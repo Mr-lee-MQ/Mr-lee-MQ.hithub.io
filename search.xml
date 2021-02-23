@@ -21547,4 +21547,36 @@ public class Client {
         <tag>后端</tag>
       </tags>
   </entry>
+  <entry>
+    <title>前端面试</title>
+    <url>/Mr-lee-MQ.hithub.io/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="前端面试"><a href="#前端面试" class="headerlink" title="前端面试"></a>前端面试<a id="more"></a></h1>]]></content>
+      <tags>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>后端面试题总结</title>
+    <url>/Mr-lee-MQ.hithub.io/%E5%90%8E%E7%AB%AF%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<h1 id="后端面试"><a href="#后端面试" class="headerlink" title="后端面试"></a>后端面试<a id="more"></a></h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="1、三个等号和两个等号的区别（“-”和-“-”）"><a href="#1、三个等号和两个等号的区别（“-”和-“-”）" class="headerlink" title="1、三个等号和两个等号的区别（“ ===  ”和  “ == ”）"></a>1、三个等号和两个等号的区别（“ ===  ”和  “ == ”）</h3><ol>
+<li><p>===：称为等同符，当两边值的类型相同时，直接比较值，若类型不相同，直接返回false；</p>
+</li>
+<li><p>==：称为等值符，当等号两边的类型相同时，直接比较值是否相等，若不相同，则先转化为类型相同的值，再进行比较；</p>
+</li>
+</ol>
+<p><strong>类型转换规则：</strong></p>
+<ol>
+<li><p>如果等号两边是boolean、string、number三者中任意两者进行比较时，优先转换为数字进行比较。</p>
+</li>
+<li><p>如果等号两边出现了null或undefined,null和undefined除了和自己相等，就彼此相等。</p>
+<p>注意：NaN==NaN //返回false，NaN和所有值包括自己都不相等。</p>
+</li>
+</ol>
+<p>​        (<strong>NaN 属性是代表非数字值的特殊值</strong>。该属性用于指示某个值不是数字。可以把 Number 对象设置为该值，来指示其不是数字值。</p>
+<p>​    <strong>提示：</strong>  请使用 isNaN() 全局函数来判断一个值是否是 NaN 值。)</p>
+]]></content>
+      <tags>
+        <tag>面试</tag>
+      </tags>
+  </entry>
 </search>
