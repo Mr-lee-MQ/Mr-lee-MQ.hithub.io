@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端面试, Mr-lee">
+    <meta name="keywords" content="Vue小案例, Mr-lee">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端面试 | Mr-lee</title>
+    <title>Vue小案例 | Mr-lee</title>
     <link rel="icon" type="image/png" href="/Mr-lee-MQ.hithub.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/Mr-lee-MQ.hithub.io/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/Mr-lee-MQ.hithub.io/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/Mr-lee-MQ.hithub.io/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端面试</h1>
+                    <h1 class="description center-align post-title">Vue小案例</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/Mr-lee-MQ.hithub.io/tags/%E9%9D%A2%E8%AF%95/">
-                                <span class="chip bg-color">面试</span>
+                            <a href="/Mr-lee-MQ.hithub.io/tags/%E6%A1%86%E6%9E%B6/">
+                                <span class="chip bg-color">框架</span>
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-23
+                    2021-02-27
                 </div>
                 
 
@@ -481,7 +481,58 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前端面试"><a href="#前端面试" class="headerlink" title="前端面试"></a>前端面试<a id="more"></a></h1>
+                <h1 id="Vue小案例"><a href="#Vue小案例" class="headerlink" title="Vue小案例"></a>Vue小案例<a id="more"></a></h1><h2 id="计数器"><a href="#计数器" class="headerlink" title="计数器"></a>计数器</h2><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>v-on指令代码<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>screen<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>main.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>main.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sub<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>num<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>add<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+      <span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        el<span class="token punctuation">:</span> <span class="token string">"#app"</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          num<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          add<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"别点啦，最大啦"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          sub<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"别点啦，最小啦"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre>
+<ol>
+<li>创建Vue示例时：el（挂载点），data（数据），methods（方法）</li>
+<li>v-on指令的作用是绑定事件，简写为@</li>
+<li>方法中通过this，关键字获取data中的数据</li>
+<li>v-text指令的作用是：设置元素的文本值，简写为 { { } }</li>
+<li>v-html指令的作用是：设置元素的innerHTML</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -507,7 +558,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</a>
+                    <a href="https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/Vue%E5%B0%8F%E6%A1%88%E4%BE%8B/">https://mr-lee-mq.github.io/Mr-lee-MQ.hithub.io/Mr-lee-MQ.hithub.io/Vue%E5%B0%8F%E6%A1%88%E4%BE%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -545,8 +596,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/Mr-lee-MQ.hithub.io/tags/%E9%9D%A2%E8%AF%95/">
-                                    <span class="chip bg-color">面试</span>
+                                <a href="/Mr-lee-MQ.hithub.io/tags/%E6%A1%86%E6%9E%B6/">
+                                    <span class="chip bg-color">框架</span>
                                 </a>
                             
                         </div>
@@ -592,29 +643,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/Mr-lee-MQ.hithub.io/%E5%90%8E%E7%AB%AF%E9%9D%A2%E8%AF%95/">
+                <a href="/Mr-lee-MQ.hithub.io/Vue%E5%B0%8F%E6%A1%88%E4%BE%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/19.jpg" class="responsive-img" alt="后端面试题总结">
+                        <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/11.jpg" class="responsive-img" alt="Vue小案例">
                         
-                        <span class="card-title">后端面试题总结</span>
+                        <span class="card-title">Vue小案例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            后端面试
+                            Vue小案例
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -623,11 +675,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/Mr-lee-MQ.hithub.io/tags/%E9%9D%A2%E8%AF%95/">
-                        <span class="chip bg-color">面试</span>
+                    <a href="/Mr-lee-MQ.hithub.io/tags/%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">框架</span>
                     </a>
                     
                 </div>
@@ -641,24 +694,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/Mr-lee-MQ.hithub.io/BUG%E6%95%B4%E7%90%86/">
+                <a href="/Mr-lee-MQ.hithub.io/%E5%90%8E%E7%AB%AF%E9%9D%A2%E8%AF%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/11.jpg" class="responsive-img" alt="BUG整理">
+                        <img src="/Mr-lee-MQ.hithub.io/medias/featureimages/15.jpg" class="responsive-img" alt="后端面试">
                         
-                        <span class="card-title">BUG整理</span>
+                        <span class="card-title">后端面试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、BUG整理
+                            后端面试题总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
                             </span>
                         <span class="publish-author">
                             
@@ -671,8 +724,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/Mr-lee-MQ.hithub.io/tags/%E7%BB%83%E6%89%8BDemo/">
-                        <span class="chip bg-color">练手Demo</span>
+                    <a href="/Mr-lee-MQ.hithub.io/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
